@@ -1,4 +1,11 @@
 Source_File,Date,Department,Category_Large,Category_Medium,Symptom,Action_Taken
+wiki-hardware-troubleshooting-v1.md,2026-08-07,전사,하드웨어,RAM,"전원 인가 후 메인보드 비프음 경고(3~4회) 및 화면 무반응, MEMORY_MANAGEMENT (0x0000001A) 블루스크린 발생","1. 잔류 전류 방전 후 RAM 적출 2. 금색 접촉 단자(Gold contact) 지우개 및 알코올 세척 3. 슬롯 교차 재장착 4. mdsched.exe 메모리 진단"
+wiki-hardware-troubleshooting-v1.md,2026-08-07,전사,하드웨어,그래픽카드,"화면 줄 가기, 분홍/초록 격자 무늬 노이즈(Artifacting), 블랙아웃, 팬 폭주, VIDEO_TDR_FAILURE 발생","1. 안전 모드 진입 2. DDU(Display Driver Uninstaller) 툴 이용 기존 드라이버 완전 삭제 3. WHQL 최신 공식 드라이버 클린 설치 4. 8핀 보조전원 체결 실사"
+wiki-hardware-troubleshooting-v1.md,2026-08-07,전사,네트워크,IP/DNS,"지구본 아이콘 활성화, 고정 IP 입력 시에도 '식별되지 않은 네트워크' 오류 및 잦은 패킷 유실","1. netsh winsock reset 및 IP 초기화 2. 파손된 RJ-45 커넥터 전용 툴 재가공 3. WIPS 및 EPP 차단 여부 검증"
+wiki-hardware-troubleshooting-v1.md,2026-08-07,전사,네트워크,WIPS/무선,"가용 와이파이 AP 목록 완전 유실, Gradius 보안 솔루션의 무선랜 어댑터 강제 차단 현상","1. Gradius 오탐 해제 및 Tgate 연동 재설치 2. 무선 드라이버 속성 '전원 절약을 위해 컴퓨터가 이 장치를 끌 수 있음' 체크 해제"
+wiki-hardware-troubleshooting-v1.md,2026-08-07,전사,하드웨어,기타,"소리 아이콘에 '출력 장치 설치 안 됨' 경고 표출, Teams/Zoom 화상 회의 마이크 음성 미인식","1. mmsys.cpl 실행 후 기본 재생/녹음 장치 지정 2. Realtek/인텔 SST 사운드 드라이버 롤백 3. 윈도우 마이크 개인정보 접근 허용"
+wiki-hardware-troubleshooting-v1.md,2026-08-07,전사,하드웨어,노트북,"노트북 터치패드 포인터 멈춤, 클릭 불가능, 하판 및 터치패드 주변이 들뜨고 부풀어 오르는 현상","1. Fn + 터치패드 락 단축키 상태 확인 2. 배터리 팽창(Swelling) 식별 시 하판 분해 및 가스 배터리 물리적 안전 탈거 3. 렌탈사 교체 접수"
+wiki-hardware-troubleshooting-v1.md,2026-08-07,전사,하드웨어,모니터,"모니터 백라이트 손상으로 화면이 희미하게 어둡게 나옴, 34인치 울트라와이드 권장 해상도 미지원","1. 외장 그래픽 드라이버 최신화 및 재생 빈도 수동 변경 2. 백라이트 패널 고장 단말 식별 시 SSD 하드 탈거 후 모니터/노트북 교체"
 windows-known-issues-v1.md,2026-08-07,전사,소프트웨어,OS,"윈도우 11 최신 누적 보안 패치가 메모리 리소스 할당 테이블과 손상 마찰을 일으키며 0x0000001A 블루스크린 무한 발생","1. 중요 소스 및 작업 데이터 안전 백업 진행 2. 최근 누적 업데이트 수동 제거 또는 정합 OS 마스터 이미지를 활용한 클린 재설치 적용"
 windows-known-issues-v1.md,2026-08-07,전사,소프트웨어,OS,"윈도우 업데이트 진행 중 56% 구간에서 진행이 정지되며 시스템 무한 재부팅 루프 발생","1. BIOS 진입 후 Secure Boot 정책 Disabled 변경 2. 안전모드 진입 3. SoftwareDistribution 캐시 초기화 (net stop wuauserv)"
 windows-known-issues-v1.md,2026-08-07,전사,소프트웨어,기본 프로그램,"외부 금융/행정 사이트 접속 후 기본 캡처도구(Snipping Tool) 및 그림판 실행 시 아무 오류창 없이 즉시 강제 종료","1. 제어판 > 프로그램 및 기능 진입 2. 상주 중인 nProtect Online Security 및 TouchENKey 프로세스 수동 종료 및 삭제 3. 캡처도구 재실행"
