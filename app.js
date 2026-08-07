@@ -33,16 +33,23 @@
   function initDataStore() {
     try {
       const savedData = localStorage.getItem(STORAGE_KEY);
+      let parsed = null;
       if (savedData) {
-        knowledgeStore = JSON.parse(savedData);
-      } else {
-        // Seed initial data if available
-        if (typeof SEED_KNOWLEDGE_DATA !== 'undefined' && Array.isArray(SEED_KNOWLEDGE_DATA)) {
+        try { parsed = JSON.parse(savedData); } catch (e) {}
+      }
+
+      // If SEED_KNOWLEDGE_DATA has more items than cached localStorage, update automatically!
+      if (typeof SEED_KNOWLEDGE_DATA !== 'undefined' && Array.isArray(SEED_KNOWLEDGE_DATA)) {
+        if (!parsed || parsed.length < SEED_KNOWLEDGE_DATA.length) {
           knowledgeStore = [...SEED_KNOWLEDGE_DATA];
           saveDataStore();
         } else {
-          knowledgeStore = [];
+          knowledgeStore = parsed;
         }
+      } else if (parsed) {
+        knowledgeStore = parsed;
+      } else {
+        knowledgeStore = [];
       }
       
       const savedHistory = localStorage.getItem(HISTORY_KEY);
@@ -50,12 +57,28 @@
         visitHistory = JSON.parse(savedHistory);
       }
     } catch (err) {
-      showErrorAlert('데이터 초기화 중 오류가 발생했습니다: ' + err.message);
-      knowledgeStore = [];
+      if (typeof SEED_KNOWLEDGE_DATA !== 'undefined' && Array.isArray(SEED_KNOWLEDGE_DATA)) {
+        knowledgeStore = [...SEED_KNOWLEDGE_DATA];
+      } else {
+        knowledgeStore = [];
+      }
     }
 
     rebuildSearchEngine();
     updateBacklinks();
+  }
+
+  function resetToSeedData() {
+    if (typeof SEED_KNOWLEDGE_DATA !== 'undefined' && Array.isArray(SEED_KNOWLEDGE_DATA)) {
+      if (confirm(`현재 저장소 데이터를 최신 시드 데이터(${SEED_KNOWLEDGE_DATA.length}건)로 전체 동기화하시겠습니까?`)) {
+        knowledgeStore = [...SEED_KNOWLEDGE_DATA];
+        saveDataStore();
+        renderApp();
+        alert(`성공적으로 ${SEED_KNOWLEDGE_DATA.length}건의 시드 데이터가 동기화되었습니다!`);
+      }
+    } else {
+      showErrorAlert('시드 데이터가 로드되지 않았습니다.');
+    }
   }
 
   function saveDataStore() {
@@ -834,6 +857,12 @@
         handleCSVImport(e.dataTransfer.files[0]);
       }
     });
+
+    // Seed Sync Button
+    const syncSeedBtn = document.getElementById('btn-sync-seed');
+    if (syncSeedBtn) {
+      syncSeedBtn.addEventListener('click', resetToSeedData);
+    }
 
     // Export Backup
     document.getElementById('btn-export-data').addEventListener('click', exportBackupData);
