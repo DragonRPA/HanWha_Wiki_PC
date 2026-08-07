@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HanWha IT Service Knowledge Wiki Platform</title>
+  
+  <!-- CDN Libraries (Zero Node/Build required) -->
+  <!-- Marked.js for Markdown & WikiLink -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <!-- Fuse.js for Fuzzy Search -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <!-- PapaParse for CSV Parsing & Export -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====================================================================
+       Header Bar
+       ==================================================================== -->
+  <header class="app-header">
+    <div class="app-brand">
+      <i data-lucide="book-open"></i>
+      <span>HanWha IT Service Knowledge Wiki</span>
+      <span class="app-brand-badge">SRS v2.0</span>
+    </div>
+    
+    <div class="header-actions">
+      <button id="btn-open-create-modal" class="btn btn-primary">
+        <i data-lucide="plus-circle"></i>
+        <span>신규 지식 등록</span>
+      </button>
+
+      <button id="btn-open-import-modal" class="btn btn-secondary">
+        <i data-lucide="file-up"></i>
+        <span>CSV 인입</span>
+      </button>
+
+      <button id="btn-export-data" class="btn btn-secondary">
+        <i data-lucide="download"></i>
+        <span>백업 내보내기</span>
+      </button>
+
+      <button id="btn-toggle-theme" class="btn btn-secondary" title="테마 전환">
+        <i data-lucide="sun"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ====================================================================
+       Main Layout (Sidebar + Main Content Area)
+       ==================================================================== -->
+  <div class="app-container">
+    
+    <!-- Sidebar Filters -->
+    <aside class="app-sidebar">
+      <div>
+        <div class="sidebar-section-title">탐색 메뉴</div>
+        <ul class="category-list">
+          <li class="filter-item active" data-filter-type="all" data-filter-value="all">
+            <span>전체 지식 항목</span>
+            <span class="filter-count" id="count-all">0</span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="sidebar-section-title">대분류 (Category)</div>
+        <ul class="category-list" id="sidebar-category-large">
+          <!-- Dynamically populated -->
+        </ul>
+      </div>
+
+      <div>
+        <div class="sidebar-section-title">주요 태그 (Tags)</div>
+        <ul class="tag-list" id="sidebar-tags">
+          <!-- Dynamically populated -->
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <main class="app-main">
+      
+      <!-- Toolbar & Search Panel -->
+      <section class="toolbar-panel">
+        <div class="search-row">
+          <!-- Rule 3.4: Vertical Stack Layout -->
+          <div class="form-group-vertical" style="flex: 1;">
+            <label for="input-search-query">통합 지식 검색 (키워드 / 용어 / Symptom / SBAR)</label>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <input type="text" id="input-search-query" class="form-control" placeholder="검색어를 입력하세요 (예: ubCUBE, Tgate, 무결성, 엑셀, WIPS, DLL 복구)">
+              <button id="btn-execute-search" class="btn btn-primary">
+                <i data-lucide="search"></i>
+                <span>검색</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-grid">
+          <!-- Rule 3.4: Vertical Stack Layout -->
+          <div class="form-group-vertical">
+            <label for="select-filter-category-large">대분류 선택</label>
+            <select id="select-filter-category-large" class="form-control">
+              <option value="">전체 대분류</option>
+            </select>
+          </div>
+
+          <div class="form-group-vertical">
+            <label for="select-filter-category-medium">중분류 선택</label>
+            <select id="select-filter-category-medium" class="form-control">
+              <option value="">전체 중분류</option>
+            </select>
+          </div>
+
+          <div class="form-group-vertical">
+            <label for="select-filter-source">데이터 출처</label>
+            <select id="select-filter-source" class="form-control">
+              <option value="">전체 출처</option>
+              <option value="서울 유지보수 대장">서울 유지보수 대장</option>
+              <option value="판교 유지보수 대장">판교 유지보수 대장</option>
+              <option value="PC지원 Q&A">PC지원 Q&A</option>
+              <option value="PC지원 단톡방.txt">PC지원 단톡방.txt</option>
+            </select>
+          </div>
+
+          <div class="form-group-vertical" style="justify-content: flex-end;">
+            <button id="btn-reset-filters" class="btn btn-secondary" style="width: 100%;">
+              <i data-lucide="rotate-ccw"></i>
+              <span>필터 초기화</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- View Switcher Tabs -->
+      <div style="display: flex; gap: 8px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
+        <button id="tab-btn-list" class="btn btn-secondary active">
+          <i data-lucide="list"></i>
+          <span>지식 목록 보기</span>
+        </button>
+        <button id="tab-btn-article" class="btn btn-secondary" style="display: none;">
+          <i data-lucide="file-text"></i>
+          <span>지식 상세 열람</span>
+        </button>
+      </div>
+
+      <!-- Knowledge Cards Grid Container -->
+      <section id="view-container-list" class="knowledge-grid">
+        <!-- Dynamically rendered cards -->
+      </section>
+
+      <!-- Article Viewer Container -->
+      <section id="view-container-article" class="article-container" style="display: none;">
+        <!-- Dynamically rendered article -->
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ====================================================================
+       Footer History Bar
+       ==================================================================== -->
+  <footer class="app-footer">
+    <span style="font-weight: 600; margin-right: 8px;">최근 방문 지식:</span>
+    <div id="history-crumbs-container" class="history-crumbs">
+      <!-- Dynamically rendered history crumbs -->
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       Modal 1: Create / Edit Knowledge Form (Rule 3.4 Vertical Stack)
+       ==================================================================== -->
+  <div id="modal-knowledge-form" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-form-title" style="font-size: 1.1rem; font-weight: 700;">신규 지식 등록</h3>
+        <button id="btn-close-form-modal" class="btn btn-secondary" style="padding: 4px 8px;">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <form id="knowledge-crud-form" style="display: flex; flex-direction: column; gap: 16px;">
+          <input type="hidden" id="form-field-id">
+
+          <!-- Rule 3.4 Vertical Stack Layout -->
+          <div class="form-group-vertical">
+            <label for="form-field-title">기술 / 이슈 항목명 (Title) *</label>
+            <input type="text" id="form-field-title" class="form-control" required placeholder="예: ubCUBE (문서보안 DRM)">
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group-vertical">
+              <label for="form-field-category-large">대분류 (Category Large) *</label>
+              <input type="text" id="form-field-category-large" class="form-control" required placeholder="예: 보안프로그램, 네트워크, 하드웨어">
+            </div>
+
+            <div class="form-group-vertical">
+              <label for="form-field-category-medium">중분류 (Category Medium)</label>
+              <input type="text" id="form-field-category-medium" class="form-control" placeholder="예: ubCUBE, Tgate, IP/DNS">
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group-vertical">
+              <label for="form-field-department">발생/관련 부서</label>
+              <input type="text" id="form-field-department" class="form-control" placeholder="예: 정보혁신팀, 전자광학체계1팀">
+            </div>
+
+            <div class="form-group-vertical">
+              <label for="form-field-source">데이터 출처</label>
+              <input type="text" id="form-field-source" class="form-control" placeholder="예: 서울 유지보수 대장, 수동등록">
+            </div>
+          </div>
+
+          <div class="form-group-vertical">
+            <label for="form-field-symptom">발생 증상 (Symptom) *</label>
+            <textarea id="form-field-symptom" class="form-control" required placeholder="발생한 증상 및 질문 내용을 입력하세요."></textarea>
+          </div>
+
+          <div class="form-group-vertical">
+            <label for="form-field-action">조치 내역 (Action Taken)</label>
+            <textarea id="form-field-action" class="form-control" placeholder="조치 내역 및 안내 사항을 입력하세요."></textarea>
+          </div>
+
+          <div class="form-group-vertical">
+            <label for="form-field-tags">태그 (쉼표 구문)</label>
+            <input type="text" id="form-field-tags" class="form-control" placeholder="예: DRM, 보안, 패스워드초기화">
+          </div>
+
+          <!-- SBAR Sections -->
+          <div style="border-top: 1px solid var(--border-color); padding-top: 12px;">
+            <h4 style="font-size: 0.9rem; font-weight: 700; color: var(--accent-primary); margin-bottom: 12px;">SBAR KCS 지식 가이드 구성 (선택)</h4>
+
+            <div class="form-group-vertical" style="margin-bottom: 10px;">
+              <label for="form-field-sbar-s">[S] 상황 개요 (Situation)</label>
+              <textarea id="form-field-sbar-s" class="form-control" style="min-height: 60px;"></textarea>
+            </div>
+
+            <div class="form-group-vertical" style="margin-bottom: 10px;">
+              <label for="form-field-sbar-b">[B] 발생 배경 (Background)</label>
+              <textarea id="form-field-sbar-b" class="form-control" style="min-height: 60px;"></textarea>
+            </div>
+
+            <div class="form-group-vertical" style="margin-bottom: 10px;">
+              <label for="form-field-sbar-a">[A] 원인 분석 (Assessment)</label>
+              <textarea id="form-field-sbar-a" class="form-control" style="min-height: 60px;"></textarea>
+            </div>
+
+            <div class="form-group-vertical">
+              <label for="form-field-sbar-r">[R] 표준 조치 절차 (Recommendation - WikiLink `[[용어명]]` 사용 가능)</label>
+              <textarea id="form-field-sbar-r" class="form-control" style="min-height: 80px;" placeholder="예: [[Tgate]] 패스워드 초기화 후 [[V3 무결성]] 검사 실행"></textarea>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btn-cancel-form" class="btn btn-secondary">취소</button>
+        <button id="btn-save-form" class="btn btn-primary">저장하기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       Modal 2: CSV Drag & Drop Import Modal
+       ==================================================================== -->
+  <div id="modal-import-csv" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 style="font-size: 1.1rem; font-weight: 700;">CSV 데이터 일괄 인입</h3>
+        <button id="btn-close-import-modal" class="btn btn-secondary" style="padding: 4px 8px;">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div id="dropzone-csv" style="border: 2px dashed var(--border-color); border-radius: var(--radius-lg); padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.2s ease;">
+          <i data-lucide="upload-cloud" style="width: 48px; height: 48px; color: var(--accent-primary); margin-bottom: 12px;"></i>
+          <p style="font-weight: 600; font-size: 1rem; color: var(--text-primary);">CSV 파일을 드래그하여 여기에 놓으세요</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">또는 클릭하여 파일 선택 (`Source_File, Date, Department, Category_Large, Category_Medium, Symptom, Action_Taken` 컬럼 표준 지원)</p>
+          <input type="file" id="input-csv-file" accept=".csv" style="display: none;">
+        </div>
+
+        <div id="import-status-message" style="display: none; padding: 12px; border-radius: var(--radius-md); font-size: 0.875rem;"></div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btn-cancel-import" class="btn btn-secondary">닫기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load Seed Data & Main Logic -->
+  <script src="seed_data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
