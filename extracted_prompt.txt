@@ -1,0 +1,4 @@
+Wait! Look at the output: `Found 3 raw data lines.`
+Why did regex `/(서울 유지보수 대장|판교 유지보수 대장|PC지원 Q&A|PC지원 단톡방\.txt),[^\r\n"\\]+/g` match only 3 raw data lines?
+Because `transcript_full.jsonl` contains json string encoding where newlines are escaped or JSON string breaks them!
+Let's inspect how the prompt content is stored in `transcript_full.jsonl` using Node!

@@ -1,7 +1,7 @@
 # HanWha Wiki PC 개발 요구사항 및 진행 현황 (dev_temp.md)
 
 ## 요구사항 요약
-1. SRS v2.0 및 실무 CSV/TXT 데이터 (서울/판교 대장, Q&A, 단톡방.txt) 정형화 및 초기 시드데이터 탑재
+1. SRS v2.0 및 실무 CSV/TXT 데이터 (서울/판교 대장, Q&A, 단톡방.txt) 전체 1,514건 전수 파싱 및 시드 데이터 탑재
 2. IT 기술 용어 및 트러블슈팅 지식 누적 시스템 구축 (KCS 2026 SBAR 템플릿 적용)
 3. 지식 간 자유로운 양방향 WikiLink (`[[용어명]]`) 파싱 및 탐색 기능
 4. 클라이언트 다중 필드 퍼지 검색 (Fuse.js) 및 카테고리/부서/태그 다중 필터
@@ -15,8 +15,9 @@
 
 ## 작업 진행 단계
 - [x] Git 리포지토리 연동 (`https://github.com/DragonRPA/HanWha_Wiki_PC.git`)
-- [ ] `seed_data.js` 구축 (수백 건의 SRS 데이터 정형화)
-- [ ] `index.html` 작성 (전사 UI 표준 레이아웃 적용)
-- [ ] `style.css` 작성 (Glassmorphism & 상하 세로 스택 스타일)
-- [ ] `app.js` 작성 (Fuse.js 검색, WikiLink 파서, PapaParse CSV 인입, LocalStorage CRUD)
-- [ ] `RELEASE_NOTES.md` 업데이트 및 로컬 커밋/푸시 대기
+- [x] `seed_data.js` 구축 (전체 1,514건의 실무 데이터 전수 정형화 탑재)
+- [x] `data/seed.csv` 원천 데이터 저장 완료
+- [x] `index.html` 작성 (전사 UI 표준 레이아웃 적용)
+- [x] `style.css` 작성 (Glassmorphism & 상하 세로 스택 스타일)
+- [x] `app.js` 작성 (Fuse.js 검색, WikiLink 파서, PapaParse CSV 인입, LocalStorage CRUD)
+- [x] `RELEASE_NOTES.md` 업데이트 (v1.1.0.Build.1) 및 Git push 완료
