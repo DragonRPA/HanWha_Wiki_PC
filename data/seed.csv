@@ -1,4 +1,9 @@
 Source_File,Date,Department,Category_Large,Category_Medium,Symptom,Action_Taken
+wiki-ssd-troubleshooting-v1.md,2026-08-07,전사,하드웨어,저장장치,"부팅 장치 인식 불가(Boot Device Not Found), 0x0000001A MEMORY_MANAGEMENT 블루스크린 반복 및 무한 재부팅 루프","1. 시스템 하판 탈거 후 메인보드/SSD 골드 핑 이물질 클리닝 및 재안착(Reseat) 2. 인식 불가 시 SSD 물리 교체 및 표준 OS 마스터 이미지 포맷 적용"
+wiki-ssd-troubleshooting-v1.md,2026-08-07,전사,하드웨어,백업,"PC 자산 교체 중 크로스케이블 백업 전송 중 네트워크 끊김으로 전송 강제 중단 및 원본 저장 영역 폴더 소실","1. 물리 섹터 덮어쓰기(Overwrite) 방지를 위해 파티션 추가 쓰기/지우기 작업 전면 금지 2. 디스크 안전 탈거 후 보안팀 공식 반출 승인 상신 3. 전문 복구 업체 이관"
+wiki-ssd-troubleshooting-v1.md,2026-08-07,전사,하드웨어,저장장치,"유휴 상태(Idle)임에도 디스크 Active Time 점유율 100% 지속, 마우스 포인터 멈춤 및 OS 전반 응답 불능","1. 칩셋 및 저장장치 드라이버 최신화 및 OS 재설치 2. 동일 증상 재발 시 초기 물리 배드섹터 결함 확정 후 신품 SSD 대체 장착"
+wiki-ssd-troubleshooting-v1.md,2026-08-07,전사,하드웨어,저장장치,"C드라이브 가용 용량 포화로 인한 Windows 업데이트 거부, 시스템 부팅 프리징 및 속도 저하","1. 디스크 관리 도구에서 D드라이브 유휴 볼륨 축소 후 C드라이브 시스템 파티션 영역 동적 강제 병합 확장(볼륨 재조정) 2. 대용량 소명 시 부서 자체 예산 SSD 증설"
+wiki-ssd-troubleshooting-v1.md,2026-08-07,전사,보안,기타,"임직원 퇴사/전배로 노트북/데스크톱 반납 시 내부 SSD 기밀 소스 코드 및 사업 자료 노출 위험","1. 반납 즉시 본체 개방 후 SSD 물리적 완전 탈거 2. 공식 자산 폐기 신청서 상신 후 보안팀 대장 동기화 3. 시건 보관함 물리 밀폐 잠금 보관"
 wiki-hardware-troubleshooting-v1.md,2026-08-07,전사,하드웨어,RAM,"전원 인가 후 메인보드 비프음 경고(3~4회) 및 화면 무반응, MEMORY_MANAGEMENT (0x0000001A) 블루스크린 발생","1. 잔류 전류 방전 후 RAM 적출 2. 금색 접촉 단자(Gold contact) 지우개 및 알코올 세척 3. 슬롯 교차 재장착 4. mdsched.exe 메모리 진단"
 wiki-hardware-troubleshooting-v1.md,2026-08-07,전사,하드웨어,그래픽카드,"화면 줄 가기, 분홍/초록 격자 무늬 노이즈(Artifacting), 블랙아웃, 팬 폭주, VIDEO_TDR_FAILURE 발생","1. 안전 모드 진입 2. DDU(Display Driver Uninstaller) 툴 이용 기존 드라이버 완전 삭제 3. WHQL 최신 공식 드라이버 클린 설치 4. 8핀 보조전원 체결 실사"
 wiki-hardware-troubleshooting-v1.md,2026-08-07,전사,네트워크,IP/DNS,"지구본 아이콘 활성화, 고정 IP 입력 시에도 '식별되지 않은 네트워크' 오류 및 잦은 패킷 유실","1. netsh winsock reset 및 IP 초기화 2. 파손된 RJ-45 커넥터 전용 툴 재가공 3. WIPS 및 EPP 차단 여부 검증"
