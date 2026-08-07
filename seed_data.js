@@ -1,302 +1,7783 @@
-// HanWha IT Service Knowledge Wiki - Full Seed Data (1526 records)
+// HanWha IT Service Knowledge Wiki - Full Seed Data (1742 records)
 const SEED_KNOWLEDGE_DATA = [
   {
-    "id": "bsod-common-01",
-    "title": "Windows 11 블루스크린 공통 대응 가이드 (SFC/DISM & 안전 모드)",
-    "sourceFile": "Microsoft Support 공식 가이드 / Windows 11 BSOD",
+    "id": "bsod-full-1",
+    "title": "[BSOD] APC_INDEX_MISMATCH (0x00000001)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
     "date": "2026-08-07",
     "department": "전사",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "OS",
-    "symptom": "Windows 11 시스템 비정상 종료, 블루스크린 발생 및 무한 재부팅 루프",
-    "actionTaken": "1. 외장장치 물리 격리 2. Shift+다시시작으로 안전모드 진입 3. dism /restorehealth 및 sfc /scannow 수행 4. 드라이버 롤백",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: APC_INDEX_MISMATCH (0x00000001) - APC(Asynchronous Procedure Call) 인덱스 불일치 오류. 커널 모드 드라이버가 APC 비활성화/활성화 수를 맞추지 못할 때 발생.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
     "tags": [
-      "OS",
-      "블루스크린",
       "Windows11",
-      "SafeMode",
-      "SFC",
-      "DISM",
-      "BSOD"
-    ],
-    "sbar": {
-      "situation": "[S] Windows 11 디바이스가 비정상적으로 종료되거나 무한 재부팅 루프 현상 발생.",
-      "background": "[B] Microsoft 공식 지원 데이터베이스 기준 일차적 공통 복구 가이드라인 적용.",
-      "assessment": "[A] 신규 외장 하드웨어 충돌, 커널 시스템 파일 파손, 누적 업데이트 결함 또는 드라이버 버전 비호환성.",
-      "recommendation": "[R] 1. 최근 연결한 USB/외장 하드웨어 물리적 제거\n2. [[안전 모드]] 진입 (로그인 화면에서 Shift + 다시시작 > 문제해결 > 시작설정)\n3. CMD 관리자 권한 실행 후 시스템 복구 명령 수행:\n   - `dism /online /cleanup-image /restorehealth`\n   - `sfc /scannow`\n4. 최근 패치 및 [[드라이버 롤백]] 적용"
-    },
-    "wikilinks": [
-      "안전 모드",
-      "드라이버 롤백"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:27:17.416Z",
-    "updatedAt": "2026-08-07T05:27:17.417Z"
-  },
-  {
-    "id": "bsod-memory-management",
-    "title": "MEMORY_MANAGEMENT (0x0000001A)",
-    "sourceFile": "Microsoft Support 공식 가이드 / Windows 11 BSOD",
-    "date": "2026-08-07",
-    "department": "전사",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "Stop Code: MEMORY_MANAGEMENT (0x0000001A) - 가상/물리 메모리 관리 시스템 결함",
-    "actionTaken": "1. RAM 탈거 후 단자 청소 및 재장착 2. mdsched.exe 메모리 진단 도구 실행 3. 누적 업데이트 수동 제거 및 OS 재설치",
-    "tags": [
-      "OS",
+      "BSOD",
       "블루스크린",
-      "MEMORY_MANAGEMENT",
-      "0x0000001A",
-      "RAM",
-      "메모리진단"
+      "APC_INDEX_MISMATCH",
+      "0x00000001",
+      "소프트웨어",
+      "OS"
     ],
     "sbar": {
-      "situation": "[S] Windows 가상 및 물리 메모리(RAM) 관리 시스템에 구조적 정합성 파손 및 무결성 위반 발생.",
-      "background": "[B] RAM 물리 단자 먼지 유입, 보안 업데이트 패키지 커널 충돌, 그래픽/메인보드 드라이버 메모리 침범.",
-      "assessment": "[A] 물리 RAM 메모리 모듈 손상 또는 슬롯 접촉 불량, 메모리 맵 참조 오류.",
-      "recommendation": "[R] 1. RAM 하판 분리 후 알코올/지우개로 [[RAM 세척]] 단자 청소 및 슬롯 변경 재장착\n2. [[메모리 진단 도구]] (`mdsched.exe`) 실행하여 RAM 하드웨어 결함 검사\n3. 지속 발생 시 안전 모드에서 최근 [[Windows 업데이트 제거]] 또는 OS 클린 재설치"
-    },
-    "wikilinks": [
-      "RAM 세척",
-      "메모리 진단 도구",
-      "Windows 업데이트 제거"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:27:17.417Z",
-    "updatedAt": "2026-08-07T05:27:17.417Z"
-  },
-  {
-    "id": "bsod-system-thread-exception",
-    "title": "SYSTEM_THREAD_EXCEPTION_NOT_HANDLED (0x0000007E)",
-    "sourceFile": "Microsoft Support 공식 가이드 / Windows 11 BSOD",
-    "date": "2026-08-07",
-    "department": "전사",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "Stop Code: SYSTEM_THREAD_EXCEPTION_NOT_HANDLED (0x0000007E) - 커널 스레드 예외 처리 실패",
-    "actionTaken": "1. 안전 모드 진입 2. intelppm.sys/nvlddmkm.sys 등 실패 드라이버 식별 3. 장치관리자 드라이버 롤백/제거",
-    "sbar": {
-      "situation": "[S] 시스템 드라이버나 커널 스레드가 예외 상태를 발생시켰으나 이를 처리하지 못하고 정지됨.",
-      "background": "[B] 화면 하단에 `intelppm.sys`, `nvlddmkm.sys`, `wpprecorder.sys` 등 실패 시작 파일 표출.",
-      "assessment": "[A] 불량 메모리 영역 접근, 버전 비호환 드라이버, 4K 섹터 디스크 드라이버 호환성 문제.",
-      "recommendation": "[R] 1. [[안전 모드]] 부팅 후 장치 관리자 진입\n2. 오류 표출 드라이버 (인텔 그래픽, 프로세서 전원, 오디오 드라이버 등) [[드라이버 롤백]] 또는 제거\n3. 시스템 복원 시점 활용하여 이전 시점으로 복원"
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code APC_INDEX_MISMATCH (0x00000001).",
+      "background": "[B] APC(Asynchronous Procedure Call) 인덱스 불일치 오류. 커널 모드 드라이버가 APC 비활성화/활성화 수를 맞추지 못할 때 발생. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
     },
     "wikilinks": [
       "안전 모드",
-      "드라이버 롤백"
+      "sfc /scannow",
+      "DISM 복구"
     ],
     "backlinks": [],
-    "createdAt": "2026-08-07T05:27:17.417Z",
-    "updatedAt": "2026-08-07T05:27:17.417Z"
+    "createdAt": "2026-08-07T05:31:38.529Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
   },
   {
-    "id": "bsod-irql-not-less-or-equal",
-    "title": "IRQL_NOT_LESS_OR_EQUAL (0x0000000A)",
-    "sourceFile": "Microsoft Support 공식 가이드 / Windows 11 BSOD",
+    "id": "bsod-full-2",
+    "title": "[BSOD] DEVICE_QUEUE_NOT_BUSY (0x00000002)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
     "date": "2026-08-07",
     "department": "전사",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "OS",
-    "symptom": "Stop Code: IRQL_NOT_LESS_OR_EQUAL (0x0000000A) - 높은 IRQL 수준에서 유효하지 않은 가상 메모리 접근",
-    "actionTaken": "1. 무선 랜카드 드라이버 및 Gradius/Tgate 보안 에이전트 충돌 검증 2. 무선 랜카드 드라이버 초기화 3. sfc /scannow 실행",
-    "sbar": {
-      "situation": "[S] 디바이스 드라이버가 높은 IRQL 권한 수준에서 유효하지 않거나 보호된 가상 메모리 주소에 잘못 접근.",
-      "background": "[B] 무선 랜카드 드라이버 불량, 사내 보안 에이전트(EPP, Gradius, Tgate)와 장치 드라이버 간 커널 충돌.",
-      "assessment": "[A] 메모리 접근 권한 위반 및 무선 네트워크 솔루션 오탐으로 인한 무한 덤프.",
-      "recommendation": "[R] 1. [[Gradius]] 및 [[Tgate]] 보안 에이전트 충돌 여부 확인 후 최신 정합 패치 주입\n2. 무선 랜카드 드라이버 삭제 후 제조사 수동 정합 드라이버 재설치\n3. `sfc /scannow`를 통한 메모리 매핑 구조 원복"
-    },
-    "wikilinks": [
-      "Gradius",
-      "Tgate"
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DEVICE_QUEUE_NOT_BUSY (0x00000002) - 디바이스 큐 비활성화 오류. 디바이스 큐가 사용 중이지 않은 상태에서 큐 조작 시도.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DEVICE_QUEUE_NOT_BUSY",
+      "0x00000002",
+      "소프트웨어",
+      "OS"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:27:17.417Z",
-    "updatedAt": "2026-08-07T05:27:17.417Z"
-  },
-  {
-    "id": "bsod-page-fault-in-nonpaged-area",
-    "title": "PAGE_FAULT_IN_NONPAGED_AREA (0x00000050)",
-    "sourceFile": "Microsoft Support 공식 가이드 / Windows 11 BSOD",
-    "date": "2026-08-07",
-    "department": "전사",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "Stop Code: PAGE_FAULT_IN_NONPAGED_AREA (0x00000050) - 비페이징 영역 무효 주소 참조",
-    "actionTaken": "1. 오작동 보안 에이전트(CrowdStrike/V3) 수동 격리 2. PE 부팅으로 파일 덮어쓰기 3. chkdsk C: /f /r 배드섹터 정비",
     "sbar": {
-      "situation": "[S] 물리 메모리에 상주하는 Nonpaged Area 영역에서 무효한 가상 주소 데이터를 참조하여 오류 발생.",
-      "background": "[B] CrowdStrike Falcon, V3 등 보안 에이전트 오작동, 메인보드 L2 캐시 손상, 저장장치 배드섹터.",
-      "assessment": "[A] 메모리 무효 주소 호출 및 SSD/HDD 저장매체 파일 시스템 파손.",
-      "recommendation": "[R] 1. 오류 원인 모듈(예: `C-00000291*.sys`) 식별 후 안전모드/PE 부팅 진입\n2. 정상 파일 덮어쓰기 또는 모듈 격리\n3. `chkdsk C: /f /r` 수행하여 디스크 배드섹터 검사 및 복구"
-    },
-    "wikilinks": [
-      "EPP V3 오진에 따른 system32 DLL 복구 절차"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:27:17.417Z",
-    "updatedAt": "2026-08-07T05:27:17.417Z"
-  },
-  {
-    "id": "bsod-whea-uncorrectable-error",
-    "title": "WHEA_UNCORRECTABLE_ERROR (0x00000124)",
-    "sourceFile": "Microsoft Support 공식 가이드 / Windows 11 BSOD",
-    "date": "2026-08-07",
-    "department": "전사",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "하드웨어",
-    "symptom": "Stop Code: WHEA_UNCORRECTABLE_ERROR (0x00000124) - 복구 불가능한 하드웨어 물리 에러 발생",
-    "actionTaken": "1. BIOS 오버클럭/전압 초기화 (Load Default) 2. 파워서플라이 및 팬 청소 3. CPU 서멀구리스 재도포 및 장비 교체",
-    "sbar": {
-      "situation": "[S] 하드웨어 자체에서 복구 불가능한 물리적 하드웨어 오류(WHEA)가 감지되어 커널 정지.",
-      "background": "[B] 파워서플라이 전압 미달, CPU/RAM 오버클럭 임계치 초과, 냉각 팬 고장으로 인한 과열.",
-      "assessment": "[A] CPU/메인보드 물리적 과열 또는 전원 공급 장치 하드웨어 파손.",
-      "recommendation": "[R] 1. BIOS 진입 후 [[BIOS 초기화]] (Load Setup Defaults)\n2. PC 내부 팬 이물질 제거, 서멀 구리스 재도포\n3. 파워서플라이 및 메인보드 하드웨어 점검/교체"
-    },
-    "wikilinks": [
-      "BIOS 초기화"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:27:17.417Z",
-    "updatedAt": "2026-08-07T05:27:17.417Z"
-  },
-  {
-    "id": "bsod-critical-process-died",
-    "title": "CRITICAL_PROCESS_DIED (0x000000EF)",
-    "sourceFile": "Microsoft Support 공식 가이드 / Windows 11 BSOD",
-    "date": "2026-08-07",
-    "department": "전사",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "Stop Code: CRITICAL_PROCESS_DIED (0x000000EF) - 핵심 운영체제 프로세스 예기치 않은 종료",
-    "actionTaken": "1. csrss.exe/lsass.exe/smss.exe 소거 여부 확인 2. 안전모드에서 악성 에이전트 제거 3. dism /restorehealth 복구",
-    "sbar": {
-      "situation": "[S] Windows 핵심 필수 프로세스(`csrss.exe`, `lsass.exe`, `smss.exe` 등)가 예기치 않게 종료됨.",
-      "background": "[B] 악성코드 감염, 사용자 임의 권한 변경, 시스템 드라이버 및 백신 무결성 파손.",
-      "assessment": "[A] 커널 필수 서비스 프로세스 훼손으로 운영체제 가동 불가능.",
-      "recommendation": "[R] 1. [[안전 모드]] 부팅 후 최근 변경된 의심 에이전트/프로그램 제거\n2. `dism /online /cleanup-image /restorehealth` 명령어로 커널 정상 구성 요소 강제 복구\n3. 복구 불가 시 [[OS 포맷]] 및 마스터 이미지 복원"
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DEVICE_QUEUE_NOT_BUSY (0x00000002).",
+      "background": "[B] 디바이스 큐 비활성화 오류. 디바이스 큐가 사용 중이지 않은 상태에서 큐 조작 시도. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
     },
     "wikilinks": [
       "안전 모드",
-      "협력업체 반출 PC 로우포맷 (Zero-Filling) 표준 절차"
+      "sfc /scannow",
+      "DISM 복구"
     ],
     "backlinks": [],
-    "createdAt": "2026-08-07T05:27:17.417Z",
-    "updatedAt": "2026-08-07T05:27:17.417Z"
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
   },
   {
-    "id": "bsod-inaccessible-boot-device",
-    "title": "INACCESSIBLE_BOOT_DEVICE (0x0000007B)",
-    "sourceFile": "Microsoft Support 공식 가이드 / Windows 11 BSOD",
-    "date": "2026-08-07",
-    "department": "전사",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "Stop Code: INACCESSIBLE_BOOT_DEVICE (0x0000007B) - 부팅 디스크 또는 AHCI/NVMe 드라이버 인식 불가",
-    "actionTaken": "1. SSD/HDD 물리 재장착 및 슬롯 이물질 제거 2. BIOS AHCI/NVMe 컨트롤러 설정 확인 3. 부팅 래코드 복구(bootrec)",
-    "sbar": {
-      "situation": "[S] 부팅 과정에서 Windows 커널이 부팅 전용 저장매체(SSD/HDD) 파일 시스템에 접근하지 못함.",
-      "background": "[B] SSD 물리 슬롯 미세 접촉 불량, BIOS 스토리 모드(IDE/AHCI/RAID) 무단 변경, BCD 파손.",
-      "assessment": "[A] 스토리 컨트롤러 드라이버 누락 또는 SSD 커넥터 접속 손상.",
-      "recommendation": "[R] 1. SSD 하판 탈거 후 물리 먼지 제거 후 재장착\n2. BIOS 진입 후 Storage Controller Mode를 AHCI/NVMe로 정상 원복\n3. 복구 콘솔에서 `bootrec /fixmbr` 및 `bootrec /rebuildbcd` 수행"
-    },
-    "wikilinks": [
-      "BIOS 초기화"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:27:17.417Z",
-    "updatedAt": "2026-08-07T05:27:17.417Z"
-  },
-  {
-    "id": "bsod-kmode-exception-not-handled",
-    "title": "KMODE_EXCEPTION_NOT_HANDLED (0x000001E)",
-    "sourceFile": "Microsoft Support 공식 가이드 / Windows 11 BSOD",
+    "id": "bsod-full-3",
+    "title": "[BSOD] EVT_INVALID_HANDLE (0x00000003)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
     "date": "2026-08-07",
     "department": "전사",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "OS",
-    "symptom": "Stop Code: KMODE_EXCEPTION_NOT_HANDLED (0x0000001E) - 커널 모드 핸들러 예외 미처리",
-    "actionTaken": "1. 타사 장치 드라이버 롤백 2. 빠른 시작(Fast Startup) 기능 해제 3. 안전 모드 디바이스 제거",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: EVT_INVALID_HANDLE (0x00000003) - 유효하지 않은 이벤트 핸들 참조. 커널 핸들 테이블 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "EVT_INVALID_HANDLE",
+      "0x00000003",
+      "소프트웨어",
+      "OS"
+    ],
     "sbar": {
-      "situation": "[S] 커널 모드 프로그램이 예외를 발생시켰으나 오류 처리기가 이를 포착하지 못해 정지.",
-      "background": "[B] 호환되지 않는 외장 드라이버, Fast Startup 기능과 최신 드라이버 간 전원 상태 충돌.",
-      "assessment": "[A] 커널 레벨 드라이버 명령어 비정상 참조.",
-      "recommendation": "[R] 1. 윈도우 전원 옵션에서 [[빠른 시작 켜기 (Fast Startup)]] 해제\n2. 안전 모드 부팅 후 최근 설치한 하드웨어 드라이버 제거\n3. [[SFC 검사]] 실행"
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code EVT_INVALID_HANDLE (0x00000003).",
+      "background": "[B] 유효하지 않은 이벤트 핸들 참조. 커널 핸들 테이블 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
     },
     "wikilinks": [
-      "안전 모드"
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
     ],
     "backlinks": [],
-    "createdAt": "2026-08-07T05:27:17.417Z",
-    "updatedAt": "2026-08-07T05:27:17.417Z"
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
   },
   {
-    "id": "bsod-dpc-watchdog-violation",
-    "title": "DPC_WATCHDOG_VIOLATION (0x00000133)",
-    "sourceFile": "Microsoft Support 공식 가이드 / Windows 11 BSOD",
+    "id": "bsod-full-4",
+    "title": "[BSOD] INVALID_DATA_ACCESS_TRAP (0x00000004)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
     "date": "2026-08-07",
     "department": "전사",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "OS",
-    "symptom": "Stop Code: DPC_WATCHDOG_VIOLATION (0x00000133) - DPC 감시 타이머 응답 시간 초과",
-    "actionTaken": "1. iastorA.sys / NVMe 컨트롤러 드라이버 업데이트 2. SSD 펌웨어 업데이트 3. 시스템 파일 무결성 검사",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INVALID_DATA_ACCESS_TRAP (0x00000004) - 무효 데이터 접근 트랩. CPU 트랩 핸들러가 승인되지 않은 메모리 데이터 읽기 탐지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INVALID_DATA_ACCESS_TRAP",
+      "0x00000004",
+      "소프트웨어",
+      "OS"
+    ],
     "sbar": {
-      "situation": "[S] DPC(Deferred Procedure Call) 지연 프로시저 응답 시간이 와치독 임계치를 초과하여 다운.",
-      "background": "[B] SSD 저장장치 펌웨어 구형 버전, SATA AHCI 표준 드라이버(iastorA.sys) 호환성 에러.",
-      "assessment": "[A] SSD 스토리지 I/O 응답 지연으로 시스템 루프 멈춤.",
-      "recommendation": "[R] 1. 장치 관리자 > IDE ATA/ATAPI 컨트롤러에서 표준 SATA AHCI 드라이버로 변경\n2. SSD 제조사 공식 [[SSD 펌웨어 업데이트]] 적용\n3. `sfc /scannow` 실행"
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INVALID_DATA_ACCESS_TRAP (0x00000004).",
+      "background": "[B] 무효 데이터 접근 트랩. CPU 트랩 핸들러가 승인되지 않은 메모리 데이터 읽기 탐지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
     },
-    "wikilinks": [],
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
     "backlinks": [],
-    "createdAt": "2026-08-07T05:27:17.417Z",
-    "updatedAt": "2026-08-07T05:27:17.417Z"
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
   },
   {
-    "id": "bsod-kernel-security-check-failure",
-    "title": "KERNEL_SECURITY_CHECK_FAILURE (0x00000139)",
-    "sourceFile": "Microsoft Support 공식 가이드 / Windows 11 BSOD",
+    "id": "bsod-full-5",
+    "title": "[BSOD] INVALID_PROCESSOR_STATE (0x00000005)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INVALID_PROCESSOR_STATE (0x00000005) - 유효하지 않은 프로세서 상태. CPU 컨텍스트 전환 중 레지스터 상태 이상.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INVALID_PROCESSOR_STATE",
+      "0x00000005",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INVALID_PROCESSOR_STATE (0x00000005).",
+      "background": "[B] 유효하지 않은 프로세서 상태. CPU 컨텍스트 전환 중 레지스터 상태 이상. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-6",
+    "title": "[BSOD] INVALID_PROCESSOR_CONTEXT (0x00000006)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INVALID_PROCESSOR_CONTEXT (0x00000006) - 유효하지 않은 프로세서 컨텍스트. 멀티코어 전원 관리 동기화 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INVALID_PROCESSOR_CONTEXT",
+      "0x00000006",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INVALID_PROCESSOR_CONTEXT (0x00000006).",
+      "background": "[B] 유효하지 않은 프로세서 컨텍스트. 멀티코어 전원 관리 동기화 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-7",
+    "title": "[BSOD] IRQL_NOT_GREATER_OR_EQUAL (0x00000009)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: IRQL_NOT_GREATER_OR_EQUAL (0x00000009) - IRQL 인터럽트 요청 레벨 미달 오류. 드라이버가 지정된 레벨 이상을 요구했으나 미달.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "IRQL_NOT_GREATER_OR_EQUAL",
+      "0x00000009",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code IRQL_NOT_GREATER_OR_EQUAL (0x00000009).",
+      "background": "[B] IRQL 인터럽트 요청 레벨 미달 오류. 드라이버가 지정된 레벨 이상을 요구했으나 미달. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-8",
+    "title": "[BSOD] IRQL_NOT_LESS_OR_EQUAL (0x0000000A)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
     "date": "2026-08-07",
     "department": "전사",
     "categoryLarge": "보안프로그램",
-    "categoryMedium": "OS/보안",
-    "symptom": "Stop Code: KERNEL_SECURITY_CHECK_FAILURE (0x00000139) - 커널 핵심 데이터 구조 훼손 탐지",
-    "actionTaken": "1. 바이러스 및 오작동 보안 에이전트 최신 패치 2. 메모리 진단 mdsched.exe 수행 3. 백신 이중 설치 해제",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: IRQL_NOT_LESS_OR_EQUAL (0x0000000A) - 높은 IRQL 수준에서 무효 메모리 접근. 무선 랜카드/보안 에이전트 커널 충돌의 주원인.",
+    "actionTaken": "1. 이중 설치된 보안 에이전트(ubCUBE/Tgate/Gradius/V3) 충돌 점검 2. 안전모드 진입 후 sfc /scannow 실행 3. 최신 무결성 패치 주입",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "IRQL_NOT_LESS_OR_EQUAL",
+      "0x0000000A",
+      "보안프로그램",
+      "OS"
+    ],
     "sbar": {
-      "situation": "[S] 커널이 치명적인 데이터 구조 손상을 감지하여 보안 위반 방지를 위해 시스템 정지.",
-      "background": "[B] 보안 프로그램 이중 설치 충돌, 메모리 훼손 악성 에이전트, 무결성 파손.",
-      "assessment": "[A] 커널 메모리 무결성 감시 기능(Kernel Patch Protection) 작동.",
-      "recommendation": "[R] 1. 이중 설치된 타사 보안 에이전트 중 1종 정돈 삭제\n2. [[ubCUBE]], [[Tgate]] 최신 정합 패치 버전 적용\n3. `sfc /scannow`를 통한 정상 커널 파일 복원"
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code IRQL_NOT_LESS_OR_EQUAL (0x0000000A).",
+      "background": "[B] 높은 IRQL 수준에서 무효 메모리 접근. 무선 랜카드/보안 에이전트 커널 충돌의 주원인. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. 이중 설치된 보안 에이전트(ubCUBE/Tgate/Gradius/V3) 충돌 점검 2. 안전모드 진입 후 sfc /scannow 실행 3. 최신 무결성 패치 주입\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]], [[ubCUBE]], [[Tgate]], [[Gradius]]"
     },
     "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구",
       "ubCUBE",
-      "Tgate"
+      "Tgate",
+      "Gradius"
     ],
     "backlinks": [],
-    "createdAt": "2026-08-07T05:27:17.417Z",
-    "updatedAt": "2026-08-07T05:27:17.417Z"
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
   },
   {
-    "id": "bsod-video-tdr-failure",
-    "title": "VIDEO_TDR_FAILURE (0x00000116 / 0x00000117)",
-    "sourceFile": "Microsoft Support 공식 가이드 / Windows 11 BSOD",
+    "id": "bsod-full-9",
+    "title": "[BSOD] NO_EXCEPTION_HANDLING_FUNCTION (0x0000000B)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: NO_EXCEPTION_HANDLING_FUNCTION (0x0000000B) - 예외 처리 함수 누락. 커널 스레드 예외 핸들러 미등록.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "NO_EXCEPTION_HANDLING_FUNCTION",
+      "0x0000000B",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code NO_EXCEPTION_HANDLING_FUNCTION (0x0000000B).",
+      "background": "[B] 예외 처리 함수 누락. 커널 스레드 예외 핸들러 미등록. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-10",
+    "title": "[BSOD] MAXIMUM_WAIT_OBJECTS_EXCEEDED (0x0000000C)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: MAXIMUM_WAIT_OBJECTS_EXCEEDED (0x0000000C) - 최대 대기 개체 수 초과. KeWaitForMultipleObjects 호출 시 제한(64개) 초과.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "MAXIMUM_WAIT_OBJECTS_EXCEEDED",
+      "0x0000000C",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code MAXIMUM_WAIT_OBJECTS_EXCEEDED (0x0000000C).",
+      "background": "[B] 최대 대기 개체 수 초과. KeWaitForMultipleObjects 호출 시 제한(64개) 초과. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-11",
+    "title": "[BSOD] MUTEX_LEVEL_NUMBER_MISMATCH (0x0000000D)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: MUTEX_LEVEL_NUMBER_MISMATCH (0x0000000D) - 뮤텍스 레벨 번호 불일치. 데드락 방지 뮤텍스 순서 위반.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "MUTEX_LEVEL_NUMBER_MISMATCH",
+      "0x0000000D",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code MUTEX_LEVEL_NUMBER_MISMATCH (0x0000000D).",
+      "background": "[B] 뮤텍스 레벨 번호 불일치. 데드락 방지 뮤텍스 순서 위반. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-12",
+    "title": "[BSOD] NO_USER_GEB_OBJECT (0x0000000E)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: NO_USER_GEB_OBJECT (0x0000000E) - 사용자 GEB 개체 없음. 시스템 그래픽 서브시스템 렌더링 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "NO_USER_GEB_OBJECT",
+      "0x0000000E",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code NO_USER_GEB_OBJECT (0x0000000E).",
+      "background": "[B] 사용자 GEB 개체 없음. 시스템 그래픽 서브시스템 렌더링 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-13",
+    "title": "[BSOD] SPIN_LOCK_ALREADY_OWNED (0x0000000F)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SPIN_LOCK_ALREADY_OWNED (0x0000000F) - 스핀락 이미 소유됨. 동기화 스핀락 수동 재취득 시도 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SPIN_LOCK_ALREADY_OWNED",
+      "0x0000000F",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SPIN_LOCK_ALREADY_OWNED (0x0000000F).",
+      "background": "[B] 스핀락 이미 소유됨. 동기화 스핀락 수동 재취득 시도 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-14",
+    "title": "[BSOD] SPIN_LOCK_NOT_OWNED (0x00000010)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SPIN_LOCK_NOT_OWNED (0x00000010) - 스핀락 미소유 해제 시도. 소유하지 않은 스핀락 해제 요청.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SPIN_LOCK_NOT_OWNED",
+      "0x00000010",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SPIN_LOCK_NOT_OWNED (0x00000010).",
+      "background": "[B] 스핀락 미소유 해제 시도. 소유하지 않은 스핀락 해제 요청. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-15",
+    "title": "[BSOD] THREAD_NOT_MUTEX_OWNER (0x00000011)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: THREAD_NOT_MUTEX_OWNER (0x00000011) - 스레드가 뮤텍스 소유자가 않음. 소유하지 않은 뮤텍스 해제.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "THREAD_NOT_MUTEX_OWNER",
+      "0x00000011",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code THREAD_NOT_MUTEX_OWNER (0x00000011).",
+      "background": "[B] 스레드가 뮤텍스 소유자가 않음. 소유하지 않은 뮤텍스 해제. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-16",
+    "title": "[BSOD] TRAP_CAUSE_UNKNOWN (0x00000012)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: TRAP_CAUSE_UNKNOWN (0x00000012) - 원인 불명의 알 수 없는 CPU 트랩 발생.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "TRAP_CAUSE_UNKNOWN",
+      "0x00000012",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code TRAP_CAUSE_UNKNOWN (0x00000012).",
+      "background": "[B] 원인 불명의 알 수 없는 CPU 트랩 발생. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-17",
+    "title": "[BSOD] EMPTY_THREAD_REAPER_LIST (0x00000013)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: EMPTY_THREAD_REAPER_LIST (0x00000013) - 비어있는 스레드 리퍼 리스트. 종료 스레드 수거 큐 이상.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "EMPTY_THREAD_REAPER_LIST",
+      "0x00000013",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code EMPTY_THREAD_REAPER_LIST (0x00000013).",
+      "background": "[B] 비어있는 스레드 리퍼 리스트. 종료 스레드 수거 큐 이상. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-18",
+    "title": "[BSOD] CREATE_DELETE_LOCK_NOT_LOCKED (0x00000014)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CREATE_DELETE_LOCK_NOT_LOCKED (0x00000014) - 생성/삭제 잠금 미잠금. 동기화 락 상태 불일치.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CREATE_DELETE_LOCK_NOT_LOCKED",
+      "0x00000014",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CREATE_DELETE_LOCK_NOT_LOCKED (0x00000014).",
+      "background": "[B] 생성/삭제 잠금 미잠금. 동기화 락 상태 불일치. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-19",
+    "title": "[BSOD] LAST_CHANCE_CALLED_FROM_KMODE (0x00000015)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: LAST_CHANCE_CALLED_FROM_KMODE (0x00000015) - 커널 모드 라스트 찬스 예외 발생. Unhandled exception 커널 정지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "LAST_CHANCE_CALLED_FROM_KMODE",
+      "0x00000015",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code LAST_CHANCE_CALLED_FROM_KMODE (0x00000015).",
+      "background": "[B] 커널 모드 라스트 찬스 예외 발생. Unhandled exception 커널 정지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-20",
+    "title": "[BSOD] CID_HANDLE_CREATION (0x00000016)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CID_HANDLE_CREATION (0x00000016) - CID 핸들 생성 실패. 프로세스/스레드 ID 핸들 테이블 만동.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CID_HANDLE_CREATION",
+      "0x00000016",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CID_HANDLE_CREATION (0x00000016).",
+      "background": "[B] CID 핸들 생성 실패. 프로세스/스레드 ID 핸들 테이블 만동. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-21",
+    "title": "[BSOD] CID_HANDLE_DELETION (0x00000017)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CID_HANDLE_DELETION (0x00000017) - CID 핸들 삭제 중 구조적 오류.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CID_HANDLE_DELETION",
+      "0x00000017",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CID_HANDLE_DELETION (0x00000017).",
+      "background": "[B] CID 핸들 삭제 중 구조적 오류. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-22",
+    "title": "[BSOD] REFERENCE_BY_POINTER (0x00000018)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: REFERENCE_BY_POINTER (0x00000018) - 포인터 참조 카운트 파손. 디바이스 개체 참조 수 0 미만 소구.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "REFERENCE_BY_POINTER",
+      "0x00000018",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code REFERENCE_BY_POINTER (0x00000018).",
+      "background": "[B] 포인터 참조 카운트 파손. 디바이스 개체 참조 수 0 미만 소구. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-23",
+    "title": "[BSOD] BAD_POOL_HEADER (0x00000019)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: BAD_POOL_HEADER (0x00000019) - 커널 메모리 풀 헤더 파손. 메모리 할당 블록 덮어쓰기 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "BAD_POOL_HEADER",
+      "0x00000019",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code BAD_POOL_HEADER (0x00000019).",
+      "background": "[B] 커널 메모리 풀 헤더 파손. 메모리 할당 블록 덮어쓰기 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-24",
+    "title": "[BSOD] MEMORY_MANAGEMENT (0x0000001A)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: MEMORY_MANAGEMENT (0x0000001A) - 가상/물리 메모리(RAM) 관리 시스템 결함. RAM 손상 및 누적 패치 충돌.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "MEMORY_MANAGEMENT",
+      "0x0000001A",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code MEMORY_MANAGEMENT (0x0000001A).",
+      "background": "[B] 가상/물리 메모리(RAM) 관리 시스템 결함. RAM 손상 및 누적 패치 충돌. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-25",
+    "title": "[BSOD] PFN_SHARE_COUNT_TOOMANY (0x0000001B)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PFN_SHARE_COUNT_TOOMANY (0x0000001B) - PFN(Page Frame Number) 공유 카운트 초과.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PFN_SHARE_COUNT_TOOMANY",
+      "0x0000001B",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PFN_SHARE_COUNT_TOOMANY (0x0000001B).",
+      "background": "[B] PFN(Page Frame Number) 공유 카운트 초과. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-26",
+    "title": "[BSOD] PFN_REFERENCE_COUNT_TOOMANY (0x0000001C)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PFN_REFERENCE_COUNT_TOOMANY (0x0000001C) - PFN 참조 카운트 임계치 초과.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PFN_REFERENCE_COUNT_TOOMANY",
+      "0x0000001C",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PFN_REFERENCE_COUNT_TOOMANY (0x0000001C).",
+      "background": "[B] PFN 참조 카운트 임계치 초과. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-27",
+    "title": "[BSOD] NO_SPIN_LOCK_AVAILABLE (0x0000001D)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: NO_SPIN_LOCK_AVAILABLE (0x0000001D) - 가용 스핀락 없음. 동기화 자원 고갈.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "NO_SPIN_LOCK_AVAILABLE",
+      "0x0000001D",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code NO_SPIN_LOCK_AVAILABLE (0x0000001D).",
+      "background": "[B] 가용 스핀락 없음. 동기화 자원 고갈. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-28",
+    "title": "[BSOD] KMODE_EXCEPTION_NOT_HANDLED (0x0000001E)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: KMODE_EXCEPTION_NOT_HANDLED (0x0000001E) - 커널 모드 예외 미처리. 빠른 시작(Fast Startup) 및 불량 드라이버 원인.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "KMODE_EXCEPTION_NOT_HANDLED",
+      "0x0000001E",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code KMODE_EXCEPTION_NOT_HANDLED (0x0000001E).",
+      "background": "[B] 커널 모드 예외 미처리. 빠른 시작(Fast Startup) 및 불량 드라이버 원인. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-29",
+    "title": "[BSOD] SHARED_RESOURCE_CONV_ERROR (0x0000001F)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SHARED_RESOURCE_CONV_ERROR (0x0000001F) - 공유 자원 전환 오류.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SHARED_RESOURCE_CONV_ERROR",
+      "0x0000001F",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SHARED_RESOURCE_CONV_ERROR (0x0000001F).",
+      "background": "[B] 공유 자원 전환 오류. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-30",
+    "title": "[BSOD] KERNEL_APC_PENDING_DURING_EXIT (0x00000020)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: KERNEL_APC_PENDING_DURING_EXIT (0x00000020) - 스레드 종료 중 KERNEL APC 대기 상태 잔존.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "KERNEL_APC_PENDING_DURING_EXIT",
+      "0x00000020",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code KERNEL_APC_PENDING_DURING_EXIT (0x00000020).",
+      "background": "[B] 스레드 종료 중 KERNEL APC 대기 상태 잔존. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-31",
+    "title": "[BSOD] QUOTA_UNDERFLOW (0x00000021)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: QUOTA_UNDERFLOW (0x00000021) - 커널 메모리 쿼터 언더플로우. 수거 쿼터 계산 오류.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "QUOTA_UNDERFLOW",
+      "0x00000021",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code QUOTA_UNDERFLOW (0x00000021).",
+      "background": "[B] 커널 메모리 쿼터 언더플로우. 수거 쿼터 계산 오류. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-32",
+    "title": "[BSOD] FILE_SYSTEM (0x00000022)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: FILE_SYSTEM (0x00000022) - 파일 시스템 일반 커널 에러. NTFS/FAT 파일 체계 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "FILE_SYSTEM",
+      "0x00000022",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code FILE_SYSTEM (0x00000022).",
+      "background": "[B] 파일 시스템 일반 커널 에러. NTFS/FAT 파일 체계 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-33",
+    "title": "[BSOD] FAT_FILE_SYSTEM (0x00000023)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: FAT_FILE_SYSTEM (0x00000023) - FAT/FAT32 드라이버 내부 처리 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "FAT_FILE_SYSTEM",
+      "0x00000023",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code FAT_FILE_SYSTEM (0x00000023).",
+      "background": "[B] FAT/FAT32 드라이버 내부 처리 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-34",
+    "title": "[BSOD] NTFS_FILE_SYSTEM (0x00000024)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: NTFS_FILE_SYSTEM (0x00000024) - NTFS 드라이버 커널 읽기/쓰기 실패. 디스크 배드섹터 유발.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "NTFS_FILE_SYSTEM",
+      "0x00000024",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code NTFS_FILE_SYSTEM (0x00000024).",
+      "background": "[B] NTFS 드라이버 커널 읽기/쓰기 실패. 디스크 배드섹터 유발. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-35",
+    "title": "[BSOD] NPFS_FILE_SYSTEM (0x00000025)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: NPFS_FILE_SYSTEM (0x00000025) - NPFS(Named Pipe File System) 입출력 커널 통신 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "NPFS_FILE_SYSTEM",
+      "0x00000025",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code NPFS_FILE_SYSTEM (0x00000025).",
+      "background": "[B] NPFS(Named Pipe File System) 입출력 커널 통신 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-36",
+    "title": "[BSOD] CDFS_FILE_SYSTEM (0x00000026)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CDFS_FILE_SYSTEM (0x00000026) - CDFS(CD-ROM File System) 파일 렌더링 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CDFS_FILE_SYSTEM",
+      "0x00000026",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CDFS_FILE_SYSTEM (0x00000026).",
+      "background": "[B] CDFS(CD-ROM File System) 파일 렌더링 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-37",
+    "title": "[BSOD] RDR_FILE_SYSTEM (0x00000027)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: RDR_FILE_SYSTEM (0x00000027) - 네트워크 리다이렉터(RDR) 파일 시스템 커널 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "RDR_FILE_SYSTEM",
+      "0x00000027",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code RDR_FILE_SYSTEM (0x00000027).",
+      "background": "[B] 네트워크 리다이렉터(RDR) 파일 시스템 커널 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-38",
+    "title": "[BSOD] CORRUPT_WITH_AUTOCHK (0x00000028)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CORRUPT_WITH_AUTOCHK (0x00000028) - 부팅 autochk 실행 중 무결성 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CORRUPT_WITH_AUTOCHK",
+      "0x00000028",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CORRUPT_WITH_AUTOCHK (0x00000028).",
+      "background": "[B] 부팅 autochk 실행 중 무결성 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-39",
+    "title": "[BSOD] KERNEL_AUTO_BOOST_INVALID_LOCK (0x00000029)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: KERNEL_AUTO_BOOST_INVALID_LOCK (0x00000029) - 커널 오토 부스트 잠금 무효. 락 오너십 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "KERNEL_AUTO_BOOST_INVALID_LOCK",
+      "0x00000029",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code KERNEL_AUTO_BOOST_INVALID_LOCK (0x00000029).",
+      "background": "[B] 커널 오토 부스트 잠금 무효. 락 오너십 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-40",
+    "title": "[BSOD] KERNEL_AUTO_BOOST_LOCK_ACQUISITION_WITH_RAISED_IRQL (0x0000002A)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: KERNEL_AUTO_BOOST_LOCK_ACQUISITION_WITH_RAISED_IRQL (0x0000002A) - 상승된 IRQL에서 오토 부스트 락 취득 시도.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "KERNEL_AUTO_BOOST_LOCK_ACQUISITION_WITH_RAISED_IRQL",
+      "0x0000002A",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code KERNEL_AUTO_BOOST_LOCK_ACQUISITION_WITH_RAISED_IRQL (0x0000002A).",
+      "background": "[B] 상승된 IRQL에서 오토 부스트 락 취득 시도. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-41",
+    "title": "[BSOD] PANIC_STACK_SWITCH (0x0000002B)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PANIC_STACK_SWITCH (0x0000002B) - 커널 스택 전환 실패 패닉.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PANIC_STACK_SWITCH",
+      "0x0000002B",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PANIC_STACK_SWITCH (0x0000002B).",
+      "background": "[B] 커널 스택 전환 실패 패닉. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-42",
+    "title": "[BSOD] KMODE_EXCEPTION_NOT_HANDLED_M (0x0000002C)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: KMODE_EXCEPTION_NOT_HANDLED_M (0x0000002C) - 커널 모드 미처리 예외 (섀도 덤프).",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "KMODE_EXCEPTION_NOT_HANDLED_M",
+      "0x0000002C",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code KMODE_EXCEPTION_NOT_HANDLED_M (0x0000002C).",
+      "background": "[B] 커널 모드 미처리 예외 (섀도 덤프). (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-43",
+    "title": "[BSOD] KERNEL_EXPANSION_STACK_OVERFLOW (0x0000002D)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: KERNEL_EXPANSION_STACK_OVERFLOW (0x0000002D) - 커널 확장 스택 오버플로우. 무한 재귀 함수 호출.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "KERNEL_EXPANSION_STACK_OVERFLOW",
+      "0x0000002D",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code KERNEL_EXPANSION_STACK_OVERFLOW (0x0000002D).",
+      "background": "[B] 커널 확장 스택 오버플로우. 무한 재귀 함수 호출. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-44",
+    "title": "[BSOD] DATA_BUS_ERROR (0x0000002E)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
     "date": "2026-08-07",
     "department": "전사",
     "categoryLarge": "하드웨어",
     "categoryMedium": "하드웨어",
-    "symptom": "Stop Code: VIDEO_TDR_FAILURE (tikikmp.sys / nvlddmkm.sys / atikmpag.sys) - 디스플레이 드라이버 응답 복구 실패",
-    "actionTaken": "1. DDU(Display Driver Uninstaller)로 그래픽 드라이버 완전 삭제 2. 최신 제조사 정식 드라이버 재설치 3. GPU 발열 점검",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DATA_BUS_ERROR (0x0000002E) - RAM/메인보드 데이터 버스 패리티 오류.",
+    "actionTaken": "1. RAM/CPU 슬롯 청소 및 물리 수리 2. BIOS 설정 초기화 (Load Default) 3. 파워서플라이 및 하드웨어 점검/교체",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DATA_BUS_ERROR",
+      "0x0000002E",
+      "하드웨어",
+      "하드웨어"
+    ],
     "sbar": {
-      "situation": "[S] 그래픽카드 디스플레이 드라이버가 응답을 멈췄으나 지정 시간 내 복구되지 않음.",
-      "background": "[B] GPU 과열, 외장 그래픽 칩셋 물리 손상, 그래픽 드라이버 충돌 (`nvlddmkm.sys`, `atikmpag.sys`).",
-      "assessment": "[A] 그래픽 렌더링 칩셋 TDR(Timeout Detection and Recovery) 복구 실패.",
-      "recommendation": "[R] 1. 안전 모드 진입 후 DDU 툴로 기존 [[그래픽 드라이버 완전 삭제]]\n2. NVIDIA/AMD/Intel 공식 안정성 인증 드라이버 클린 설치\n3. 노트북/데스크탑 GPU 서멀 구리스 재도포 및 먼지 청소"
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DATA_BUS_ERROR (0x0000002E).",
+      "background": "[B] RAM/메인보드 데이터 버스 패리티 오류. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. RAM/CPU 슬롯 청소 및 물리 수리 2. BIOS 설정 초기화 (Load Default) 3. 파워서플라이 및 하드웨어 점검/교체\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]], [[BIOS 초기화]], [[RAM 세척]]"
     },
     "wikilinks": [
-      "안전 모드"
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구",
+      "BIOS 초기화",
+      "RAM 세척"
     ],
     "backlinks": [],
-    "createdAt": "2026-08-07T05:27:17.417Z",
-    "updatedAt": "2026-08-07T05:27:17.417Z"
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-45",
+    "title": "[BSOD] INSTRUCTION_BUS_ERROR (0x0000002F)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INSTRUCTION_BUS_ERROR (0x0000002F) - CPU 명령어 버스 파수 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INSTRUCTION_BUS_ERROR",
+      "0x0000002F",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INSTRUCTION_BUS_ERROR (0x0000002F).",
+      "background": "[B] CPU 명령어 버스 파수 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-46",
+    "title": "[BSOD] PHASE0_INITIALIZATION_FAILED (0x00000031)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PHASE0_INITIALIZATION_FAILED (0x00000031) - Windows 커널 Phase 0 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PHASE0_INITIALIZATION_FAILED",
+      "0x00000031",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PHASE0_INITIALIZATION_FAILED (0x00000031).",
+      "background": "[B] Windows 커널 Phase 0 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-47",
+    "title": "[BSOD] PHASE1_INITIALIZATION_FAILED (0x00000032)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PHASE1_INITIALIZATION_FAILED (0x00000032) - Windows 커널 Phase 1 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PHASE1_INITIALIZATION_FAILED",
+      "0x00000032",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PHASE1_INITIALIZATION_FAILED (0x00000032).",
+      "background": "[B] Windows 커널 Phase 1 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-48",
+    "title": "[BSOD] UNEXPECTED_INITIALIZATION_CALL (0x00000033)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: UNEXPECTED_INITIALIZATION_CALL (0x00000033) - 예기치 않은 초기화 호출.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "UNEXPECTED_INITIALIZATION_CALL",
+      "0x00000033",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code UNEXPECTED_INITIALIZATION_CALL (0x00000033).",
+      "background": "[B] 예기치 않은 초기화 호출. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-49",
+    "title": "[BSOD] CACHE_MANAGER (0x00000034)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CACHE_MANAGER (0x00000034) - Windows 캐시 관리자 커널 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CACHE_MANAGER",
+      "0x00000034",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CACHE_MANAGER (0x00000034).",
+      "background": "[B] Windows 캐시 관리자 커널 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-50",
+    "title": "[BSOD] NO_MORE_IRP_STACK_LOCATIONS (0x00000035)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: NO_MORE_IRP_STACK_LOCATIONS (0x00000035) - IRP 드라이버 스택 위치 고갈.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "NO_MORE_IRP_STACK_LOCATIONS",
+      "0x00000035",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code NO_MORE_IRP_STACK_LOCATIONS (0x00000035).",
+      "background": "[B] IRP 드라이버 스택 위치 고갈. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-51",
+    "title": "[BSOD] DEVICE_REFERENCE_COUNT_NOT_ZERO (0x00000036)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DEVICE_REFERENCE_COUNT_NOT_ZERO (0x00000036) - 디바이스 언로드 시 참조 카운트 0 아님.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DEVICE_REFERENCE_COUNT_NOT_ZERO",
+      "0x00000036",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DEVICE_REFERENCE_COUNT_NOT_ZERO (0x00000036).",
+      "background": "[B] 디바이스 언로드 시 참조 카운트 0 아님. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-52",
+    "title": "[BSOD] FLOPPY_INTERNAL_ERROR (0x00000037)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: FLOPPY_INTERNAL_ERROR (0x00000037) - 플로피 디바이스 내부 커널 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "FLOPPY_INTERNAL_ERROR",
+      "0x00000037",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code FLOPPY_INTERNAL_ERROR (0x00000037).",
+      "background": "[B] 플로피 디바이스 내부 커널 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-53",
+    "title": "[BSOD] SERIAL_DRIVER_INTERNAL (0x00000038)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SERIAL_DRIVER_INTERNAL (0x00000038) - 시리얼 포트 드라이버 내부 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SERIAL_DRIVER_INTERNAL",
+      "0x00000038",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SERIAL_DRIVER_INTERNAL (0x00000038).",
+      "background": "[B] 시리얼 포트 드라이버 내부 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-54",
+    "title": "[BSOD] SYSTEM_EXIT_OWNED_MUTEX (0x00000039)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SYSTEM_EXIT_OWNED_MUTEX (0x00000039) - 시스템 스레드 종료 시 소유 뮤텍스 미해제.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SYSTEM_EXIT_OWNED_MUTEX",
+      "0x00000039",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SYSTEM_EXIT_OWNED_MUTEX (0x00000039).",
+      "background": "[B] 시스템 스레드 종료 시 소유 뮤텍스 미해제. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-55",
+    "title": "[BSOD] SYSTEM_UNSCANED_FREE_POOL (0x0000003A)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SYSTEM_UNSCANED_FREE_POOL (0x0000003A) - 미검사 커널 프리 풀 해제 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SYSTEM_UNSCANED_FREE_POOL",
+      "0x0000003A",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SYSTEM_UNSCANED_FREE_POOL (0x0000003A).",
+      "background": "[B] 미검사 커널 프리 풀 해제 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-56",
+    "title": "[BSOD] SYSTEM_SERVICE_EXCEPTION (0x0000003B)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SYSTEM_SERVICE_EXCEPTION (0x0000003B) - GUI/그래픽 시스템 서비스 함수 예외 발생.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SYSTEM_SERVICE_EXCEPTION",
+      "0x0000003B",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SYSTEM_SERVICE_EXCEPTION (0x0000003B).",
+      "background": "[B] GUI/그래픽 시스템 서비스 함수 예외 발생. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-57",
+    "title": "[BSOD] INTERRUPT_UNWIND_ATTEMPTED (0x0000003C)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INTERRUPT_UNWIND_ATTEMPTED (0x0000003C) - 인터럽트 언와인드 시도 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INTERRUPT_UNWIND_ATTEMPTED",
+      "0x0000003C",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INTERRUPT_UNWIND_ATTEMPTED (0x0000003C).",
+      "background": "[B] 인터럽트 언와인드 시도 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-58",
+    "title": "[BSOD] INTERRUPT_EXCEPTION_NOT_HANDLED (0x0000003D)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INTERRUPT_EXCEPTION_NOT_HANDLED (0x0000003D) - 인터럽트 처리기 예외 미처리.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INTERRUPT_EXCEPTION_NOT_HANDLED",
+      "0x0000003D",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INTERRUPT_EXCEPTION_NOT_HANDLED (0x0000003D).",
+      "background": "[B] 인터럽트 처리기 예외 미처리. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-59",
+    "title": "[BSOD] MULTIPROCESSOR_CONFIGURATION_NOT_SUPPORTED (0x0000003E)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: MULTIPROCESSOR_CONFIGURATION_NOT_SUPPORTED (0x0000003E) - 지원되지 않는 다중 프로세서 코어 설정.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "MULTIPROCESSOR_CONFIGURATION_NOT_SUPPORTED",
+      "0x0000003E",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code MULTIPROCESSOR_CONFIGURATION_NOT_SUPPORTED (0x0000003E).",
+      "background": "[B] 지원되지 않는 다중 프로세서 코어 설정. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-60",
+    "title": "[BSOD] NO_MORE_SYSTEM_PTES (0x0000003F)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: NO_MORE_SYSTEM_PTES (0x0000003F) - 시스템 PTE(Page Table Entry) 고갈. 메모리 공간 부족.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "NO_MORE_SYSTEM_PTES",
+      "0x0000003F",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code NO_MORE_SYSTEM_PTES (0x0000003F).",
+      "background": "[B] 시스템 PTE(Page Table Entry) 고갈. 메모리 공간 부족. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-61",
+    "title": "[BSOD] TARGET_MDL_TOO_SMALL (0x00000040)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: TARGET_MDL_TOO_SMALL (0x00000040) - 타겟 MDL 메모리 설명자 크기 부족.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "TARGET_MDL_TOO_SMALL",
+      "0x00000040",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code TARGET_MDL_TOO_SMALL (0x00000040).",
+      "background": "[B] 타겟 MDL 메모리 설명자 크기 부족. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-62",
+    "title": "[BSOD] MUST_SUCCEED_POOL_EMPTY (0x00000041)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: MUST_SUCCEED_POOL_EMPTY (0x00000041) - Must Succeed 커널 풀 고갈.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "MUST_SUCCEED_POOL_EMPTY",
+      "0x00000041",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code MUST_SUCCEED_POOL_EMPTY (0x00000041).",
+      "background": "[B] Must Succeed 커널 풀 고갈. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-63",
+    "title": "[BSOD] ATDISK_DRIVER_INTERNAL (0x00000042)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: ATDISK_DRIVER_INTERNAL (0x00000042) - AT 디스크 드라이버 내부 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "ATDISK_DRIVER_INTERNAL",
+      "0x00000042",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code ATDISK_DRIVER_INTERNAL (0x00000042).",
+      "background": "[B] AT 디스크 드라이버 내부 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-64",
+    "title": "[BSOD] NO_SUCH_PARTITION (0x00000043)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: NO_SUCH_PARTITION (0x00000043) - 부팅 지정 파티션 찾을 수 없음.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "NO_SUCH_PARTITION",
+      "0x00000043",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code NO_SUCH_PARTITION (0x00000043).",
+      "background": "[B] 부팅 지정 파티션 찾을 수 없음. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-65",
+    "title": "[BSOD] MULTIPLE_IRP_COMPLETE_REQUESTS (0x00000044)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: MULTIPLE_IRP_COMPLETE_REQUESTS (0x00000044) - 드라이버가 동일 IRP 요청을 중복 완료 시도.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "MULTIPLE_IRP_COMPLETE_REQUESTS",
+      "0x00000044",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code MULTIPLE_IRP_COMPLETE_REQUESTS (0x00000044).",
+      "background": "[B] 드라이버가 동일 IRP 요청을 중복 완료 시도. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-66",
+    "title": "[BSOD] INSUFFICIENT_SYSTEM_MAP_RESOURCES (0x00000045)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INSUFFICIENT_SYSTEM_MAP_RESOURCES (0x00000045) - 시스템 맵 리소스 부족.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INSUFFICIENT_SYSTEM_MAP_RESOURCES",
+      "0x00000045",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INSUFFICIENT_SYSTEM_MAP_RESOURCES (0x00000045).",
+      "background": "[B] 시스템 맵 리소스 부족. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-67",
+    "title": "[BSOD] DEREFERENCE_BUS_INTERFACE (0x00000046)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DEREFERENCE_BUS_INTERFACE (0x00000046) - 버스 인터페이스 역참조 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DEREFERENCE_BUS_INTERFACE",
+      "0x00000046",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DEREFERENCE_BUS_INTERFACE (0x00000046).",
+      "background": "[B] 버스 인터페이스 역참조 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-68",
+    "title": "[BSOD] DEREFERENCE_EXTENDED_PROFILE (0x00000047)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DEREFERENCE_EXTENDED_PROFILE (0x00000047) - 확장 프로필 역참조 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DEREFERENCE_EXTENDED_PROFILE",
+      "0x00000047",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DEREFERENCE_EXTENDED_PROFILE (0x00000047).",
+      "background": "[B] 확장 프로필 역참조 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-69",
+    "title": "[BSOD] CANCEL_STATE_IN_COMPLETED_IRP (0x00000048)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CANCEL_STATE_IN_COMPLETED_IRP (0x00000048) - 완료된 IRP 취소 상태 오류.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CANCEL_STATE_IN_COMPLETED_IRP",
+      "0x00000048",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CANCEL_STATE_IN_COMPLETED_IRP (0x00000048).",
+      "background": "[B] 완료된 IRP 취소 상태 오류. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-70",
+    "title": "[BSOD] PAGE_FAULT_WITH_INTERRUPTS_OFF (0x00000049)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PAGE_FAULT_WITH_INTERRUPTS_OFF (0x00000049) - 인터럽트 차단 상태에서 페이징 파실 발생.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PAGE_FAULT_WITH_INTERRUPTS_OFF",
+      "0x00000049",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PAGE_FAULT_WITH_INTERRUPTS_OFF (0x00000049).",
+      "background": "[B] 인터럽트 차단 상태에서 페이징 파실 발생. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-71",
+    "title": "[BSOD] IRQL_GT_ZERO_AT_SYSTEM_SERVICE (0x0000004A)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: IRQL_GT_ZERO_AT_SYSTEM_SERVICE (0x0000004A) - 시스템 서비스 완료 시 IRQL 0 초과 상태.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "IRQL_GT_ZERO_AT_SYSTEM_SERVICE",
+      "0x0000004A",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code IRQL_GT_ZERO_AT_SYSTEM_SERVICE (0x0000004A).",
+      "background": "[B] 시스템 서비스 완료 시 IRQL 0 초과 상태. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-72",
+    "title": "[BSOD] STREAMS_INTERNAL_ERROR (0x0000004B)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: STREAMS_INTERNAL_ERROR (0x0000004B) - 스트림 내부 커널 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "STREAMS_INTERNAL_ERROR",
+      "0x0000004B",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code STREAMS_INTERNAL_ERROR (0x0000004B).",
+      "background": "[B] 스트림 내부 커널 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-73",
+    "title": "[BSOD] FATAL_UNHANDLED_HARD_ERROR (0x0000004C)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: FATAL_UNHANDLED_HARD_ERROR (0x0000004C) - 치명적인 미처리 하드웨어 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "FATAL_UNHANDLED_HARD_ERROR",
+      "0x0000004C",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code FATAL_UNHANDLED_HARD_ERROR (0x0000004C).",
+      "background": "[B] 치명적인 미처리 하드웨어 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-74",
+    "title": "[BSOD] NO_PAGES_AVAILABLE (0x0000004D)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: NO_PAGES_AVAILABLE (0x0000004D) - 사용 가능 물리 메모리 페이지 고갈.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "NO_PAGES_AVAILABLE",
+      "0x0000004D",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code NO_PAGES_AVAILABLE (0x0000004D).",
+      "background": "[B] 사용 가능 물리 메모리 페이지 고갈. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-75",
+    "title": "[BSOD] PFN_LIST_CORRUPT (0x0000004E)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PFN_LIST_CORRUPT (0x0000004E) - Page Frame Number 메모리 리스트 구조체 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PFN_LIST_CORRUPT",
+      "0x0000004E",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PFN_LIST_CORRUPT (0x0000004E).",
+      "background": "[B] Page Frame Number 메모리 리스트 구조체 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-76",
+    "title": "[BSOD] NDIS_INTERNAL_ERROR (0x0000004F)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: NDIS_INTERNAL_ERROR (0x0000004F) - NDIS 네트워크 드라이버 인터페이스 내부 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "NDIS_INTERNAL_ERROR",
+      "0x0000004F",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code NDIS_INTERNAL_ERROR (0x0000004F).",
+      "background": "[B] NDIS 네트워크 드라이버 인터페이스 내부 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-77",
+    "title": "[BSOD] PAGE_FAULT_IN_NONPAGED_AREA (0x00000050)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "보안프로그램",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PAGE_FAULT_IN_NONPAGED_AREA (0x00000050) - 비페이징 메모리 영역 무효 참조. CrowdStrike/V3/보안 모듈 오작동.",
+    "actionTaken": "1. 이중 설치된 보안 에이전트(ubCUBE/Tgate/Gradius/V3) 충돌 점검 2. 안전모드 진입 후 sfc /scannow 실행 3. 최신 무결성 패치 주입",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PAGE_FAULT_IN_NONPAGED_AREA",
+      "0x00000050",
+      "보안프로그램",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PAGE_FAULT_IN_NONPAGED_AREA (0x00000050).",
+      "background": "[B] 비페이징 메모리 영역 무효 참조. CrowdStrike/V3/보안 모듈 오작동. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. 이중 설치된 보안 에이전트(ubCUBE/Tgate/Gradius/V3) 충돌 점검 2. 안전모드 진입 후 sfc /scannow 실행 3. 최신 무결성 패치 주입\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]], [[ubCUBE]], [[Tgate]], [[Gradius]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구",
+      "ubCUBE",
+      "Tgate",
+      "Gradius"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-78",
+    "title": "[BSOD] REGISTRY_ERROR (0x00000051)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: REGISTRY_ERROR (0x00000051) - Windows 레지스트리 Hive 파일 시스템 커널 읽기/쓰기 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "REGISTRY_ERROR",
+      "0x00000051",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code REGISTRY_ERROR (0x00000051).",
+      "background": "[B] Windows 레지스트리 Hive 파일 시스템 커널 읽기/쓰기 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-79",
+    "title": "[BSOD] MAILSLOT_TECHNICAL_ERROR (0x00000052)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: MAILSLOT_TECHNICAL_ERROR (0x00000052) - 메일슬롯 파일 시스템 커널 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "MAILSLOT_TECHNICAL_ERROR",
+      "0x00000052",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code MAILSLOT_TECHNICAL_ERROR (0x00000052).",
+      "background": "[B] 메일슬롯 파일 시스템 커널 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-80",
+    "title": "[BSOD] FTDISK_INTERNAL_ERROR (0x00000058)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: FTDISK_INTERNAL_ERROR (0x00000058) - FTDisk 볼륨 드라이버 커널 결함.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "FTDISK_INTERNAL_ERROR",
+      "0x00000058",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code FTDISK_INTERNAL_ERROR (0x00000058).",
+      "background": "[B] FTDisk 볼륨 드라이버 커널 결함. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-81",
+    "title": "[BSOD] HAL_INITIALIZATION_FAILED (0x0000005C)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: HAL_INITIALIZATION_FAILED (0x0000005C) - HAL(Hardware Abstraction Layer) 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "HAL_INITIALIZATION_FAILED",
+      "0x0000005C",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code HAL_INITIALIZATION_FAILED (0x0000005C).",
+      "background": "[B] HAL(Hardware Abstraction Layer) 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-82",
+    "title": "[BSOD] UNSUPPORTED_PROCESSOR (0x0000005D)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: UNSUPPORTED_PROCESSOR (0x0000005D) - Windows 11 미지원 명령 집합 프로세서.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "UNSUPPORTED_PROCESSOR",
+      "0x0000005D",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code UNSUPPORTED_PROCESSOR (0x0000005D).",
+      "background": "[B] Windows 11 미지원 명령 집합 프로세서. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-83",
+    "title": "[BSOD] OBJECT_INITIALIZATION_FAILED (0x0000005E)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: OBJECT_INITIALIZATION_FAILED (0x0000005E) - 커널 개체 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "OBJECT_INITIALIZATION_FAILED",
+      "0x0000005E",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code OBJECT_INITIALIZATION_FAILED (0x0000005E).",
+      "background": "[B] 커널 개체 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-84",
+    "title": "[BSOD] SECURITY_INITIALIZATION_FAILED (0x0000005F)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SECURITY_INITIALIZATION_FAILED (0x0000005F) - 커널 보안 시스템 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SECURITY_INITIALIZATION_FAILED",
+      "0x0000005F",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SECURITY_INITIALIZATION_FAILED (0x0000005F).",
+      "background": "[B] 커널 보안 시스템 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-85",
+    "title": "[BSOD] PROCESS_INITIALIZATION_FAILED (0x00000060)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PROCESS_INITIALIZATION_FAILED (0x00000060) - 시스템 프로세스 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PROCESS_INITIALIZATION_FAILED",
+      "0x00000060",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PROCESS_INITIALIZATION_FAILED (0x00000060).",
+      "background": "[B] 시스템 프로세스 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-86",
+    "title": "[BSOD] HAL1_INITIALIZATION_FAILED (0x00000061)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: HAL1_INITIALIZATION_FAILED (0x00000061) - HAL Phase 1 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "HAL1_INITIALIZATION_FAILED",
+      "0x00000061",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code HAL1_INITIALIZATION_FAILED (0x00000061).",
+      "background": "[B] HAL Phase 1 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-87",
+    "title": "[BSOD] OBJECT1_INITIALIZATION_FAILED (0x00000062)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: OBJECT1_INITIALIZATION_FAILED (0x00000062) - 커널 개체 Phase 1 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "OBJECT1_INITIALIZATION_FAILED",
+      "0x00000062",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code OBJECT1_INITIALIZATION_FAILED (0x00000062).",
+      "background": "[B] 커널 개체 Phase 1 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-88",
+    "title": "[BSOD] SECURITY1_INITIALIZATION_FAILED (0x00000063)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SECURITY1_INITIALIZATION_FAILED (0x00000063) - 보안 서브시스템 Phase 1 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SECURITY1_INITIALIZATION_FAILED",
+      "0x00000063",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SECURITY1_INITIALIZATION_FAILED (0x00000063).",
+      "background": "[B] 보안 서브시스템 Phase 1 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-89",
+    "title": "[BSOD] SYMBOLIC_INITIALIZATION_FAILED (0x00000064)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SYMBOLIC_INITIALIZATION_FAILED (0x00000064) - 심볼릭 링크 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SYMBOLIC_INITIALIZATION_FAILED",
+      "0x00000064",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SYMBOLIC_INITIALIZATION_FAILED (0x00000064).",
+      "background": "[B] 심볼릭 링크 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-90",
+    "title": "[BSOD] MEMORY1_INITIALIZATION_FAILED (0x00000065)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: MEMORY1_INITIALIZATION_FAILED (0x00000065) - 메모리 관리자 Phase 1 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "MEMORY1_INITIALIZATION_FAILED",
+      "0x00000065",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code MEMORY1_INITIALIZATION_FAILED (0x00000065).",
+      "background": "[B] 메모리 관리자 Phase 1 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-91",
+    "title": "[BSOD] CONFIG_INITIALIZATION_FAILED (0x00000066)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CONFIG_INITIALIZATION_FAILED (0x00000066) - 시스템 레지스트리 구성 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CONFIG_INITIALIZATION_FAILED",
+      "0x00000066",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CONFIG_INITIALIZATION_FAILED (0x00000066).",
+      "background": "[B] 시스템 레지스트리 구성 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-92",
+    "title": "[BSOD] FILE1_INITIALIZATION_FAILED (0x00000067)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: FILE1_INITIALIZATION_FAILED (0x00000067) - 파일 시스템 Phase 1 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "FILE1_INITIALIZATION_FAILED",
+      "0x00000067",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code FILE1_INITIALIZATION_FAILED (0x00000067).",
+      "background": "[B] 파일 시스템 Phase 1 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-93",
+    "title": "[BSOD] IO1_INITIALIZATION_FAILED (0x00000068)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: IO1_INITIALIZATION_FAILED (0x00000068) - I/O 관리자 Phase 1 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "IO1_INITIALIZATION_FAILED",
+      "0x00000068",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code IO1_INITIALIZATION_FAILED (0x00000068).",
+      "background": "[B] I/O 관리자 Phase 1 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-94",
+    "title": "[BSOD] PROCESS1_INITIALIZATION_FAILED (0x00000069)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PROCESS1_INITIALIZATION_FAILED (0x00000069) - 프로세스 관리자 Phase 1 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PROCESS1_INITIALIZATION_FAILED",
+      "0x00000069",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PROCESS1_INITIALIZATION_FAILED (0x00000069).",
+      "background": "[B] 프로세스 관리자 Phase 1 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-95",
+    "title": "[BSOD] PROCESSOR_START_FAILED (0x0000006B)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PROCESSOR_START_FAILED (0x0000006B) - 다중 코어 멀티프로세서 시작 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PROCESSOR_START_FAILED",
+      "0x0000006B",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PROCESSOR_START_FAILED (0x0000006B).",
+      "background": "[B] 다중 코어 멀티프로세서 시작 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-96",
+    "title": "[BSOD] REFMON_INITIALIZATION_FAILED (0x0000006C)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: REFMON_INITIALIZATION_FAILED (0x0000006C) - 참조 모니터 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "REFMON_INITIALIZATION_FAILED",
+      "0x0000006C",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code REFMON_INITIALIZATION_FAILED (0x0000006C).",
+      "background": "[B] 참조 모니터 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-97",
+    "title": "[BSOD] SESSION1_INITIALIZATION_FAILED (0x0000006D)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SESSION1_INITIALIZATION_FAILED (0x0000006D) - 세션 1 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SESSION1_INITIALIZATION_FAILED",
+      "0x0000006D",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SESSION1_INITIALIZATION_FAILED (0x0000006D).",
+      "background": "[B] 세션 1 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-98",
+    "title": "[BSOD] SESSION2_INITIALIZATION_FAILED (0x0000006E)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SESSION2_INITIALIZATION_FAILED (0x0000006E) - 세션 2 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SESSION2_INITIALIZATION_FAILED",
+      "0x0000006E",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SESSION2_INITIALIZATION_FAILED (0x0000006E).",
+      "background": "[B] 세션 2 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-99",
+    "title": "[BSOD] CONFIG_LIST_FAILED (0x00000073)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CONFIG_LIST_FAILED (0x00000073) - 핵심 레지스트리 Hive 로드 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CONFIG_LIST_FAILED",
+      "0x00000073",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CONFIG_LIST_FAILED (0x00000073).",
+      "background": "[B] 핵심 레지스트리 Hive 로드 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-100",
+    "title": "[BSOD] BAD_SYSTEM_CONFIG_INFO (0x00000074)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: BAD_SYSTEM_CONFIG_INFO (0x00000074) - 손상된 Windows 레지스트리 구성 시스템 파일 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "BAD_SYSTEM_CONFIG_INFO",
+      "0x00000074",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code BAD_SYSTEM_CONFIG_INFO (0x00000074).",
+      "background": "[B] 손상된 Windows 레지스트리 구성 시스템 파일 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-101",
+    "title": "[BSOD] CANNOT_WRITE_CONFIGURATION (0x00000075)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CANNOT_WRITE_CONFIGURATION (0x00000075) - SYSTEM 레지스트리 Hive 파일 쓰기 공간 부족.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CANNOT_WRITE_CONFIGURATION",
+      "0x00000075",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CANNOT_WRITE_CONFIGURATION (0x00000075).",
+      "background": "[B] SYSTEM 레지스트리 Hive 파일 쓰기 공간 부족. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-102",
+    "title": "[BSOD] PROCESS_HAS_LOCKED_PAGES (0x00000076)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PROCESS_HAS_LOCKED_PAGES (0x00000076) - 프로세스가 잠긴 메모리 페이지를 해제하지 않고 종료.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PROCESS_HAS_LOCKED_PAGES",
+      "0x00000076",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PROCESS_HAS_LOCKED_PAGES (0x00000076).",
+      "background": "[B] 프로세스가 잠긴 메모리 페이지를 해제하지 않고 종료. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-103",
+    "title": "[BSOD] KERNEL_STACK_INPAGE_ERROR (0x00000077)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: KERNEL_STACK_INPAGE_ERROR (0x00000077) - 커널 메모리 스택 엑세스 실패. SSD/HDD 디스크 배드섹터 원인.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "KERNEL_STACK_INPAGE_ERROR",
+      "0x00000077",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code KERNEL_STACK_INPAGE_ERROR (0x00000077).",
+      "background": "[B] 커널 메모리 스택 엑세스 실패. SSD/HDD 디스크 배드섹터 원인. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-104",
+    "title": "[BSOD] PHASE0_EXCEPTION (0x00000078)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PHASE0_EXCEPTION (0x00000078) - Phase 0 커널 초기화 예외.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PHASE0_EXCEPTION",
+      "0x00000078",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PHASE0_EXCEPTION (0x00000078).",
+      "background": "[B] Phase 0 커널 초기화 예외. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-105",
+    "title": "[BSOD] MISMATCHED_HAL (0x00000079)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: MISMATCHED_HAL (0x00000079) - HAL 레벨과 커널 릴리즈 파일 불일치.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "MISMATCHED_HAL",
+      "0x00000079",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code MISMATCHED_HAL (0x00000079).",
+      "background": "[B] HAL 레벨과 커널 릴리즈 파일 불일치. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-106",
+    "title": "[BSOD] KERNEL_DATA_INPAGE_ERROR (0x0000007A)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: KERNEL_DATA_INPAGE_ERROR (0x0000007A) - 커널 데이터를 메모리로 페이징 중 I/O 읽기 에러 발생.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "KERNEL_DATA_INPAGE_ERROR",
+      "0x0000007A",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code KERNEL_DATA_INPAGE_ERROR (0x0000007A).",
+      "background": "[B] 커널 데이터를 메모리로 페이징 중 I/O 읽기 에러 발생. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-107",
+    "title": "[BSOD] INACCESSIBLE_BOOT_DEVICE (0x0000007B)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "하드웨어",
+    "categoryMedium": "하드웨어",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INACCESSIBLE_BOOT_DEVICE (0x0000007B) - 부팅 저장매체(SSD/HDD) 접근 불가. BIOS AHCI/NVMe 설정 불일치.",
+    "actionTaken": "1. RAM/CPU 슬롯 청소 및 물리 수리 2. BIOS 설정 초기화 (Load Default) 3. 파워서플라이 및 하드웨어 점검/교체",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INACCESSIBLE_BOOT_DEVICE",
+      "0x0000007B",
+      "하드웨어",
+      "하드웨어"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INACCESSIBLE_BOOT_DEVICE (0x0000007B).",
+      "background": "[B] 부팅 저장매체(SSD/HDD) 접근 불가. BIOS AHCI/NVMe 설정 불일치. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. RAM/CPU 슬롯 청소 및 물리 수리 2. BIOS 설정 초기화 (Load Default) 3. 파워서플라이 및 하드웨어 점검/교체\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]], [[BIOS 초기화]], [[RAM 세척]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구",
+      "BIOS 초기화",
+      "RAM 세척"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-108",
+    "title": "[BSOD] BUGCODE_NDIS_DRIVER (0x0000007C)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: BUGCODE_NDIS_DRIVER (0x0000007C) - NDIS 네트워크 드라이버 버그 코드 발생.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "BUGCODE_NDIS_DRIVER",
+      "0x0000007C",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code BUGCODE_NDIS_DRIVER (0x0000007C).",
+      "background": "[B] NDIS 네트워크 드라이버 버그 코드 발생. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-109",
+    "title": "[BSOD] INSTALL_MORE_MEMORY (0x0000007D)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INSTALL_MORE_MEMORY (0x0000007D) - Windows 11 실행 최소 용량 메모리 부족.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INSTALL_MORE_MEMORY",
+      "0x0000007D",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INSTALL_MORE_MEMORY (0x0000007D).",
+      "background": "[B] Windows 11 실행 최소 용량 메모리 부족. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-110",
+    "title": "[BSOD] SYSTEM_THREAD_EXCEPTION_NOT_HANDLED (0x0000007E)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SYSTEM_THREAD_EXCEPTION_NOT_HANDLED (0x0000007E) - 커널 스레드 예외 미처리 (`intelppm.sys`, `nvlddmkm.sys`).",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SYSTEM_THREAD_EXCEPTION_NOT_HANDLED",
+      "0x0000007E",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SYSTEM_THREAD_EXCEPTION_NOT_HANDLED (0x0000007E).",
+      "background": "[B] 커널 스레드 예외 미처리 (`intelppm.sys`, `nvlddmkm.sys`). (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-111",
+    "title": "[BSOD] UNEXPECTED_KERNEL_MODE_TRAP (0x0000007F)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: UNEXPECTED_KERNEL_MODE_TRAP (0x0000007F) - CPU 트랩 예외 발생. 오버클럭, RAM 불량, 하드웨어 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "UNEXPECTED_KERNEL_MODE_TRAP",
+      "0x0000007F",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code UNEXPECTED_KERNEL_MODE_TRAP (0x0000007F).",
+      "background": "[B] CPU 트랩 예외 발생. 오버클럭, RAM 불량, 하드웨어 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-112",
+    "title": "[BSOD] NMI_HARDWARE_FAILURE (0x00000080)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "하드웨어",
+    "categoryMedium": "하드웨어",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: NMI_HARDWARE_FAILURE (0x00000080) - NMI(Non-Maskable Interrupt) 하드웨어 치명적 결함.",
+    "actionTaken": "1. RAM/CPU 슬롯 청소 및 물리 수리 2. BIOS 설정 초기화 (Load Default) 3. 파워서플라이 및 하드웨어 점검/교체",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "NMI_HARDWARE_FAILURE",
+      "0x00000080",
+      "하드웨어",
+      "하드웨어"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code NMI_HARDWARE_FAILURE (0x00000080).",
+      "background": "[B] NMI(Non-Maskable Interrupt) 하드웨어 치명적 결함. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. RAM/CPU 슬롯 청소 및 물리 수리 2. BIOS 설정 초기화 (Load Default) 3. 파워서플라이 및 하드웨어 점검/교체\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]], [[BIOS 초기화]], [[RAM 세척]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구",
+      "BIOS 초기화",
+      "RAM 세척"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-113",
+    "title": "[BSOD] SPIN_LOCK_INIT_FAILURE (0x00000081)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SPIN_LOCK_INIT_FAILURE (0x00000081) - 스핀락 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SPIN_LOCK_INIT_FAILURE",
+      "0x00000081",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SPIN_LOCK_INIT_FAILURE (0x00000081).",
+      "background": "[B] 스핀락 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-114",
+    "title": "[BSOD] DFS_FILE_SYSTEM (0x00000082)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DFS_FILE_SYSTEM (0x00000082) - DFS(Distributed File System) 파일 시스템 커널 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DFS_FILE_SYSTEM",
+      "0x00000082",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DFS_FILE_SYSTEM (0x00000082).",
+      "background": "[B] DFS(Distributed File System) 파일 시스템 커널 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-115",
+    "title": "[BSOD] OFS_FILE_SYSTEM (0x00000084)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: OFS_FILE_SYSTEM (0x00000084) - OFS 파일 시스템 커널 결함.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "OFS_FILE_SYSTEM",
+      "0x00000084",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code OFS_FILE_SYSTEM (0x00000084).",
+      "background": "[B] OFS 파일 시스템 커널 결함. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-116",
+    "title": "[BSOD] SETUP_FAILURE (0x00000085)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SETUP_FAILURE (0x00000085) - Windows 11 셋업 커널 진입 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SETUP_FAILURE",
+      "0x00000085",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SETUP_FAILURE (0x00000085).",
+      "background": "[B] Windows 11 셋업 커널 진입 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-117",
+    "title": "[BSOD] KERNEL_MODE_EXCEPTION_NOT_HANDLED (0x0000008E)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: KERNEL_MODE_EXCEPTION_NOT_HANDLED (0x0000008E) - 커널 모드 프로그램 미처리 예외 발생.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "KERNEL_MODE_EXCEPTION_NOT_HANDLED",
+      "0x0000008E",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code KERNEL_MODE_EXCEPTION_NOT_HANDLED (0x0000008E).",
+      "background": "[B] 커널 모드 프로그램 미처리 예외 발생. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-118",
+    "title": "[BSOD] PP0_INITIALIZATION_FAILED (0x0000008F)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PP0_INITIALIZATION_FAILED (0x0000008F) - 플러그 앤 플레이(PnP) Phase 0 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PP0_INITIALIZATION_FAILED",
+      "0x0000008F",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PP0_INITIALIZATION_FAILED (0x0000008F).",
+      "background": "[B] 플러그 앤 플레이(PnP) Phase 0 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-119",
+    "title": "[BSOD] PP1_INITIALIZATION_FAILED (0x00000090)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PP1_INITIALIZATION_FAILED (0x00000090) - 플러그 앤 플레이(PnP) Phase 1 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PP1_INITIALIZATION_FAILED",
+      "0x00000090",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PP1_INITIALIZATION_FAILED (0x00000090).",
+      "background": "[B] 플러그 앤 플레이(PnP) Phase 1 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-120",
+    "title": "[BSOD] UP_DRIVER_ON_MP_SYSTEM (0x00000092)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: UP_DRIVER_ON_MP_SYSTEM (0x00000092) - 단일 코어 전용 드라이버가 멀티코어 커널에서 실행됨.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "UP_DRIVER_ON_MP_SYSTEM",
+      "0x00000092",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code UP_DRIVER_ON_MP_SYSTEM (0x00000092).",
+      "background": "[B] 단일 코어 전용 드라이버가 멀티코어 커널에서 실행됨. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-121",
+    "title": "[BSOD] INVALID_KERNEL_HANDLE (0x00000093)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INVALID_KERNEL_HANDLE (0x00000093) - 유효하지 않은 커널 핸들 사용 시도.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INVALID_KERNEL_HANDLE",
+      "0x00000093",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INVALID_KERNEL_HANDLE (0x00000093).",
+      "background": "[B] 유효하지 않은 커널 핸들 사용 시도. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-122",
+    "title": "[BSOD] KERNEL_STACK_LOCKED_AT_EXIT (0x00000094)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: KERNEL_STACK_LOCKED_AT_EXIT (0x00000094) - 스레드 종료 시 커널 스택 잠김 잔존.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "KERNEL_STACK_LOCKED_AT_EXIT",
+      "0x00000094",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code KERNEL_STACK_LOCKED_AT_EXIT (0x00000094).",
+      "background": "[B] 스레드 종료 시 커널 스택 잠김 잔존. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-123",
+    "title": "[BSOD] INVALID_WORK_QUEUE_ITEM (0x00000096)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INVALID_WORK_QUEUE_ITEM (0x00000096) - 유효하지 않은 워크 큐 아이템 처리 시도.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INVALID_WORK_QUEUE_ITEM",
+      "0x00000096",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INVALID_WORK_QUEUE_ITEM (0x00000096).",
+      "background": "[B] 유효하지 않은 워크 큐 아이템 처리 시도. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-124",
+    "title": "[BSOD] BOUND_IMAGE_UNSUPPORTED (0x00000097)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: BOUND_IMAGE_UNSUPPORTED (0x00000097) - 지원되지 않는 바운드 이미지 로드 시도.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "BOUND_IMAGE_UNSUPPORTED",
+      "0x00000097",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code BOUND_IMAGE_UNSUPPORTED (0x00000097).",
+      "background": "[B] 지원되지 않는 바운드 이미지 로드 시도. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-125",
+    "title": "[BSOD] END_OF_NT_EVALUATION_PERIOD (0x00000098)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: END_OF_NT_EVALUATION_PERIOD (0x00000098) - Windows 11 평가판 사용 기간 만료.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "END_OF_NT_EVALUATION_PERIOD",
+      "0x00000098",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code END_OF_NT_EVALUATION_PERIOD (0x00000098).",
+      "background": "[B] Windows 11 평가판 사용 기간 만료. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-126",
+    "title": "[BSOD] INVALID_REGION_OR_SEGMENT (0x00000099)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INVALID_REGION_OR_SEGMENT (0x00000099) - 유효하지 않은 메모리 영역 또는 세그먼트 매핑.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INVALID_REGION_OR_SEGMENT",
+      "0x00000099",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INVALID_REGION_OR_SEGMENT (0x00000099).",
+      "background": "[B] 유효하지 않은 메모리 영역 또는 세그먼트 매핑. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-127",
+    "title": "[BSOD] SYSTEM_LICENSE_VIOLATION (0x0000009A)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SYSTEM_LICENSE_VIOLATION (0x0000009A) - Windows 시스템 정품 인증 라이선스 위반 탐지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SYSTEM_LICENSE_VIOLATION",
+      "0x0000009A",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SYSTEM_LICENSE_VIOLATION (0x0000009A).",
+      "background": "[B] Windows 시스템 정품 인증 라이선스 위반 탐지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-128",
+    "title": "[BSOD] UDFS_FILE_SYSTEM (0x0000009B)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: UDFS_FILE_SYSTEM (0x0000009B) - UDFS(DVD/ISO File System) 커널 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "UDFS_FILE_SYSTEM",
+      "0x0000009B",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code UDFS_FILE_SYSTEM (0x0000009B).",
+      "background": "[B] UDFS(DVD/ISO File System) 커널 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-129",
+    "title": "[BSOD] MACHINE_CHECK_EXCEPTION (0x0000009C)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "하드웨어",
+    "categoryMedium": "하드웨어",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: MACHINE_CHECK_EXCEPTION (0x0000009C) - CPU 칩셋 내부 하드웨어 오류 감지 (Machine Check).",
+    "actionTaken": "1. RAM/CPU 슬롯 청소 및 물리 수리 2. BIOS 설정 초기화 (Load Default) 3. 파워서플라이 및 하드웨어 점검/교체",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "MACHINE_CHECK_EXCEPTION",
+      "0x0000009C",
+      "하드웨어",
+      "하드웨어"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code MACHINE_CHECK_EXCEPTION (0x0000009C).",
+      "background": "[B] CPU 칩셋 내부 하드웨어 오류 감지 (Machine Check). (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. RAM/CPU 슬롯 청소 및 물리 수리 2. BIOS 설정 초기화 (Load Default) 3. 파워서플라이 및 하드웨어 점검/교체\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]], [[BIOS 초기화]], [[RAM 세척]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구",
+      "BIOS 초기화",
+      "RAM 세척"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-130",
+    "title": "[BSOD] USER_MODE_HEALTH_MONITOR (0x0000009E)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: USER_MODE_HEALTH_MONITOR (0x0000009E) - 유저 모드 프로세스 헬스 모니터링 타임아웃 종료.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "USER_MODE_HEALTH_MONITOR",
+      "0x0000009E",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code USER_MODE_HEALTH_MONITOR (0x0000009E).",
+      "background": "[B] 유저 모드 프로세스 헬스 모니터링 타임아웃 종료. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-131",
+    "title": "[BSOD] DRIVER_POWER_STATE_FAILURE (0x0000009F)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_POWER_STATE_FAILURE (0x0000009F) - 드라이버 전원 관리 상태 절전/복구 전환 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_POWER_STATE_FAILURE",
+      "0x0000009F",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_POWER_STATE_FAILURE (0x0000009F).",
+      "background": "[B] 드라이버 전원 관리 상태 절전/복구 전환 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-132",
+    "title": "[BSOD] INTERNAL_POWER_ERROR (0x000000A0)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INTERNAL_POWER_ERROR (0x000000A0) - 전원 관리 서브시스템 내부 커널 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INTERNAL_POWER_ERROR",
+      "0x000000A0",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INTERNAL_POWER_ERROR (0x000000A0).",
+      "background": "[B] 전원 관리 서브시스템 내부 커널 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-133",
+    "title": "[BSOD] PCI_BUS_DRIVER_INTERNAL (0x000000A1)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PCI_BUS_DRIVER_INTERNAL (0x000000A1) - PCI 버스 드라이버 내부 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PCI_BUS_DRIVER_INTERNAL",
+      "0x000000A1",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PCI_BUS_DRIVER_INTERNAL (0x000000A1).",
+      "background": "[B] PCI 버스 드라이버 내부 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-134",
+    "title": "[BSOD] MEMORY_IMAGE_CORRUPT (0x000000A2)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: MEMORY_IMAGE_CORRUPT (0x000000A2) - 메모리 덤프 이미지 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "MEMORY_IMAGE_CORRUPT",
+      "0x000000A2",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code MEMORY_IMAGE_CORRUPT (0x000000A2).",
+      "background": "[B] 메모리 덤프 이미지 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-135",
+    "title": "[BSOD] ACPI_DRIVER_INTERNAL (0x000000A3)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: ACPI_DRIVER_INTERNAL (0x000000A3) - ACPI 전원 관리 드라이버 내부 오류.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "ACPI_DRIVER_INTERNAL",
+      "0x000000A3",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code ACPI_DRIVER_INTERNAL (0x000000A3).",
+      "background": "[B] ACPI 전원 관리 드라이버 내부 오류. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-136",
+    "title": "[BSOD] CNSS_FILE_SYSTEM_FILTER (0x000000A4)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CNSS_FILE_SYSTEM_FILTER (0x000000A4) - CNSS 파일 시스템 필터 드라이버 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CNSS_FILE_SYSTEM_FILTER",
+      "0x000000A4",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CNSS_FILE_SYSTEM_FILTER (0x000000A4).",
+      "background": "[B] CNSS 파일 시스템 필터 드라이버 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-137",
+    "title": "[BSOD] ACPI_BIOS_ERROR (0x000000A5)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: ACPI_BIOS_ERROR (0x000000A5) - 메인보드 ACPI BIOS 전원 관리 규격 불일치.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "ACPI_BIOS_ERROR",
+      "0x000000A5",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code ACPI_BIOS_ERROR (0x000000A5).",
+      "background": "[B] 메인보드 ACPI BIOS 전원 관리 규격 불일치. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-138",
+    "title": "[BSOD] BAD_EXSYSTEM_PARTITION (0x000000A7)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: BAD_EXSYSTEM_PARTITION (0x000000A7) - 손상된 시스템 파티션 레코드.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "BAD_EXSYSTEM_PARTITION",
+      "0x000000A7",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code BAD_EXSYSTEM_PARTITION (0x000000A7).",
+      "background": "[B] 손상된 시스템 파티션 레코드. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-139",
+    "title": "[BSOD] SESSION_HAS_VALID_VIEWS_ON_EXIT (0x000000AB)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SESSION_HAS_VALID_VIEWS_ON_EXIT (0x000000AB) - 세션 종료 시 뷰 미해제 잔존.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SESSION_HAS_VALID_VIEWS_ON_EXIT",
+      "0x000000AB",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SESSION_HAS_VALID_VIEWS_ON_EXIT (0x000000AB).",
+      "background": "[B] 세션 종료 시 뷰 미해제 잔존. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-140",
+    "title": "[BSOD] AUTO_BOOST_LOCK_ACQUISITION_FAILURE (0x000000AC)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: AUTO_BOOST_LOCK_ACQUISITION_FAILURE (0x000000AC) - 오토 부스트 락 취득 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "AUTO_BOOST_LOCK_ACQUISITION_FAILURE",
+      "0x000000AC",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code AUTO_BOOST_LOCK_ACQUISITION_FAILURE (0x000000AC).",
+      "background": "[B] 오토 부스트 락 취득 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-141",
+    "title": "[BSOD] VIDEO_DRIVER_INIT_FAILURE (0x000000B4)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: VIDEO_DRIVER_INIT_FAILURE (0x000000B4) - 디스플레이 그래픽 드라이버 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "VIDEO_DRIVER_INIT_FAILURE",
+      "0x000000B4",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code VIDEO_DRIVER_INIT_FAILURE (0x000000B4).",
+      "background": "[B] 디스플레이 그래픽 드라이버 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-142",
+    "title": "[BSOD] ATTEMPTED_SWITCH_FROM_DPC (0x000000B8)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: ATTEMPTED_SWITCH_FROM_DPC (0x000000B8) - DPC 루틴 내에서 불법 스레드 스위치 시도.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "ATTEMPTED_SWITCH_FROM_DPC",
+      "0x000000B8",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code ATTEMPTED_SWITCH_FROM_DPC (0x000000B8).",
+      "background": "[B] DPC 루틴 내에서 불법 스레드 스위치 시도. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-143",
+    "title": "[BSOD] CHIPSET_DETECTED_ERROR (0x000000B9)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CHIPSET_DETECTED_ERROR (0x000000B9) - 메인보드 칩셋 하드웨어 오류 감지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CHIPSET_DETECTED_ERROR",
+      "0x000000B9",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CHIPSET_DETECTED_ERROR (0x000000B9).",
+      "background": "[B] 메인보드 칩셋 하드웨어 오류 감지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-144",
+    "title": "[BSOD] SESSION_HAS_VALID_PROCESSES_ON_EXIT (0x000000BA)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SESSION_HAS_VALID_PROCESSES_ON_EXIT (0x000000BA) - 세션 종료 시 활성 프로세스 잔존.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SESSION_HAS_VALID_PROCESSES_ON_EXIT",
+      "0x000000BA",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SESSION_HAS_VALID_PROCESSES_ON_EXIT (0x000000BA).",
+      "background": "[B] 세션 종료 시 활성 프로세스 잔존. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-145",
+    "title": "[BSOD] NETWORK_BOOT_INITIALIZATION_FAILED (0x000000BB)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: NETWORK_BOOT_INITIALIZATION_FAILED (0x000000BB) - PXE 네트워크 부팅 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "NETWORK_BOOT_INITIALIZATION_FAILED",
+      "0x000000BB",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code NETWORK_BOOT_INITIALIZATION_FAILED (0x000000BB).",
+      "background": "[B] PXE 네트워크 부팅 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-146",
+    "title": "[BSOD] NETWORK_BOOT_DUPLICATE_ADDRESS (0x000000BC)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: NETWORK_BOOT_DUPLICATE_ADDRESS (0x000000BC) - 네트워크 부팅 IP 주소 중복 탐지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "NETWORK_BOOT_DUPLICATE_ADDRESS",
+      "0x000000BC",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code NETWORK_BOOT_DUPLICATE_ADDRESS (0x000000BC).",
+      "background": "[B] 네트워크 부팅 IP 주소 중복 탐지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-147",
+    "title": "[BSOD] INVALID_HIBERNATED_STATE (0x000000BD)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INVALID_HIBERNATED_STATE (0x000000BD) - 유효하지 않은 최대절전모드 파일 상태.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INVALID_HIBERNATED_STATE",
+      "0x000000BD",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INVALID_HIBERNATED_STATE (0x000000BD).",
+      "background": "[B] 유효하지 않은 최대절전모드 파일 상태. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-148",
+    "title": "[BSOD] ATTEMPTED_WRITE_TO_READONLY_MEMORY (0x000000BE)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: ATTEMPTED_WRITE_TO_READONLY_MEMORY (0x000000BE) - 읽기 전용 커널 메모리 영역에 무단 쓰기 시도.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "ATTEMPTED_WRITE_TO_READONLY_MEMORY",
+      "0x000000BE",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code ATTEMPTED_WRITE_TO_READONLY_MEMORY (0x000000BE).",
+      "background": "[B] 읽기 전용 커널 메모리 영역에 무단 쓰기 시도. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-149",
+    "title": "[BSOD] MUTEX_ALREADY_OWNED (0x000000BF)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: MUTEX_ALREADY_OWNED (0x000000BF) - 뮤텍스 중복 소유 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "MUTEX_ALREADY_OWNED",
+      "0x000000BF",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code MUTEX_ALREADY_OWNED (0x000000BF).",
+      "background": "[B] 뮤텍스 중복 소유 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-150",
+    "title": "[BSOD] SPECIAL_POOL_DETECTED_MEMORY_CORRUPTION (0x000000C1)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SPECIAL_POOL_DETECTED_MEMORY_CORRUPTION (0x000000C1) - 스페셜 메모리 풀에서 커널 덮어쓰기 파손 탐지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SPECIAL_POOL_DETECTED_MEMORY_CORRUPTION",
+      "0x000000C1",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SPECIAL_POOL_DETECTED_MEMORY_CORRUPTION (0x000000C1).",
+      "background": "[B] 스페셜 메모리 풀에서 커널 덮어쓰기 파손 탐지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-151",
+    "title": "[BSOD] BAD_POOL_CALLER (0x000000C2)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: BAD_POOL_CALLER (0x000000C2) - 잘못된 메모리 풀 해제 요청. 드라이버 메모리 버그.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "BAD_POOL_CALLER",
+      "0x000000C2",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code BAD_POOL_CALLER (0x000000C2).",
+      "background": "[B] 잘못된 메모리 풀 해제 요청. 드라이버 메모리 버그. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-152",
+    "title": "[BSOD] DRIVER_VERIFIER_DETECTED_VIOLATION (0x000000C4)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_VERIFIER_DETECTED_VIOLATION (0x000000C4) - Driver Verifier 검증 도구가 드라이버 위반 탐지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_VERIFIER_DETECTED_VIOLATION",
+      "0x000000C4",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_VERIFIER_DETECTED_VIOLATION (0x000000C4).",
+      "background": "[B] Driver Verifier 검증 도구가 드라이버 위반 탐지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-153",
+    "title": "[BSOD] DRIVER_CORRUPTED_EXPOOL (0x000000C5)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_CORRUPTED_EXPOOL (0x000000C5) - 드라이버가 커널 풀 메모리를 무단 파손함.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_CORRUPTED_EXPOOL",
+      "0x000000C5",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_CORRUPTED_EXPOOL (0x000000C5).",
+      "background": "[B] 드라이버가 커널 풀 메모리를 무단 파손함. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-154",
+    "title": "[BSOD] DRIVER_CAUGHT_MODIFYING_FREED_POOL (0x000000C6)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_CAUGHT_MODIFYING_FREED_POOL (0x000000C6) - 이미 해제된 메모리 풀을 드라이버가 무단 수정 탐지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_CAUGHT_MODIFYING_FREED_POOL",
+      "0x000000C6",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_CAUGHT_MODIFYING_FREED_POOL (0x000000C6).",
+      "background": "[B] 이미 해제된 메모리 풀을 드라이버가 무단 수정 탐지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-155",
+    "title": "[BSOD] TIMER_OR_DPC_INVALID (0x000000C7)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: TIMER_OR_DPC_INVALID (0x000000C7) - 유효하지 않은 타이머 또는 DPC 주소 참조.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "TIMER_OR_DPC_INVALID",
+      "0x000000C7",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code TIMER_OR_DPC_INVALID (0x000000C7).",
+      "background": "[B] 유효하지 않은 타이머 또는 DPC 주소 참조. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-156",
+    "title": "[BSOD] IRQL_UNEXPECTED_VALUE (0x000000C8)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: IRQL_UNEXPECTED_VALUE (0x000000C8) - 예기치 않은 IRQL 수치 탐지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "IRQL_UNEXPECTED_VALUE",
+      "0x000000C8",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code IRQL_UNEXPECTED_VALUE (0x000000C8).",
+      "background": "[B] 예기치 않은 IRQL 수치 탐지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-157",
+    "title": "[BSOD] DRIVER_VERIFIER_IOMANAGER_VIOLATION (0x000000C9)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_VERIFIER_IOMANAGER_VIOLATION (0x000000C9) - Driver Verifier I/O 관리자 위반 탐지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_VERIFIER_IOMANAGER_VIOLATION",
+      "0x000000C9",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_VERIFIER_IOMANAGER_VIOLATION (0x000000C9).",
+      "background": "[B] Driver Verifier I/O 관리자 위반 탐지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-158",
+    "title": "[BSOD] PNP_DETECTED_FATAL_ERROR (0x000000CA)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PNP_DETECTED_FATAL_ERROR (0x000000CA) - PnP(Plug and Play) 치명적 하드웨어 오류 감지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PNP_DETECTED_FATAL_ERROR",
+      "0x000000CA",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PNP_DETECTED_FATAL_ERROR (0x000000CA).",
+      "background": "[B] PnP(Plug and Play) 치명적 하드웨어 오류 감지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-159",
+    "title": "[BSOD] DRIVER_LEFT_LOCKED_PAGES_IN_PROCESS (0x000000CB)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_LEFT_LOCKED_PAGES_IN_PROCESS (0x000000CB) - 드라이버가 잠긴 메모리 페이지를 해제하지 않고 이탈.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_LEFT_LOCKED_PAGES_IN_PROCESS",
+      "0x000000CB",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_LEFT_LOCKED_PAGES_IN_PROCESS (0x000000CB).",
+      "background": "[B] 드라이버가 잠긴 메모리 페이지를 해제하지 않고 이탈. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-160",
+    "title": "[BSOD] PAGE_FAULT_IN_FREED_SPECIAL_POOL (0x000000CC)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PAGE_FAULT_IN_FREED_SPECIAL_POOL (0x000000CC) - 해제된 스페셜 메모리 풀 영역 참조 페이징 오류.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PAGE_FAULT_IN_FREED_SPECIAL_POOL",
+      "0x000000CC",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PAGE_FAULT_IN_FREED_SPECIAL_POOL (0x000000CC).",
+      "background": "[B] 해제된 스페셜 메모리 풀 영역 참조 페이징 오류. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-161",
+    "title": "[BSOD] PAGE_FAULT_BEYOND_END_OF_ALLOCATION (0x000000CD)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PAGE_FAULT_BEYOND_END_OF_ALLOCATION (0x000000CD) - 할당 범위 경계를 넘어선 무단 페이징 오류.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PAGE_FAULT_BEYOND_END_OF_ALLOCATION",
+      "0x000000CD",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PAGE_FAULT_BEYOND_END_OF_ALLOCATION (0x000000CD).",
+      "background": "[B] 할당 범위 경계를 넘어선 무단 페이징 오류. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-162",
+    "title": "[BSOD] DRIVER_UNLOADED_WITHOUT_CANCELLING_PENDING_OPERATIONS (0x000000CE)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_UNLOADED_WITHOUT_CANCELLING_PENDING_OPERATIONS (0x000000CE) - 보류 작업을 취소하지 않고 드라이버 언로드.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_UNLOADED_WITHOUT_CANCELLING_PENDING_OPERATIONS",
+      "0x000000CE",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_UNLOADED_WITHOUT_CANCELLING_PENDING_OPERATIONS (0x000000CE).",
+      "background": "[B] 보류 작업을 취소하지 않고 드라이버 언로드. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-163",
+    "title": "[BSOD] TERMINAL_SERVER_DRIVER_MADE_INVALID_TAG (0x000000CF)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: TERMINAL_SERVER_DRIVER_MADE_INVALID_TAG (0x000000CF) - 터미널 서버 드라이버 유효하지 않은 태그 생성.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "TERMINAL_SERVER_DRIVER_MADE_INVALID_TAG",
+      "0x000000CF",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code TERMINAL_SERVER_DRIVER_MADE_INVALID_TAG (0x000000CF).",
+      "background": "[B] 터미널 서버 드라이버 유효하지 않은 태그 생성. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-164",
+    "title": "[BSOD] DRIVER_CORRUPTED_MMPOOL (0x000000D0)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_CORRUPTED_MMPOOL (0x000000D0) - 드라이버가 메모리 관리자 풀 메모리 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_CORRUPTED_MMPOOL",
+      "0x000000D0",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_CORRUPTED_MMPOOL (0x000000D0).",
+      "background": "[B] 드라이버가 메모리 관리자 풀 메모리 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-165",
+    "title": "[BSOD] DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1) - 드라이버가 높은 IRQL 레벨에서 무효 메모리 접근.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_IRQL_NOT_LESS_OR_EQUAL",
+      "0x000000D1",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_IRQL_NOT_LESS_OR_EQUAL (0x000000D1).",
+      "background": "[B] 드라이버가 높은 IRQL 레벨에서 무효 메모리 접근. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-166",
+    "title": "[BSOD] BUGCODE_IDRIVER_MAPPED_PORT_SPACE (0x000000D2)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: BUGCODE_IDRIVER_MAPPED_PORT_SPACE (0x000000D2) - 드라이버 포트 스페이스 매핑 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "BUGCODE_IDRIVER_MAPPED_PORT_SPACE",
+      "0x000000D2",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code BUGCODE_IDRIVER_MAPPED_PORT_SPACE (0x000000D2).",
+      "background": "[B] 드라이버 포트 스페이스 매핑 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-167",
+    "title": "[BSOD] DRIVER_PORT_COMPLETION_SET_DATA (0x000000D3)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_PORT_COMPLETION_SET_DATA (0x000000D3) - 드라이버 포트 완성 데이터 설정 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_PORT_COMPLETION_SET_DATA",
+      "0x000000D3",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_PORT_COMPLETION_SET_DATA (0x000000D3).",
+      "background": "[B] 드라이버 포트 완성 데이터 설정 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-168",
+    "title": "[BSOD] SYSTEM_SCAN_AT_UNAUTHENTICATED_LOCATION (0x000000D4)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SYSTEM_SCAN_AT_UNAUTHENTICATED_LOCATION (0x000000D4) - 미인증 커널 위치 시스템 스캔 탐지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SYSTEM_SCAN_AT_UNAUTHENTICATED_LOCATION",
+      "0x000000D4",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SYSTEM_SCAN_AT_UNAUTHENTICATED_LOCATION (0x000000D4).",
+      "background": "[B] 미인증 커널 위치 시스템 스캔 탐지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-169",
+    "title": "[BSOD] DRIVER_PAGE_FAULT_IN_FREED_SPECIAL_POOL (0x000000D5)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_PAGE_FAULT_IN_FREED_SPECIAL_POOL (0x000000D5) - 해제된 스페셜 풀 영역 드라이버 페이징 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_PAGE_FAULT_IN_FREED_SPECIAL_POOL",
+      "0x000000D5",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_PAGE_FAULT_IN_FREED_SPECIAL_POOL (0x000000D5).",
+      "background": "[B] 해제된 스페셜 풀 영역 드라이버 페이징 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-170",
+    "title": "[BSOD] DRIVER_PAGE_FAULT_BEYOND_END_OF_ALLOCATION (0x000000D6)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_PAGE_FAULT_BEYOND_END_OF_ALLOCATION (0x000000D6) - 할당 범위를 초과한 드라이버 페이징 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_PAGE_FAULT_BEYOND_END_OF_ALLOCATION",
+      "0x000000D6",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_PAGE_FAULT_BEYOND_END_OF_ALLOCATION (0x000000D6).",
+      "background": "[B] 할당 범위를 초과한 드라이버 페이징 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-171",
+    "title": "[BSOD] DRIVER_UNMAPPED_SYSTEM_VA (0x000000D7)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_UNMAPPED_SYSTEM_VA (0x000000D7) - 매핑 해제된 시스템 가상 주소 참조.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_UNMAPPED_SYSTEM_VA",
+      "0x000000D7",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_UNMAPPED_SYSTEM_VA (0x000000D7).",
+      "background": "[B] 매핑 해제된 시스템 가상 주소 참조. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-172",
+    "title": "[BSOD] DRIVER_USED_EXCESSIVE_PTES (0x000000D8)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_USED_EXCESSIVE_PTES (0x000000D8) - 드라이버가 남용 수준으로 과도한 PTE 소비.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_USED_EXCESSIVE_PTES",
+      "0x000000D8",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_USED_EXCESSIVE_PTES (0x000000D8).",
+      "background": "[B] 드라이버가 남용 수준으로 과도한 PTE 소비. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-173",
+    "title": "[BSOD] LOCKED_PAGES_TRACKER_CORRUPT (0x000000D9)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: LOCKED_PAGES_TRACKER_CORRUPT (0x000000D9) - 잠긴 페이지 추적기 구조체 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "LOCKED_PAGES_TRACKER_CORRUPT",
+      "0x000000D9",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code LOCKED_PAGES_TRACKER_CORRUPT (0x000000D9).",
+      "background": "[B] 잠긴 페이지 추적기 구조체 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-174",
+    "title": "[BSOD] SYSTEM_PTE_MISUSE (0x000000DA)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SYSTEM_PTE_MISUSE (0x000000DA) - 시스템 PTE 무단 남용 탐지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SYSTEM_PTE_MISUSE",
+      "0x000000DA",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SYSTEM_PTE_MISUSE (0x000000DA).",
+      "background": "[B] 시스템 PTE 무단 남용 탐지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-175",
+    "title": "[BSOD] DRIVER_CORRUPTED_SYSPTES (0x000000DB)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_CORRUPTED_SYSPTES (0x000000DB) - 드라이버가 시스템 PTE 메모리 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_CORRUPTED_SYSPTES",
+      "0x000000DB",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_CORRUPTED_SYSPTES (0x000000DB).",
+      "background": "[B] 드라이버가 시스템 PTE 메모리 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-176",
+    "title": "[BSOD] DRIVER_INVALID_STACK_ACCESS (0x000000DC)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_INVALID_STACK_ACCESS (0x000000DC) - 드라이버 유효하지 않은 스택 메모리 접근.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_INVALID_STACK_ACCESS",
+      "0x000000DC",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_INVALID_STACK_ACCESS (0x000000DC).",
+      "background": "[B] 드라이버 유효하지 않은 스택 메모리 접근. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-177",
+    "title": "[BSOD] POOL_CORRUPTION_IN_FILE_AREA (0x000000DE)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: POOL_CORRUPTION_IN_FILE_AREA (0x000000DE) - 파일 영역 내 메모리 풀 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "POOL_CORRUPTION_IN_FILE_AREA",
+      "0x000000DE",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code POOL_CORRUPTION_IN_FILE_AREA (0x000000DE).",
+      "background": "[B] 파일 영역 내 메모리 풀 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-178",
+    "title": "[BSOD] IMPERSONATING_WORKER_THREAD (0x000000DF)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: IMPERSONATING_WORKER_THREAD (0x000000DF) - 워커 스레드가 임퍼소네이션(가징) 상태 유지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "IMPERSONATING_WORKER_THREAD",
+      "0x000000DF",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code IMPERSONATING_WORKER_THREAD (0x000000DF).",
+      "background": "[B] 워커 스레드가 임퍼소네이션(가징) 상태 유지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-179",
+    "title": "[BSOD] ACPI_BIOS_FATAL_ERROR (0x000000E0)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: ACPI_BIOS_FATAL_ERROR (0x000000E0) - ACPI BIOS 치명적 오류 발생.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "ACPI_BIOS_FATAL_ERROR",
+      "0x000000E0",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code ACPI_BIOS_FATAL_ERROR (0x000000E0).",
+      "background": "[B] ACPI BIOS 치명적 오류 발생. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-180",
+    "title": "[BSOD] WORKER_THREAD_RETURNED_AT_BAD_IRQL (0x000000E1)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: WORKER_THREAD_RETURNED_AT_BAD_IRQL (0x000000E1) - 워커 스레드가 상승된 IRQL 레벨에서 리턴됨.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "WORKER_THREAD_RETURNED_AT_BAD_IRQL",
+      "0x000000E1",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code WORKER_THREAD_RETURNED_AT_BAD_IRQL (0x000000E1).",
+      "background": "[B] 워커 스레드가 상승된 IRQL 레벨에서 리턴됨. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-181",
+    "title": "[BSOD] MANUALLY_INITIATED_CRASH (0x000000E2)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: MANUALLY_INITIATED_CRASH (0x000000E2) - 사용자/엔지니어가 수동으로 유발한 BSOD (Ctrl+ScrollLock).",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "MANUALLY_INITIATED_CRASH",
+      "0x000000E2",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code MANUALLY_INITIATED_CRASH (0x000000E2).",
+      "background": "[B] 사용자/엔지니어가 수동으로 유발한 BSOD (Ctrl+ScrollLock). (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-182",
+    "title": "[BSOD] RESOURCE_NOT_OWNED (0x000000E3)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: RESOURCE_NOT_OWNED (0x000000E3) - 소유하지 않은 공유 자원 해제 시도.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "RESOURCE_NOT_OWNED",
+      "0x000000E3",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code RESOURCE_NOT_OWNED (0x000000E3).",
+      "background": "[B] 소유하지 않은 공유 자원 해제 시도. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-183",
+    "title": "[BSOD] WORKER_THREAD_INVALID_STATE (0x000000E4)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: WORKER_THREAD_INVALID_STATE (0x000000E4) - 워커 스레드 유효하지 않은 상태.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "WORKER_THREAD_INVALID_STATE",
+      "0x000000E4",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code WORKER_THREAD_INVALID_STATE (0x000000E4).",
+      "background": "[B] 워커 스레드 유효하지 않은 상태. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-184",
+    "title": "[BSOD] DRIVER_VERIFIER_DMA_VIOLATION (0x000000E6)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_VERIFIER_DMA_VIOLATION (0x000000E6) - Driver Verifier DMA 버퍼 위반 탐지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_VERIFIER_DMA_VIOLATION",
+      "0x000000E6",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_VERIFIER_DMA_VIOLATION (0x000000E6).",
+      "background": "[B] Driver Verifier DMA 버퍼 위반 탐지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-185",
+    "title": "[BSOD] INVALID_FLOATING_POINT_STATE (0x000000E7)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INVALID_FLOATING_POINT_STATE (0x000000E7) - 유효하지 않은 CPU 부동소수점 상태.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INVALID_FLOATING_POINT_STATE",
+      "0x000000E7",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INVALID_FLOATING_POINT_STATE (0x000000E7).",
+      "background": "[B] 유효하지 않은 CPU 부동소수점 상태. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-186",
+    "title": "[BSOD] INVALID_CANCEL_OF_FILE_OPEN (0x000000E8)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: INVALID_CANCEL_OF_FILE_OPEN (0x000000E8) - 파일 오픈 취소 요청 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "INVALID_CANCEL_OF_FILE_OPEN",
+      "0x000000E8",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code INVALID_CANCEL_OF_FILE_OPEN (0x000000E8).",
+      "background": "[B] 파일 오픈 취소 요청 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-187",
+    "title": "[BSOD] ACTIVE_EX_WORKER_THREAD_TERMINATION (0x000000E9)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: ACTIVE_EX_WORKER_THREAD_TERMINATION (0x000000E9) - 활성 워커 스레드 강제 종료 탐지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "ACTIVE_EX_WORKER_THREAD_TERMINATION",
+      "0x000000E9",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code ACTIVE_EX_WORKER_THREAD_TERMINATION (0x000000E9).",
+      "background": "[B] 활성 워커 스레드 강제 종료 탐지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-188",
+    "title": "[BSOD] THREAD_STUCK_IN_DEVICE_DRIVER (0x000000EA)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: THREAD_STUCK_IN_DEVICE_DRIVER (0x000000EA) - 디바이스 그래픽 드라이버 내 스레드 무한 루프 갇힘.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "THREAD_STUCK_IN_DEVICE_DRIVER",
+      "0x000000EA",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code THREAD_STUCK_IN_DEVICE_DRIVER (0x000000EA).",
+      "background": "[B] 디바이스 그래픽 드라이버 내 스레드 무한 루프 갇힘. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-189",
+    "title": "[BSOD] DIRTY_MAPPED_PAGES_CONGRUENCE (0x000000EB)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DIRTY_MAPPED_PAGES_CONGRUENCE (0x000000EB) - 더티 매핑 페이지 일관성 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DIRTY_MAPPED_PAGES_CONGRUENCE",
+      "0x000000EB",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DIRTY_MAPPED_PAGES_CONGRUENCE (0x000000EB).",
+      "background": "[B] 더티 매핑 페이지 일관성 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-190",
+    "title": "[BSOD] SESSION_HAS_VALID_SPECIAL_VIEWS (0x000000EC)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SESSION_HAS_VALID_SPECIAL_VIEWS (0x000000EC) - 세션 종료 시 스페셜 뷰 잔존.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SESSION_HAS_VALID_SPECIAL_VIEWS",
+      "0x000000EC",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SESSION_HAS_VALID_SPECIAL_VIEWS (0x000000EC).",
+      "background": "[B] 세션 종료 시 스페셜 뷰 잔존. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-191",
+    "title": "[BSOD] UNMOUNTABLE_BOOT_VOLUME (0x000000ED)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: UNMOUNTABLE_BOOT_VOLUME (0x000000ED) - 부팅 볼륨 마운트 불가. 디스크 BCD/파일시스템 손상.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "UNMOUNTABLE_BOOT_VOLUME",
+      "0x000000ED",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code UNMOUNTABLE_BOOT_VOLUME (0x000000ED).",
+      "background": "[B] 부팅 볼륨 마운트 불가. 디스크 BCD/파일시스템 손상. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-192",
+    "title": "[BSOD] CRITICAL_INITIALIZATION_FAILURE (0x000000EE)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CRITICAL_INITIALIZATION_FAILURE (0x000000EE) - 치명적인 필수 서브시스템 초기화 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CRITICAL_INITIALIZATION_FAILURE",
+      "0x000000EE",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CRITICAL_INITIALIZATION_FAILURE (0x000000EE).",
+      "background": "[B] 치명적인 필수 서브시스템 초기화 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-193",
+    "title": "[BSOD] CRITICAL_PROCESS_DIED (0x000000EF)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CRITICAL_PROCESS_DIED (0x000000EF) - 핵심 필수 시스템 프로세스(`csrss.exe`, `lsass.exe`) 사망.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CRITICAL_PROCESS_DIED",
+      "0x000000EF",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CRITICAL_PROCESS_DIED (0x000000EF).",
+      "background": "[B] 핵심 필수 시스템 프로세스(`csrss.exe`, `lsass.exe`) 사망. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-194",
+    "title": "[BSOD] CRITICAL_OBJECT_TERMINATION (0x000000F4)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CRITICAL_OBJECT_TERMINATION (0x000000F4) - 치명적인 프로세스 개체 강제 종료.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CRITICAL_OBJECT_TERMINATION",
+      "0x000000F4",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CRITICAL_OBJECT_TERMINATION (0x000000F4).",
+      "background": "[B] 치명적인 프로세스 개체 강제 종료. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-195",
+    "title": "[BSOD] DRIVER_OVERRAN_STACK_BUFFER (0x000000F7)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DRIVER_OVERRAN_STACK_BUFFER (0x000000F7) - 드라이버 스택 버퍼 오버런 (보안 버퍼 침범).",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DRIVER_OVERRAN_STACK_BUFFER",
+      "0x000000F7",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DRIVER_OVERRAN_STACK_BUFFER (0x000000F7).",
+      "background": "[B] 드라이버 스택 버퍼 오버런 (보안 버퍼 침범). (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-196",
+    "title": "[BSOD] HTTP_DRIVER_CORRUPTED (0x000000FA)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: HTTP_DRIVER_CORRUPTED (0x000000FA) - HTTP.sys 웹 서버 드라이버 메모리 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "HTTP_DRIVER_CORRUPTED",
+      "0x000000FA",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code HTTP_DRIVER_CORRUPTED (0x000000FA).",
+      "background": "[B] HTTP.sys 웹 서버 드라이버 메모리 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-197",
+    "title": "[BSOD] ATTEMPTED_EXECUTE_OF_NOEXECUTE_MEMORY (0x000000FC)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: ATTEMPTED_EXECUTE_OF_NOEXECUTE_MEMORY (0x000000FC) - 실행 방지(NX/DEP) 메모리 영역 실행 시도.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "ATTEMPTED_EXECUTE_OF_NOEXECUTE_MEMORY",
+      "0x000000FC",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code ATTEMPTED_EXECUTE_OF_NOEXECUTE_MEMORY (0x000000FC).",
+      "background": "[B] 실행 방지(NX/DEP) 메모리 영역 실행 시도. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-198",
+    "title": "[BSOD] DIRTY_NOWRITE_PAGES_CONGRUENCE (0x000000FD)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DIRTY_NOWRITE_PAGES_CONGRUENCE (0x000000FD) - 쓰기 금지 더티 페이지 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DIRTY_NOWRITE_PAGES_CONGRUENCE",
+      "0x000000FD",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DIRTY_NOWRITE_PAGES_CONGRUENCE (0x000000FD).",
+      "background": "[B] 쓰기 금지 더티 페이지 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-199",
+    "title": "[BSOD] BUGCODE_USB_DRIVER (0x000000FE)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: BUGCODE_USB_DRIVER (0x000000FE) - USB 포트 드라이버 치명적 버그 코드 발생.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "BUGCODE_USB_DRIVER",
+      "0x000000FE",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code BUGCODE_USB_DRIVER (0x000000FE).",
+      "background": "[B] USB 포트 드라이버 치명적 버그 코드 발생. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-200",
+    "title": "[BSOD] LOADER_BLOCK_MISMATCH (0x00000100)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: LOADER_BLOCK_MISMATCH (0x00000100) - OS 로더 블록 버전 불일치.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "LOADER_BLOCK_MISMATCH",
+      "0x00000100",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code LOADER_BLOCK_MISMATCH (0x00000100).",
+      "background": "[B] OS 로더 블록 버전 불일치. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-201",
+    "title": "[BSOD] CLOCK_WATCHDOG_TIMEOUT (0x00000101)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "하드웨어",
+    "categoryMedium": "하드웨어",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CLOCK_WATCHDOG_TIMEOUT (0x00000101) - 다중 코어 CPU 클럭 와치독 타임아웃. CPU 과열/오버클럭.",
+    "actionTaken": "1. RAM/CPU 슬롯 청소 및 물리 수리 2. BIOS 설정 초기화 (Load Default) 3. 파워서플라이 및 하드웨어 점검/교체",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CLOCK_WATCHDOG_TIMEOUT",
+      "0x00000101",
+      "하드웨어",
+      "하드웨어"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CLOCK_WATCHDOG_TIMEOUT (0x00000101).",
+      "background": "[B] 다중 코어 CPU 클럭 와치독 타임아웃. CPU 과열/오버클럭. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. RAM/CPU 슬롯 청소 및 물리 수리 2. BIOS 설정 초기화 (Load Default) 3. 파워서플라이 및 하드웨어 점검/교체\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]], [[BIOS 초기화]], [[RAM 세척]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구",
+      "BIOS 초기화",
+      "RAM 세척"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-202",
+    "title": "[BSOD] CRITICAL_STRUCTURE_CORRUPTION (0x00000109)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "보안프로그램",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: CRITICAL_STRUCTURE_CORRUPTION (0x00000109) - 커널 치명적 데이터 구조(Kernel Patch Protection/PatchGuard) 무단 수정 탐지.",
+    "actionTaken": "1. 이중 설치된 보안 에이전트(ubCUBE/Tgate/Gradius/V3) 충돌 점검 2. 안전모드 진입 후 sfc /scannow 실행 3. 최신 무결성 패치 주입",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "CRITICAL_STRUCTURE_CORRUPTION",
+      "0x00000109",
+      "보안프로그램",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code CRITICAL_STRUCTURE_CORRUPTION (0x00000109).",
+      "background": "[B] 커널 치명적 데이터 구조(Kernel Patch Protection/PatchGuard) 무단 수정 탐지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. 이중 설치된 보안 에이전트(ubCUBE/Tgate/Gradius/V3) 충돌 점검 2. 안전모드 진입 후 sfc /scannow 실행 3. 최신 무결성 패치 주입\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]], [[ubCUBE]], [[Tgate]], [[Gradius]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구",
+      "ubCUBE",
+      "Tgate",
+      "Gradius"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-203",
+    "title": "[BSOD] WDF_VIOLATION (0x0000010D)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: WDF_VIOLATION (0x0000010D) - WDF(Windows Driver Framework) 프레임워크 규칙 위반.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "WDF_VIOLATION",
+      "0x0000010D",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code WDF_VIOLATION (0x0000010D).",
+      "background": "[B] WDF(Windows Driver Framework) 프레임워크 규칙 위반. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-204",
+    "title": "[BSOD] VIDEO_MEMORY_MANAGEMENT_INTERNAL (0x0000010E)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: VIDEO_MEMORY_MANAGEMENT_INTERNAL (0x0000010E) - 비디오 그래픽 메모리 관리자 내부 오류.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "VIDEO_MEMORY_MANAGEMENT_INTERNAL",
+      "0x0000010E",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code VIDEO_MEMORY_MANAGEMENT_INTERNAL (0x0000010E).",
+      "background": "[B] 비디오 그래픽 메모리 관리자 내부 오류. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-205",
+    "title": "[BSOD] RESOURCE_MANAGER_EXCEPTION (0x0000010F)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: RESOURCE_MANAGER_EXCEPTION (0x0000010F) - 자원 관리자 서브시스템 예외.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "RESOURCE_MANAGER_EXCEPTION",
+      "0x0000010F",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code RESOURCE_MANAGER_EXCEPTION (0x0000010F).",
+      "background": "[B] 자원 관리자 서브시스템 예외. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-206",
+    "title": "[BSOD] VIDEO_TDR_FAILURE (0x00000116)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: VIDEO_TDR_FAILURE (0x00000116) - 디스플레이 그래픽 드라이버 TDR 복구 실패 (`nvlddmkm.sys`).",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "VIDEO_TDR_FAILURE",
+      "0x00000116",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code VIDEO_TDR_FAILURE (0x00000116).",
+      "background": "[B] 디스플레이 그래픽 드라이버 TDR 복구 실패 (`nvlddmkm.sys`). (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-207",
+    "title": "[BSOD] VIDEO_TDR_TIMEOUT_DETECTED (0x00000117)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: VIDEO_TDR_TIMEOUT_DETECTED (0x00000117) - 디스플레이 그래픽 TDR 타임아웃 감지.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "VIDEO_TDR_TIMEOUT_DETECTED",
+      "0x00000117",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code VIDEO_TDR_TIMEOUT_DETECTED (0x00000117).",
+      "background": "[B] 디스플레이 그래픽 TDR 타임아웃 감지. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-208",
+    "title": "[BSOD] VIDEO_SCHEDULER_INTERNAL_ERROR (0x00000119)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: VIDEO_SCHEDULER_INTERNAL_ERROR (0x00000119) - 비디오 그래픽 스케줄러 내부 커널 오류.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "VIDEO_SCHEDULER_INTERNAL_ERROR",
+      "0x00000119",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code VIDEO_SCHEDULER_INTERNAL_ERROR (0x00000119).",
+      "background": "[B] 비디오 그래픽 스케줄러 내부 커널 오류. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-209",
+    "title": "[BSOD] ATTEMPTED_WRITE_TO_CM_PROTECTED_READONLY_PAGE (0x0000011C)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: ATTEMPTED_WRITE_TO_CM_PROTECTED_READONLY_PAGE (0x0000011C) - 보호된 읽기 전용 CM 페이지 무단 쓰기 시도.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "ATTEMPTED_WRITE_TO_CM_PROTECTED_READONLY_PAGE",
+      "0x0000011C",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code ATTEMPTED_WRITE_TO_CM_PROTECTED_READONLY_PAGE (0x0000011C).",
+      "background": "[B] 보호된 읽기 전용 CM 페이지 무단 쓰기 시도. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-210",
+    "title": "[BSOD] EVENT_TRACING_FATAL_ERROR (0x0000011D)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: EVENT_TRACING_FATAL_ERROR (0x0000011D) - 이벤트 트레이싱(ETW) 치명적 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "EVENT_TRACING_FATAL_ERROR",
+      "0x0000011D",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code EVENT_TRACING_FATAL_ERROR (0x0000011D).",
+      "background": "[B] 이벤트 트레이싱(ETW) 치명적 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-211",
+    "title": "[BSOD] WHEA_UNCORRECTABLE_ERROR (0x00000124)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "하드웨어",
+    "categoryMedium": "하드웨어",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: WHEA_UNCORRECTABLE_ERROR (0x00000124) - 복구 불가능한 하드웨어 물리 에러 발생 (CPU/RAM/전력).",
+    "actionTaken": "1. RAM/CPU 슬롯 청소 및 물리 수리 2. BIOS 설정 초기화 (Load Default) 3. 파워서플라이 및 하드웨어 점검/교체",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "WHEA_UNCORRECTABLE_ERROR",
+      "0x00000124",
+      "하드웨어",
+      "하드웨어"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code WHEA_UNCORRECTABLE_ERROR (0x00000124).",
+      "background": "[B] 복구 불가능한 하드웨어 물리 에러 발생 (CPU/RAM/전력). (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. RAM/CPU 슬롯 청소 및 물리 수리 2. BIOS 설정 초기화 (Load Default) 3. 파워서플라이 및 하드웨어 점검/교체\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]], [[BIOS 초기화]], [[RAM 세척]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구",
+      "BIOS 초기화",
+      "RAM 세척"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-212",
+    "title": "[BSOD] FAULTY_HARDWARE_CORRUPTED_PAGE (0x0000012B)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: FAULTY_HARDWARE_CORRUPTED_PAGE (0x0000012B) - 불량 물리 메모리(RAM) 카드로 인한 페이지 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "FAULTY_HARDWARE_CORRUPTED_PAGE",
+      "0x0000012B",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code FAULTY_HARDWARE_CORRUPTED_PAGE (0x0000012B).",
+      "background": "[B] 불량 물리 메모리(RAM) 카드로 인한 페이지 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-213",
+    "title": "[BSOD] DPC_WATCHDOG_VIOLATION (0x00000133)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: DPC_WATCHDOG_VIOLATION (0x00000133) - DPC 감시 타이머 응답 초과. SSD 펌웨어/AHCI 드라이버 호환성.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "DPC_WATCHDOG_VIOLATION",
+      "0x00000133",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code DPC_WATCHDOG_VIOLATION (0x00000133).",
+      "background": "[B] DPC 감시 타이머 응답 초과. SSD 펌웨어/AHCI 드라이버 호환성. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-214",
+    "title": "[BSOD] KERNEL_SECURITY_CHECK_FAILURE (0x00000139)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "보안프로그램",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: KERNEL_SECURITY_CHECK_FAILURE (0x00000139) - 커널 보안 체크 실패. 이중 설치 보안 프로그램 충돌.",
+    "actionTaken": "1. 이중 설치된 보안 에이전트(ubCUBE/Tgate/Gradius/V3) 충돌 점검 2. 안전모드 진입 후 sfc /scannow 실행 3. 최신 무결성 패치 주입",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "KERNEL_SECURITY_CHECK_FAILURE",
+      "0x00000139",
+      "보안프로그램",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code KERNEL_SECURITY_CHECK_FAILURE (0x00000139).",
+      "background": "[B] 커널 보안 체크 실패. 이중 설치 보안 프로그램 충돌. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. 이중 설치된 보안 에이전트(ubCUBE/Tgate/Gradius/V3) 충돌 점검 2. 안전모드 진입 후 sfc /scannow 실행 3. 최신 무결성 패치 주입\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]], [[ubCUBE]], [[Tgate]], [[Gradius]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구",
+      "ubCUBE",
+      "Tgate",
+      "Gradius"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-215",
+    "title": "[BSOD] KERNEL_MODE_HEAP_CORRUPTION (0x0000013A)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: KERNEL_MODE_HEAP_CORRUPTION (0x0000013A) - 커널 모드 힙 메모리 덮어쓰기 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "KERNEL_MODE_HEAP_CORRUPTION",
+      "0x0000013A",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code KERNEL_MODE_HEAP_CORRUPTION (0x0000013A).",
+      "background": "[B] 커널 모드 힙 메모리 덮어쓰기 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-216",
+    "title": "[BSOD] BUGCODE_USB3_DRIVER (0x00000144)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: BUGCODE_USB3_DRIVER (0x00000144) - USB 3.0 포트 드라이버 버그 코드 발생.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "BUGCODE_USB3_DRIVER",
+      "0x00000144",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code BUGCODE_USB3_DRIVER (0x00000144).",
+      "background": "[B] USB 3.0 포트 드라이버 버그 코드 발생. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-217",
+    "title": "[BSOD] SOC_SUBSYSTEM_FAILURE (0x0000014B)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SOC_SUBSYSTEM_FAILURE (0x0000014B) - SoC 원칩 하드웨어 서브시스템 실패.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SOC_SUBSYSTEM_FAILURE",
+      "0x0000014B",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SOC_SUBSYSTEM_FAILURE (0x0000014B).",
+      "background": "[B] SoC 원칩 하드웨어 서브시스템 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-218",
+    "title": "[BSOD] UNEXPECTED_STORE_EXCEPTION (0x00000154)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: UNEXPECTED_STORE_EXCEPTION (0x00000154) - 메모리 압축 스토어 커널 예외. SSD 불량 배드섹터 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "UNEXPECTED_STORE_EXCEPTION",
+      "0x00000154",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code UNEXPECTED_STORE_EXCEPTION (0x00000154).",
+      "background": "[B] 메모리 압축 스토어 커널 예외. SSD 불량 배드섹터 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-219",
+    "title": "[BSOD] WIN32K_CRITICAL_FAILURE (0x00000164)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: WIN32K_CRITICAL_FAILURE (0x00000164) - win32k.sys 그래픽 서브시스템 치명적 오류.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "WIN32K_CRITICAL_FAILURE",
+      "0x00000164",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code WIN32K_CRITICAL_FAILURE (0x00000164).",
+      "background": "[B] win32k.sys 그래픽 서브시스템 치명적 오류. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-220",
+    "title": "[BSOD] MICROCODE_REVISION_MISMATCH (0x0000017E)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: MICROCODE_REVISION_MISMATCH (0x0000017E) - CPU 마이크로코드 바이오스 릴리즈 불일치.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "MICROCODE_REVISION_MISMATCH",
+      "0x0000017E",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code MICROCODE_REVISION_MISMATCH (0x0000017E).",
+      "background": "[B] CPU 마이크로코드 바이오스 릴리즈 불일치. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-221",
+    "title": "[BSOD] SECURE_KERNEL_ERROR (0x00000180)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "보안프로그램",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SECURE_KERNEL_ERROR (0x00000180) - 보안 커널(VBS/Hyper-V) 무결성 검증 실패.",
+    "actionTaken": "1. 이중 설치된 보안 에이전트(ubCUBE/Tgate/Gradius/V3) 충돌 점검 2. 안전모드 진입 후 sfc /scannow 실행 3. 최신 무결성 패치 주입",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SECURE_KERNEL_ERROR",
+      "0x00000180",
+      "보안프로그램",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SECURE_KERNEL_ERROR (0x00000180).",
+      "background": "[B] 보안 커널(VBS/Hyper-V) 무결성 검증 실패. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. 이중 설치된 보안 에이전트(ubCUBE/Tgate/Gradius/V3) 충돌 점검 2. 안전모드 진입 후 sfc /scannow 실행 3. 최신 무결성 패치 주입\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]], [[ubCUBE]], [[Tgate]], [[Gradius]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구",
+      "ubCUBE",
+      "Tgate",
+      "Gradius"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-222",
+    "title": "[BSOD] KERNEL_AUTO_BOOST_INVALID_LOCK_RELEASE (0x00000192)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: KERNEL_AUTO_BOOST_INVALID_LOCK_RELEASE (0x00000192) - 커널 오토 부스트 잠금 해제 무효.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "KERNEL_AUTO_BOOST_INVALID_LOCK_RELEASE",
+      "0x00000192",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code KERNEL_AUTO_BOOST_INVALID_LOCK_RELEASE (0x00000192).",
+      "background": "[B] 커널 오토 부스트 잠금 해제 무효. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-223",
+    "title": "[BSOD] WIN32K_POWER_WATCHDOG_TIMEOUT (0x0000019C)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: WIN32K_POWER_WATCHDOG_TIMEOUT (0x0000019C) - win32k 전원 관리 와치독 타임아웃.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "WIN32K_POWER_WATCHDOG_TIMEOUT",
+      "0x0000019C",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code WIN32K_POWER_WATCHDOG_TIMEOUT (0x0000019C).",
+      "background": "[B] win32k 전원 관리 와치독 타임아웃. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-224",
+    "title": "[BSOD] WIN32K_CALLOUT_WATCHDOG_TIMEOUT (0x000001A1)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: WIN32K_CALLOUT_WATCHDOG_TIMEOUT (0x000001A1) - win32k 콜아웃 와치독 타임아웃.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "WIN32K_CALLOUT_WATCHDOG_TIMEOUT",
+      "0x000001A1",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code WIN32K_CALLOUT_WATCHDOG_TIMEOUT (0x000001A1).",
+      "background": "[B] win32k 콜아웃 와치독 타임아웃. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-225",
+    "title": "[BSOD] STORE_DATA_STRUCTURE_CORRUPTION (0x000001C7)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: STORE_DATA_STRUCTURE_CORRUPTION (0x000001C7) - 메모리 압축 스토어 구조체 파손.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "STORE_DATA_STRUCTURE_CORRUPTION",
+      "0x000001C7",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code STORE_DATA_STRUCTURE_CORRUPTION (0x000001C7).",
+      "background": "[B] 메모리 압축 스토어 구조체 파손. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-226",
+    "title": "[BSOD] UCMUCSI_FAILURE (0x000001D4)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: UCMUCSI_FAILURE (0x000001D4) - USB-C 타입 전원 전달(PD) 커널 드라이버 에러.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "UCMUCSI_FAILURE",
+      "0x000001D4",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code UCMUCSI_FAILURE (0x000001D4).",
+      "background": "[B] USB-C 타입 전원 전달(PD) 커널 드라이버 에러. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-227",
+    "title": "[BSOD] PROMETHEUS_DRIVER_FATAL_ERROR (0x000001E3)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: PROMETHEUS_DRIVER_FATAL_ERROR (0x000001E3) - Prometheus 보안 드라이버 치명적 오류.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "PROMETHEUS_DRIVER_FATAL_ERROR",
+      "0x000001E3",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code PROMETHEUS_DRIVER_FATAL_ERROR (0x000001E3).",
+      "background": "[B] Prometheus 보안 드라이버 치명적 오류. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
+  },
+  {
+    "id": "bsod-full-228",
+    "title": "[BSOD] SYNTHETIC_HEARTBEAT_TIMEOUT (0x000001FC)",
+    "sourceFile": "Microsoft Learn Official Bug Check Code Reference (Windows 11)",
+    "date": "2026-08-07",
+    "department": "전사",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "OS",
+    "symptom": "Windows 11 Stop Code 블루스크린 오류: SYNTHETIC_HEARTBEAT_TIMEOUT (0x000001FC) - 가상화 Hyper-V 헬스 하트비트 타임아웃.",
+    "actionTaken": "1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치",
+    "tags": [
+      "Windows11",
+      "BSOD",
+      "블루스크린",
+      "SYNTHETIC_HEARTBEAT_TIMEOUT",
+      "0x000001FC",
+      "소프트웨어",
+      "OS"
+    ],
+    "sbar": {
+      "situation": "[S] Windows 11 디바이스 가동 중 커널 정지 블루스크린 표출: Stop Code SYNTHETIC_HEARTBEAT_TIMEOUT (0x000001FC).",
+      "background": "[B] 가상화 Hyper-V 헬스 하트비트 타임아웃. (Microsoft 공식 버그체크 레퍼런스 규격).",
+      "assessment": "[A] 커널 메모리 무결성, 드라이버 호환성, 하드웨어 I/O 응답 지연 또는 보안 솔루션 정책 충돌.",
+      "recommendation": "[R] 1. Shift+다시시작으로 안전모드 진입 2. 장치관리자 드라이버 롤백/제거 3. dism /restorehealth 및 sfc /scannow 4. 복구 불가능 시 OS 클린 재설치\n\n📌 연관 복구 가이드: [[안전 모드]], [[sfc /scannow]], [[DISM 복구]]"
+    },
+    "wikilinks": [
+      "안전 모드",
+      "sfc /scannow",
+      "DISM 복구"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-08-07T05:31:38.530Z",
+    "updatedAt": "2026-08-07T05:31:38.530Z"
   },
   {
     "id": "seed-1",
