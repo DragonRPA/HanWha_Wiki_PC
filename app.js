@@ -27,8 +27,7 @@
     categoryLarge: '',
     categoryMedium: '',
     source: '',
-    sidebarTag: '',
-    sidebarCategory: 'all'
+    tag: ''
   };
 
   let currentArticleId = null;
@@ -216,20 +215,16 @@
   function getFilteredItems() {
     let results = knowledgeStore;
 
-    if (activeFilter.sidebarCategory && activeFilter.sidebarCategory !== 'all') {
-      results = results.filter(item => item.categoryLarge === activeFilter.sidebarCategory);
-    }
-
-    if (activeFilter.sidebarTag) {
-      results = results.filter(item => item.tags && item.tags.includes(activeFilter.sidebarTag));
-    }
-
     if (activeFilter.categoryLarge) {
       results = results.filter(item => item.categoryLarge === activeFilter.categoryLarge);
     }
 
     if (activeFilter.categoryMedium) {
       results = results.filter(item => item.categoryMedium === activeFilter.categoryMedium);
+    }
+
+    if (activeFilter.tag) {
+      results = results.filter(item => item.tags && item.tags.includes(activeFilter.tag));
     }
 
     if (activeFilter.source) {
@@ -278,14 +273,20 @@
       }
     });
 
+    const isAllActive = !activeFilter.categoryLarge && !activeFilter.tag;
+    const allItem = document.querySelector('.filter-item[data-filter-type="all"]');
+    if (allItem) {
+      if (isAllActive) allItem.classList.add('active');
+      else allItem.classList.remove('active');
+    }
+
     categoryLargeContainer.innerHTML = Object.entries(categoryCounts).map(([cat, count]) => `
-      <li class="filter-item ${activeFilter.sidebarCategory === cat ? 'active' : ''}" data-filter-type="category" data-filter-value="${escapeHtml(cat)}">
+      <li class="filter-item ${activeFilter.categoryLarge === cat ? 'active' : ''}" data-filter-type="category" data-filter-value="${escapeHtml(cat)}">
         <span>${escapeHtml(cat)}</span>
         <span class="filter-count">${count}</span>
       </li>
     `).join('');
 
-    // Curated Top 8 Tags to prevent endless sidebar clutter
     const tagCounts = {};
     knowledgeStore.forEach(item => {
       if (Array.isArray(item.tags)) {
@@ -301,7 +302,7 @@
       .sort((a, b) => b[1] - a[1])
       .slice(0, 8)
       .map(([tag, count]) => `
-        <li class="filter-item ${activeFilter.sidebarTag === tag ? 'active' : ''}" data-filter-type="tag" data-filter-value="${escapeHtml(tag)}">
+        <li class="filter-item ${activeFilter.tag === tag ? 'active' : ''}" data-filter-type="tag" data-filter-value="${escapeHtml(tag)}">
           <span>🏷️ ${escapeHtml(tag)}</span>
           <span class="filter-count">${count}</span>
         </li>
@@ -317,7 +318,13 @@
 
     knowledgeStore.forEach(item => {
       if (item.categoryLarge) catLargeSet.add(item.categoryLarge);
-      if (item.categoryMedium) catMediumSet.add(item.categoryMedium);
+      if (activeFilter.categoryLarge) {
+        if (item.categoryLarge === activeFilter.categoryLarge && item.categoryMedium) {
+          catMediumSet.add(item.categoryMedium);
+        }
+      } else {
+        if (item.categoryMedium) catMediumSet.add(item.categoryMedium);
+      }
     });
 
     catLargeSelect.innerHTML = '<option value="">전체 대분류</option>' + 
@@ -819,6 +826,8 @@
     // Filter Dropdowns
     document.getElementById('select-filter-category-large').addEventListener('change', (e) => {
       activeFilter.categoryLarge = e.target.value;
+      activeFilter.categoryMedium = '';
+      activeFilter.tag = '';
       currentPage = 1;
       renderApp();
     });
@@ -841,8 +850,7 @@
         categoryLarge: '',
         categoryMedium: '',
         source: '',
-        sidebarTag: '',
-        sidebarCategory: 'all'
+        tag: ''
       };
       currentPage = 1;
       document.getElementById('input-search-query').value = '';
@@ -876,12 +884,19 @@
         const filterValue = filterItem.getAttribute('data-filter-value');
 
         if (filterType === 'all') {
-          activeFilter.sidebarCategory = 'all';
-          activeFilter.sidebarTag = '';
+          activeFilter.categoryLarge = '';
+          activeFilter.categoryMedium = '';
+          activeFilter.tag = '';
         } else if (filterType === 'category') {
-          activeFilter.sidebarCategory = filterValue;
+          // Select category & clear tag/medium filters to avoid unwanted intersection
+          activeFilter.categoryLarge = filterValue;
+          activeFilter.categoryMedium = '';
+          activeFilter.tag = '';
         } else if (filterType === 'tag') {
-          activeFilter.sidebarTag = filterValue;
+          // Select tag & clear category filter
+          activeFilter.tag = filterValue;
+          activeFilter.categoryLarge = '';
+          activeFilter.categoryMedium = '';
         }
         currentPage = 1;
         renderApp();

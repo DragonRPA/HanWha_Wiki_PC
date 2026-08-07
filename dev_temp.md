@@ -1,17 +1,20 @@
 # HanWha Wiki PC 개발 요구사항 및 진행 현황 (dev_temp.md)
 
 ## 요구사항 요약
-1. SRS v2.0 및 실무 CSV/TXT 데이터 전체 1,514건 + **Microsoft 공식 Bug Check Code Reference전수 228개 Windows 11 BSOD 자동 수집/파싱 및 지식 인입 (총 1,742건)**
+1. SRS v2.0 및 실무 CSV/TXT 데이터 전체 1,514건 + Microsoft 공식 Windows 11 BSOD (228건) 전수 탑재 (총 1,742건)
 2. IT 기술 용어 및 트러블슈팅 지식 누적 시스템 구축 (KCS 2026 SBAR 템플릿 적용)
 3. 지식 간 자유로운 양방향 WikiLink (`[[용어명]]`) 파싱 및 탐색 기능
-4. **Microsoft 공식 Windows 11 전체 블루스크린 (228개 Stop Code) 전수 수집 및 자동 시드 구축 (v1.5.0)**:
-   - Microsoft Learn / SDK 커널 레퍼런스 기준 `0x00000001 (APC_INDEX_MISMATCH)` ~ `0x000001FC (SYNTHETIC_HEARTBEAT_TIMEOUT)`까지 228개 전수 Stop Code 자동 수집 및 한글 SBAR 구조 변환
-   - `build_all_windows11_bsods.js` 스크립트를 통한 자동 추출/시드 파이프라인 구축
+4. **사이드바-드롭다운 필터 교집합 오작동 버그 수정 (v1.5.1)**:
+   - 원인 분석: `sidebarCategory`와 `categoryLarge`(드롭다운), `sidebarTag` 간의 개별 상태 분리로 인해 사이드바 항목 클릭 시 기존 태그/드롭다운 조건과 불필요한 교집합(AND 조건) 연산이 수행되어 표시 건수가 다르게 나오는 현상 발생.
+   - 해결 조치:
+     - `sidebarCategory`와 `categoryLarge` 필터를 단일 `activeFilter.categoryLarge`로 통합 일원화.
+     - 사이드바에서 대분류(예: `소프트웨어 (627)`) 클릭 시 충돌되는 태그(`tag`) 및 중분류(`categoryMedium`) 조건을 자동 해제하여 **정확히 627건이 100% 조회**되도록 수정.
+     - 사이드바 대분류 클릭 시 상단 `[대분류 선택]` 드롭다운 선택값 및 `[중분류 선택]` 옵션 항목이 동적으로 자동 동기화되도록 연동.
+     - 사이드바 태그(예: `🏷️ OS (353)`) 클릭 시 대분류 필터를 자동 클리어하여 **정확히 353건이 100% 조회**되도록 개선.
 5. 화면 배분 극대화 & 고밀도 정보 표시 개편 (v1.3.0)
 6. JSON / CSV 백업 및 복원 기능
 7. 전사 UI/UX 개발 표준 100% 준수 (Rule 3.1, 3.2, 3.4)
 
 ## 작업 진행 단계
-- [x] Microsoft 공식 Windows 11 전체 228개 BSOD Stop Code 자동 추출/파싱 파이프라인 구축 완료 (총 1,742건)
-- [x] `seed_data.js` 및 `data/seed.csv` 1,742건 전수 동기화 완료
-- [x] `RELEASE_NOTES.md` (v1.5.0.Build.1) 작성 및 Git push 완료
+- [x] 필터 일원화 및 사이드바-드롭다운 동기화, 교집합 버그 수정 완료
+- [x] `RELEASE_NOTES.md` (v1.5.1.Build.1) 작성 및 Git push 완료
