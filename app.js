@@ -20,7 +20,7 @@
   // View & Pagination State
   let currentViewMode = 'table'; // 'table' | 'card' | 'article'
   let currentPage = 1;
-  let pageSize = 25;
+  let pageSize = 15;
 
   let activeFilter = {
     query: '',
