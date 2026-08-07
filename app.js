@@ -1,10 +1,10 @@
 /**
- * HanWha IT Service Knowledge Wiki Platform - Application Core Logic
+ * HanWha IT Service Knowledge Wiki Platform - High-Density Application Logic
  * Adheres strictly to Enterprise System Development Standards Charter
  * - Rule 3.1: Dry & Professional UI Labels
- * - Rule 3.2: No-Wrap Text Standards
- * - Rule 3.4: Vertical Stack Layout for Forms
- * - Rule 5.2: Zero Silent Failures (Explicit Error Modals & Validation)
+ * - Rule 3.2: No-Wrap & Flex-Shrink-0 Standard (First Column Action Button)
+ * - Rule 3.4: Vertical Header-Label Layout Standard (flex-direction: column; gap: 2px)
+ * - Rule 5.2: Zero Silent Failures
  */
 
 (function () {
@@ -16,6 +16,12 @@
   
   let knowledgeStore = [];
   let fuseInstance = null;
+
+  // View & Pagination State
+  let currentViewMode = 'table'; // 'table' | 'card' | 'article'
+  let currentPage = 1;
+  let pageSize = 25;
+
   let activeFilter = {
     query: '',
     categoryLarge: '',
@@ -24,6 +30,7 @@
     sidebarTag: '',
     sidebarCategory: 'all'
   };
+
   let currentArticleId = null;
   let visitHistory = [];
 
@@ -38,7 +45,7 @@
         try { parsed = JSON.parse(savedData); } catch (e) {}
       }
 
-      // If SEED_KNOWLEDGE_DATA has more items than cached localStorage, update automatically!
+      // Automatically update if seed data has more items
       if (typeof SEED_KNOWLEDGE_DATA !== 'undefined' && Array.isArray(SEED_KNOWLEDGE_DATA)) {
         if (!parsed || parsed.length < SEED_KNOWLEDGE_DATA.length) {
           knowledgeStore = [...SEED_KNOWLEDGE_DATA];
@@ -73,6 +80,7 @@
       if (confirm(`현재 저장소 데이터를 최신 시드 데이터(${SEED_KNOWLEDGE_DATA.length}건)로 전체 동기화하시겠습니까?`)) {
         knowledgeStore = [...SEED_KNOWLEDGE_DATA];
         saveDataStore();
+        currentPage = 1;
         renderApp();
         alert(`성공적으로 ${SEED_KNOWLEDGE_DATA.length}건의 시드 데이터가 동기화되었습니다!`);
       }
@@ -113,16 +121,13 @@
   // 3. WikiLink Parser & Backlink Registry
   // =========================================================================
   function updateBacklinks() {
-    // Reset all backlinks
     knowledgeStore.forEach(item => item.backlinks = []);
 
-    // Create title map
     const titleMap = new Map();
     knowledgeStore.forEach(item => {
       titleMap.set(item.title.trim().toLowerCase(), item.id);
     });
 
-    // Scan links
     knowledgeStore.forEach(sourceItem => {
       const links = extractWikiLinks(sourceItem);
       sourceItem.wikilinks = links;
@@ -165,7 +170,6 @@
   function renderWikiMarkdown(text) {
     if (!text) return '';
     
-    // Replace [[Link]] with HTML placeholders
     const wikiRegex = /\[\[(.*?)\]\]/g;
     const processedText = text.replace(wikiRegex, (match, p1) => {
       let targetTitle = p1.trim();
@@ -197,39 +201,41 @@
   function renderApp() {
     renderSidebar();
     renderFilterDropdowns();
-    renderKnowledgeGrid();
+    
+    if (currentViewMode === 'table') {
+      renderKnowledgeTable();
+    } else if (currentViewMode === 'card') {
+      renderKnowledgeGrid();
+    } else if (currentViewMode === 'article' && currentArticleId) {
+      openArticleViewer(currentArticleId);
+    }
+    
     renderHistoryCrumbs();
   }
 
   function getFilteredItems() {
     let results = knowledgeStore;
 
-    // Sidebar Category Filter
     if (activeFilter.sidebarCategory && activeFilter.sidebarCategory !== 'all') {
       results = results.filter(item => item.categoryLarge === activeFilter.sidebarCategory);
     }
 
-    // Sidebar Tag Filter
     if (activeFilter.sidebarTag) {
       results = results.filter(item => item.tags && item.tags.includes(activeFilter.sidebarTag));
     }
 
-    // Category Large Select Filter
     if (activeFilter.categoryLarge) {
       results = results.filter(item => item.categoryLarge === activeFilter.categoryLarge);
     }
 
-    // Category Medium Select Filter
     if (activeFilter.categoryMedium) {
       results = results.filter(item => item.categoryMedium === activeFilter.categoryMedium);
     }
 
-    // Source Filter
     if (activeFilter.source) {
       results = results.filter(item => item.sourceFile === activeFilter.source);
     }
 
-    // Fuzzy Query Search
     if (activeFilter.query.trim() && fuseInstance) {
       const fuseResults = fuseInstance.search(activeFilter.query.trim());
       const searchIds = new Set(fuseResults.map(r => r.item.id));
@@ -239,6 +245,25 @@
     return results;
   }
 
+  function getPaginatedItems(filteredItems) {
+    const totalItems = filteredItems.length;
+    const totalPages = Math.ceil(totalItems / pageSize) || 1;
+
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = Math.min(startIndex + pageSize, totalItems);
+
+    return {
+      items: filteredItems.slice(startIndex, endIndex),
+      totalItems,
+      totalPages,
+      startIndex: totalItems > 0 ? startIndex + 1 : 0,
+      endIndex
+    };
+  }
+
   function renderSidebar() {
     const categoryLargeContainer = document.getElementById('sidebar-category-large');
     const tagsContainer = document.getElementById('sidebar-tags');
@@ -246,7 +271,6 @@
 
     if (countAllEl) countAllEl.textContent = knowledgeStore.length;
 
-    // Aggregate Categories
     const categoryCounts = {};
     knowledgeStore.forEach(item => {
       if (item.categoryLarge) {
@@ -261,12 +285,12 @@
       </li>
     `).join('');
 
-    // Aggregate Tags
+    // Curated Top 8 Tags to prevent endless sidebar clutter
     const tagCounts = {};
     knowledgeStore.forEach(item => {
       if (Array.isArray(item.tags)) {
         item.tags.forEach(tag => {
-          if (tag.trim()) {
+          if (tag.trim() && !categoryCounts[tag.trim()]) {
             tagCounts[tag.trim()] = (tagCounts[tag.trim()] || 0) + 1;
           }
         });
@@ -275,7 +299,7 @@
 
     tagsContainer.innerHTML = Object.entries(tagCounts)
       .sort((a, b) => b[1] - a[1])
-      .slice(0, 15)
+      .slice(0, 8)
       .map(([tag, count]) => `
         <li class="filter-item ${activeFilter.sidebarTag === tag ? 'active' : ''}" data-filter-type="tag" data-filter-value="${escapeHtml(tag)}">
           <span>🏷️ ${escapeHtml(tag)}</span>
@@ -303,42 +327,95 @@
       Array.from(catMediumSet).map(c => `<option value="${escapeHtml(c)}" ${activeFilter.categoryMedium === c ? 'selected' : ''}>${escapeHtml(c)}</option>`).join('');
   }
 
-  function renderKnowledgeGrid() {
-    const listContainer = document.getElementById('view-container-list');
+  // =========================================================================
+  // High-Density Data Table Rendering (Default Maximized Screen View)
+  // =========================================================================
+  function renderKnowledgeTable() {
     const filteredItems = getFilteredItems();
+    const pagination = getPaginatedItems(filteredItems);
 
-    if (filteredItems.length === 0) {
-      listContainer.innerHTML = `
-        <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--text-muted);">
-          <i data-lucide="inbox" style="width: 48px; height: 48px; margin-bottom: 12px;"></i>
-          <p style="font-size: 1rem; font-weight: 600;">검색 결과가 없습니다.</p>
-          <p style="font-size: 0.85rem; margin-top: 4px;">다른 검색어나 필터를 선택해 보세요.</p>
-        </div>
+    updatePaginationUI(pagination);
+
+    const tbody = document.getElementById('table-body-knowledge');
+    if (!tbody) return;
+
+    if (pagination.items.length === 0) {
+      tbody.innerHTML = `
+        <tr>
+          <td colspan="8" style="text-align: center; padding: 40px; color: var(--text-muted);">
+            조회된 지식 데이터가 없습니다.
+          </td>
+        </tr>
       `;
-      if (window.lucide) lucide.createIcons();
       return;
     }
 
-    listContainer.innerHTML = filteredItems.map(item => `
-      <div class="knowledge-card" data-article-id="${item.id}">
-        <div>
-          <div class="card-header">
-            <div class="card-title">${escapeHtml(item.title)}</div>
-            <span class="card-badge">${escapeHtml(item.categoryLarge || '기타')}</span>
-          </div>
-          <div class="card-symptom" style="margin-top: 8px;">
-            ${escapeHtml(item.symptom || '증상 미기재')}
-          </div>
-        </div>
+    // Rule 3.2: First Column Action Button [상세 ➔], No-Wrap Table Cells
+    tbody.innerHTML = pagination.items.map(item => `
+      <tr data-article-id="${item.id}">
+        <td style="text-align: center; white-space: nowrap;">
+          <button class="btn-action-cell" data-article-id="${item.id}">상세 ➔</button>
+        </td>
+        <td class="table-cell-title" title="${escapeHtml(item.title)}">${escapeHtml(item.title)}</td>
+        <td style="white-space: nowrap;"><span class="badge-tag">${escapeHtml(item.categoryLarge || '기타')}</span></td>
+        <td style="white-space: nowrap;">${escapeHtml(item.categoryMedium || '일반')}</td>
+        <td style="white-space: nowrap;">${escapeHtml(item.department || '전사')}</td>
+        <td class="table-cell-symptom" title="${escapeHtml(item.symptom)}">${escapeHtml(item.symptom)}</td>
+        <td class="table-cell-action" title="${escapeHtml(item.actionTaken)}">${escapeHtml(item.actionTaken)}</td>
+        <td style="white-space: nowrap; font-size: 0.75rem; color: var(--text-muted);">${escapeHtml(item.date || '')}</td>
+      </tr>
+    `).join('');
+  }
 
-        <div class="card-footer">
-          <span>🏢 ${escapeHtml(item.department || '부서 미지정')}</span>
-          <span>📅 ${escapeHtml(item.date || '날짜 미상')}</span>
+  function renderKnowledgeGrid() {
+    const listContainer = document.getElementById('view-container-list');
+    const filteredItems = getFilteredItems();
+    const pagination = getPaginatedItems(filteredItems);
+
+    updatePaginationUI(pagination);
+
+    if (pagination.items.length === 0) {
+      listContainer.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align: center; padding: 40px 20px; color: var(--text-muted);">
+          <p style="font-size: 0.95rem; font-weight: 600;">조회된 지식 데이터가 없습니다.</p>
+        </div>
+      `;
+      return;
+    }
+
+    listContainer.innerHTML = pagination.items.map(item => `
+      <div class="knowledge-card" data-article-id="${item.id}">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <div class="card-title">${escapeHtml(item.title)}</div>
+          <span class="badge-tag" style="flex-shrink: 0;">${escapeHtml(item.categoryLarge || '기타')}</span>
+        </div>
+        <div style="font-size: 0.8rem; color: var(--text-secondary); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+          ${escapeHtml(item.symptom)}
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.73rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 6px;">
+          <span>🏢 ${escapeHtml(item.department || '전사')}</span>
+          <span>📅 ${escapeHtml(item.date || '')}</span>
         </div>
       </div>
     `).join('');
+  }
 
-    if (window.lucide) lucide.createIcons();
+  function updatePaginationUI(pagination) {
+    const textInfo = document.getElementById('text-pagination-info');
+    const textPageCurrent = document.getElementById('text-page-current');
+    const btnPrev = document.getElementById('btn-prev-page');
+    const btnNext = document.getElementById('btn-next-page');
+
+    if (textInfo) {
+      textInfo.textContent = `총 ${pagination.totalItems.toLocaleString()}건 중 ${pagination.startIndex}-${pagination.endIndex} 표시`;
+    }
+
+    if (textPageCurrent) {
+      textPageCurrent.textContent = `${currentPage} / ${pagination.totalPages}`;
+    }
+
+    if (btnPrev) btnPrev.disabled = (currentPage <= 1);
+    if (btnNext) btnNext.disabled = (currentPage >= pagination.totalPages);
   }
 
   function openArticleViewer(articleId) {
@@ -346,20 +423,26 @@
     if (!item) return;
 
     currentArticleId = articleId;
+    currentViewMode = 'article';
     addToHistory(item);
 
     const articleContainer = document.getElementById('view-container-article');
     const listContainer = document.getElementById('view-container-list');
-    const tabBtnList = document.getElementById('tab-btn-list');
+    const tableContainer = document.getElementById('view-container-table');
+
+    const tabBtnTable = document.getElementById('tab-btn-table');
+    const tabBtnCard = document.getElementById('tab-btn-card');
     const tabBtnArticle = document.getElementById('tab-btn-article');
 
+    tableContainer.style.display = 'none';
     listContainer.style.display = 'none';
     articleContainer.style.display = 'flex';
+
     tabBtnArticle.style.display = 'inline-flex';
     tabBtnArticle.classList.add('active');
-    tabBtnList.classList.remove('active');
+    tabBtnTable.classList.remove('active');
+    tabBtnCard.classList.remove('active');
 
-    // Build Backlinks Chips
     const backlinksHtml = (item.backlinks || []).map(bId => {
       const bItem = knowledgeStore.find(i => i.id === bId);
       if (!bItem) return '';
@@ -368,24 +451,24 @@
 
     articleContainer.innerHTML = `
       <div class="article-header">
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px;">
           <div>
-            <h1 style="font-size: 1.6rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">${escapeHtml(item.title)}</h1>
-            <div class="article-meta-row">
-              <span class="article-meta-item">📁 대분류: <strong>${escapeHtml(item.categoryLarge || '미지정')}</strong></span>
-              <span class="article-meta-item">🏷️ 중분류: <strong>${escapeHtml(item.categoryMedium || '미지정')}</strong></span>
-              <span class="article-meta-item">🏢 관련 부서: <strong>${escapeHtml(item.department || '전사')}</strong></span>
-              <span class="article-meta-item">📄 출처: <strong>${escapeHtml(item.sourceFile || '수동등록')}</strong></span>
-              <span class="article-meta-item">📅 등록일: <strong>${escapeHtml(item.date || '')}</strong></span>
+            <h1 style="font-size: 1.35rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">${escapeHtml(item.title)}</h1>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; color: var(--text-secondary); white-space: nowrap;">
+              <span>📁 대분류: <strong>${escapeHtml(item.categoryLarge || '미지정')}</strong></span>
+              <span>🏷️ 중분류: <strong>${escapeHtml(item.categoryMedium || '미지정')}</strong></span>
+              <span>🏢 관련 부서: <strong>${escapeHtml(item.department || '전사')}</strong></span>
+              <span>📄 출처: <strong>${escapeHtml(item.sourceFile || '수동등록')}</strong></span>
+              <span>📅 등록일: <strong>${escapeHtml(item.date || '')}</strong></span>
             </div>
           </div>
 
-          <div style="display: flex; gap: 8px; flex-shrink: 0;">
-            <button id="btn-edit-article" class="btn btn-secondary" data-article-id="${item.id}">
+          <div style="display: flex; gap: 6px; flex-shrink: 0;">
+            <button id="btn-edit-article" class="btn btn-secondary btn-sm" data-article-id="${item.id}">
               <i data-lucide="edit"></i>
               <span>지식 수정</span>
             </button>
-            <button id="btn-delete-article" class="btn btn-danger" data-article-id="${item.id}">
+            <button id="btn-delete-article" class="btn btn-danger btn-sm" data-article-id="${item.id}">
               <i data-lucide="trash-2"></i>
               <span>삭제</span>
             </button>
@@ -393,21 +476,21 @@
         </div>
       </div>
 
-      <!-- Raw Symptom & Action Section -->
-      <div style="display: flex; flex-direction: column; gap: 12px; background-color: var(--bg-primary); padding: 16px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+      <!-- Raw Symptom & Action -->
+      <div style="display: flex; flex-direction: column; gap: 8px; background-color: var(--bg-primary); padding: 12px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
         <div>
-          <h4 style="font-size: 0.85rem; color: var(--accent-warning); font-weight: 700;">🚨 접수 증상 (Symptom)</h4>
-          <p style="font-size: 0.95rem; color: var(--text-primary); margin-top: 4px;">${escapeHtml(item.symptom)}</p>
+          <h4 style="font-size: 0.8rem; color: var(--accent-warning); font-weight: 700;">🚨 접수 증상 (Symptom)</h4>
+          <p style="font-size: 0.88rem; color: var(--text-primary); margin-top: 2px;">${escapeHtml(item.symptom)}</p>
         </div>
-        <div style="border-top: 1px dashed var(--border-color); padding-top: 8px;">
-          <h4 style="font-size: 0.85rem; color: var(--accent-success); font-weight: 700;">✅ 원문 조치 내역 (Action Taken)</h4>
-          <p style="font-size: 0.95rem; color: var(--text-primary); margin-top: 4px;">${escapeHtml(item.actionTaken || '조치 내역 없음')}</p>
+        <div style="border-top: 1px dashed var(--border-color); padding-top: 6px;">
+          <h4 style="font-size: 0.8rem; color: var(--accent-success); font-weight: 700;">✅ 원문 조치 내역 (Action Taken)</h4>
+          <p style="font-size: 0.88rem; color: var(--text-primary); margin-top: 2px;">${escapeHtml(item.actionTaken || '조치 내역 없음')}</p>
         </div>
       </div>
 
-      <!-- KCS 2026 SBAR Guidance Section -->
+      <!-- KCS SBAR Guidance -->
       <div>
-        <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">📋 KCS SBAR 정형 지식 가이드</h3>
+        <h3 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px;">📋 KCS SBAR 정형 지식 가이드</h3>
         <div class="sbar-container">
           <div class="sbar-box">
             <span class="sbar-title">📌 [S] 상황 개요 (Situation)</span>
@@ -419,7 +502,7 @@
           </div>
           <div class="sbar-box">
             <span class="sbar-title">🔍 [A] 원인 분석 (Assessment)</span>
-            <div class="sbar-content">${renderWikiMarkdown(item.sbar?.assessment || '원인 분석 데이터가 등록되지 않았습니다.')}</div>
+            <div class="sbar-content">${renderWikiMarkdown(item.sbar?.assessment || '원인 분석 데이터 미입력')}</div>
           </div>
           <div class="sbar-box">
             <span class="sbar-title">💡 [R] 표준 조치 가이드 (Recommendation)</span>
@@ -428,12 +511,12 @@
         </div>
       </div>
 
-      <!-- Backlinks Section -->
+      <!-- Backlinks -->
       <div class="backlinks-panel">
-        <div class="backlinks-title">🔗 이 지식을 참조하는 문서 (Backlinks - 총 ${item.backlinks?.length || 0}건)</div>
+        <div style="font-size: 0.8rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 6px;">🔗 이 지식을 참조하는 문서 (Backlinks - 총 ${item.backlinks?.length || 0}건)</div>
         ${(item.backlinks && item.backlinks.length > 0) 
           ? `<ul class="backlinks-list">${backlinksHtml}</ul>`
-          : `<p style="font-size: 0.85rem; color: var(--text-muted);">이 지식을 참조하는 다른 문서가 없습니다.</p>`}
+          : `<p style="font-size: 0.8rem; color: var(--text-muted);">이 지식을 참조하는 다른 문서가 없습니다.</p>`}
       </div>
     `;
 
@@ -466,7 +549,7 @@
   }
 
   // =========================================================================
-  // 5. CUD Modal Forms & Zero Silent Failures
+  // 5. CUD Modal Forms & Handlers
   // =========================================================================
   function openCreateModal(defaultTitle = '') {
     document.getElementById('modal-form-title').textContent = '신규 지식 등록';
@@ -533,7 +616,6 @@
     const nowIso = new Date().toISOString();
 
     if (id) {
-      // Edit existing
       const item = knowledgeStore.find(i => i.id === id);
       if (item) {
         item.title = title;
@@ -548,7 +630,6 @@
         item.updatedAt = nowIso;
       }
     } else {
-      // Create new
       const newItem = {
         id: 'user-' + Date.now() + '-' + Math.random().toString(36).substr(2, 5),
         title,
@@ -584,17 +665,10 @@
     knowledgeStore = knowledgeStore.filter(i => i.id !== articleId);
     saveDataStore();
 
-    document.getElementById('view-container-article').style.display = 'none';
-    document.getElementById('view-container-list').style.display = 'grid';
-    document.getElementById('tab-btn-list').classList.add('active');
-    document.getElementById('tab-btn-article').style.display = 'none';
-
+    switchViewMode('table');
     renderApp();
   }
 
-  // =========================================================================
-  // 6. CSV Bulk Import (PapaParse) & Export
-  // =========================================================================
   function handleCSVImport(file) {
     const statusEl = document.getElementById('import-status-message');
     statusEl.style.display = 'block';
@@ -665,6 +739,41 @@
     downloadAnchor.remove();
   }
 
+  function switchViewMode(mode) {
+    currentViewMode = mode;
+
+    const tableContainer = document.getElementById('view-container-table');
+    const gridContainer = document.getElementById('view-container-list');
+    const articleContainer = document.getElementById('view-container-article');
+
+    const tabBtnTable = document.getElementById('tab-btn-table');
+    const tabBtnCard = document.getElementById('tab-btn-card');
+    const tabBtnArticle = document.getElementById('tab-btn-article');
+
+    tableContainer.style.display = 'none';
+    gridContainer.style.display = 'none';
+    articleContainer.style.display = 'none';
+
+    tabBtnTable.classList.remove('active');
+    tabBtnCard.classList.remove('active');
+    tabBtnArticle.classList.remove('active');
+
+    if (mode === 'table') {
+      tableContainer.style.display = 'block';
+      tabBtnTable.classList.add('active');
+      renderKnowledgeTable();
+    } else if (mode === 'card') {
+      gridContainer.style.display = 'grid';
+      tabBtnCard.classList.add('active');
+      renderKnowledgeGrid();
+    } else if (mode === 'article' && currentArticleId) {
+      articleContainer.style.display = 'flex';
+      tabBtnArticle.style.display = 'inline-flex';
+      tabBtnArticle.classList.add('active');
+      openArticleViewer(currentArticleId);
+    }
+  }
+
   function showErrorAlert(msg) {
     alert(msg);
   }
@@ -679,9 +788,15 @@
   }
 
   // =========================================================================
-  // 7. Event Listeners Initialization
+  // 6. Event Listeners
   // =========================================================================
   function initEventListeners() {
+    // Sidebar Toggle
+    document.getElementById('btn-toggle-sidebar').addEventListener('click', () => {
+      const sidebar = document.getElementById('app-sidebar');
+      sidebar.classList.toggle('collapsed');
+    });
+
     // Theme Toggle
     document.getElementById('btn-toggle-theme').addEventListener('click', () => {
       const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -692,27 +807,32 @@
     // Search Query Input
     document.getElementById('input-search-query').addEventListener('input', (e) => {
       activeFilter.query = e.target.value;
-      renderKnowledgeGrid();
+      currentPage = 1;
+      renderApp();
     });
 
     document.getElementById('btn-execute-search').addEventListener('click', () => {
-      renderKnowledgeGrid();
+      currentPage = 1;
+      renderApp();
     });
 
     // Filter Dropdowns
     document.getElementById('select-filter-category-large').addEventListener('change', (e) => {
       activeFilter.categoryLarge = e.target.value;
-      renderKnowledgeGrid();
+      currentPage = 1;
+      renderApp();
     });
 
     document.getElementById('select-filter-category-medium').addEventListener('change', (e) => {
       activeFilter.categoryMedium = e.target.value;
-      renderKnowledgeGrid();
+      currentPage = 1;
+      renderApp();
     });
 
     document.getElementById('select-filter-source').addEventListener('change', (e) => {
       activeFilter.source = e.target.value;
-      renderKnowledgeGrid();
+      currentPage = 1;
+      renderApp();
     });
 
     document.getElementById('btn-reset-filters').addEventListener('click', () => {
@@ -724,7 +844,27 @@
         sidebarTag: '',
         sidebarCategory: 'all'
       };
+      currentPage = 1;
       document.getElementById('input-search-query').value = '';
+      renderApp();
+    });
+
+    // Pagination
+    document.getElementById('btn-prev-page').addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        renderApp();
+      }
+    });
+
+    document.getElementById('btn-next-page').addEventListener('click', () => {
+      currentPage++;
+      renderApp();
+    });
+
+    document.getElementById('select-page-size').addEventListener('change', (e) => {
+      pageSize = parseInt(e.target.value, 10) || 25;
+      currentPage = 1;
       renderApp();
     });
 
@@ -743,12 +883,28 @@
         } else if (filterType === 'tag') {
           activeFilter.sidebarTag = filterValue;
         }
+        currentPage = 1;
         renderApp();
       }
     });
 
-    // Card Click & View Switcher
+    // Table & Card Click Delegation
     document.addEventListener('click', (e) => {
+      // Table Row or Action Button Click
+      const actionBtn = e.target.closest('.btn-action-cell');
+      if (actionBtn) {
+        const articleId = actionBtn.getAttribute('data-article-id');
+        openArticleViewer(articleId);
+        return;
+      }
+
+      const tableRow = e.target.closest('#table-body-knowledge tr');
+      if (tableRow && !e.target.closest('button')) {
+        const articleId = tableRow.getAttribute('data-article-id');
+        if (articleId) openArticleViewer(articleId);
+        return;
+      }
+
       const card = e.target.closest('.knowledge-card');
       if (card) {
         const articleId = card.getAttribute('data-article-id');
@@ -764,7 +920,7 @@
         return;
       }
 
-      // Missing WikiLink Click (Prompt create)
+      // Missing WikiLink Click
       const wikiLinkMissing = e.target.closest('.wiki-link-missing');
       if (wikiLinkMissing) {
         const missingTitle = wikiLinkMissing.getAttribute('data-wiki-title');
@@ -791,19 +947,14 @@
       }
     });
 
-    // Tab Buttons
-    document.getElementById('tab-btn-list').addEventListener('click', () => {
-      document.getElementById('view-container-article').style.display = 'none';
-      document.getElementById('view-container-list').style.display = 'grid';
-      document.getElementById('tab-btn-list').classList.add('active');
-      document.getElementById('tab-btn-article').classList.remove('active');
-    });
-
+    // View Switcher Tabs
+    document.getElementById('tab-btn-table').addEventListener('click', () => switchViewMode('table'));
+    document.getElementById('tab-btn-card').addEventListener('click', () => switchViewMode('card'));
     document.getElementById('tab-btn-article').addEventListener('click', () => {
-      if (currentArticleId) openArticleViewer(currentArticleId);
+      if (currentArticleId) switchViewMode('article');
     });
 
-    // Modals Trigger & Form Handlers
+    // Modals
     document.getElementById('btn-open-create-modal').addEventListener('click', () => openCreateModal());
     document.getElementById('btn-close-form-modal').addEventListener('click', () => document.getElementById('modal-knowledge-form').classList.add('hidden'));
     document.getElementById('btn-cancel-form').addEventListener('click', () => document.getElementById('modal-knowledge-form').classList.add('hidden'));
@@ -823,22 +974,18 @@
       }
     });
 
-    // Import Modal & Dropzone
+    // Import Modal
     const importModal = document.getElementById('modal-import-csv');
     const dropzone = document.getElementById('dropzone-csv');
     const csvFileInput = document.getElementById('input-csv-file');
 
-    document.getElementById('btn-open-import-modal').addEventListener('click', () => {
-      importModal.classList.remove('hidden');
-    });
+    document.getElementById('btn-open-import-modal').addEventListener('click', () => importModal.classList.remove('hidden'));
     document.getElementById('btn-close-import-modal').addEventListener('click', () => importModal.classList.add('hidden'));
     document.getElementById('btn-cancel-import').addEventListener('click', () => importModal.classList.add('hidden'));
 
     dropzone.addEventListener('click', () => csvFileInput.click());
     csvFileInput.addEventListener('change', (e) => {
-      if (e.target.files.length > 0) {
-        handleCSVImport(e.target.files[0]);
-      }
+      if (e.target.files.length > 0) handleCSVImport(e.target.files[0]);
     });
 
     dropzone.addEventListener('dragover', (e) => {
@@ -846,31 +993,21 @@
       dropzone.style.borderColor = 'var(--accent-primary)';
     });
 
-    dropzone.addEventListener('dragleave', () => {
-      dropzone.style.borderColor = 'var(--border-color)';
-    });
-
+    dropzone.addEventListener('dragleave', () => dropzone.style.borderColor = 'var(--border-color)');
     dropzone.addEventListener('drop', (e) => {
       e.preventDefault();
       dropzone.style.borderColor = 'var(--border-color)';
-      if (e.dataTransfer.files.length > 0) {
-        handleCSVImport(e.dataTransfer.files[0]);
-      }
+      if (e.dataTransfer.files.length > 0) handleCSVImport(e.dataTransfer.files[0]);
     });
 
-    // Seed Sync Button
+    // Sync & Export
     const syncSeedBtn = document.getElementById('btn-sync-seed');
-    if (syncSeedBtn) {
-      syncSeedBtn.addEventListener('click', resetToSeedData);
-    }
+    if (syncSeedBtn) syncSeedBtn.addEventListener('click', resetToSeedData);
 
-    // Export Backup
     document.getElementById('btn-export-data').addEventListener('click', exportBackupData);
   }
 
-  // =========================================================================
   // Bootstrap Application
-  // =========================================================================
   document.addEventListener('DOMContentLoaded', () => {
     initDataStore();
     initEventListeners();

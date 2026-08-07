@@ -5,14 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HanWha IT Service Knowledge Wiki Platform</title>
   
-  <!-- CDN Libraries (Zero Node/Build required) -->
-  <!-- Marked.js for Markdown & WikiLink -->
+  <!-- CDN Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <!-- Fuse.js for Fuzzy Search -->
   <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
-  <!-- PapaParse for CSV Parsing & Export -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
   
   <link rel="stylesheet" href="style.css">
@@ -24,6 +20,9 @@
        ==================================================================== -->
   <header class="app-header">
     <div class="app-brand">
+      <button id="btn-toggle-sidebar" class="btn btn-secondary" style="padding: 4px 8px;" title="사이드바 접기/펼치">
+        <i data-lucide="panel-left-close"></i>
+      </button>
       <i data-lucide="book-open"></i>
       <span>HanWha IT Service Knowledge Wiki</span>
       <span class="app-brand-badge">SRS v2.0</span>
@@ -62,7 +61,7 @@
   <div class="app-container">
     
     <!-- Sidebar Filters -->
-    <aside class="app-sidebar">
+    <aside id="app-sidebar" class="app-sidebar">
       <div>
         <div class="sidebar-section-title">탐색 메뉴</div>
         <ul class="category-list">
@@ -91,39 +90,35 @@
     <!-- Main Content Panel -->
     <main class="app-main">
       
-      <!-- Toolbar & Search Panel -->
-      <section class="toolbar-panel">
-        <div class="search-row">
+      <!-- Compact Single-Row Toolbar & Search Panel -->
+      <section class="toolbar-panel-compact">
+        <div class="toolbar-flex-row">
           <!-- Rule 3.4: Vertical Stack Layout -->
-          <div class="form-group-vertical" style="flex: 1;">
-            <label for="input-search-query">통합 지식 검색 (키워드 / 용어 / Symptom / SBAR)</label>
-            <div style="display: flex; gap: 8px; align-items: center;">
-              <input type="text" id="input-search-query" class="form-control" placeholder="검색어를 입력하세요 (예: ubCUBE, Tgate, 무결성, 엑셀, WIPS, DLL 복구)">
-              <button id="btn-execute-search" class="btn btn-primary">
+          <div class="form-group-vertical" style="flex: 2; min-width: 260px;">
+            <label for="input-search-query">통합 지식 검색</label>
+            <div style="display: flex; gap: 6px; align-items: center;">
+              <input type="text" id="input-search-query" class="form-control" placeholder="키워드/용어/Symptom/SBAR 검색 (예: ubCUBE, Tgate, 무결성, 엑셀, WIPS, DLL 복구)">
+              <button id="btn-execute-search" class="btn btn-primary" style="padding: 8px 12px;">
                 <i data-lucide="search"></i>
-                <span>검색</span>
               </button>
             </div>
           </div>
-        </div>
 
-        <div class="filter-grid">
-          <!-- Rule 3.4: Vertical Stack Layout -->
-          <div class="form-group-vertical">
-            <label for="select-filter-category-large">대분류 선택</label>
+          <div class="form-group-vertical" style="flex: 1; min-width: 140px;">
+            <label for="select-filter-category-large">대분류</label>
             <select id="select-filter-category-large" class="form-control">
               <option value="">전체 대분류</option>
             </select>
           </div>
 
-          <div class="form-group-vertical">
-            <label for="select-filter-category-medium">중분류 선택</label>
+          <div class="form-group-vertical" style="flex: 1; min-width: 140px;">
+            <label for="select-filter-category-medium">중분류</label>
             <select id="select-filter-category-medium" class="form-control">
               <option value="">전체 중분류</option>
             </select>
           </div>
 
-          <div class="form-group-vertical">
+          <div class="form-group-vertical" style="flex: 1; min-width: 140px;">
             <label for="select-filter-source">데이터 출처</label>
             <select id="select-filter-source" class="form-control">
               <option value="">전체 출처</option>
@@ -134,29 +129,69 @@
             </select>
           </div>
 
-          <div class="form-group-vertical" style="justify-content: flex-end;">
-            <button id="btn-reset-filters" class="btn btn-secondary" style="width: 100%;">
+          <div class="form-group-vertical" style="justify-content: flex-end; width: auto;">
+            <button id="btn-reset-filters" class="btn btn-secondary" style="padding: 8px 12px;" title="필터 초기화">
               <i data-lucide="rotate-ccw"></i>
-              <span>필터 초기화</span>
             </button>
           </div>
         </div>
       </section>
 
-      <!-- View Switcher Tabs -->
-      <div style="display: flex; gap: 8px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px;">
-        <button id="tab-btn-list" class="btn btn-secondary active">
-          <i data-lucide="list"></i>
-          <span>지식 목록 보기</span>
-        </button>
-        <button id="tab-btn-article" class="btn btn-secondary" style="display: none;">
-          <i data-lucide="file-text"></i>
-          <span>지식 상세 열람</span>
-        </button>
+      <!-- Display Options & Pagination Bar Header -->
+      <div class="view-header-bar">
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <button id="tab-btn-table" class="btn btn-secondary active">
+            <i data-lucide="table"></i>
+            <span>고밀도 목록 보기</span>
+          </button>
+          <button id="tab-btn-card" class="btn btn-secondary">
+            <i data-lucide="layout-grid"></i>
+            <span>카드 보기</span>
+          </button>
+          <button id="tab-btn-article" class="btn btn-secondary" style="display: none;">
+            <i data-lucide="file-text"></i>
+            <span>지식 상세 열람</span>
+          </button>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div id="pagination-controls" class="pagination-bar">
+          <span id="text-pagination-info" class="pagination-info">총 0건중 1-25 표시</span>
+          <button id="btn-prev-page" class="btn btn-secondary btn-sm" disabled>◀ 이전</button>
+          <span id="text-page-current" class="page-num">1 / 1</span>
+          <button id="btn-next-page" class="btn btn-secondary btn-sm">다음 ▶</button>
+          
+          <select id="select-page-size" class="form-control form-control-sm" style="width: auto;">
+            <option value="25" selected>25개씩 보기</option>
+            <option value="50">50개씩 보기</option>
+            <option value="100">100개씩 보기</option>
+          </select>
+        </div>
       </div>
 
+      <!-- High-Density Data Table View Container (Default) -->
+      <section id="view-container-table" class="table-container">
+        <table class="knowledge-table">
+          <thead>
+            <tr>
+              <th style="width: 70px; text-align: center;">상세</th>
+              <th>기술 / 항목명</th>
+              <th>대분류</th>
+              <th>중분류</th>
+              <th>관련 부서</th>
+              <th>접수 증상 (Symptom)</th>
+              <th>조치 내역 (Action Taken)</th>
+              <th style="width: 100px;">등록일</th>
+            </tr>
+          </thead>
+          <tbody id="table-body-knowledge">
+            <!-- Dynamically rendered table rows -->
+          </tbody>
+        </table>
+      </section>
+
       <!-- Knowledge Cards Grid Container -->
-      <section id="view-container-list" class="knowledge-grid">
+      <section id="view-container-list" class="knowledge-grid" style="display: none;">
         <!-- Dynamically rendered cards -->
       </section>
 
