@@ -1,4 +1,4 @@
-// IT Service Knowledge Wiki - Full Seed Data (1225 records)
+// IT Service Knowledge Wiki - Full Seed Data (1129 records)
 const SEED_KNOWLEDGE_DATA = [
   {
     "id": "ms-update-80070002",
@@ -1051,78 +1051,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-09-17T14:26:55.284Z"
   },
   {
-    "id": "hw-spec-id-05-reallocated-sectors-coun",
-    "title": "[하드웨어 규격] SMART Diagnostic - ID 05 (Reallocated Sectors Count) (Storage Bad Sector) 점검 가이드",
-    "sourceFile": "PC 하드웨어 표준 진단 규격",
-    "date": "2026-08-07",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "[ID 05 (Reallocated Sectors Count)] CrystalDiskInfo에서 디스크 상태 [주의] 노란색 경고 표시 및 05 치환된 섹터 수 증가",
-    "actionTaken": "즉시 중요 데이터 2차 외부 백업 수행 및 무상 보증(RMA) 서비스 신청",
-    "tags": [
-      "하드웨어",
-      "진단규격",
-      "Storage Bad Sector",
-      "SMART",
-      "배드섹터",
-      "CrystalDiskInfo",
-      "SSD",
-      "HDD"
-    ],
-    "sbar": {
-      "situation": "[S] PC 하드웨어 부팅 또는 가동 중 [ID 05 (Reallocated Sectors Count)] 상태가 식별되어 정상 가동이 불가능함.",
-      "background": "[B] 출처: PC 하드웨어 표준 진단 규격 (공개 팩트) | 대상 부품: Storage Bad Sector",
-      "assessment": "[A] 하드웨어 결함 분석: 저장장치 내부 플래터/NAND 플래시의 물리적 불량 섹터 발생으로 예비 영역(Spare Area)으로 치환됨",
-      "recommendation": "[R] 표준 정비 절차:\n1. 치환된 섹터의 [원시 값(Raw Value)]이 1 이상인 경우 물리적 표면 손상이 시작된 신호임\n2. 더 이상 디스크 조각 모음이나 대용량 쓰기 작업을 중단하고 외장 드라이브에 긴급 데이터 백업\n3. 제조사 전용 진단 툴(삼성 Magician, WD Dashboard, SeaTools)로 전체 표면 검사 진행 후 교체\n📌 연관 지식: [[SMART]], [[배드섹터]], [[CrystalDiskInfo]], [[SSD]], [[HDD]]"
-    },
-    "wikilinks": [
-      "SMART",
-      "배드섹터",
-      "CrystalDiskInfo",
-      "SSD",
-      "HDD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-09-17T14:26:55.284Z",
-    "updatedAt": "2026-09-17T14:26:55.284Z"
-  },
-  {
-    "id": "hw-spec-id-c5-current-pending-sector-c",
-    "title": "[하드웨어 규격] SMART Diagnostic - ID C5 (Current Pending Sector Count) (Unstable Storage Sector) 점검 가이드",
-    "sourceFile": "PC 하드웨어 표준 진단 규격",
-    "date": "2026-08-07",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "[ID C5 (Current Pending Sector Count)] 시스템 프리징 발생 및 CrystalDiskInfo C5 보류 중인 섹터 수 경고 표출",
-    "actionTaken": "전체 포맷(Zero-fill)을 통해 섹터 복구 시도 또는 즉시 SSD/HDD 교체",
-    "tags": [
-      "하드웨어",
-      "진단규격",
-      "Unstable Storage Sector",
-      "SMART",
-      "보류섹터",
-      "chkdsk",
-      "로우포맷",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] PC 하드웨어 부팅 또는 가동 중 [ID C5 (Current Pending Sector Count)] 상태가 식별되어 정상 가동이 불가능함.",
-      "background": "[B] 출처: PC 하드웨어 표준 진단 규격 (공개 팩트) | 대상 부품: Unstable Storage Sector",
-      "assessment": "[A] 하드웨어 결함 분석: 읽기/쓰기 오류가 발생하여 재할당 여부를 대기 중인 불안정 섹터 존재",
-      "recommendation": "[R] 표준 정비 절차:\n1. `chkdsk /r` 실행 시 시스템이 장시간 멈추는 경우 보류 중인 섹터가 손상된 상태임\n2. 중요 데이터를 복사한 후 디스크 로우포맷(로우 레벨 포맷)을 실행하여 컨트롤러가 배드섹터를 격리하도록 유도\n3. 로우포맷 이후에도 C5 값이 0으로 환원되지 않으면 하드웨어 수명 종료로 판단\n📌 연관 지식: [[SMART]], [[보류섹터]], [[chkdsk]], [[로우포맷]], [[저장장치]]"
-    },
-    "wikilinks": [
-      "SMART",
-      "보류섹터",
-      "chkdsk",
-      "로우포맷",
-      "저장장치"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-09-17T14:26:55.284Z",
-    "updatedAt": "2026-09-17T14:26:55.284Z"
-  },
-  {
     "id": "kisa-sec-001",
     "title": "[KISA 표준 가이드] 공유기 DNS 변조 파밍 감지 및 복구",
     "sourceFile": "KISA 보호나라 표준 가이드",
@@ -2119,43 +2047,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-09-17T14:26:55.289Z"
   },
   {
-    "id": "hw-smart-c7",
-    "title": "[하드웨어 규격] SMART ID C7 (UltraDMA CRC Error Count / SATA 케이블 결함)",
-    "sourceFile": "PC 하드웨어 표준 진단 규격",
-    "date": "2026-08-07",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "CrystalDiskInfo에서 C7 울트라 DMA CRC 오류 횟수 증가 및 시스템 간헐적 멈춤",
-    "actionTaken": "SATA 데이터 케이블 신품 교체 및 메인보드 포트 변경",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SMART 규격",
-      "ID C7 (CRC Error)",
-      "SMART",
-      "SATA케이블",
-      "CRC오류",
-      "CrystalDiskInfo",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] CrystalDiskInfo에서 C7 울트라 DMA CRC 오류 횟수 증가 및 시스템 간헐적 멈춤",
-      "background": "[B] 출처: PC 하드웨어 표준 진단 규격 | 분류: 하드웨어 > 저장장치",
-      "assessment": "[A] 장애 원인 분석: 메인보드와 저장장치(SATA SSD/HDD) 간의 데이터 전송 케이블 노후화 또는 신호 노이즈",
-      "recommendation": "[R] 표준 조치 절차:\n1. C7 오류는 디스크 내부 물리 결함이 아니며 전송 케이블 접촉 불량에 기인함\n2. 현재 체결된 SATA 케이블을 폐기하고 래치 고정형 SATA 6Gbps 신품 케이블로 교체\n3. 메인보드의 다른 SATA 포트(예: SATA3_0 ➔ SATA3_1)로 위치 변경 결착\n📌 연관 지식: [[SMART]], [[SATA케이블]], [[CRC오류]], [[CrystalDiskInfo]], [[저장장치]]"
-    },
-    "wikilinks": [
-      "SMART",
-      "SATA케이블",
-      "CRC오류",
-      "CrystalDiskInfo",
-      "저장장치"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-09-17T14:26:55.289Z",
-    "updatedAt": "2026-09-17T14:26:55.289Z"
-  },
-  {
     "id": "kisa-wifi-wpa3",
     "title": "[KISA 표준 가이드] Wi-Fi 무선 네트워크 보안 암호화(WPA3/WPA2) 설정 수칙",
     "sourceFile": "KISA 보호나라 표준 가이드",
@@ -2264,39 +2155,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-09-17T14:26:55.289Z"
   },
   {
-    "id": "ssd-trouble-01",
-    "title": "SSD 부팅 장애 및 드라이브 인식 실패 (Boot Device Not Found)",
-    "sourceFile": "SSD 트러블슈팅 가이드",
-    "date": "2026-08-07",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "부팅 장치 인식 불가(Boot Device Not Found), 0x0000001A MEMORY_MANAGEMENT 블루스크린 반복 및 무한 재부팅 루프",
-    "actionTaken": "1. 시스템 하판 탈거 후 메인보드/SSD 골드 핑 이물질 클리닝 및 재안착(Reseat) 2. 인식 불가 시 SSD 물리 교체 및 표준 OS 마스터 이미지 포맷 적용",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD",
-      "BootDeviceNotFound",
-      "골드핑세척",
-      "0x0000001A",
-      "OS포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 시스템 가동 또는 Windows 업데이트 진행 중 `Boot Device Not Found` 메시지 표출되며 디스크 인식 실패 및 블루스크린 발생.",
-      "background": "[B] SSD 인터페이스 슬롯 체결 상태 이격, 메인보드 및 SSD 골드 핑(Gold Pin) 먼지 오염 또는 플래시 메모리 물리적 손상 (wiki-ssd-troubleshooting-v1.md).",
-      "assessment": "[A] SSD 슬롯 물리적 접촉 불량 또는 SSD 하드웨어 자체 불량.",
-      "recommendation": "[R] 1. 시스템 하판 탈거 후 체결 부위 이물질 클리닝 및 재안착(Reseat)\n2. 드라이브 인식 불가 시 [[SSD 물리 교체]] 및 사내 표준 [[OS 마스터 이미지 포맷]] 적용"
-    },
-    "wikilinks": [
-      "SSD 물리 교체",
-      "OS 마스터 이미지 포맷",
-      "MEMORY_MANAGEMENT (0x0000001A)"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T06:06:53.492Z",
-    "updatedAt": "2026-08-07T06:06:53.493Z"
-  },
-  {
     "id": "ssd-trouble-02",
     "title": "SSD 데이터 백업/이관 도중 전송 중단 및 원본 유실 복구 절차",
     "sourceFile": "SSD 트러블슈팅 가이드",
@@ -2313,50 +2171,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "정보전산관리자 반출 승인"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T06:06:53.493Z",
-    "updatedAt": "2026-08-07T06:06:53.493Z"
-  },
-  {
-    "id": "ssd-trouble-03",
-    "title": "SSD 디스크 사용량(점유율) 100% 지속 및 시스템 프리징 대응",
-    "sourceFile": "SSD 트러블슈팅 가이드",
-    "date": "2026-08-07",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "유휴 상태(Idle)임에도 디스크 Active Time 점유율 100% 지속, 마우스 포인터 멈춤 및 OS 전반 응답 불능",
-    "actionTaken": "1. 칩셋 및 저장장치 드라이버 최신화 및 OS 재설치 2. 동일 증상 재발 시 초기 물리 배드섹터 결함 확정 후 신품 SSD 대체 장착",
-    "sbar": {
-      "situation": "[S] 가하중 작업이 없는 유휴 상태임에도 디스크 사용량이 100%를 유지하며 시스템 프리징 초래.",
-      "background": "[B] 스토리지 드라이버 호환성 에러 또는 SSD 플래시 컨트롤러 배드섹터 초기 불량.",
-      "assessment": "[A] SSD 스토리지 I/O 응답 지연 및 초기 물리 배드섹터.",
-      "recommendation": "[R] 1. 저장장치 칩셋 드라이버 최신화 및 OS 재설치\n2. 증상 재발 시 [[SSD 초기 배드섹터 불량]] 판정 ➔ 신품 SSD 일대일 물리 대체 장착 및 AS 반납"
-    },
-    "wikilinks": [
-      "DPC_WATCHDOG_VIOLATION (0x00000133)"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T06:06:53.493Z",
-    "updatedAt": "2026-08-07T06:06:53.493Z"
-  },
-  {
-    "id": "ssd-trouble-04",
-    "title": "C드라이브 여유 공간 포화 & 파티션 동적 강제 병합 확장",
-    "sourceFile": "SSD 트러블슈팅 가이드",
-    "date": "2026-08-07",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "C드라이브 가용 용량 포화로 인한 Windows 업데이트 거부, 시스템 부팅 프리징 및 속도 저하",
-    "actionTaken": "1. 디스크 관리 도구에서 D드라이브 유휴 볼륨 축소 후 C드라이브 시스템 파티션 영역 동적 강제 병합 확장(볼륨 재조정) 2. 대용량 소명 시 부서 자체 예산 SSD 증설",
-    "sbar": {
-      "situation": "[S] C드라이브 용량이 부족하여 OS 패치 및 시스템 가동 멈춤 발생.",
-      "background": "[B] 윈도우 업데이트 패치 및 사내 에이전트 구동 데이터 누적.",
-      "assessment": "[A] C드라이브 가용 볼륨 포화.",
-      "recommendation": "[R] 1. 디스크 관리 도구에서 D드라이브 유휴 공간 축소\n2. [[C드라이브 동적 파티션 확장]] 적용\n3. 영구 공간 부족 시 부서 예산으로 [[증설용 SSD]] 수급 및 추가 장착 지원"
-    },
-    "wikilinks": [
-      "증설용 SSD"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T06:06:53.493Z",
@@ -13124,60 +12938,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.309Z"
   },
   {
-    "id": "seed-200",
-    "title": "저장장치 - 파티션 C/D 하나로 통합 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-18",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "파티션 C/D 하나로 통합 요청",
-    "actionTaken": "파티션 통합",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션"
-    ],
-    "sbar": {
-      "situation": "[S] 파티션 C/D 하나로 통합 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 파티션 통합 📌 연관 지식: [[파티션]]"
-    },
-    "wikilinks": [
-      "파티션"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-201",
-    "title": "저장장치 - 파티션 분할 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-18",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "파티션 분할 요청",
-    "actionTaken": "C/D 분할",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션"
-    ],
-    "sbar": {
-      "situation": "[S] 파티션 분할 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] C/D 분할 📌 연관 지식: [[파티션]]"
-    },
-    "wikilinks": [
-      "파티션"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
     "id": "seed-202",
     "title": "모니터 - 회의실 스크린 화면 복제 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -13877,30 +13637,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
-    "id": "seed-241",
-    "title": "저장장치 - C 드라이브 용량 변경 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-13",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "C 드라이브 용량 변경 요청",
-    "actionTaken": "C 드라이브 70기가 증설, D 드라이브 40기가 용량 변경 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] C 드라이브 용량 변경 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] C 드라이브 70기가 증설, D 드라이브 40기가 용량 변경 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-242",
     "title": "메신저 - 아웃룩 용량 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -13923,30 +13659,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "아웃룩"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-243",
-    "title": "저장장치 - 휴직으로 인한 자료이동 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-13",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "휴직으로 인한 자료이동 요청",
-    "actionTaken": "자료이동 하드디스크 대여",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] 휴직으로 인한 자료이동 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 자료이동 하드디스크 대여"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.310Z",
     "updatedAt": "2026-08-07T05:08:48.310Z"
@@ -14201,33 +13913,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
-    "id": "seed-261",
-    "title": "저장장치 - 용량부족",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-03",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "용량부족",
-    "actionTaken": "SSD 증설완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 용량부족",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSD 증설완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-262",
     "title": "IP - 전배로인한 IP 셋팅",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -14272,33 +13957,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 노후PC 사용중으로 교체안내 및 교체완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-264",
-    "title": "저장장치 - SSD 증설요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-05",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "SSD 증설요청",
-    "actionTaken": "SSD 증설완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] SSD 증설요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSD 증설완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.310Z",
     "updatedAt": "2026-08-07T05:08:48.310Z"
@@ -14789,33 +14447,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
-    "id": "seed-301",
-    "title": "저장장치 - 폐기SSD 파기결재 상신확인요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08-07",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "폐기SSD 파기결재 상신확인요청",
-    "actionTaken": "상신완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 폐기SSD 파기결재 상신확인요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 상신완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-302",
     "title": "OS - Win11HOME에서 PRO 교체방법 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -14887,33 +14518,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
-    "id": "seed-307",
-    "title": "저장장치 - 프로젝트 문서 백업으로 인한 자료이동 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09-10",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "프로젝트 문서 백업으로 인한 자료이동 요청",
-    "actionTaken": "자료이동 하드디스크 대여",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 프로젝트 문서 백업으로 인한 자료이동 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 자료이동 하드디스크 대여 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-309",
     "title": "노트북 - 노트북 일반망 포맷 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -14942,19 +14546,19 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-310",
-    "title": "드라이버 - 대표님 노트북 키보드 , 마우스 블루투스 연",
+    "title": "드라이버 - 임원 노트북 키보드 , 마우스 블루투스 연",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "09-26",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "드라이버",
-    "symptom": "대표님 노트북 키보드 , 마우스 블루투스 연결 문의",
+    "symptom": "임원 노트북 키보드 , 마우스 블루투스 연결 문의",
     "actionTaken": "블루투스 연결 완료",
     "tags": [
       "소프트웨어",
       "드라이버"
     ],
     "sbar": {
-      "situation": "[S] 대표님 노트북 키보드 , 마우스 블루투스 연결 문의",
+      "situation": "[S] 임원 노트북 키보드 , 마우스 블루투스 연결 문의",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 드라이버. 현장 처리 결과 검증.",
       "recommendation": "[R] 블루투스 연결 완료"
@@ -15048,19 +14652,19 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-319",
-    "title": "기본 프로그램 - 강세호 실장님 아웃룩 설정 문의",
+    "title": "기본 프로그램 - 임직원 아웃룩 설정 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "10-17",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "기본 프로그램",
-    "symptom": "강세호 실장님 아웃룩 설정 문의",
+    "symptom": "임직원 아웃룩 설정 문의",
     "actionTaken": "아웃룩 계정 설정 후 정상 접속 확인",
     "tags": [
       "소프트웨어",
       "아웃룩"
     ],
     "sbar": {
-      "situation": "[S] 강세호 실장님 아웃룩 설정 문의",
+      "situation": "[S] 임직원 아웃룩 설정 문의",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
       "recommendation": "[R] 아웃룩 계정 설정 후 정상 접속 확인 📌 연관 지식: [[아웃룩]]"
@@ -15128,19 +14732,19 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-327",
-    "title": "데스크탑 - 사원증 발급 PC 안켜짐",
+    "title": "데스크탑 - 출입 관리 PC 안켜짐",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "10-25",
     "categoryLarge": "하드웨어",
     "categoryMedium": "데스크탑",
-    "symptom": "사원증 발급 PC 안켜짐",
+    "symptom": "출입 관리 PC 안켜짐",
     "actionTaken": "멀티콘센트및 파워케이블 재연결후 정상작동",
     "tags": [
       "하드웨어",
       "데스크탑"
     ],
     "sbar": {
-      "situation": "[S] 사원증 발급 PC 안켜짐",
+      "situation": "[S] 출입 관리 PC 안켜짐",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: 데스크탑. 현장 처리 결과 검증.",
       "recommendation": "[R] 멀티콘센트및 파워케이블 재연결후 정상작동"
@@ -15152,19 +14756,19 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-329",
-    "title": "기본 프로그램 - 대표님 줌 실행시 오류창 발생",
+    "title": "기본 프로그램 - 임원 줌 실행시 오류창 발생",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "10-30",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "기본 프로그램",
-    "symptom": "대표님 줌 실행시 오류창 발생",
+    "symptom": "임원 줌 실행시 오류창 발생",
     "actionTaken": "줌 재설치 및 타 사업장 줌 테스트",
     "tags": [
       "소프트웨어",
       "줌"
     ],
     "sbar": {
-      "situation": "[S] 대표님 줌 실행시 오류창 발생",
+      "situation": "[S] 임원 줌 실행시 오류창 발생",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
       "recommendation": "[R] 줌 재설치 및 타 사업장 줌 테스트 📌 연관 지식: [[줌]]"
@@ -15284,19 +14888,19 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-342",
-    "title": "기본 프로그램 - 대표님 PC 줌 점검 요청",
+    "title": "기본 프로그램 - 임원 PC 줌 점검 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "11-26",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "기본 프로그램",
-    "symptom": "대표님 PC 줌 점검 요청",
+    "symptom": "임원 PC 줌 점검 요청",
     "actionTaken": "줌 회의 참가 및 음질, 영상 테스트 완료",
     "tags": [
       "소프트웨어",
       "줌"
     ],
     "sbar": {
-      "situation": "[S] 대표님 PC 줌 점검 요청",
+      "situation": "[S] 임원 PC 줌 점검 요청",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
       "recommendation": "[R] 줌 회의 참가 및 음질, 영상 테스트 완료 📌 연관 지식: [[줌]]"
@@ -15720,30 +15324,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "DNS"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.311Z",
-    "updatedAt": "2026-08-07T05:08:48.311Z"
-  },
-  {
-    "id": "seed-366",
-    "title": "저장장치 - D 드라이브 사라짐",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12-30",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "D 드라이브 사라짐",
-    "actionTaken": "메인보드 칩셋 드라이버 삭제후 재설치후 정상작동",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] D 드라이브 사라짐",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 메인보드 칩셋 드라이버 삭제후 재설치후 정상작동"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.311Z",
     "updatedAt": "2026-08-07T05:08:48.311Z"
@@ -16490,19 +16070,19 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-432",
-    "title": "기본 프로그램 - 사내 메신저 사원찾기 정보 안보임",
+    "title": "기본 프로그램 - 사내 메신저 임직원 검색 정보 안보임",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "03-27",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "기본 프로그램",
-    "symptom": "사내 메신저 사원찾기 정보 안보임",
+    "symptom": "사내 메신저 임직원 검색 정보 안보임",
     "actionTaken": "엣지 브라우저 초기화후 업데이트",
     "tags": [
       "소프트웨어",
       "사내 메신저"
     ],
     "sbar": {
-      "situation": "[S] 사내 메신저 사원찾기 정보 안보임",
+      "situation": "[S] 사내 메신저 임직원 검색 정보 안보임",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
       "recommendation": "[R] 엣지 브라우저 초기화후 업데이트 📌 연관 지식: [[사내 메신저]]"
@@ -17327,33 +16907,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-474",
-    "title": "저장장치 - C드라이브 용량 확장요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/05(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "C드라이브 용량 확장요청",
-    "actionTaken": "30GB확장완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] C드라이브 용량 확장요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 30GB확장완료 📌 연관 지식: [[C드라이브]]"
-    },
-    "wikilinks": [
-      "C드라이브"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-476",
     "title": "데스크탑 - 개발용PC PCI모듈점검",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -17643,33 +17196,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 프린터 ID 재설정완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-500",
-    "title": "저장장치 - SSD 장착",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/13(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "SSD 장착",
-    "actionTaken": "SSD 장착완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] SSD 장착",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSD 장착완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.312Z",
     "updatedAt": "2026-08-07T05:08:48.312Z"
@@ -18933,12 +18459,12 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-571",
-    "title": "노트북 - 12층부문장님 공용 업무 PC 포맷 및 보안프로",
+    "title": "노트북 - 부문장 공용 업무 PC 포맷 및 보안프로",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "03/13(수)",
     "categoryLarge": "하드웨어",
     "categoryMedium": "노트북",
-    "symptom": "12층부문장님 공용 업무 PC 포맷 및 보안 소프트웨어 설치 요청",
+    "symptom": "부문장 공용 업무 PC 포맷 및 보안 소프트웨어 설치 요청",
     "actionTaken": "포맷신청서 확인 및 작업, 보안 소프트웨어 설치완료",
     "tags": [
       "하드웨어",
@@ -18946,7 +18472,7 @@ const SEED_KNOWLEDGE_DATA = [
       "포맷"
     ],
     "sbar": {
-      "situation": "[S] 12층부문장님 공용 업무 PC 포맷 및 보안 소프트웨어 설치 요청",
+      "situation": "[S] 부문장 공용 업무 PC 포맷 및 보안 소프트웨어 설치 요청",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
       "recommendation": "[R] 포맷신청서 확인 및 작업, 보안 소프트웨어 설치완료 📌 연관 지식: [[포맷]]"
@@ -19239,33 +18765,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.313Z"
   },
   {
-    "id": "seed-594",
-    "title": "저장장치 - 일반망PC SSD 증설 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/28(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "일반망PC SSD 증설 요청",
-    "actionTaken": "저장매체 구입/이관 신청서 확인후 증설작업 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC SSD 증설 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 저장매체 구입/이관 신청서 확인후 증설작업 완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
     "id": "seed-596",
     "title": "소프트웨어 - 내부 보안망 PC 업무링크 접속불가",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -19290,33 +18789,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.313Z"
   },
   {
-    "id": "seed-597",
-    "title": "저장장치 - C,D 드라이브 파티션 병합 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/01(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "C,D 드라이브 파티션 병합 요청",
-    "actionTaken": "파티션 병합 작업완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션"
-    ],
-    "sbar": {
-      "situation": "[S] C,D 드라이브 파티션 병합 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 파티션 병합 작업완료 📌 연관 지식: [[파티션]]"
-    },
-    "wikilinks": [
-      "파티션"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
     "id": "seed-598",
     "title": "네트워크 - 내부 보안망PC 네트워크 셋팅 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -19336,35 +18808,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 내부 보안망 PC 네트워크 및 보안 소프트웨어 셋팅 완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-599",
-    "title": "저장장치 - 일반망PC C드라이브 파티션 확장 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/02(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "일반망PC C드라이브 파티션 확장 요청",
-    "actionTaken": "C드라이브 파티션 확장 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC C드라이브 파티션 확장 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] C드라이브 파티션 확장 완료 📌 연관 지식: [[파티션]], [[C드라이브]]"
-    },
-    "wikilinks": [
-      "파티션",
-      "C드라이브"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.313Z",
     "updatedAt": "2026-08-07T05:08:48.313Z"
@@ -19960,33 +19403,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-630",
-    "title": "저장장치 - C드라이브 Bit Locker 해제 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/17(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "C드라이브 Bit Locker 해제 요청",
-    "actionTaken": "해제작업 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] C드라이브 Bit Locker 해제 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 해제작업 완료 📌 연관 지식: [[C드라이브]]"
-    },
-    "wikilinks": [
-      "C드라이브"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-631",
     "title": "IP - 외부 사업장 반출 일반망pc 네트워크 연결 요",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20141,33 +19557,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-642",
-    "title": "저장장치 - 파티션 재조정작업",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/18(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "파티션 재조정작업",
-    "actionTaken": "파티션 재조정완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션"
-    ],
-    "sbar": {
-      "situation": "[S] 파티션 재조정작업",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 파티션 재조정완료 📌 연관 지식: [[파티션]]"
-    },
-    "wikilinks": [
-      "파티션"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-643",
     "title": "IP - 내부 보안망PC 네트워크 연결 불량",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20239,33 +19628,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-648",
-    "title": "저장장치 - SSD 추가 증설 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/19(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "SSD 추가 증설 요청",
-    "actionTaken": "저장매체 구입/이관 신청서 확인후 증설작업 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] SSD 추가 증설 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 저장매체 구입/이관 신청서 확인후 증설작업 완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-650",
     "title": "OS - MS OFFICE 실행이 안되는 증상",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20287,33 +19649,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-652",
-    "title": "저장장치 - C 하드용량 증가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/22(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "C 하드용량 증가",
-    "actionTaken": "파티션 재조정완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션"
-    ],
-    "sbar": {
-      "situation": "[S] C 하드용량 증가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 파티션 재조정완료 📌 연관 지식: [[파티션]]"
-    },
-    "wikilinks": [
-      "파티션"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.314Z",
@@ -20573,33 +19908,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-667",
-    "title": "저장장치 - 내부 보안망 노트북 SSD 추가증설 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/23(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "내부 보안망 노트북 SSD 추가증설 요청",
-    "actionTaken": "저장매체 구입/이관 신청서 확인후 증설작업 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 노트북 SSD 추가증설 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 저장매체 구입/이관 신청서 확인후 증설작업 완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-669",
     "title": "소프트웨어 - C드라이브 용량부족",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20851,35 +20159,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-685",
-    "title": "저장장치 - 일반망 c드라이브 파티션 확장요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/25(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "일반망 c드라이브 파티션 확장요청",
-    "actionTaken": "c드라이브 60GB 확장 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 c드라이브 파티션 확장요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] c드라이브 60GB 확장 완료 📌 연관 지식: [[파티션]], [[C드라이브]]"
-    },
-    "wikilinks": [
-      "파티션",
-      "C드라이브"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-686",
     "title": "네트워크 - 일반망 외부사이트 접속불가",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20979,30 +20258,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "AD"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-696",
-    "title": "저장장치 - 복구 데이터 수령문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/26(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "복구 데이터 수령문의",
-    "actionTaken": "차주 월요일 처리완료예정",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] 복구 데이터 수령문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 차주 월요일 처리완료예정"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.314Z",
     "updatedAt": "2026-08-07T05:08:48.314Z"
@@ -21110,60 +20365,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-702",
-    "title": "저장장치 - 파손된 SSD 복구데이터 이전 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/29(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "파손된 SSD 복구데이터 이전 요청",
-    "actionTaken": "데이터 PC지원 외장하드 추출완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 파손된 SSD 복구데이터 이전 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 데이터 PC지원 외장하드 추출완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-703",
-    "title": "저장장치 - HDD 자료추출 및 노트북 내 SSD카드에",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/29(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "HDD 자료추출 및 노트북 내 SSD카드에 이관 저장",
-    "actionTaken": "데이터 PC지원 외장하드 추출완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] HDD 자료추출 및 노트북 내 SSD카드에 이관 저장",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 데이터 PC지원 외장하드 추출완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-704",
     "title": "OS - 윈도우비밀번호 로그인안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -21183,62 +20384,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 사내 메신저 비밀번호로 로그인완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-705",
-    "title": "저장장치 - 복구데이터 이동 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/29(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "복구데이터 이동 요청",
-    "actionTaken": "D드라이브 이동완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "D드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] 복구데이터 이동 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] D드라이브 이동완료 📌 연관 지식: [[D드라이브]]"
-    },
-    "wikilinks": [
-      "D드라이브"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-706",
-    "title": "저장장치 - 복구업체 자산 대여HDD 로우포맷 작업",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/29(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "복구업체 자산 대여HDD 로우포맷 작업",
-    "actionTaken": "로우포맷 작업완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "로우포맷",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 복구업체 자산 대여HDD 로우포맷 작업",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 로우포맷 작업완료 📌 연관 지식: [[로우포맷]], [[포맷]]"
-    },
-    "wikilinks": [
-      "로우포맷",
-      "포맷"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.314Z",
     "updatedAt": "2026-08-07T05:08:48.314Z"
@@ -21359,35 +20504,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 엣지브라우저 업데이트 완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-717",
-    "title": "저장장치 - C드라이브 파티션 용량 변경",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/30(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "C드라이브 파티션 용량 변경",
-    "actionTaken": "파티션 재조정완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] C드라이브 파티션 용량 변경",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 파티션 재조정완료 📌 연관 지식: [[파티션]], [[C드라이브]]"
-    },
-    "wikilinks": [
-      "파티션",
-      "C드라이브"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.314Z",
     "updatedAt": "2026-08-07T05:08:48.314Z"
@@ -21872,86 +20988,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.315Z"
   },
   {
-    "id": "seed-741",
-    "title": "저장장치 - 반출을 위한 하드디스크 제거 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/03(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "반출을 위한 하드디스크 제거 요청",
-    "actionTaken": "제거완료",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] 반출을 위한 하드디스크 제거 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 제거완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-744",
-    "title": "저장장치 - 부팅안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/07(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "부팅안됨",
-    "actionTaken": "SSD 고장으로 교체완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 부팅안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSD 고장으로 교체완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-745",
-    "title": "저장장치 - 복구업체 자산 대여HDD 로우포맷 작업 수령",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/07(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "복구업체 자산 대여HDD 로우포맷 작업 수령안내",
-    "actionTaken": "금일 수령연락완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "로우포맷",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 복구업체 자산 대여HDD 로우포맷 작업 수령안내",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 금일 수령연락완료 📌 연관 지식: [[로우포맷]], [[포맷]]"
-    },
-    "wikilinks": [
-      "로우포맷",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
     "id": "seed-746",
     "title": "메신저 - 메신서 대화안됨 및 일반망 스캔 셋팅요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -22060,18 +21096,18 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-754",
-    "title": "IP - 전배사원 일반망PC 네트워크 연결문의",
+    "title": "IP - 전입 임직원 일반망PC 네트워크 연결문의",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "05/08(수)",
     "categoryLarge": "네트워크",
     "categoryMedium": "IP",
-    "symptom": "전배사원 일반망PC 네트워크 연결문의",
+    "symptom": "전입 임직원 일반망PC 네트워크 연결문의",
     "actionTaken": "일반망 네트워크 어뎁터 및 WIFI 설정 완료",
     "tags": [
       "네트워크"
     ],
     "sbar": {
-      "situation": "[S] 전배사원 일반망PC 네트워크 연결문의",
+      "situation": "[S] 전입 임직원 일반망PC 네트워크 연결문의",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
       "recommendation": "[R] 일반망 네트워크 어뎁터 및 WIFI 설정 완료"
@@ -22148,33 +21184,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 네트워크 재설정완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-759",
-    "title": "저장장치 - HDD 인식안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/09(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "HDD 인식안됨",
-    "actionTaken": "베드섹터 안내로 백업가이드 전달완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] HDD 인식안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 베드섹터 안내로 백업가이드 전달완료 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.315Z",
     "updatedAt": "2026-08-07T05:08:48.315Z"
@@ -22394,35 +21403,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.315Z"
   },
   {
-    "id": "seed-776",
-    "title": "저장장치 - HDD 인식불가 점검 요청 D드라이브 백업",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/13(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "HDD 인식불가 점검 요청 D드라이브 백업 요청",
-    "actionTaken": "HDD 문제로 백업안내완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "D드라이브",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] HDD 인식불가 점검 요청 D드라이브 백업 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] HDD 문제로 백업안내완료 📌 연관 지식: [[D드라이브]], [[백업]]"
-    },
-    "wikilinks": [
-      "D드라이브",
-      "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
     "id": "seed-778",
     "title": "데스크탑 - 내부 보안망PC 부팅오류",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -22506,90 +21486,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.315Z"
   },
   {
-    "id": "seed-785",
-    "title": "저장장치 - 파기 PC 저장매체 분리요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/20(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "파기 PC 저장매체 분리요청",
-    "actionTaken": "분리완료",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] 파기 PC 저장매체 분리요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 분리완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-788",
-    "title": "저장장치 - 블루스크린 발생 및 저장공간 부족",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/21(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "블루스크린 발생 및 저장공간 부족",
-    "actionTaken": "포맷신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "블루스크린",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 블루스크린 발생 및 저장공간 부족",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인후 작업완료 📌 연관 지식: [[블루스크린]], [[포맷]]"
-    },
-    "wikilinks": [
-      "블루스크린",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-789",
-    "title": "저장장치 - 일반망 pc C드라이브 용량 부족",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/21(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "일반망 pc C드라이브 용량 부족",
-    "actionTaken": "Bitlocker 해제 및 c드라이브 파티션 20GB 확장 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션",
-      "C드라이브",
-      "BitLocker"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 pc C드라이브 용량 부족",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] Bitlocker 해제 및 c드라이브 파티션 20GB 확장 완료 📌 연관 지식: [[파티션]], [[C드라이브]], [[BitLocker]]"
-    },
-    "wikilinks": [
-      "파티션",
-      "C드라이브",
-      "BitLocker"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
     "id": "seed-791",
     "title": "OS - 출장용 노트북(GRAM) OS 설치 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -22635,113 +21531,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "바이오스"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-793",
-    "title": "저장장치 - 파기PC, 저장매체 분리요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/21(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "파기PC, 저장매체 분리요청",
-    "actionTaken": "저장매체 분리완료",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] 파기PC, 저장매체 분리요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 저장매체 분리완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-794",
-    "title": "저장장치 - 노트북 2대 SSD 추가장착요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/21(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "노트북 2대 SSD 추가장착요청",
-    "actionTaken": "추가증설완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 2대 SSD 추가장착요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 추가증설완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-795",
-    "title": "저장장치 - SSD 추가설치",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/22(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "SSD 추가설치",
-    "actionTaken": "추가장착완료 파티션 생성완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD",
-      "파티션"
-    ],
-    "sbar": {
-      "situation": "[S] SSD 추가설치",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 추가장착완료 파티션 생성완료 📌 연관 지식: [[SSD]], [[파티션]]"
-    },
-    "wikilinks": [
-      "SSD",
-      "파티션"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-796",
-    "title": "저장장치 - C드라이브 용량 증가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/22(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "C드라이브 용량 증가",
-    "actionTaken": "재조정완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] C드라이브 용량 증가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 재조정완료 📌 연관 지식: [[C드라이브]]"
-    },
-    "wikilinks": [
-      "C드라이브"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.315Z",
@@ -22922,33 +21711,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.315Z"
   },
   {
-    "id": "seed-812",
-    "title": "저장장치 - 추가증설 가능한 SSD 장착문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/24(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "추가증설 가능한 SSD 장착문의",
-    "actionTaken": "저장매체 구입신청서 상신 후 작업절차 안내완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 추가증설 가능한 SSD 장착문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 저장매체 구입신청서 상신 후 작업절차 안내완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
     "id": "seed-813",
     "title": "노트북 - 일반업무망 멈춤증상 자주 나타남",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -23106,57 +21868,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.315Z"
   },
   {
-    "id": "seed-820",
-    "title": "저장장치 - 일반업무망PC 파티션 재조정",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/28(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "일반업무망PC 파티션 재조정",
-    "actionTaken": "파티션 재조정완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션"
-    ],
-    "sbar": {
-      "situation": "[S] 일반업무망PC 파티션 재조정",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 파티션 재조정완료 📌 연관 지식: [[파티션]]"
-    },
-    "wikilinks": [
-      "파티션"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-821",
-    "title": "저장장치 - 하드자료 복구 후 자료이동요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/28(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "하드자료 복구 후 자료이동요청",
-    "actionTaken": "복구데이터 이동완료",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] 하드자료 복구 후 자료이동요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 복구데이터 이동완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
     "id": "seed-822",
     "title": "드라이버 - 랜카드 드라이버 설치후 블루스크린 발생",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -23279,108 +21990,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 고객센터 이관완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-830",
-    "title": "저장장치 - 내부 보안망 하드디스크 불량으로 백업",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/29(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "내부 보안망 하드디스크 불량으로 백업",
-    "actionTaken": "통백업완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 하드디스크 불량으로 백업",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 통백업완료 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-833",
-    "title": "저장장치 - 노후 PC 교체하드 및 고장난하드 폐기 리스",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/29(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "노후 PC 교체하드 및 고장난하드 폐기 리스트 작성요청",
-    "actionTaken": "작성 후 전자결재 상신완료",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] 노후 PC 교체하드 및 고장난하드 폐기 리스트 작성요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 작성 후 전자결재 상신완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-834",
-    "title": "저장장치 - 보안USB 인식안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/29(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "보안USB 인식안됨",
-    "actionTaken": "드라이버 재설치완료",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] 보안USB 인식안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 드라이버 재설치완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-836",
-    "title": "저장장치 - 내부 보안망 데이터백업",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/30(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "내부 보안망 데이터백업",
-    "actionTaken": "풀백업 후 이동완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 데이터백업",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 풀백업 후 이동완료 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.316Z",
     "updatedAt": "2026-08-07T05:08:48.316Z"
@@ -23509,33 +22118,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "블루스크린",
       "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-845",
-    "title": "저장장치 - PC 웹메일 다운로드가 안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/05(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "PC 웹메일 다운로드가 안됨",
-    "actionTaken": "파티션 재조정완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션"
-    ],
-    "sbar": {
-      "situation": "[S] PC 웹메일 다운로드가 안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 파티션 재조정완료 📌 연관 지식: [[파티션]]"
-    },
-    "wikilinks": [
-      "파티션"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.316Z",
@@ -23706,57 +22288,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
       "recommendation": "[R] 임시WIFI 설정 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-859",
-    "title": "저장장치 - 하드디스크 백업",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/17(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "하드디스크 백업",
-    "actionTaken": "사용자가 직접 백업완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 하드디스크 백업",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사용자가 직접 백업완료 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-860",
-    "title": "저장장치 - 폐기PC 저장매체 분리요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/17(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "폐기PC 저장매체 분리요청",
-    "actionTaken": "분리완료",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] 폐기PC 저장매체 분리요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 분리완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -24517,35 +23048,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.316Z"
   },
   {
-    "id": "seed-910",
-    "title": "저장장치 - 내부 보안망PC C드라이브 파티션 용량 변경",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/02(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "내부 보안망PC C드라이브 파티션 용량 변경",
-    "actionTaken": "50GB 조정완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC C드라이브 파티션 용량 변경",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 50GB 조정완료 📌 연관 지식: [[파티션]], [[C드라이브]]"
-    },
-    "wikilinks": [
-      "파티션",
-      "C드라이브"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
     "id": "seed-911",
     "title": "OS - 화면보호기 진입시 PC전원 꺼짐발생",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -24664,35 +23166,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-918",
-    "title": "저장장치 - 일반망PC C드라이브 파티션 확장 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/03(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "일반망PC C드라이브 파티션 확장 문의",
-    "actionTaken": "PC지원실 방문 예정",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC C드라이브 파티션 확장 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC지원실 방문 예정 📌 연관 지식: [[파티션]], [[C드라이브]]"
-    },
-    "wikilinks": [
-      "파티션",
-      "C드라이브"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.316Z",
@@ -25184,35 +23657,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.317Z"
   },
   {
-    "id": "seed-974",
-    "title": "저장장치 - 일반망PC C드라이브 용량 50GB추가 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/26(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "일반망PC C드라이브 용량 50GB추가 요청",
-    "actionTaken": "C드라이브 파티션조정 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC C드라이브 용량 50GB추가 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] C드라이브 파티션조정 완료 📌 연관 지식: [[파티션]], [[C드라이브]]"
-    },
-    "wikilinks": [
-      "파티션",
-      "C드라이브"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
     "id": "seed-975",
     "title": "OS - 일반망PC 보안 소프트웨어 설치오류로 인한 포멧",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -25651,35 +24095,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.317Z"
   },
   {
-    "id": "seed-1002",
-    "title": "저장장치 - 일반망PC C드라이브 파티션 조정 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/07(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "일반망PC C드라이브 파티션 조정 요청",
-    "actionTaken": "C드라이브 파티션 조정 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC C드라이브 파티션 조정 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] C드라이브 파티션 조정 완료 📌 연관 지식: [[파티션]], [[C드라이브]]"
-    },
-    "wikilinks": [
-      "파티션",
-      "C드라이브"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
     "id": "seed-1003",
     "title": "네트워크 - 내부 보안망 PC 네트워크 세팅 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -25699,60 +24114,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 네트워크 어뎁터 설정 완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-1004",
-    "title": "저장장치 - SSD(부서비용) 추가 증설 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/08(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "SSD(부서비용) 추가 증설 요청",
-    "actionTaken": "증설완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] SSD(부서비용) 추가 증설 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 증설완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-1005",
-    "title": "저장장치 - 개발용PC 반출을 위한 하드디스크 탈거 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/12(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "개발용PC 반출을 위한 하드디스크 탈거 요청",
-    "actionTaken": "SSD 탈거 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 개발용PC 반출을 위한 하드디스크 탈거 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSD 탈거 완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.317Z",
     "updatedAt": "2026-08-07T05:08:48.317Z"
@@ -25909,33 +24270,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.317Z"
   },
   {
-    "id": "seed-1015",
-    "title": "저장장치 - 일반망 PC 데이터 백업 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/20(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "일반망 PC 데이터 백업 요청",
-    "actionTaken": "백업 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 PC 데이터 백업 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 백업 완료 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
     "id": "seed-1018",
     "title": "데스크탑 - 내부 보안망PC 화면표출 안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -25987,19 +24321,19 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-1020",
-    "title": "네트워크 - 팀장님 일반망PC 네트워크 오류",
+    "title": "네트워크 - 임원 일반망PC 네트워크 오류",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "08/21(수)",
     "categoryLarge": "네트워크",
     "categoryMedium": "기타",
-    "symptom": "팀장님 일반망PC 네트워크 오류",
+    "symptom": "임원 일반망PC 네트워크 오류",
     "actionTaken": "랜카드 교체후 조치완료",
     "tags": [
       "네트워크",
       "기타"
     ],
     "sbar": {
-      "situation": "[S] 팀장님 일반망PC 네트워크 오류",
+      "situation": "[S] 임원 일반망PC 네트워크 오류",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
       "recommendation": "[R] 랜카드 교체후 조치완료"
@@ -26261,35 +24595,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.317Z"
   },
   {
-    "id": "seed-1058",
-    "title": "저장장치 - C드라이브 용량 부족",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/28(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "C드라이브 용량 부족",
-    "actionTaken": "C드라이브 파티션 조정 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] C드라이브 용량 부족",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] C드라이브 파티션 조정 완료 📌 연관 지식: [[파티션]], [[C드라이브]]"
-    },
-    "wikilinks": [
-      "파티션",
-      "C드라이브"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
     "id": "seed-1060",
     "title": "기본 프로그램 - 사내 메신저 접속 오류",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -26481,31 +24786,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "블루스크린"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1079",
-    "title": "저장장치 - 저장매체 관리번호 스티커 공유 및 부착요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/05(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "저장매체 관리번호 스티커 공유 및 부착요청",
-    "actionTaken": "저장매체 관리번호 스티커 부착작업 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "시스템관리"
-    ],
-    "sbar": {
-      "situation": "[S] 저장매체 관리번호 스티커 공유 및 부착요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 저장매체 관리번호 스티커 부착작업 완료"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.318Z",
     "updatedAt": "2026-08-07T05:08:48.318Z"
@@ -26734,86 +25014,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.318Z"
   },
   {
-    "id": "seed-1095",
-    "title": "저장장치 - C드라이브 용량증설",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/19(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "C드라이브 용량증설",
-    "actionTaken": "파티션 재조정완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] C드라이브 용량증설",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 파티션 재조정완료 📌 연관 지식: [[파티션]], [[C드라이브]]"
-    },
-    "wikilinks": [
-      "파티션",
-      "C드라이브"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1096",
-    "title": "저장장치 - 내부 보안망PC 자료이동 및 오토캐드 설치",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/19(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "내부 보안망PC 자료이동 및 오토캐드 설치",
-    "actionTaken": "자료복원 오토캐드 설치완료",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 자료이동 및 오토캐드 설치",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 자료복원 오토캐드 설치완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1097",
-    "title": "저장장치 - 내부 보안망PC 자료 백업",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/19(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "내부 보안망PC 자료 백업",
-    "actionTaken": "통백업완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 자료 백업",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 통백업완료 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1098",
     "title": "데스크탑 - 모니터출력 x",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -26970,33 +25170,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.318Z"
   },
   {
-    "id": "seed-1107",
-    "title": "저장장치 - 퇴직자 자료 백업요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/27(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "퇴직자 자료 백업요청",
-    "actionTaken": "통백업완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 퇴직자 자료 백업요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 통백업완료 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1108",
     "title": "OS - 블루스크린",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -27106,7 +25279,7 @@ const SEED_KNOWLEDGE_DATA = [
     "categoryLarge": "소프트웨어",
     "categoryMedium": "기타",
     "symptom": "자산실사 프로그램 팝업창 발생 시 이전부서로 나옴",
-    "actionTaken": "PC지원 김균우 사원에게 해당 내용 이관 완료",
+    "actionTaken": "PC지원 임직원에게 해당 내용 이관 완료",
     "tags": [
       "소프트웨어",
       "기타"
@@ -27115,7 +25288,7 @@ const SEED_KNOWLEDGE_DATA = [
       "situation": "[S] 자산실사 프로그램 팝업창 발생 시 이전부서로 나옴",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC지원 김균우 사원에게 해당 내용 이관 완료"
+      "recommendation": "[R] PC지원 임직원에게 해당 내용 이관 완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -27196,30 +25369,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.318Z"
   },
   {
-    "id": "seed-1117",
-    "title": "저장장치 -",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/10(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "",
-    "actionTaken": "복구업체 가이드 및 해당 사업장 PC지원 쪽으로 이관완료",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S]",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 복구업체 가이드 및 해당 사업장 PC지원 쪽으로 이관완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1118",
     "title": "OS - 윈도우 화면 표출 불가",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -27264,33 +25413,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1120",
-    "title": "저장장치 - SSD 추가증설 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/11(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "SSD 추가증설 요청",
-    "actionTaken": "증설완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] SSD 추가증설 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 증설완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.318Z",
@@ -27374,33 +25496,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.318Z"
   },
   {
-    "id": "seed-1125",
-    "title": "저장장치 - 용량부족",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/16(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "용량부족",
-    "actionTaken": "파티션 재조정완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션"
-    ],
-    "sbar": {
-      "situation": "[S] 용량부족",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 파티션 재조정완료 📌 연관 지식: [[파티션]]"
-    },
-    "wikilinks": [
-      "파티션"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1126",
     "title": "IP - 내부 보안망 노트PC 네트워크 안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -27448,35 +25543,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1132",
-    "title": "저장장치 - SSD 추가요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/17(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "SSD 추가요청",
-    "actionTaken": "추가장착완료 파티션 생성완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD",
-      "파티션"
-    ],
-    "sbar": {
-      "situation": "[S] SSD 추가요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 추가장착완료 파티션 생성완료 📌 연관 지식: [[SSD]], [[파티션]]"
-    },
-    "wikilinks": [
-      "SSD",
-      "파티션"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.318Z",
@@ -27638,35 +25704,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.318Z"
   },
   {
-    "id": "seed-1145",
-    "title": "저장장치 - 일반망PC C드라이브 확장 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/22(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "일반망PC C드라이브 확장 요청",
-    "actionTaken": "C드라이브 파티션 조정완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC C드라이브 확장 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] C드라이브 파티션 조정완료 📌 연관 지식: [[파티션]], [[C드라이브]]"
-    },
-    "wikilinks": [
-      "파티션",
-      "C드라이브"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1146",
     "title": "드라이버 - 일반망PC 프린터 안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -27710,62 +25747,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 발송 완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1149",
-    "title": "저장장치 - C드라이브 용량 변경",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/23(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "C드라이브 용량 변경",
-    "actionTaken": "파티션 재조정완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] C드라이브 용량 변경",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 파티션 재조정완료 📌 연관 지식: [[파티션]], [[C드라이브]]"
-    },
-    "wikilinks": [
-      "파티션",
-      "C드라이브"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1152",
-    "title": "저장장치 - 내부 보안망PC 교체로인한 자료백업",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/24(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "내부 보안망PC 교체로인한 자료백업",
-    "actionTaken": "통백업완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 교체로인한 자료백업",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 통백업완료 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.318Z",
     "updatedAt": "2026-08-07T05:08:48.318Z"
@@ -27819,33 +25800,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.318Z"
   },
   {
-    "id": "seed-1155",
-    "title": "저장장치 - PC변경으로인한 데이터 백업요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/24(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "PC변경으로인한 데이터 백업요청",
-    "actionTaken": "통백업완료(일반망)",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] PC변경으로인한 데이터 백업요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 통백업완료(일반망) 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1156",
     "title": "노트북 - 일반망PC 메인보드고장으로 인한 교체",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -27890,33 +25844,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1158",
-    "title": "저장장치 - 일반망PC SSD추가 증설 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/24(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "일반망PC SSD추가 증설 요청",
-    "actionTaken": "저장매체 구입/파기/이관 신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC SSD추가 증설 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 저장매체 구입/파기/이관 신청서 확인후 작업완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.318Z",
@@ -28139,30 +26066,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.319Z"
   },
   {
-    "id": "seed-1172",
-    "title": "저장장치 - 해양미래기술연구센터(사용자) 일반/사내 PC",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/31(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "해양미래기술연구센터(사용자) 일반/사내 PC 저장매체 탈거 작업",
-    "actionTaken": "저장매체 분리, 전산관리자에 퇴직자 저장매체 관리대장 작성 후 공유 및 반납처리 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] 해양미래기술연구센터(사용자) 일반/사내 PC 저장매체 탈거 작업",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 저장매체 분리, 전산관리자에 퇴직자 저장매체 관리대장 작성 후 공유 및 반납처리 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
     "id": "seed-1195",
     "title": "노트북 - 윈도우 부팅 후 블루스크린 발생",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -28184,33 +26087,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1197",
-    "title": "저장장치 - C드라이브 점검",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/04(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "C드라이브 점검",
-    "actionTaken": "OS 시스템복구완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] C드라이브 점검",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] OS 시스템복구완료 📌 연관 지식: [[C드라이브]]"
-    },
-    "wikilinks": [
-      "C드라이브"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.319Z",
@@ -28463,60 +26339,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.319Z"
   },
   {
-    "id": "seed-1217",
-    "title": "저장장치 - 일반망PC SSD 추가 장착요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/14(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "일반망PC SSD 추가 장착요청",
-    "actionTaken": "저장매체 구입/파기/이관 신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC SSD 추가 장착요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 저장매체 구입/파기/이관 신청서 확인후 작업완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1218",
-    "title": "저장장치 - 내부 보안망PC SSD 추가 장착요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/14(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "내부 보안망PC SSD 추가 장착요청",
-    "actionTaken": "저장매체 구입/파기/이관 신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC SSD 추가 장착요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 저장매체 구입/파기/이관 신청서 확인후 작업완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
     "id": "seed-1220",
     "title": "네트워크 - 내부 보안망 PC 네트워크 연결 불량",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -28568,30 +26390,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.319Z"
   },
   {
-    "id": "seed-1223",
-    "title": "저장장치 - 복구데이터 이관",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/18(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "복구데이터 이관",
-    "actionTaken": "이관완료",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] 복구데이터 이관",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 이관완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
     "id": "seed-1230",
     "title": "네트워크 - 일반망 PC DNS 미변경자 변경지원요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -28635,30 +26433,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
       "recommendation": "[R] 일반망 PC WIFI 설정OFF 확인 후 네트워크 어뎁터 재설정 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1236",
-    "title": "저장장치 - 이수재 본부장님 PC 하드 분리후 파기 신청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/25(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "이수재 본부장님 PC 하드 분리후 파기 신청서 상신요청",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] 이수재 본부장님 PC 하드 분리후 파기 신청서 상신요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 조치 완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -28896,19 +26670,19 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-1254",
-    "title": "백업 - 전산관리자장님 이전PC 데이터 백업요청",
+    "title": "백업 - 부문장 이전PC 데이터 백업요청",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "12/12(목)",
     "categoryLarge": "하드웨어",
     "categoryMedium": "백업",
-    "symptom": "전산관리자장님 이전PC 데이터 백업요청",
+    "symptom": "부문장 이전PC 데이터 백업요청",
     "actionTaken": "데이터 백업 완료 및 이전 PC 반납처리 완료",
     "tags": [
       "하드웨어",
       "백업"
     ],
     "sbar": {
-      "situation": "[S] 전산관리자장님 이전PC 데이터 백업요청",
+      "situation": "[S] 부문장 이전PC 데이터 백업요청",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: 백업. 현장 처리 결과 검증.",
       "recommendation": "[R] 데이터 백업 완료 및 이전 PC 반납처리 완료 📌 연관 지식: [[백업]]"
@@ -29447,33 +27221,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1281",
-    "title": "저장장치 - SSD 고장 확인으로 인한 SSD 교체 신청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/03(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "SSD 고장 확인으로 인한 SSD 교체 신청",
-    "actionTaken": "신청서 상신 확인 후 교체 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] SSD 고장 확인으로 인한 SSD 교체 신청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 신청서 상신 확인 후 교체 완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1284",
     "title": "OS - 부팅시 블루 스크린 발생",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -29518,33 +27265,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "문서보안(DRM)"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1286",
-    "title": "저장장치 - 데스크탑 PC SSD 추가장착 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/06(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "데스크탑 PC SSD 추가장착 요청",
-    "actionTaken": "SATA케이블 부족으로 설치 불가",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 데스크탑 PC SSD 추가장착 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] SATA케이블 부족으로 설치 불가 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.320Z",
@@ -29678,33 +27398,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1295",
-    "title": "저장장치 - SSD추가 증성 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/14(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "SSD추가 증성 요청",
-    "actionTaken": "해당 SSD 추가 슬롯 부족으로 장착 불가",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] SSD추가 증성 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 해당 SSD 추가 슬롯 부족으로 장착 불가 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1297",
     "title": "IP - 내부 보안망PC 네트워크 연결 안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -29749,35 +27442,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1299",
-    "title": "저장장치 - SSD 추가장착요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/17(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "SSD 추가장착요청",
-    "actionTaken": "추가장착완료 파티션 생성완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD",
-      "파티션"
-    ],
-    "sbar": {
-      "situation": "[S] SSD 추가장착요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 추가장착완료 파티션 생성완료 📌 연관 지식: [[SSD]], [[파티션]]"
-    },
-    "wikilinks": [
-      "SSD",
-      "파티션"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.320Z",
@@ -29864,35 +27528,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1304",
-    "title": "저장장치 - C드라이브 용량 확대요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/20(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "C드라이브 용량 확대요청",
-    "actionTaken": "파티션 재조정완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "파티션",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] C드라이브 용량 확대요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 파티션 재조정완료 📌 연관 지식: [[파티션]], [[C드라이브]]"
-    },
-    "wikilinks": [
-      "파티션",
-      "C드라이브"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1305",
     "title": "노트북 - 메모리가 없다고 뜨면서 멈춥니다",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -29910,30 +27545,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
       "recommendation": "[R] 시스템 복구완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1306",
-    "title": "저장장치 - PC 교체로인한 자료이관",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/21(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "PC 교체로인한 자료이관",
-    "actionTaken": "자료이관완료",
-    "tags": [
-      "하드웨어",
-      "저장장치"
-    ],
-    "sbar": {
-      "situation": "[S] PC 교체로인한 자료이관",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 자료이관완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -29960,33 +27571,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R]"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1312",
-    "title": "저장장치 - 노후 PC 자료 이관 (D드라이브 전체)",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/22(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "노후 PC 자료 이관 (D드라이브 전체)",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "D드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] 노후 PC 자료 이관 (D드라이브 전체)",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 📌 연관 지식: [[D드라이브]]"
-    },
-    "wikilinks": [
-      "D드라이브"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.320Z",
     "updatedAt": "2026-08-07T05:08:48.320Z"
@@ -32501,34 +30085,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.321Z"
   },
   {
-    "id": "seed-1442",
-    "title": "저장장치 - PC 용량이 부족하여 용량 확장이 필요 합니",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "Q&A 가이드",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "PC 용량이 부족하여 용량 확장이 필요 합니다. 어떻게 진행 하면 되나요?",
-    "actionTaken": "PC지원 연락하여 현재 사용하고 있는 PC에 저장매체 추가장착 가능 여부 확인 후 부서에서 SSD 자체적으로 구매, PC지원에 추가장착 요청 하시면 되겠습니다.",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "전사 공통",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] PC 용량이 부족하여 용량 확장이 필요 합니다. 어떻게 진행 하면 되나요?",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC지원 연락하여 현재 사용하고 있는 PC에 저장매체 추가장착 가능 여부 확인 후 부서에서 SSD 자체적으로 구매, PC지원에 추가장착 요청 하시면 되겠습니다. 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
     "id": "seed-1443",
     "title": "백업 - 문서파일 등 일부 데이터가 손실(삭제) 되었",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -32576,33 +30132,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 임원실 방문 후 일반망 유무선 공유기 무선 채널 간섭 조정 및 최적화 케이블 신호 점검 완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
-    "id": "seed-1445",
-    "title": "저장장치 - 본사 내 재고 PC 성능 저하로 인한",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-03-04 17:30",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "본사 내 재고 PC 성능 저하로 인한 SSD 디스크 업그레이드 요청",
-    "actionTaken": "PC지원실에서 신품 SSD 자산 장착 및 검수 완료 후 본사으로 안전하게 파우치 택배 배송 조치",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 본사 내 재고 PC 성능 저하로 인한 SSD 디스크 업그레이드 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC지원실에서 신품 SSD 자산 장착 및 검수 완료 후 본사으로 안전하게 파우치 택배 배송 조치 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.321Z",
     "updatedAt": "2026-08-07T05:08:48.321Z"
@@ -32739,51 +30268,24 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-1456",
-    "title": "OS - 업무 부서 이증섭 사원 개발용 노트북의",
+    "title": "OS - 업무 부서 임직원 개발용 노트북의",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "2024-04-04 17:30",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "OS",
-    "symptom": "업무 부서 이증섭 사원 개발용 노트북의 윈도우 OS 깨짐 및 시스템 라이브러리 손상",
+    "symptom": "업무 부서 임직원 개발용 노트북의 윈도우 OS 깨짐 및 시스템 라이브러리 손상",
     "actionTaken": "노트북 데이터 안전 이관 후 윈도우 OS를 재설치하고 개발 업무용 호환 드라이버 패키지를 수동 정합 설치하여 기능 정상화",
     "tags": [
       "소프트웨어",
       "OS"
     ],
     "sbar": {
-      "situation": "[S] 업무 부서 이증섭 사원 개발용 노트북의 윈도우 OS 깨짐 및 시스템 라이브러리 손상",
+      "situation": "[S] 업무 부서 임직원 개발용 노트북의 윈도우 OS 깨짐 및 시스템 라이브러리 손상",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] 노트북 데이터 안전 이관 후 윈도우 OS를 재설치하고 개발 업무용 호환 드라이버 패키지를 수동 정합 설치하여 기능 정상화"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
-    "id": "seed-1457",
-    "title": "저장장치 - 임직원 장비 전대전 후 반납 처리된 노후 전",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-04-05 17:00",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "임직원 장비 전대전 후 반납 처리된 노후 전산 자산 내 하드디스크 정보 복구 가능성 잔존",
-    "actionTaken": "반납 자산들의 하드디스크(SSD)를 수동으로 분해 및 탈거하여 물리적 파기 대상 대장에 안전하게 이관 및 시건 보관",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 임직원 장비 전대전 후 반납 처리된 노후 전산 자산 내 하드디스크 정보 복구 가능성 잔존",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 반납 자산들의 하드디스크(SSD)를 수동으로 분해 및 탈거하여 물리적 파기 대상 대장에 안전하게 이관 및 시건 보관 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.321Z",
     "updatedAt": "2026-08-07T05:08:48.321Z"
@@ -32818,12 +30320,12 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-1459",
-    "title": "포맷 - 이증섭 사원 오프라인 노트북 및 전술통신체계",
+    "title": "포맷 - 임직원 오프라인 노트북 및 전술통신체계",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "2024-04-08 17:30",
     "categoryLarge": "하드웨어",
     "categoryMedium": "포맷",
-    "symptom": "이증섭 사원 오프라인 노트북 및 업무 부서 서유석 사원 오프라인 개발 데스크탑의 부팅 에러",
+    "symptom": "임직원 오프라인 노트북 및 업무 부서 서유석 사원 오프라인 개발 데스크탑의 부팅 에러",
     "actionTaken": "오프라인 보안 장비 2대에 대해 물리 하드디스크 정밀 점검 후 정비 로우포맷을 실행하고 공장 초기화 표준 이미지 구축",
     "tags": [
       "하드웨어",
@@ -32831,7 +30333,7 @@ const SEED_KNOWLEDGE_DATA = [
       "로우포맷"
     ],
     "sbar": {
-      "situation": "[S] 이증섭 사원 오프라인 노트북 및 업무 부서 서유석 사원 오프라인 개발 데스크탑의 부팅 에러",
+      "situation": "[S] 임직원 오프라인 노트북 및 업무 부서 서유석 사원 오프라인 개발 데스크탑의 부팅 에러",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
       "recommendation": "[R] 오프라인 보안 장비 2대에 대해 물리 하드디스크 정밀 점검 후 정비 로우포맷을 실행하고 공장 초기화 표준 이미지 구축 📌 연관 지식: [[로우포맷]], [[포맷]]"
@@ -32846,19 +30348,19 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-1461",
-    "title": "OS - 업무 부서 김성범 사원 일반망 PC 사용 중",
+    "title": "OS - 업무 부서 임직원 일반망 PC 사용 중",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "2024-04-17 18:00",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "OS",
-    "symptom": "업무 부서 김성범 사원 일반망 PC 사용 중 시스템 파일 업데이트 도중 부팅 에러 발생",
+    "symptom": "업무 부서 임직원 일반망 PC 사용 중 시스템 파일 업데이트 도중 부팅 에러 발생",
     "actionTaken": "PC 전원 방전 후 윈도우 OS 손상 파일 자동 복구 명령어를 적용하고, 일반망 표준 환경으로 신규 OS 마스터 재설치",
     "tags": [
       "소프트웨어",
       "OS"
     ],
     "sbar": {
-      "situation": "[S] 업무 부서 김성범 사원 일반망 PC 사용 중 시스템 파일 업데이트 도중 부팅 에러 발생",
+      "situation": "[S] 업무 부서 임직원 일반망 PC 사용 중 시스템 파일 업데이트 도중 부팅 에러 발생",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] PC 전원 방전 후 윈도우 OS 손상 파일 자동 복구 명령어를 적용하고, 일반망 표준 환경으로 신규 OS 마스터 재설치"
@@ -33003,12 +30505,12 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-1476",
-    "title": "OS - 사업장 노연희 사원 내부 보안망 PC 전원 인",
+    "title": "OS - 사업장 임직원 내부 보안망 PC 전원 인",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "2024-07-02 17:30",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "OS",
-    "symptom": "사업장 노연희 사원 내부 보안망 PC 전원 인가 시 블루스크린 및 부팅 드라이브 누락 에러 발생",
+    "symptom": "사업장 임직원 내부 보안망 PC 전원 인가 시 블루스크린 및 부팅 드라이브 누락 에러 발생",
     "actionTaken": "내부 보안망 PC C드라이브 정밀 로우포맷 진행 후 표준 내부 보안망 OS 재설치 및 라이선스 복구 작업 이행",
     "tags": [
       "소프트웨어",
@@ -33019,7 +30521,7 @@ const SEED_KNOWLEDGE_DATA = [
       "포맷"
     ],
     "sbar": {
-      "situation": "[S] 사업장 노연희 사원 내부 보안망 PC 전원 인가 시 블루스크린 및 부팅 드라이브 누락 에러 발생",
+      "situation": "[S] 사업장 임직원 내부 보안망 PC 전원 인가 시 블루스크린 및 부팅 드라이브 누락 에러 발생",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] 내부 보안망 PC C드라이브 정밀 로우포맷 진행 후 표준 내부 보안망 OS 재설치 및 라이선스 복구 작업 이행 📌 연관 지식: [[로우포맷]], [[블루스크린]], [[C드라이브]], [[포맷]]"
@@ -33036,12 +30538,12 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-1479",
-    "title": "OS - 기반SW팀 이주원 사원 사외 출장용 노트북",
+    "title": "OS - 업무 부서 임직원 사외 출장용 노트북",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "2024-07-08 17:30",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "OS",
-    "symptom": "기반SW팀 이주원 사원 사외 출장용 노트북 V3 및 T-gate 에이전트 버전 구형으로 인한 반출 승인 거절",
+    "symptom": "업무 부서 임직원 사외 출장용 노트북 V3 및 T-gate 에이전트 버전 구형으로 인한 반출 승인 거절",
     "actionTaken": "출장용 공용 노트북 OS 일괄 클린 설치 및 필수 사외 반출용 보안 에이전트 최신 패치 업데이트 완료 후 인계",
     "tags": [
       "소프트웨어",
@@ -33049,42 +30551,13 @@ const SEED_KNOWLEDGE_DATA = [
       "V3"
     ],
     "sbar": {
-      "situation": "[S] 기반SW팀 이주원 사원 사외 출장용 노트북 V3 및 T-gate 에이전트 버전 구형으로 인한 반출 승인 거절",
+      "situation": "[S] 업무 부서 임직원 사외 출장용 노트북 V3 및 T-gate 에이전트 버전 구형으로 인한 반출 승인 거절",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] 출장용 공용 노트북 OS 일괄 클린 설치 및 필수 사외 반출용 보안 에이전트 최신 패치 업데이트 완료 후 인계 📌 연관 지식: [[V3]]"
     },
     "wikilinks": [
       "V3"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
-    "id": "seed-1480",
-    "title": "저장장치 - 사업장 네트워크 담당자 일반망 PC의 윈도우",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-07-09 17:00",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "사업장 네트워크 담당자 일반망 PC의 윈도우 업데이트 시 C드라이브 용량 한도 초과로 인한 시스템 정지",
-    "actionTaken": "D드라이브의 유휴 가용 볼륨을 축소하고 C드라이브 볼륨을 동적으로 강제 확장하여 윈도우 업데이트 공간 확보 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "C드라이브",
-      "D드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] 사업장 네트워크 담당자 일반망 PC의 윈도우 업데이트 시 C드라이브 용량 한도 초과로 인한 시스템 정지",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] D드라이브의 유휴 가용 볼륨을 축소하고 C드라이브 볼륨을 동적으로 강제 확장하여 윈도우 업데이트 공간 확보 완료 📌 연관 지식: [[C드라이브]], [[D드라이브]]"
-    },
-    "wikilinks": [
-      "C드라이브",
-      "D드라이브"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.322Z",
@@ -33149,12 +30622,12 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-1484",
-    "title": "일반망 - 업무 부서 김경욱 사원 일반망 인터넷 서",
+    "title": "일반망 - 업무 부서 임직원 일반망 인터넷 서",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "2024-07-16 17:30",
     "categoryLarge": "네트워크",
     "categoryMedium": "일반망",
-    "symptom": "업무 부서 김경욱 사원 일반망 인터넷 서핑 중 비정상 사이트 팝업 중독 및 IP 주소 중복 차단",
+    "symptom": "업무 부서 임직원 일반망 인터넷 서핑 중 비정상 사이트 팝업 중독 및 IP 주소 중복 차단",
     "actionTaken": "PC 내의 비정상 네트워크 환경 초기화 및 캐시 전량 청소 후, 안전한 일반망 고정 IP 수동 재설정 및 WIPS 연동 완료",
     "tags": [
       "네트워크",
@@ -33162,7 +30635,7 @@ const SEED_KNOWLEDGE_DATA = [
       "WIPS"
     ],
     "sbar": {
-      "situation": "[S] 업무 부서 김경욱 사원 일반망 인터넷 서핑 중 비정상 사이트 팝업 중독 및 IP 주소 중복 차단",
+      "situation": "[S] 업무 부서 임직원 일반망 인터넷 서핑 중 비정상 사이트 팝업 중독 및 IP 주소 중복 차단",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 네트워크 / 중분류: 일반망. 현장 처리 결과 검증.",
       "recommendation": "[R] PC 내의 비정상 네트워크 환경 초기화 및 캐시 전량 청소 후, 안전한 일반망 고정 IP 수동 재설정 및 WIPS 연동 완료 📌 연관 지식: [[WIPS]], [[IP]]"
@@ -33204,12 +30677,12 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-1486",
-    "title": "OS - 해양시스템1팀 김현모 사원 출장 복귀 PC의",
+    "title": "OS - 업무 부서 임직원 출장 복귀 PC의",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "2024-07-18 17:00",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "OS",
-    "symptom": "해양시스템1팀 김현모 사원 출장 복귀 PC의 원인 미상의 운영체제 커널 손상 및 윈도우 부팅 불가",
+    "symptom": "업무 부서 임직원 출장 복귀 PC의 원인 미상의 운영체제 커널 손상 및 윈도우 부팅 불가",
     "actionTaken": "기존 로컬 자료 백업 유휴 디스크 보존 조치 후, 최신 윈도우 OS 마스터이미지 수동 초기화 설치 및 보안 업데이트",
     "tags": [
       "소프트웨어",
@@ -33217,7 +30690,7 @@ const SEED_KNOWLEDGE_DATA = [
       "백업"
     ],
     "sbar": {
-      "situation": "[S] 해양시스템1팀 김현모 사원 출장 복귀 PC의 원인 미상의 운영체제 커널 손상 및 윈도우 부팅 불가",
+      "situation": "[S] 업무 부서 임직원 출장 복귀 PC의 원인 미상의 운영체제 커널 손상 및 윈도우 부팅 불가",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] 기존 로컬 자료 백업 유휴 디스크 보존 조치 후, 최신 윈도우 OS 마스터이미지 수동 초기화 설치 및 보안 업데이트 📌 연관 지식: [[백업]]"
@@ -33231,12 +30704,12 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-1487",
-    "title": "OS - 데이터링크1팀 이덕우/양모찬 사원 일반망 P",
+    "title": "OS - 업무 부서 임직원 일반망 P",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "2024-07-22 17:30",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "OS",
-    "symptom": "데이터링크1팀 이덕우/양모찬 사원 일반망 PC 속도 저하 및 주기적인 블루스크린 덤프 에러 발생",
+    "symptom": "업무 부서 임직원 일반망 PC 속도 저하 및 주기적인 블루스크린 덤프 에러 발생",
     "actionTaken": "PC지원실 이송 후 SSD 무결성 하드 검수, 전체 로우포맷 진행 및 최신 표준 일반망 윈도우 10 OS 일괄 재배포",
     "tags": [
       "소프트웨어",
@@ -33247,7 +30720,7 @@ const SEED_KNOWLEDGE_DATA = [
       "포맷"
     ],
     "sbar": {
-      "situation": "[S] 데이터링크1팀 이덕우/양모찬 사원 일반망 PC 속도 저하 및 주기적인 블루스크린 덤프 에러 발생",
+      "situation": "[S] 업무 부서 임직원 일반망 PC 속도 저하 및 주기적인 블루스크린 덤프 에러 발생",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] PC지원실 이송 후 SSD 무결성 하드 검수, 전체 로우포맷 진행 및 최신 표준 일반망 윈도우 10 OS 일괄 재배포 📌 연관 지식: [[SSD]], [[로우포맷]], [[블루스크린]], [[포맷]]"
@@ -33295,12 +30768,12 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-1492",
-    "title": "OS - 원가1팀 김인호 사원 내부 보안망 PC 사용 중",
+    "title": "OS - 업무 부서 임직원 내부 보안망 PC 사용 중",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "2024-08-19 17:30",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "OS",
-    "symptom": "원가1팀 김인호 사원 내부 보안망 PC 사용 중 불규칙적인 무한 블루스크린(Crash) 및 시스템 다운",
+    "symptom": "업무 부서 임직원 내부 보안망 PC 사용 중 불규칙적인 무한 블루스크린(Crash) 및 시스템 다운",
     "actionTaken": "내부 보안망 PC 내부 장착된 무선 랜카드 드라이버 충돌 확인 후, 안전모드 진입하여 드라이버 초기화 및 최신 정합 드라이버 재설치",
     "tags": [
       "소프트웨어",
@@ -33308,7 +30781,7 @@ const SEED_KNOWLEDGE_DATA = [
       "블루스크린"
     ],
     "sbar": {
-      "situation": "[S] 원가1팀 김인호 사원 내부 보안망 PC 사용 중 불규칙적인 무한 블루스크린(Crash) 및 시스템 다운",
+      "situation": "[S] 업무 부서 임직원 내부 보안망 PC 사용 중 불규칙적인 무한 블루스크린(Crash) 및 시스템 다운",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] 내부 보안망 PC 내부 장착된 무선 랜카드 드라이버 충돌 확인 후, 안전모드 진입하여 드라이버 초기화 및 최신 정합 드라이버 재설치 📌 연관 지식: [[블루스크린]]"
@@ -33401,33 +30874,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.322Z"
   },
   {
-    "id": "seed-1496",
-    "title": "저장장치 - 지상시스템3팀 박현철 사원 일반망/내부 보안망 P",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-11-14 17:30",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "지상시스템3팀 박현철 사원 일반망/내부 보안망 PC의 데이터 가용 공간 절대 부족",
-    "actionTaken": "저장매체 구입/이관 신청서 확인 후 PC지원실에서 SSD 물리 추가 장착 및 볼륨 정상 동기화 셋팅 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 지상시스템3팀 박현철 사원 일반망/내부 보안망 PC의 데이터 가용 공간 절대 부족",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 저장매체 구입/이관 신청서 확인 후 PC지원실에서 SSD 물리 추가 장착 및 볼륨 정상 동기화 셋팅 완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
     "id": "seed-1499",
     "title": "OS - 본사 임직원(정세진 실장 등)의 클레버",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -33460,54 +30906,25 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-1501",
-    "title": "백업 - 업무 부서 한성현 사원 신구 PC 교체",
+    "title": "백업 - 업무 부서 임직원 신구 PC 교체",
     "sourceFile": "PC 트러블슈팅 가이드",
     "date": "2025-07-07 13:15",
     "categoryLarge": "하드웨어",
     "categoryMedium": "백업",
-    "symptom": "업무 부서 한성현 사원 신구 PC 교체 중 크로스케이블 백업 전송 도중 오류 발생 및 기존 원본 데이터 소실",
+    "symptom": "업무 부서 임직원 신구 PC 교체 중 크로스케이블 백업 전송 도중 오류 발생 및 기존 원본 데이터 소실",
     "actionTaken": "백업 끊김 현상 확인 후, 하드 탈거를 수행하여 사내 공식 보안 반출 승인을 득하고 데이터 정밀 복구 전문업체 긴급 이관 조치",
     "tags": [
       "하드웨어",
       "백업"
     ],
     "sbar": {
-      "situation": "[S] 업무 부서 한성현 사원 신구 PC 교체 중 크로스케이블 백업 전송 도중 오류 발생 및 기존 원본 데이터 소실",
+      "situation": "[S] 업무 부서 임직원 신구 PC 교체 중 크로스케이블 백업 전송 도중 오류 발생 및 기존 원본 데이터 소실",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: 백업. 현장 처리 결과 검증.",
       "recommendation": "[R] 백업 끊김 현상 확인 후, 하드 탈거를 수행하여 사내 공식 보안 반출 승인을 득하고 데이터 정밀 복구 전문업체 긴급 이관 조치 📌 연관 지식: [[백업]]"
     },
     "wikilinks": [
       "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
-    "id": "seed-1502",
-    "title": "저장장치 - 신품 HP 노트북 구동 시 부팅 장치 검색",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2025-08-11 08:47",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "신품 HP 노트북 구동 시 부팅 장치 검색 오류 'Boot Device Not Found' 블루스크린 출력",
-    "actionTaken": "노트북 하판 탈거 후 메인보드와 SSD 연결 슬롯 간의 이물질 물리 소거 및 재장착을 이행하여 인식 상태 복구 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "SSD",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 신품 HP 노트북 구동 시 부팅 장치 검색 오류 'Boot Device Not Found' 블루스크린 출력",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 하판 탈거 후 메인보드와 SSD 연결 슬롯 간의 이물질 물리 소거 및 재장착을 이행하여 인식 상태 복구 완료 📌 연관 지식: [[SSD]], [[블루스크린]]"
-    },
-    "wikilinks": [
-      "SSD",
-      "블루스크린"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.322Z",
@@ -33645,35 +31062,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] PC지원실에서 사전 확보 중인 윈도우 표준 복구 패키지 설치파일을 사용하여 기본 앱들 전원 수동 정상 복구 수립"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
-    "id": "seed-1514",
-    "title": "저장장치 - 사내 보안 전용 공유폴더 개편 조치 도입 이",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2026-07-30 14:17",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "저장장치",
-    "symptom": "사내 보안 전용 공유폴더 개편 조치 도입 이후, PC지원용 포맷 및 백업용 외장하드 연결 시 보안 탐지로 인한 마운트 즉시 해제 및 파일서버 접근 차단 현상",
-    "actionTaken": "전산관리자과 연계하여 PC지원 엔지니어 전용 외장 저장매체에 대해 보안 USB 및 포탈 예외 사용 등록 승인 완료",
-    "tags": [
-      "하드웨어",
-      "저장장치",
-      "포맷",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 보안 전용 공유폴더 개편 조치 도입 이후, PC지원용 포맷 및 백업용 외장하드 연결 시 보안 탐지로 인한 마운트 즉시 해제 및 파일서버 접근 차단 현상",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 전산관리자과 연계하여 PC지원 엔지니어 전용 외장 저장매체에 대해 보안 USB 및 포탈 예외 사용 등록 승인 완료 📌 연관 지식: [[포맷]], [[백업]]"
-    },
-    "wikilinks": [
-      "포맷",
-      "백업"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.322Z",
     "updatedAt": "2026-08-07T05:08:48.322Z"
