@@ -1,5 +1,274 @@
-// IT Service Knowledge Wiki - Full Seed Data (719 records)
+// IT Service Knowledge Wiki - Full Seed Data (727 records)
 const SEED_KNOWLEDGE_DATA = [
+  {
+    "id": "hw-ssd-nvme-timeout",
+    "title": "[SSD] NVMe SSD 디스크 활성 시간 100% 지속 및 프리징 해결 (NVMe Freezing & Active Time 100%)",
+    "sourceFile": "JEDEC/NVMe 표준 진단 규격",
+    "date": "2026-09-18",
+    "categoryLarge": "하드웨어",
+    "categoryMedium": "SSD",
+    "symptom": "대용량 파일 쓰기 또는 부팅 직후 NVMe SSD 디스크 활성 시간 100% 지속 및 애플리케이션 프리징",
+    "actionTaken": "1. PCIe 링크 상태 전원 관리 해제\n2. APST 절전 지연 시간 조정\n3. 전용 드라이버 및 최신 펌웨어 설치",
+    "tags": [
+      "하드웨어",
+      "SSD",
+      "NVMe",
+      "I/O타임아웃",
+      "SMART",
+      "드라이버"
+    ],
+    "sbar": {
+      "situation": "[S] PC 구동 중 애플리케이션 프리징 및 이벤트 ID 129(stornvme 장치 재설정) 발생",
+      "background": "[B] 출처: JEDEC/NVMe 표준 진단 규격 | 적용 규격: PCIe NVMe M.2 SSD",
+      "assessment": "[A] 원인 분석: Windows ASPM/APST 전원 절감 모드 진입 지연으로 인한 컨트롤러 I/O 타임아웃",
+      "recommendation": "[R] 표준 조치 절차:\n1. [전원 옵션 > 고급 설정 > PCI Express > 링크 상태 전원 관리] '해제(Off)' 설정\n2. 전용 툴(Samsung Magician, WD Dashboard)에서 최신 펌웨어 업데이트\n📌 연관 지식: [[NVMe]], [[SSD]], [[SMART]], [[드라이버]]"
+    },
+    "wikilinks": [
+      "NVMe",
+      "SSD",
+      "SMART",
+      "드라이버"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-09-18T00:00:00.000Z",
+    "updatedAt": "2026-09-18T00:00:00.000Z"
+  },
+  {
+    "id": "os-win-bsod-stopcode",
+    "title": "[OS/Windows] Windows 블루스크린(BSOD) 중지 코드 및 부팅 실패 해결 (BSOD & Boot Failure)",
+    "sourceFile": "Microsoft Learn & Windows 지원 커뮤니티",
+    "date": "2026-09-18",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "블루스크린(BSOD)",
+    "symptom": "OS 구동 중 BSOD(Blue Screen of Death) 중지 코드 발생, 부팅 실패 및 업데이트 오류",
+    "actionTaken": "1. BSOD 중지 코드(DPC_WATCHDOG_VIOLATION 등) 분석\n2. 안전모드 진입 후 드라이버/업데이트 롤백\n3. SFC 및 DISM 시스템 파일 복구 명령어 실행",
+    "tags": [
+      "소프트웨어",
+      "OS",
+      "Windows",
+      "BSOD",
+      "BlueScreen",
+      "BootFailure",
+      "MicrosoftLearn"
+    ],
+    "sbar": {
+      "situation": "[S] Windows OS 진입 중 중지 코드(Stop Code)와 함께 블루스크린 발생 및 무한 재부팅",
+      "background": "[B] 출처: Microsoft Learn & Windows 지원 커뮤니티 | 적용 OS: Windows 10/11",
+      "assessment": "[A] 원인 분석: 커널 드라이버 충돌, 시스템 핵심 DLL 손상 또는 OS 업데이트 미완료",
+      "recommendation": "[R] 표준 조치 절차:\n1. Windows 복구 환경(WinRE) 진입 후 '안전모드' 부팅\n2. CMD 창에서 `sfc /scannow` 및 `DISM /Online /Cleanup-Image /RestoreHealth` 실행\n3. 최근 설치된 드라이버 및 Windows 품질 업데이트 제거\n📌 연관 지식: [[BSOD]], [[Windows]], [[부팅실패]], [[MicrosoftLearn]]"
+    },
+    "wikilinks": [
+      "BSOD",
+      "Windows",
+      "부팅실패",
+      "MicrosoftLearn"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-09-18T00:00:00.000Z",
+    "updatedAt": "2026-09-18T00:00:00.000Z"
+  },
+  {
+    "id": "hw-diag-beep-led",
+    "title": "[하드웨어] 메인보드 비프음(Beep Code) 및 LED 점멸 패턴 진단 (Hardware Diagnostics & Beep Codes)",
+    "sourceFile": "제조사별 기술 지원 포털(Dell, Lenovo, HP, 삼성 등)",
+    "date": "2026-09-18",
+    "categoryLarge": "하드웨어",
+    "categoryMedium": "BIOS",
+    "symptom": "전원 인가 시 화면 미출력, 비프음(Beep Code) 발생 및 메인보드 LED 점멸, 전원 불량",
+    "actionTaken": "1. 제조사별 비프음/LED 패턴 카운트 확인\n2. 부품별 자가 조치 매뉴얼 가이드 적용\n3. 파워서플라이 및 메모리/그래픽카드 재장착",
+    "tags": [
+      "하드웨어",
+      "BeepCode",
+      "LED패턴",
+      "전원불량",
+      "Dell",
+      "Lenovo",
+      "HP"
+    ],
+    "sbar": {
+      "situation": "[S] PC 전원 버튼을 눌렀으나 POST 과정을 통과하지 못하고 화면이 켜지지 않음",
+      "background": "[B] 출처: Dell, Lenovo, HP, 삼성 등 제조사 지원 포털 | 적용 대상: 브랜드/조립 PC",
+      "assessment": "[A] 원인 분석: 비프음 패턴(예: 연속 3회 짧은 소리) 또는 EZ Debug LED 점멸을 통한 RAM/VGA 초기화 실패 감지",
+      "recommendation": "[R] 표준 조치 절차:\n1. 메인보드 제조사 매뉴얼의 Beep Code / Diagnostic LED 표 참조\n2. RAM 및 그래픽카드 재장착 후 Gold Finger 접점 청소\n3. BIOS CMOS 배터리 탈거 후 5분 대기하여 설정 초기화\n📌 연관 지식: [[BeepCode]], [[LED패턴]], [[하드웨어진단]], [[제조사포털]]"
+    },
+    "wikilinks": [
+      "BeepCode",
+      "LED패턴",
+      "하드웨어진단",
+      "제조사포털"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-09-18T00:00:00.000Z",
+    "updatedAt": "2026-09-18T00:00:00.000Z"
+  },
+  {
+    "id": "hw-diy-ram-gpu-instability",
+    "title": "[하드웨어] 램 접촉 불량, 고주파음 및 그래픽 카드 드라이버 꼬임 해결 (DIY Hardware Troubleshooting)",
+    "sourceFile": "퀘이사존(Quasarzone) & 쿨엔조이(Coolenjoy)",
+    "date": "2026-09-18",
+    "categoryLarge": "하드웨어",
+    "categoryMedium": "데스크탑",
+    "symptom": "전원 인가 불가, RAM 접촉 불량으로 인한 화면 미출력, 고주파음, 오버클럭 충돌, GPU 드라이버 꼬임",
+    "actionTaken": "1. RAM 금단자 세척 및 단일 슬롯 테스트\n2. DDU(Display Driver Uninstaller)를 이용한 안전모드 드라이버 재설치\n3. XMP/EXPO 오버클럭 해제 및 BIOS 초기화",
+    "tags": [
+      "하드웨어",
+      "RAM접촉불량",
+      "고주파음",
+      "오버클럭",
+      "GPU드라이버",
+      "Quasarzone",
+      "Coolenjoy"
+    ],
+    "sbar": {
+      "situation": "[S] 게임 플레이 중 화면 블랙아웃, 프레임 드랍, GPU 고주파음 및 부팅 간헐적 실패",
+      "background": "[B] 출처: 퀘이사존 & 쿨엔조이 커뮤니티 트러블슈팅 사례 DB",
+      "assessment": "[A] 원인 분석: RAM 미세 접촉 불량, GPU 드라이버 레지스트리 꼬임, 파워 공급 불안정으로 인한 고주파",
+      "recommendation": "[R] 표준 조치 절차:\n1. RAM 지우개 세척 후 2, 4번 슬롯 재장착\n2. DDU로 기존 그래픽 드라이버 완전 삭제 후 WHQL 정식 드라이버 설치\n3. 오버클럭 설정(XMP/EXPO) 해제 후 순정 상태 안정성 테스트\n📌 연관 지식: [[RAM접촉불량]], [[GPU드라이버]], [[오버클럭]], [[DDU]]"
+    },
+    "wikilinks": [
+      "RAM접촉불량",
+      "GPU드라이버",
+      "오버클럭",
+      "DDU"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-09-18T00:00:00.000Z",
+    "updatedAt": "2026-09-18T00:00:00.000Z"
+  },
+  {
+    "id": "hw-global-compatibility-shutdown",
+    "title": "[Global HW] 메인보드/GPU 호환성 충돌 및 전원 차단(Shutdown) 해결 (Hardware Compatibility & Shutdown)",
+    "sourceFile": "Tom's Hardware Forums",
+    "date": "2026-09-18",
+    "categoryLarge": "하드웨어",
+    "categoryMedium": "전원/파워",
+    "symptom": "고부하 작업 시 PC 차단(System Shutdown) 및 특정 메인보드-GPU 호환성 충돌",
+    "actionTaken": "1. PSU Peak Power 모니터링 및 독립 PCIe 전원 케이블 연결\n2. 메인보드 최신 BIOS 업데이트\n3. GPU PCIe Mode 설정(Gen4 -> Gen3) 검토",
+    "tags": [
+      "하드웨어",
+      "Hardware",
+      "TomsHardware",
+      "Compatibility",
+      "Shutdown",
+      "PowerSupply",
+      "BIOS"
+    ],
+    "sbar": {
+      "situation": "[S] 3D 렌더링/게임 실행 중 셧다운(Power Shutdown) 발생 및 재부팅 불가",
+      "background": "[B] 출처: Tom's Hardware Forums | 글로벌 하드웨어 진단 사례",
+      "assessment": "[A] 원인 분석: 고성능 GPU 순간 과전류(Transient Spike)로 인한 파워서플라이 OCP/OPP 작동",
+      "recommendation": "[R] 표준 조치 절차:\n1. 1개의 PCIe 케이블 브릿지 대신 레일별 독립 케이블으로 GPU 전원 연결\n2. 메인보드 BIOS 업데이트로 AGESA/PCIe 호환성 패치 적용\n📌 연관 지식: [[TomsHardware]], [[호환성충돌]], [[전원차단]], [[BIOS]]"
+    },
+    "wikilinks": [
+      "TomsHardware",
+      "호환성충돌",
+      "전원차단",
+      "BIOS"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-09-18T00:00:00.000Z",
+    "updatedAt": "2026-09-18T00:00:00.000Z"
+  },
+  {
+    "id": "sec-malware-ransomware-registry",
+    "title": "[보안/복구] 악성코드 감염, 랜섬웨어 복구 및 시스템 파일/레지스트리 복구 (Malware & Registry Repair)",
+    "sourceFile": "BleepingComputer",
+    "date": "2026-09-18",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "보안/복구",
+    "symptom": "악성코드 감염, 랜섬웨어 파일 암호화, Windows 시스템 파일 손상 및 레지스트리 비정상 변경",
+    "actionTaken": "1. BleepingComputer 전용 복구 툴(RKill, Malwarebytes) 활용\n2. Safe Mode 진입 후 악성 프로세스 및 레지스트리 키 제거\n3. 복원 지점(VSS) 및 백업을 통한 파일 복구",
+    "tags": [
+      "소프트웨어",
+      "Security",
+      "BleepingComputer",
+      "Malware",
+      "Ransomware",
+      "Registry",
+      "SystemRepair"
+    ],
+    "sbar": {
+      "situation": "[S] 특정 파일 확장자 변경, 시스템 파일 접근 불가 및 랜섬웨어 결제 안내문 표시",
+      "background": "[B] 출처: BleepingComputer 보안 기술 포럼",
+      "assessment": "[A] 원인 분석: 악성 실행 파일 감염으로 인한 볼륨 섀도 복사본(VSS) 삭제 및 레지스트리 변조",
+      "recommendation": "[R] 표준 조치 절차:\n1. 즉시 랜선 탈거 및 네트워크 차단\n2. RKill을 사용하여 악성 프로세스 종료 후 Malwarebytes 종합 검사\n3. BleepingComputer 공식 복구 툴 세트로 변조된 레지스트리 키 복구\n📌 연관 지식: [[BleepingComputer]], [[악성코드]], [[랜섬웨어복구]], [[레지스트리]]"
+    },
+    "wikilinks": [
+      "BleepingComputer",
+      "악성코드",
+      "랜섬웨어복구",
+      "레지스트리"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-09-18T00:00:00.000Z",
+    "updatedAt": "2026-09-18T00:00:00.000Z"
+  },
+  {
+    "id": "ent-network-ad-printer",
+    "title": "[엔터프라이즈] 기업 업무망 네트워크 끊김, 도메인/AD 로그인 실패 및 프린터 공유 충돌 (Corporate IT Troubleshoot)",
+    "sourceFile": "쉐어드IT(SharedIT)",
+    "date": "2026-09-18",
+    "categoryLarge": "네트워크",
+    "categoryMedium": "네트워크 보안",
+    "symptom": "업무용 PC 네트워크 끊김, Active Directory(AD) 도메인 로그인 실패, 프린터 공유 드라이버 충돌",
+    "actionTaken": "1. IP/DNS 바인딩 및 AD 트러스트 관계 재설정\n2. SMB 프로토콜 및 프린터 스풀러(Spooler) 재시작\n3. 업무망 GPO(그룹 정책) 업데이트",
+    "tags": [
+      "IT관리",
+      "SharedIT",
+      "AD도메인",
+      "네트워크",
+      "프린터공유",
+      "업무용PC"
+    ],
+    "sbar": {
+      "situation": "[S] 출근 후 클라이언트 PC의 AD 도메인 인증 실패 및 공유 프린터 인쇄 오류",
+      "background": "[B] 출처: 쉐어드IT 전산실 IT 인프라 관리자 사례 DB",
+      "assessment": "[A] 원인 분석: Kerberos 시간 동기화 오차, DNS SRV 레코드 조회 실패 또는 SMBv1 보안 차단",
+      "recommendation": "[R] 표준 조치 절차:\n1. `w32tm /resync` 명령어로 AD 서버와 클라이언트 시간 동기화\n2. `ipconfig /flushdns` 후 DC 서버 IP 피어링 점검\n3. Print Spooler 서비스 재시작 및 GPO 수동 업데이트(`gpupdate /force`)\n📌 연관 지식: [[SharedIT]], [[AD도메인]], [[업무망네트워크]], [[프린터공유]]"
+    },
+    "wikilinks": [
+      "SharedIT",
+      "AD도메인",
+      "업무망네트워크",
+      "프린터공유"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-09-18T00:00:00.000Z",
+    "updatedAt": "2026-09-18T00:00:00.000Z"
+  },
+  {
+    "id": "ent-global-deployment-remote",
+    "title": "[Global IT] Enterprise PC 배포, 원격 지원 및 업무용 PC 고장 관리 (PC Deployment & Remote Support)",
+    "sourceFile": "Spiceworks Community",
+    "date": "2026-09-18",
+    "categoryLarge": "소프트웨어",
+    "categoryMedium": "기본 프로그램",
+    "symptom": "대규모 업무용 PC OS 이미지 배포 오류, 원격 지원 접속 장애, 고장 증상 관리 티켓 증가",
+    "actionTaken": "1. PXE 부팅 및 Sysprep 이미지 재생성\n2. 원격 에이전트 포트/방화벽 정책 점검\n3. 통합 유지보수 체크리스트 적용",
+    "tags": [
+      "소프트웨어",
+      "Enterprise",
+      "Spiceworks",
+      "PCDeployment",
+      "RemoteSupport",
+      "SysAdmin"
+    ],
+    "sbar": {
+      "situation": "[S] 신규 입사자 PC 대량 배포 중 PXE 이더넷 부팅 오류 및 원격 제어 끊김",
+      "background": "[B] 출처: Spiceworks Community 시스템 관리자 포럼",
+      "assessment": "[A] 원인 분석: DHCP 옵션 66/67 미설정, 네트워크 카드 드라이버 누락 및 원격 지원 서비스 에이전트 중단",
+      "recommendation": "[R] 표준 조치 절차:\n1. WDS/MDT 서버 DHCP PXE 브로드캐스트 설정 확인\n2. 에이전트 서비스 상태 모니터링 및 자동 재시작 스크립트 배포\n3. 업무용 PC 정기 유지보수 체크리스트 가이드 동기화\n📌 연관 지식: [[Spiceworks]], [[PC배포]], [[원격지원]], [[체크리스트]]"
+    },
+    "wikilinks": [
+      "Spiceworks",
+      "PC배포",
+      "원격지원",
+      "체크리스트"
+    ],
+    "backlinks": [],
+    "createdAt": "2026-09-18T00:00:00.000Z",
+    "updatedAt": "2026-09-18T00:00:00.000Z"
+  },
   {
     "id": "ms-update-80070002",
     "title": "[0x80070002] ERROR_FILE_NOT_FOUND - Windows 업데이트 및 시스템 오류 해결",
