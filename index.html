@@ -3,6 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    if (window.location.pathname.startsWith('/pc-wiki')) {
+      document.write('<base href="/pc-wiki/">');
+    }
+  </script>
   <title>HanWha IT Service Knowledge Wiki Platform</title>
   
   <!-- CDN Libraries -->
