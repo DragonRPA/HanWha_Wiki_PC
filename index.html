@@ -16,7 +16,7 @@
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260917_4">
 </head>
 <body>
 
@@ -46,7 +46,7 @@
 
       <button id="btn-sync-seed" class="btn btn-secondary" title="최신 시드 데이터 동기화">
         <i data-lucide="refresh-cw"></i>
-        <span>시드 동기화 (1,760건)</span>
+        <span>시드 동기화 (1,406건)</span>
       </button>
 
       <button id="btn-export-data" class="btn btn-secondary">
@@ -102,7 +102,7 @@
           <div class="form-group-vertical" style="flex: 2; min-width: 260px;">
             <label for="input-search-query">통합 지식 검색</label>
             <div style="display: flex; gap: 6px; align-items: center;">
-              <input type="text" id="input-search-query" class="form-control" placeholder="키워드/용어/Symptom/SBAR 검색 (예: ubCUBE, Tgate, 무결성, 엑셀, WIPS, DLL 복구)">
+              <input type="text" id="input-search-query" class="form-control" placeholder="키워드/용어/Symptom/SBAR 검색 (예: 블루스크린, SSD, 포맷, 메모리, 그래픽카드, DLL 복구)">
               <button id="btn-execute-search" class="btn btn-primary" style="padding: 8px 12px;">
                 <i data-lucide="search"></i>
               </button>
@@ -185,7 +185,6 @@
               <th>기술 / 항목명</th>
               <th>대분류</th>
               <th>중분류</th>
-              <th>관련 부서</th>
               <th>접수 증상 (Symptom)</th>
               <th>조치 내역 (Action Taken)</th>
               <th style="width: 100px;">등록일</th>
@@ -237,31 +236,24 @@
           <!-- Rule 3.4 Vertical Stack Layout -->
           <div class="form-group-vertical">
             <label for="form-field-title">기술 / 이슈 항목명 (Title) *</label>
-            <input type="text" id="form-field-title" class="form-control" required placeholder="예: ubCUBE (문서보안 DRM)">
+            <input type="text" id="form-field-title" class="form-control" required placeholder="예: 모니터 화면 깜빡임 및 신호 없음 해결">
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
             <div class="form-group-vertical">
               <label for="form-field-category-large">대분류 (Category Large) *</label>
-              <input type="text" id="form-field-category-large" class="form-control" required placeholder="예: 보안프로그램, 네트워크, 하드웨어">
+              <input type="text" id="form-field-category-large" class="form-control" required placeholder="예: 하드웨어, 소프트웨어, 네트워크">
             </div>
 
             <div class="form-group-vertical">
               <label for="form-field-category-medium">중분류 (Category Medium)</label>
-              <input type="text" id="form-field-category-medium" class="form-control" placeholder="예: ubCUBE, Tgate, IP/DNS">
+              <input type="text" id="form-field-category-medium" class="form-control" placeholder="예: 그래픽카드, OS, 블루스크린, DNS">
             </div>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-            <div class="form-group-vertical">
-              <label for="form-field-department">발생/관련 부서</label>
-              <input type="text" id="form-field-department" class="form-control" placeholder="예: IT운영팀, 하드웨어개발팀">
-            </div>
-
-            <div class="form-group-vertical">
-              <label for="form-field-source">데이터 출처</label>
-              <input type="text" id="form-field-source" class="form-control" placeholder="예: IT 유지보수 대장, 수동등록">
-            </div>
+          <div class="form-group-vertical">
+            <label for="form-field-source">데이터 출처</label>
+            <input type="text" id="form-field-source" class="form-control" placeholder="예: IT 트러블슈팅 가이드, 수동등록">
           </div>
 
           <div class="form-group-vertical">
@@ -300,7 +292,7 @@
 
             <div class="form-group-vertical">
               <label for="form-field-sbar-r">[R] 표준 조치 절차 (Recommendation - WikiLink `[[용어명]]` 사용 가능)</label>
-              <textarea id="form-field-sbar-r" class="form-control" style="min-height: 80px;" placeholder="예: [[Tgate]] 패스워드 초기화 후 [[V3 무결성]] 검사 실행"></textarea>
+              <textarea id="form-field-sbar-r" class="form-control" style="min-height: 80px;" placeholder="예: [[SSD]] 펌웨어 업데이트 후 [[디스크 무결성]] 검사 실행"></textarea>
             </div>
           </div>
 
@@ -328,7 +320,7 @@
         <div id="dropzone-csv" style="border: 2px dashed var(--border-color); border-radius: var(--radius-lg); padding: 40px 20px; text-align: center; cursor: pointer; transition: all 0.2s ease;">
           <i data-lucide="upload-cloud" style="width: 48px; height: 48px; color: var(--accent-primary); margin-bottom: 12px;"></i>
           <p style="font-weight: 600; font-size: 1rem; color: var(--text-primary);">CSV 파일을 드래그하여 여기에 놓으세요</p>
-          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">또는 클릭하여 파일 선택 (`Source_File, Date, Department, Category_Large, Category_Medium, Symptom, Action_Taken` 컬럼 표준 지원)</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">또는 클릭하여 파일 선택 (`Source_File, Date, Category_Large, Category_Medium, Symptom, Action_Taken` 컬럼 표준 지원)</p>
           <input type="file" id="input-csv-file" accept=".csv" style="display: none;">
         </div>
 
@@ -341,9 +333,9 @@
     </div>
   </div>
 
-  <!-- Load Seed Data & Main Logic -->
-  <script src="seed_data.js"></script>
-  <script src="app.js"></script>
+  <!-- Load Seed Data & Main Logic (Cache-Busted) -->
+  <script src="seed_data.js?v=20260917_4"></script>
+  <script src="app.js?v=20260917_4"></script>
   <script>
     lucide.createIcons();
   </script>

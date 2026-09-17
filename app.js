@@ -11,8 +11,8 @@
   'use strict';
 
   // State Management
-  const STORAGE_KEY = 'pc_wiki_knowledge_base_v3';
-  const HISTORY_KEY = 'pc_wiki_visit_history_v3';
+  const STORAGE_KEY = 'pc_wiki_knowledge_base_v4';
+  const HISTORY_KEY = 'pc_wiki_visit_history_v4';
   
   let knowledgeStore = [];
   let fuseInstance = null;
@@ -43,6 +43,8 @@
       localStorage.removeItem('hanwha_wiki_visit_history');
       localStorage.removeItem('pc_wiki_knowledge_base_v2');
       localStorage.removeItem('pc_wiki_visit_history');
+      localStorage.removeItem('pc_wiki_knowledge_base_v3');
+      localStorage.removeItem('pc_wiki_visit_history_v3');
       localStorage.removeItem('피씨위키_wiki_knowledge_base_v1');
       localStorage.removeItem('피씨위키_wiki_visit_history');
 
@@ -52,9 +54,9 @@
         try { parsed = JSON.parse(savedData); } catch (e) {}
       }
 
-      // Automatically update if seed data has more items
+      // Automatically initialize or update seed data
       if (typeof SEED_KNOWLEDGE_DATA !== 'undefined' && Array.isArray(SEED_KNOWLEDGE_DATA)) {
-        if (!parsed || parsed.length < SEED_KNOWLEDGE_DATA.length) {
+        if (!parsed) {
           knowledgeStore = [...SEED_KNOWLEDGE_DATA];
           saveDataStore();
         } else {
@@ -365,7 +367,7 @@
     if (pagination.items.length === 0) {
       tbody.innerHTML = `
         <tr>
-          <td colspan="8" style="text-align: center; padding: 40px; color: var(--text-muted);">
+          <td colspan="7" style="text-align: center; padding: 40px; color: var(--text-muted);">
             조회된 지식 데이터가 없습니다.
           </td>
         </tr>
@@ -382,7 +384,6 @@
         <td class="table-cell-title" title="${escapeHtml(item.title)}">${escapeHtml(item.title)}</td>
         <td style="white-space: nowrap;"><span class="badge-tag">${escapeHtml(item.categoryLarge || '기타')}</span></td>
         <td style="white-space: nowrap;">${escapeHtml(item.categoryMedium || '일반')}</td>
-        <td style="white-space: nowrap;">${escapeHtml(item.department || '전사')}</td>
         <td class="table-cell-symptom" title="${escapeHtml(item.symptom)}">${escapeHtml(item.symptom)}</td>
         <td class="table-cell-action" title="${escapeHtml(item.actionTaken)}">${escapeHtml(item.actionTaken)}</td>
         <td style="white-space: nowrap; font-size: 0.75rem; color: var(--text-muted);">${escapeHtml(item.date || '')}</td>
@@ -416,7 +417,7 @@
           ${escapeHtml(item.symptom)}
         </div>
         <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.73rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 6px;">
-          <span>🏢 ${escapeHtml(item.department || '전사')}</span>
+          <span>🏷️ ${escapeHtml(item.categoryMedium || '일반')}</span>
           <span>📅 ${escapeHtml(item.date || '')}</span>
         </div>
       </div>
@@ -480,7 +481,6 @@
             <div style="display: flex; flex-wrap: wrap; gap: 10px; font-size: 0.8rem; color: var(--text-secondary); white-space: nowrap;">
               <span>📁 대분류: <strong>${escapeHtml(item.categoryLarge || '미지정')}</strong></span>
               <span>🏷️ 중분류: <strong>${escapeHtml(item.categoryMedium || '미지정')}</strong></span>
-              <span>🏢 관련 부서: <strong>${escapeHtml(item.department || '전사')}</strong></span>
               <span>📄 출처: <strong>${escapeHtml(item.sourceFile || '수동등록')}</strong></span>
               <span>📅 등록일: <strong>${escapeHtml(item.date || '')}</strong></span>
             </div>
@@ -521,7 +521,7 @@
           </div>
           <div class="sbar-box">
             <span class="sbar-title">🏢 [B] 발생 배경 (Background)</span>
-            <div class="sbar-content">${renderWikiMarkdown(item.sbar?.background || `부서: ${item.department} / 시스템: ${item.categoryMedium}`)}</div>
+            <div class="sbar-content">${renderWikiMarkdown(item.sbar?.background || `시스템: ${item.categoryMedium || 'PC 환경'}`)}</div>
           </div>
           <div class="sbar-box">
             <span class="sbar-title">🔍 [A] 원인 분석 (Assessment)</span>
@@ -595,7 +595,6 @@
     document.getElementById('form-field-title').value = item.title || '';
     document.getElementById('form-field-category-large').value = item.categoryLarge || '';
     document.getElementById('form-field-category-medium').value = item.categoryMedium || '';
-    document.getElementById('form-field-department').value = item.department || '';
     document.getElementById('form-field-source').value = item.sourceFile || '';
     document.getElementById('form-field-symptom').value = item.symptom || '';
     document.getElementById('form-field-action').value = item.actionTaken || '';
@@ -616,7 +615,6 @@
     const title = document.getElementById('form-field-title').value.trim();
     const categoryLarge = document.getElementById('form-field-category-large').value.trim();
     const categoryMedium = document.getElementById('form-field-category-medium').value.trim();
-    const department = document.getElementById('form-field-department').value.trim();
     const sourceFile = document.getElementById('form-field-source').value.trim() || '수동등록';
     const symptom = document.getElementById('form-field-symptom').value.trim();
     const actionTaken = document.getElementById('form-field-action').value.trim();
@@ -631,7 +629,7 @@
 
     const sbar = {
       situation: document.getElementById('form-field-sbar-s').value.trim() || symptom,
-      background: document.getElementById('form-field-sbar-b').value.trim() || `관련부서: ${department}`,
+      background: document.getElementById('form-field-sbar-b').value.trim() || '표준 트러블슈팅 가이드',
       assessment: document.getElementById('form-field-sbar-a').value.trim() || '원인 분석 미입력',
       recommendation: document.getElementById('form-field-sbar-r').value.trim() || actionTaken
     };
@@ -644,7 +642,6 @@
         item.title = title;
         item.categoryLarge = categoryLarge;
         item.categoryMedium = categoryMedium;
-        item.department = department;
         item.sourceFile = sourceFile;
         item.symptom = symptom;
         item.actionTaken = actionTaken;
@@ -658,7 +655,6 @@
         title,
         categoryLarge,
         categoryMedium,
-        department,
         sourceFile,
         date: new Date().toISOString().slice(0, 10),
         symptom,
@@ -718,7 +714,6 @@
             title: row.Title || titleCandidate,
             sourceFile: row.Source_File || file.name,
             date: row.Date || new Date().toISOString().slice(0, 10),
-            department: row.Department || '미지정 부서',
             categoryLarge: row.Category_Large || '기타',
             categoryMedium: row.Category_Medium || '일반',
             symptom: row.Symptom || '',
@@ -726,7 +721,7 @@
             tags: [row.Category_Large, row.Category_Medium].filter(Boolean),
             sbar: {
               situation: row.Symptom || '',
-              background: `출처: ${row.Source_File || file.name} / 부서: ${row.Department || ''}`,
+              background: `출처: ${row.Source_File || file.name}`,
               assessment: 'CSV 인입 데이터 자동 생성',
               recommendation: row.Action_Taken || ''
             },
