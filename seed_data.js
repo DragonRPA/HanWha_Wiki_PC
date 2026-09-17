@@ -1,4 +1,4 @@
-// IT Service Knowledge Wiki - Full Seed Data (780 records)
+// IT Service Knowledge Wiki - Full Seed Data (719 records)
 const SEED_KNOWLEDGE_DATA = [
   {
     "id": "ms-update-80070002",
@@ -9647,30 +9647,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.307Z"
   },
   {
-    "id": "seed-15",
-    "title": "네트워크 - 서피스 ICT망 접속 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-04",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "서피스 ICT망 접속 문의",
-    "actionTaken": "ICT담당자 안내",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 서피스 ICT망 접속 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] ICT담당자 안내"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.307Z",
-    "updatedAt": "2026-08-07T05:08:48.307Z"
-  },
-  {
     "id": "seed-16",
     "title": "기본 프로그램 - 공용 업무 PC 메일 연동 삭제 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -10174,37 +10150,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.308Z"
   },
   {
-    "id": "seed-70",
-    "title": "네트워크 - 삼성 복합기 네트워크 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-22",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "삼성 복합기 네트워크 문의",
-    "actionTaken": "복합기 SSID 변경 후 정상",
-    "tags": [
-      "네트워크",
-      "문의",
-      "SSID",
-      "복합기",
-      "삼성"
-    ],
-    "sbar": {
-      "situation": "[S] 삼성 복합기 네트워크 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 복합기 SSID 변경 후 정상 📌 연관 지식: [[SSID]], [[복합기]], [[삼성]]"
-    },
-    "wikilinks": [
-      "SSID",
-      "복합기",
-      "삼성"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
     "id": "seed-71",
     "title": "IP - DNS 변경 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -10335,30 +10280,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.308Z"
   },
   {
-    "id": "seed-80",
-    "title": "네트워크 - 네트워크 끊킴 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-26",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "네트워크 끊킴 문의",
-    "actionTaken": "네트워크 정상 작동",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 네트워크 끊킴 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 정상 작동"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
     "id": "seed-81",
     "title": "기본 프로그램 - 사내 메신저 패스워드 변경 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -10436,30 +10357,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.308Z"
   },
   {
-    "id": "seed-86",
-    "title": "네트워크 - 네트워크 연결 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-29",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "네트워크 연결 문의",
-    "actionTaken": "네트워크 끊킴 정상 작동",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 네트워크 연결 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 끊킴 정상 작동"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
     "id": "seed-90",
     "title": "IP - 방송실 노트북 네트워크 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -10529,57 +10426,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "사내 메신저"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-104",
-    "title": "네트워크 - ICT망 네트워크 연결 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-05",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "ICT망 네트워크 연결 문의",
-    "actionTaken": "네트워크 담당자 안ㄴ",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] ICT망 네트워크 연결 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 담당자 안ㄴ"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-105",
-    "title": "네트워크 - 네트워크 끊킴",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-05",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "네트워크 끊킴",
-    "actionTaken": "CORP_WIFI_SEC -> CORP_WIFI 안내",
-    "tags": [
-      "네트워크",
-      "문의",
-      "CORP_WIFI"
-    ],
-    "sbar": {
-      "situation": "[S] 네트워크 끊킴",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] CORP_WIFI_SEC -> CORP_WIFI 안내 📌 연관 지식: [[CORP_WIFI]]"
-    },
-    "wikilinks": [
-      "CORP_WIFI"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.308Z",
@@ -10798,33 +10644,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.308Z"
   },
   {
-    "id": "seed-129",
-    "title": "네트워크 - 와이파이 신호 세기 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-29",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "와이파이 신호 세기 문의",
-    "actionTaken": "CORP_WIFI_5G -> CORP_WIFI 신호 확인",
-    "tags": [
-      "네트워크",
-      "문의",
-      "CORP_WIFI"
-    ],
-    "sbar": {
-      "situation": "[S] 와이파이 신호 세기 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] CORP_WIFI_5G -> CORP_WIFI 신호 확인 📌 연관 지식: [[CORP_WIFI]]"
-    },
-    "wikilinks": [
-      "CORP_WIFI"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
     "id": "seed-134",
     "title": "기본 프로그램 - 사내 메신저 로그인 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -10845,57 +10664,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "사내 메신저"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-136",
-    "title": "네트워크 - 임원실 네트워크 끊킴 및 느림",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-05",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "임원실 네트워크 끊킴 및 느림",
-    "actionTaken": "업무 부서 시스템 담당자 과 통화후 조치 예정",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 임원실 네트워크 끊킴 및 느림",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 업무 부서 시스템 담당자 과 통화후 조치 예정"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-138",
-    "title": "네트워크 - 와이파이 연결 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-06",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "와이파이 연결 문의",
-    "actionTaken": "CORP_WIFI 안내",
-    "tags": [
-      "네트워크",
-      "문의",
-      "CORP_WIFI"
-    ],
-    "sbar": {
-      "situation": "[S] 와이파이 연결 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] CORP_WIFI 안내 📌 연관 지식: [[CORP_WIFI]]"
-    },
-    "wikilinks": [
-      "CORP_WIFI"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.309Z",
@@ -10971,32 +10739,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.309Z"
   },
   {
-    "id": "seed-145",
-    "title": "네트워크 - IP 설정 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-12",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "IP 설정 문의",
-    "actionTaken": "네트워크 설정 - IP입력 안내",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] IP 설정 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 설정 - IP입력 안내 📌 연관 지식: [[IP]]"
-    },
-    "wikilinks": [
-      "IP"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
     "id": "seed-148",
     "title": "브라우저 - 엣지 문서 다운로드 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -11044,30 +10786,6 @@ const SEED_KNOWLEDGE_DATA = [
       "줌",
       "화상회의"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-154",
-    "title": "메신저 - 사내 개발망 메신저 로그인 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-14",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "사내 개발망 메신저 로그인 문의",
-    "actionTaken": "도메인 주소 corp.com -> corp-rd.com",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 개발망 메신저 로그인 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 도메인 주소 corp.com -> corp-rd.com"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.309Z",
     "updatedAt": "2026-08-07T05:08:48.309Z"
@@ -11148,30 +10866,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "IP"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-170",
-    "title": "네트워크 - 넷기어 고장으로 인한 교체",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-28",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "넷기어 고장으로 인한 교체",
-    "actionTaken": "네트워크 정상 작동",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 넷기어 고장으로 인한 교체",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 정상 작동"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.309Z",
     "updatedAt": "2026-08-07T05:08:48.309Z"
@@ -11309,33 +11003,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.309Z"
   },
   {
-    "id": "seed-190",
-    "title": "메신저 - 메신져 오류 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-15",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "메신져 오류 문의",
-    "actionTaken": "사내 메신저 메신져 재설치 후 정상",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "사내 메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 메신져 오류 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 메신져 재설치 후 정상 📌 연관 지식: [[사내 메신저]]"
-    },
-    "wikilinks": [
-      "사내 메신저"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
     "id": "seed-191",
     "title": "기본 프로그램 - 무선 마우프 페어링 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -11356,32 +11023,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "페어링"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-194",
-    "title": "네트워크 - 사내개방망 네트워크 연결 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-16",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "사내개방망 네트워크 연결 문의",
-    "actionTaken": "IP차단으로 인한 전산관리자 안내",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 사내개방망 네트워크 연결 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] IP차단으로 인한 전산관리자 안내 📌 연관 지식: [[IP]]"
-    },
-    "wikilinks": [
-      "IP"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.309Z",
@@ -11441,57 +11082,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.309Z"
   },
   {
-    "id": "seed-204",
-    "title": "네트워크 - 아이피 등록 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-22",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "아이피 등록 문의",
-    "actionTaken": "보안 솔루션 -OTP요청 후 코드 입력 후 아이피 입력",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 아이피 등록 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 보안 솔루션 -OTP요청 후 코드 입력 후 아이피 입력"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-205",
-    "title": "네트워크 - 네트워크 연결",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-22",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "네트워크 연결",
-    "actionTaken": "CORP_WIFI -> CORP_WIFI_SEC 정상",
-    "tags": [
-      "네트워크",
-      "문의",
-      "CORP_WIFI"
-    ],
-    "sbar": {
-      "situation": "[S] 네트워크 연결",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] CORP_WIFI -> CORP_WIFI_SEC 정상 📌 연관 지식: [[CORP_WIFI]]"
-    },
-    "wikilinks": [
-      "CORP_WIFI"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
     "id": "seed-206",
     "title": "기본 프로그램 - 자산실사 프로그램 실행 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -11536,33 +11126,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "오피스"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-208",
-    "title": "메신저 - 메신저 업그레이드 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-23",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "메신저 업그레이드 문의",
-    "actionTaken": "사내 메신저 - 고객센터 메신져 애드인 설치",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "사내 메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 메신저 업그레이드 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 - 고객센터 메신져 애드인 설치 📌 연관 지식: [[사내 메신저]]"
-    },
-    "wikilinks": [
-      "사내 메신저"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.309Z",
@@ -11675,30 +11238,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.309Z"
   },
   {
-    "id": "seed-233",
-    "title": "메신저 - 업데이트 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-03",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "업데이트 문의",
-    "actionTaken": "안내 완료",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 업데이트 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 안내 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-234",
     "title": "기본 프로그램 - MS 오피스 재설치 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -11774,60 +11313,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
-    "id": "seed-240",
-    "title": "메신저 - 아웃룩 파일 이동 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-12",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "아웃룩 파일 이동 요청",
-    "actionTaken": "완료",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "아웃룩"
-    ],
-    "sbar": {
-      "situation": "[S] 아웃룩 파일 이동 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 완료 📌 연관 지식: [[아웃룩]]"
-    },
-    "wikilinks": [
-      "아웃룩"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-242",
-    "title": "메신저 - 아웃룩 용량 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-13",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "아웃룩 용량 문의",
-    "actionTaken": "안내 완료",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "아웃룩"
-    ],
-    "sbar": {
-      "situation": "[S] 아웃룩 용량 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 안내 완료 📌 연관 지식: [[아웃룩]]"
-    },
-    "wikilinks": [
-      "아웃룩"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-244",
     "title": "기본 프로그램 - 보안 설치 프로그램 노트북에 복사 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -11868,30 +11353,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] 조치 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-251",
-    "title": "네트워크 - 네트워크 끊김 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-18",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "네트워크 끊김 문의",
-    "actionTaken": "안내 완료",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 네트워크 끊김 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 안내 완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -11996,33 +11457,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "IP"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-268",
-    "title": "메신저 - 메신저 로그인안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-23",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "메신저 로그인안됨",
-    "actionTaken": "패스워드 초기화 안내완료",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "워드"
-    ],
-    "sbar": {
-      "situation": "[S] 메신저 로그인안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 패스워드 초기화 안내완료 📌 연관 지식: [[워드]]"
-    },
-    "wikilinks": [
-      "워드"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.310Z",
@@ -13057,30 +12491,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.311Z"
   },
   {
-    "id": "seed-389",
-    "title": "메신저 - SAP 실행 불",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-05",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "SAP 실행 불",
-    "actionTaken": "SapGui740_install 재설치",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] SAP 실행 불",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] SapGui740_install 재설치"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.311Z",
-    "updatedAt": "2026-08-07T05:08:48.311Z"
-  },
-  {
     "id": "seed-391",
     "title": "기본 프로그램 - 아웃룩 사서함 메일 꽉참",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -13308,30 +12718,6 @@ const SEED_KNOWLEDGE_DATA = [
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.311Z",
     "updatedAt": "2026-08-07T05:08:48.311Z"
-  },
-  {
-    "id": "seed-424",
-    "title": "메신저 - 메신저 로그인 안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-20",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "메신저 로그인 안됨",
-    "actionTaken": "메신저 삭제후 재설치및 메신저 업그레이드",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 메신저 로그인 안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 메신저 삭제후 재설치및 메신저 업그레이드"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
     "id": "seed-426",
@@ -13661,33 +13047,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-454",
-    "title": "메신저 - 메신저 왼쪽 메뉴바 안보임",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-27",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "메신저 왼쪽 메뉴바 안보임",
-    "actionTaken": "사내 메신저 메신저 재설치 후 정상",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "사내 메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 메신저 왼쪽 메뉴바 안보임",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 메신저 재설치 후 정상 📌 연관 지식: [[사내 메신저]]"
-    },
-    "wikilinks": [
-      "사내 메신저"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-455",
     "title": "기본 프로그램 - 보안 소프트웨어 설치 지원",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -13858,108 +13217,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-470",
-    "title": "메신저 - 아웃룩 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-25",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "아웃룩 문의",
-    "actionTaken": "아웃룩 이메일 PST 파일 연결",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "아웃룩"
-    ],
-    "sbar": {
-      "situation": "[S] 아웃룩 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 아웃룩 이메일 PST 파일 연결 📌 연관 지식: [[아웃룩]]"
-    },
-    "wikilinks": [
-      "아웃룩"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-471",
-    "title": "메신저 - 대용량 파일 전송오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/01(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "대용량 파일 전송오류",
-    "actionTaken": "아웃룩 프로그램 재설치",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "아웃룩"
-    ],
-    "sbar": {
-      "situation": "[S] 대용량 파일 전송오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 아웃룩 프로그램 재설치 📌 연관 지식: [[아웃룩]]"
-    },
-    "wikilinks": [
-      "아웃룩"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-472",
-    "title": "네트워크 - 일반망 WIFI 연결안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/02(금)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "일반망 WIFI 연결안됨",
-    "actionTaken": "일반망 WIFI 설정 후 정상연결 확인",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 WIFI 연결안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 일반망 WIFI 설정 후 정상연결 확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-473",
-    "title": "네트워크 - 일반망 네트워크 세팅 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/02(금)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "일반망 네트워크 세팅 요청",
-    "actionTaken": "일반망 네트워크 어뎁터 및 WIFI 설정 완료",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 네트워크 세팅 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 일반망 네트워크 어뎁터 및 WIFI 설정 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-476",
     "title": "데스크탑 - 개발용PC PCI모듈점검",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -13977,78 +13234,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: 데스크탑. 현장 처리 결과 검증.",
       "recommendation": "[R] PC 분해후 점검완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-478",
-    "title": "메신저 - outlook 대용량 첨부불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/05(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "outlook 대용량 첨부불가",
-    "actionTaken": "cubelook 재설치 후 대용량첨부 기능 정상",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] outlook 대용량 첨부불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] cubelook 재설치 후 대용량첨부 기능 정상"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-481",
-    "title": "네트워크 - 내부 보안망 네트워크 접속오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/06(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "내부 보안망 네트워크 접속오류",
-    "actionTaken": "무선인증솔루션 재설정 왼료",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 네트워크 접속오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선인증솔루션 재설정 왼료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-490",
-    "title": "메신저 - 일반망PC 사내 메신저 옵션 표출 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/07(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "일반망PC 사내 메신저 옵션 표출 오류",
-    "actionTaken": "PC재부팅 및 메신저 재접속",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 사내 메신저 옵션 표출 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC재부팅 및 메신저 재접속"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -14253,55 +13438,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-513",
-    "title": "메신저 - 아웃록(메신저) 연결 관련 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/19(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "아웃록(메신저) 연결 관련 오류",
-    "actionTaken": "비밀번호 초기화 후 정상작동완료",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "RPA"
-    ],
-    "sbar": {
-      "situation": "[S] 아웃록(메신저) 연결 관련 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 비밀번호 초기화 후 정상작동완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-514",
-    "title": "네트워크 - 일반망 PC 네트워크 연결 불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/19(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "일반망 PC 네트워크 연결 불량",
-    "actionTaken": "네트워크 어댑터 설정 초기화",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 PC 네트워크 연결 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 어댑터 설정 초기화"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-516",
     "title": "IP - 내부 보안망PC 네트워크 연결불량",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -14344,30 +13480,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 라이센스. 현장 처리 결과 검증.",
       "recommendation": "[R] 내부 보안망PC 네트워크 연결후 인증상태 확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-521",
-    "title": "네트워크 - 내부 보안망PC 네트워크 연결불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/21(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "내부 보안망PC 네트워크 연결불량",
-    "actionTaken": "내부 보안망 네트워크 어뎁터설정 완료",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 네트워크 연결불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 내부 보안망 네트워크 어뎁터설정 완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -14428,102 +13540,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-528",
-    "title": "네트워크 - 일반망PC 네트워크 연결상태불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/26(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "일반망PC 네트워크 연결상태불량",
-    "actionTaken": "네트워크 어댑터 설정 초기화",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 네트워크 연결상태불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 어댑터 설정 초기화"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-534",
-    "title": "메신저 - 일반망 메신져 옵션 표출 안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/27(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "일반망 메신져 옵션 표출 안됨",
-    "actionTaken": "사내 메신저 재실행후 정상표출 완료",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 메신져 옵션 표출 안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 재실행후 정상표출 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-537",
-    "title": "메신저 - 일반망 메신저 로그인 안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/27(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "일반망 메신저 로그인 안됨",
-    "actionTaken": "사내 메신저 PW초기화 후 로그인 완료",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 메신저 로그인 안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 PW초기화 후 로그인 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-542",
-    "title": "메신저 - 내부 보안망 메신져 접속불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/29(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "내부 보안망 메신져 접속불가",
-    "actionTaken": "내부 보안망네트워크 오류 확인 후 무선인증솔루션 재인증",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 메신져 접속불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 내부 보안망네트워크 오류 확인 후 무선인증솔루션 재인증"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-545",
     "title": "IP - 네트워크 접속 불가",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -14545,107 +13561,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "DNS"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-547",
-    "title": "네트워크 - 망연계 시스템 접속오류발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/06(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "망연계 시스템 접속오류발생",
-    "actionTaken": "네트워크 설정 초기화 후 재접속 완료",
-    "tags": [
-      "네트워크",
-      "문의",
-      "망연계"
-    ],
-    "sbar": {
-      "situation": "[S] 망연계 시스템 접속오류발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 설정 초기화 후 재접속 완료 📌 연관 지식: [[망연계 시스템]]"
-    },
-    "wikilinks": [
-      "망연계 시스템"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-550",
-    "title": "네트워크 - 내부 보안망PC 네트워트 어뎁터 인식불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/06(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "내부 보안망PC 네트워트 어뎁터 인식불가",
-    "actionTaken": "보안 솔루션 IP설정차단기능으로 드라이버 안보임 확인 후 네트워크 재연결완료",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 네트워트 어뎁터 인식불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 보안 솔루션 IP설정차단기능으로 드라이버 안보임 확인 후 네트워크 재연결완료 📌 연관 지식: [[IP]]"
-    },
-    "wikilinks": [
-      "IP"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-551",
-    "title": "네트워크 - 내부 보안망PC 네트워크 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/06(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "내부 보안망PC 네트워크 오류",
-    "actionTaken": "무선인증솔루션 재설정 왼료",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 네트워크 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선인증솔루션 재설정 왼료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-552",
-    "title": "메신저 - 임원 퇴사후 재입사처리로 인한 기존계정 PC",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/07(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "임원 퇴사후 재입사처리로 인한 기존계정 PC 메신저 및 보안 소프트웨어 접속불가",
-    "actionTaken": "새 계정 발급 되었지만 PC오프 접속불가, 담당자 통화후 PC오프 삭제완료후 메신저 접속완료",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 임원 퇴사후 재입사처리로 인한 기존계정 PC 메신저 및 보안 소프트웨어 접속불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 새 계정 발급 되었지만 PC오프 접속불가, 담당자 통화후 PC오프 삭제완료후 메신저 접속완료"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.312Z",
     "updatedAt": "2026-08-07T05:08:48.312Z"
@@ -14676,131 +13591,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.313Z"
   },
   {
-    "id": "seed-560",
-    "title": "네트워크 - 일반망 네트워크 접속불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/08(금)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "일반망 네트워크 접속불량",
-    "actionTaken": "일반망 네트워크 어뎁터 및 WIFI 설정 완료",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 네트워크 접속불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 일반망 네트워크 어뎁터 및 WIFI 설정 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-561",
-    "title": "네트워크 - 내부 보안망PC 이너넷 어뎁터 인식불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/11(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "내부 보안망PC 이너넷 어뎁터 인식불가",
-    "actionTaken": "보안 솔루션 해제후 어뎁터 인식 정상확인",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 이너넷 어뎁터 인식불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 보안 솔루션 해제후 어뎁터 인식 정상확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-562",
-    "title": "네트워크 - 내부 보안망PC 네트워크 접속오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/11(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "내부 보안망PC 네트워크 접속오류",
-    "actionTaken": "네트워크 드라이버 초기화 작업 진행 후 정상접속 확인",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 네트워크 접속오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 드라이버 초기화 작업 진행 후 정상접속 확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-564",
-    "title": "네트워크 - 일반망, 내부 보안망 PC 네트워크 셋팅 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/11(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "일반망, 내부 보안망 PC 네트워크 셋팅 요청",
-    "actionTaken": "일반망 내부 보안망 PC입스등록및 IP초기화 등 네트워크 셋팅 완료",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망, 내부 보안망 PC 네트워크 셋팅 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 일반망 내부 보안망 PC입스등록및 IP초기화 등 네트워크 셋팅 완료 📌 연관 지식: [[IP]]"
-    },
-    "wikilinks": [
-      "IP"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-570",
-    "title": "네트워크 - 일반망PC 프린터 출력 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/12(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "일반망PC 프린터 출력 오류",
-    "actionTaken": "복합기설치드라이버 재설치 후 정상출력 확인",
-    "tags": [
-      "네트워크",
-      "문의",
-      "복합기"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 프린터 출력 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 복합기설치드라이버 재설치 후 정상출력 확인 📌 연관 지식: [[복합기]]"
-    },
-    "wikilinks": [
-      "복합기"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
     "id": "seed-576",
     "title": "IP - 내부 보안망 네트워크 접속오류",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -14821,54 +13611,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "IP"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-578",
-    "title": "네트워크 - 일반망PC 네트워크 안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/14(목)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "일반망PC 네트워크 안됨",
-    "actionTaken": "비행기모드 해제후 네트워크 재설정 및 연결상태 확인",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 네트워크 안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 비행기모드 해제후 네트워크 재설정 및 연결상태 확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-583",
-    "title": "네트워크 - 내부 보안망PC 네트워크 연결 불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/18(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "문의",
-    "symptom": "내부 보안망PC 네트워크 연결 불량",
-    "actionTaken": "T-GATE PW변경후 재로그인 후 네트워크 연결 완료",
-    "tags": [
-      "네트워크",
-      "문의"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 네트워크 연결 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] T-GATE PW변경후 재로그인 후 네트워크 연결 완료"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.313Z",
     "updatedAt": "2026-08-07T05:08:48.313Z"
@@ -14944,30 +13686,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: 데스크탑. 현장 처리 결과 검증.",
       "recommendation": "[R] 규격 확인 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-602",
-    "title": "메신저 - 메신저 오류 및 인사시스템 접속불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/04(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "메신저 오류 및 인사시스템 접속불가",
-    "actionTaken": "메신저 프로그램 재설치 후 정상접속 확인",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 메신저 오류 및 인사시스템 접속불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 메신저 프로그램 재설치 후 정상접속 확인"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -15604,30 +14322,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-680",
-    "title": "메신저 - 메신저 에딩에있는 사내 메신저 접속안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/25(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "메신저 에딩에있는 사내 메신저 접속안됨",
-    "actionTaken": "메신저 에딩 이슈로인하여 담당자 이관완료",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 메신저 에딩에있는 사내 메신저 접속안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 메신저 에딩 이슈로인하여 담당자 이관완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-681",
     "title": "유지보수 - 무선랜카드 네트워크 접속",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -16088,37 +14782,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.315Z"
   },
   {
-    "id": "seed-746",
-    "title": "메신저 - 메신서 대화안됨 및 일반망 스캔 셋팅요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/07(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "메신서 대화안됨 및 일반망 스캔 셋팅요청",
-    "actionTaken": "오피스 재설치 및 복합기 관리자매니저 셋팅완료",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "복합기",
-      "오피스",
-      "스캔"
-    ],
-    "sbar": {
-      "situation": "[S] 메신서 대화안됨 및 일반망 스캔 셋팅요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 오피스 재설치 및 복합기 관리자매니저 셋팅완료 📌 연관 지식: [[복합기 관리자]], [[오피스]], [[스캔]]"
-    },
-    "wikilinks": [
-      "복합기 관리자",
-      "오피스",
-      "스캔"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
     "id": "seed-750",
     "title": "기본 프로그램 - PC OFF 솔루션 근태 설정안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -16229,30 +14892,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
       "recommendation": "[R] 네트워크 재설정완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-760",
-    "title": "메신저 - 아웃록 대용량첨부 안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/09(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "아웃록 대용량첨부 안됨",
-    "actionTaken": "에딩 재설치완료",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 아웃록 대용량첨부 안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 에딩 재설치완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -16458,33 +15097,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 재부팅완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-799",
-    "title": "메신저 - 아웃록 백업",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/23(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "아웃록 백업",
-    "actionTaken": "백업완료",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 아웃록 백업",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 백업완료 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.315Z",
     "updatedAt": "2026-08-07T05:08:48.315Z"
@@ -16750,30 +15362,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 라이센스. 현장 처리 결과 검증.",
       "recommendation": "[R] msoffice 재설치 및 라이선스 재등록 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-880",
-    "title": "메신저 - 내부 보안망 메신저 접속불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/21(금)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "내부 보안망 메신저 접속불가",
-    "actionTaken": "메신저 프로그램 재설치 후 정상접속 확인",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 메신저 접속불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 메신저 프로그램 재설치 후 정상접속 확인"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -17105,33 +15693,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.316Z"
   },
   {
-    "id": "seed-906",
-    "title": "메신저 - 사내 메신저 pw변경 불가 오류발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/01(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "사내 메신저 pw변경 불가 오류발생",
-    "actionTaken": "담당자 확인 후 피드백예정",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "사내 메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 메신저 pw변경 불가 오류발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 담당자 확인 후 피드백예정 📌 연관 지식: [[사내 메신저]]"
-    },
-    "wikilinks": [
-      "사내 메신저"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
     "id": "seed-907",
     "title": "IP - 내부 보안망 무선랜 설정 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -17327,30 +15888,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "블루스크린"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-935",
-    "title": "메신저 - 인사시스템 접속오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/11(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "인사시스템 접속오류",
-    "actionTaken": "OS 깨짐현상 확인 후 재설치 권유 및 포멧신청서 상신 요청",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 인사시스템 접속오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] OS 깨짐현상 확인 후 재설치 권유 및 포멧신청서 상신 요청"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.316Z",
     "updatedAt": "2026-08-07T05:08:48.316Z"
@@ -17607,62 +16144,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 장착 후 인식 완료 확인"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-985",
-    "title": "메신저 - 사내 메신저 접속 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/01(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "사내 메신저 접속 오류",
-    "actionTaken": "사내 메신저 Add-in 프로그램 재설치 후 정상 동작확인",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "AD"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 메신저 접속 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 Add-in 프로그램 재설치 후 정상 동작확인 📌 연관 지식: [[AD]]"
-    },
-    "wikilinks": [
-      "AD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-986",
-    "title": "메신저 - 구) 그룹웨어[서클-아웃룩, 메신저 Add-",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/01(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "구) 그룹웨어[서클-아웃룩, 메신저 Add-in] 접속자 문제 해결 방안 게시글 공유요청",
-    "actionTaken": "게시글 링크 및 화면 첨부하여 PC지원팀 공유완료",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "아웃룩",
-      "AD"
-    ],
-    "sbar": {
-      "situation": "[S] 구) 그룹웨어[서클-아웃룩, 메신저 Add-in] 접속자 문제 해결 방안 게시글 공유요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 게시글 링크 및 화면 첨부하여 PC지원팀 공유완료 📌 연관 지식: [[아웃룩]], [[AD]]"
-    },
-    "wikilinks": [
-      "아웃룩",
-      "AD"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.317Z",
     "updatedAt": "2026-08-07T05:08:48.317Z"
@@ -18992,30 +17473,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "DNS"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1240",
-    "title": "메신저 - 일반망pc 사내 메신저 미설치",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/27(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "일반망pc 사내 메신저 미설치",
-    "actionTaken": "사내 메신저 메신저 설치 및 실행 확인",
-    "tags": [
-      "소프트웨어",
-      "메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망pc 사내 메신저 미설치",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 메신저 설치 및 실행 확인"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.319Z",
     "updatedAt": "2026-08-07T05:08:48.319Z"
