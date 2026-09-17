@@ -1,4 +1,4 @@
-// IT Service Knowledge Wiki - Full Seed Data (1129 records)
+// IT Service Knowledge Wiki - Full Seed Data (780 records)
 const SEED_KNOWLEDGE_DATA = [
   {
     "id": "ms-update-80070002",
@@ -1867,19 +1867,17 @@ const SEED_KNOWLEDGE_DATA = [
     "sourceFile": "PC 하드웨어 표준 진단 규격",
     "date": "2026-08-07",
     "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
+    "categoryMedium": "디스플레이",
     "symptom": "Dell 노트북 전원 버튼 LED가 주황색 2회, 흰색 7회 반복 점멸하며 화면 블랙",
     "actionTaken": "eDP 케이블 재장착 및 Dell BIST(자체 화면 테스트) 실행",
     "tags": [
       "하드웨어",
-      "노트북",
-      "Dell Diagnostic LED",
-      "2 Amber 7 White",
+      "디스플레이",
       "Dell",
       "LED점멸",
       "LCDBIST",
       "eDP케이블",
-      "노트북화면"
+      "화면"
     ],
     "sbar": {
       "situation": "[S] Dell 노트북 전원 버튼 LED가 주황색 2회, 흰색 7회 반복 점멸하며 화면 블랙",
@@ -2290,7 +2288,7 @@ const SEED_KNOWLEDGE_DATA = [
     "sourceFile": "하드웨어 트러블슈팅 가이드",
     "date": "2026-08-07",
     "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
+    "categoryMedium": "사운드/오디오",
     "symptom": "소리 아이콘에 '출력 장치 설치 안 됨' 경고 표출, Teams/Zoom 화상 회의 마이크 음성 미인식",
     "actionTaken": "1. mmsys.cpl 실행 후 기본 재생/녹음 장치 지정 2. Realtek/인텔 SST 사운드 드라이버 롤백 3. 윈도우 마이크 개인정보 접근 허용",
     "sbar": {
@@ -2302,7 +2300,13 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T06:04:44.489Z",
-    "updatedAt": "2026-08-07T06:04:44.489Z"
+    "updatedAt": "2026-08-07T06:04:44.489Z",
+    "tags": [
+      "하드웨어",
+      "사운드",
+      "오디오",
+      "마이크"
+    ]
   },
   {
     "id": "hw-trouble-06",
@@ -2310,7 +2314,7 @@ const SEED_KNOWLEDGE_DATA = [
     "sourceFile": "하드웨어 트러블슈팅 가이드",
     "date": "2026-08-07",
     "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
+    "categoryMedium": "배터리/전원",
     "symptom": "노트북 터치패드 포인터 멈춤, 클릭 불가능, 하판 및 터치패드 주변이 들뜨고 부풀어 오르는 현상",
     "actionTaken": "1. Fn + 터치패드 락 단축키 상태 확인 2. 배터리 팽창(Swelling) 식별 시 하판 분해 및 가스 배터리 물리적 안전 탈거 3. 렌탈사 교체 접수",
     "sbar": {
@@ -2322,7 +2326,13 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T06:04:44.489Z",
-    "updatedAt": "2026-08-07T06:04:44.489Z"
+    "updatedAt": "2026-08-07T06:04:44.489Z",
+    "tags": [
+      "하드웨어",
+      "배터리",
+      "터치패드",
+      "스웰링"
+    ]
   },
   {
     "id": "hw-trouble-07",
@@ -2330,7 +2340,7 @@ const SEED_KNOWLEDGE_DATA = [
     "sourceFile": "하드웨어 트러블슈팅 가이드",
     "date": "2026-08-07",
     "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
+    "categoryMedium": "디스플레이",
     "symptom": "모니터 백라이트 손상으로 화면이 희미하게 어둡게 나옴, 34인치 울트라와이드 권장 해상도 미지원",
     "actionTaken": "1. 외장 그래픽 드라이버 최신화 및 재생 빈도 수동 변경 2. 백라이트 패널 고장 단말 식별 시 SSD 하드 탈거 후 모니터/노트북 교체",
     "sbar": {
@@ -2342,7 +2352,13 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T06:04:44.489Z",
-    "updatedAt": "2026-08-07T06:04:44.489Z"
+    "updatedAt": "2026-08-07T06:04:44.489Z",
+    "tags": [
+      "하드웨어",
+      "디스플레이",
+      "백라이트",
+      "해상도"
+    ]
   },
   {
     "id": "known-issue-01",
@@ -2474,7 +2490,7 @@ const SEED_KNOWLEDGE_DATA = [
     "sourceFile": "Windows 11 기술 가이드",
     "date": "2026-08-07",
     "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
+    "categoryMedium": "브라우저",
     "symptom": "신규 지급된 LG 그램 노트북에서 웹 브라우저, 사내 메신저 메일 등 파일 첨부 기능 클릭 시 무한 먹통/프리징",
     "actionTaken": "1. 제어판 > 프로그램 및 기능 진입 2. OEM 번들 프로그램 LG Smart Assistant 수동 완전 삭제 3. PC 재부팅 후 보안 솔루션 정책 재동기화",
     "sbar": {
@@ -2489,7 +2505,12 @@ const SEED_KNOWLEDGE_DATA = [
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T06:00:21.686Z",
-    "updatedAt": "2026-08-07T06:00:21.686Z"
+    "updatedAt": "2026-08-07T06:00:21.686Z",
+    "tags": [
+      "소프트웨어",
+      "Windows11",
+      "파일업로드"
+    ]
   },
   {
     "id": "bsod-full-1",
@@ -9496,37 +9517,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:31:38.530Z"
   },
   {
-    "id": "seed-2",
-    "title": "하드웨어 - 삼성 복합기 스캔 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-02",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "삼성 복합기 스캔 문의",
-    "actionTaken": "복합기 등록 안내",
-    "tags": [
-      "하드웨어",
-      "기타",
-      "복합기",
-      "삼성",
-      "스캔"
-    ],
-    "sbar": {
-      "situation": "[S] 삼성 복합기 스캔 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 복합기 등록 안내 📌 연관 지식: [[복합기]], [[삼성]], [[스캔]]"
-    },
-    "wikilinks": [
-      "복합기",
-      "삼성",
-      "스캔"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.307Z",
-    "updatedAt": "2026-08-07T05:08:48.307Z"
-  },
-  {
     "id": "seed-3",
     "title": "기본 프로그램 - 아웃룩 대용량 첨부파일 안열림",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -9548,54 +9538,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "아웃룩"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.307Z",
-    "updatedAt": "2026-08-07T05:08:48.307Z"
-  },
-  {
-    "id": "seed-5",
-    "title": "노트북 - 26층 노트북 한대 셋팅 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-02",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "26층 노트북 한대 셋팅 요청",
-    "actionTaken": "셋팅 완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 26층 노트북 한대 셋팅 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 셋팅 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.307Z",
-    "updatedAt": "2026-08-07T05:08:48.307Z"
-  },
-  {
-    "id": "seed-7",
-    "title": "노트북 - 연말정산 노트북 렌탈 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-03",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "연말정산 노트북 렌탈 문의",
-    "actionTaken": "노트북 셋팅 후 지급 예정",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 연말정산 노트북 렌탈 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 셋팅 후 지급 예정"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.307Z",
     "updatedAt": "2026-08-07T05:08:48.307Z"
@@ -9650,33 +9592,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.307Z"
   },
   {
-    "id": "seed-10",
-    "title": "노트북 - 렌탈 노트북 계정 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-04",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "렌탈 노트북 계정 문의",
-    "actionTaken": "AD 삭제 안내",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "AD"
-    ],
-    "sbar": {
-      "situation": "[S] 렌탈 노트북 계정 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] AD 삭제 안내 📌 연관 지식: [[AD]]"
-    },
-    "wikilinks": [
-      "AD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.307Z",
-    "updatedAt": "2026-08-07T05:08:48.307Z"
-  },
-  {
     "id": "seed-11",
     "title": "기본 프로그램 - 신도 복합기 출력 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -9699,60 +9614,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "복합기",
       "신도"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.307Z",
-    "updatedAt": "2026-08-07T05:08:48.307Z"
-  },
-  {
-    "id": "seed-12",
-    "title": "노트북 - 노트북 포맷 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-04",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 포맷 요청",
-    "actionTaken": "노트북 포맷",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 포맷 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.307Z",
-    "updatedAt": "2026-08-07T05:08:48.307Z"
-  },
-  {
-    "id": "seed-13",
-    "title": "하드웨어 - 26층 TF 복합기 셋팅 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-04",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "26층 TF 복합기 셋팅 문의",
-    "actionTaken": "드라이버 설치 및 테스트",
-    "tags": [
-      "하드웨어",
-      "기타",
-      "복합기"
-    ],
-    "sbar": {
-      "situation": "[S] 26층 TF 복합기 셋팅 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 드라이버 설치 및 테스트 📌 연관 지식: [[복합기]]"
-    },
-    "wikilinks": [
-      "복합기"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.307Z",
@@ -9833,32 +9694,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.307Z"
   },
   {
-    "id": "seed-17",
-    "title": "포맷 - 노트북 포맷",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-05",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "노트북 포맷",
-    "actionTaken": "포맷 및 셋팅 완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 포맷",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 및 셋팅 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.307Z",
-    "updatedAt": "2026-08-07T05:08:48.307Z"
-  },
-  {
     "id": "seed-18",
     "title": "IP - IP 입력 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -9881,30 +9716,6 @@ const SEED_KNOWLEDGE_DATA = [
       "IP",
       "DNS"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.307Z",
-    "updatedAt": "2026-08-07T05:08:48.307Z"
-  },
-  {
-    "id": "seed-19",
-    "title": "노트북 - 인사발령 입사자 노트북 신청 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-05",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "인사발령 입사자 노트북 신청 문의",
-    "actionTaken": "노트북 신청 안내 완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 인사발령 입사자 노트북 신청 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 신청 안내 완료"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.307Z",
     "updatedAt": "2026-08-07T05:08:48.307Z"
@@ -9959,59 +9770,6 @@ const SEED_KNOWLEDGE_DATA = [
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.307Z",
     "updatedAt": "2026-08-07T05:08:48.307Z"
-  },
-  {
-    "id": "seed-22",
-    "title": "노트북 - PC 노후화 교체 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-08",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "PC 노후화 교체 문의",
-    "actionTaken": "노트북 노후화로 인한 교체 예정",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] PC 노후화 교체 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 노후화로 인한 교체 예정"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.307Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-23",
-    "title": "소프트웨어 - 회의실 줌 화상회의 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-08",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "회의실 줌 화상회의 문의",
-    "actionTaken": "화상회의 점검 및 정상 작동 확인",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "줌",
-      "화상회의"
-    ],
-    "sbar": {
-      "situation": "[S] 회의실 줌 화상회의 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 화상회의 점검 및 정상 작동 확인 📌 연관 지식: [[줌]], [[화상회의]]"
-    },
-    "wikilinks": [
-      "줌",
-      "화상회의"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
   },
   {
     "id": "seed-26",
@@ -10116,133 +9874,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.308Z"
   },
   {
-    "id": "seed-31",
-    "title": "소프트웨어 - 윈도우 패스워드 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-10",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "윈도우 패스워드 문의",
-    "actionTaken": "업무 부서 김동욱 패스워드 초기화 안내",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "워드"
-    ],
-    "sbar": {
-      "situation": "[S] 윈도우 패스워드 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 업무 부서 김동욱 패스워드 초기화 안내 📌 연관 지식: [[워드]]"
-    },
-    "wikilinks": [
-      "워드"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-32",
-    "title": "포맷 - PC 포맷 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-10",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "PC 포맷 요청",
-    "actionTaken": "포맷 및 셋팅 완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] PC 포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 및 셋팅 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-33",
-    "title": "노트북 - 연말정산 노트북 셋팅 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-11",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "연말정산 노트북 셋팅 문의",
-    "actionTaken": "노트북 셋팅 안내",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 연말정산 노트북 셋팅 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 셋팅 안내"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-34",
-    "title": "노트북 - 26층 TF노트북 1대 교체 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-11",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "26층 TF노트북 1대 교체 문의",
-    "actionTaken": "확인 후 안내 예정",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 26층 TF노트북 1대 교체 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 확인 후 안내 예정"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-35",
-    "title": "포맷 - 면접용 노트북 포맷 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-11",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "면접용 노트북 포맷 문의",
-    "actionTaken": "포맷 및 셋팅 완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 면접용 노트북 포맷 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 및 셋팅 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
     "id": "seed-37",
     "title": "기본 프로그램 - 면접용 노트북 셋팅",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -10321,30 +9952,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.308Z"
   },
   {
-    "id": "seed-40",
-    "title": "하드웨어 - 연말정산 노트북 셋팅 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-15",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "연말정산 노트북 셋팅 문의",
-    "actionTaken": "셋팅 완료",
-    "tags": [
-      "하드웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 연말정산 노트북 셋팅 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 셋팅 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
     "id": "seed-41",
     "title": "드라이버 - 삼성 복합기 드라이버 설치 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -10374,78 +9981,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.308Z"
   },
   {
-    "id": "seed-42",
-    "title": "노트북 - 26층 노트북 교체 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-15",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "26층 노트북 교체 문의",
-    "actionTaken": "교체 완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 26층 노트북 교체 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 교체 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-44",
-    "title": "노트북 - 26층 TF노트북 교체 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-15",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "26층 TF노트북 교체 문의",
-    "actionTaken": "노트북 교체 및 셋팅 완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 26층 TF노트북 교체 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 교체 및 셋팅 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-46",
-    "title": "소프트웨어 - 사내 메신저 전자결재 안열림",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-15",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "사내 메신저 전자결재 안열림",
-    "actionTaken": "사내 메신저 접속 정상",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 메신저 전자결재 안열림",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 접속 정상"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
     "id": "seed-47",
     "title": "드라이버 - 사내 메신저 메신져 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -10463,30 +9998,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 드라이버. 현장 처리 결과 검증.",
       "recommendation": "[R] 사내 메신저 메신져 다운로드"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-49",
-    "title": "노트북 - 렌탈 노트북 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-16",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "렌탈 노트북 문의",
-    "actionTaken": "렌탈 진행 안내",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 렌탈 노트북 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 렌탈 진행 안내"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -10519,111 +10030,6 @@ const SEED_KNOWLEDGE_DATA = [
       "복합기",
       "삼성",
       "스캔"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-54",
-    "title": "노트북 - 노트북 포맷 신청 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-17",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 포맷 신청 문의",
-    "actionTaken": "포맷 신청 완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 포맷 신청 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 신청 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-56",
-    "title": "기본 프로그램 - 연말정산 노트북 포맷 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-17",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기본 프로그램",
-    "symptom": "연말정산 노트북 포맷 문의",
-    "actionTaken": "포맷 및 셋팅 완료",
-    "tags": [
-      "소프트웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 연말정산 노트북 포맷 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 및 셋팅 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-57",
-    "title": "모니터 - 모니터 신청 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-17",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "모니터 신청 문의",
-    "actionTaken": "모니터 신청 및 지급",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 신청 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 모니터 신청 및 지급 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-58",
-    "title": "포맷 - 노트북 포맷 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-17",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "노트북 포맷 문의",
-    "actionTaken": "포맷 완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 포맷 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.308Z",
@@ -10742,34 +10148,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.308Z"
   },
   {
-    "id": "seed-64",
-    "title": "기본 프로그램 - 모니터 화면",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-18",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기본 프로그램",
-    "symptom": "모니터 화면",
-    "actionTaken": "화면 해상도 조정",
-    "tags": [
-      "소프트웨어",
-      "모니터",
-      "해상도"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 화면",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
-      "recommendation": "[R] 화면 해상도 조정 📌 연관 지식: [[모니터]], [[해상도]]"
-    },
-    "wikilinks": [
-      "모니터",
-      "해상도"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
     "id": "seed-65",
     "title": "기본 프로그램 - 화면 해상도 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -10790,58 +10168,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "해상도"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-66",
-    "title": "기본 프로그램 - 회의실 모니터 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-19",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기본 프로그램",
-    "symptom": "회의실 모니터 문의",
-    "actionTaken": "듀얼모니터 설정 완료",
-    "tags": [
-      "소프트웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 회의실 모니터 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
-      "recommendation": "[R] 듀얼모니터 설정 완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-69",
-    "title": "모니터 - 모니터 교체 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-22",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "모니터 교체 문의",
-    "actionTaken": "모니터 교체 완료",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 교체 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 모니터 교체 완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.308Z",
@@ -10900,30 +10226,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "DNS"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-72",
-    "title": "노트북 - 김연철 대표이사 노후 PC 교체문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-22",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "김연철 대표이사 노후 PC 교체문의",
-    "actionTaken": "사내 메신저 - PC신청서 안내",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 김연철 대표이사 노후 PC 교체문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 - PC신청서 안내"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.308Z",
     "updatedAt": "2026-08-07T05:08:48.308Z"
@@ -11033,33 +10335,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.308Z"
   },
   {
-    "id": "seed-78",
-    "title": "소프트웨어 - 회의실 CMOS 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-25",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "회의실 CMOS 문의",
-    "actionTaken": "CMOS 안내 완료",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "CMOS"
-    ],
-    "sbar": {
-      "situation": "[S] 회의실 CMOS 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] CMOS 안내 완료 📌 연관 지식: [[CMOS]]"
-    },
-    "wikilinks": [
-      "CMOS"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
     "id": "seed-80",
     "title": "네트워크 - 네트워크 끊킴 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -11107,30 +10382,6 @@ const SEED_KNOWLEDGE_DATA = [
       "사내 메신저",
       "워드"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-82",
-    "title": "노트북 - 노트북 교체문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-29",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 교체문의",
-    "actionTaken": "업무 부서 확인 후 교체 예정",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 교체문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 업무 부서 확인 후 교체 예정"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.308Z",
     "updatedAt": "2026-08-07T05:08:48.308Z"
@@ -11209,37 +10460,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.308Z"
   },
   {
-    "id": "seed-89",
-    "title": "소프트웨어 - 삼성 복합기 스캔 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-30",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "삼성 복합기 스캔 문의",
-    "actionTaken": "복합기 네트워크 정상 연결",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "복합기",
-      "삼성",
-      "스캔"
-    ],
-    "sbar": {
-      "situation": "[S] 삼성 복합기 스캔 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 복합기 네트워크 정상 연결 📌 연관 지식: [[복합기]], [[삼성]], [[스캔]]"
-    },
-    "wikilinks": [
-      "복합기",
-      "삼성",
-      "스캔"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
     "id": "seed-90",
     "title": "IP - 방송실 노트북 네트워크 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -11289,54 +10509,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.308Z"
   },
   {
-    "id": "seed-92",
-    "title": "노트북 - 노트북 신청 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-30",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 신청 문의",
-    "actionTaken": "전자결재 노트북 신청 안내",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 신청 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 전자결재 노트북 신청 안내"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-94",
-    "title": "소프트웨어 - 랜카드 교체 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-30",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "랜카드 교체 문의",
-    "actionTaken": "랜카드 교체 예정",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 랜카드 교체 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 랜카드 교체 예정"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
     "id": "seed-98",
     "title": "기본 프로그램 - 26층 사내 메신저 접속 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -11354,57 +10526,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
       "recommendation": "[R] 사내 메신저 고객센터 안내 📌 연관 지식: [[사내 메신저]]"
-    },
-    "wikilinks": [
-      "사내 메신저"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-99",
-    "title": "노트북 - 노트북 교체 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-01",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 교체 요청",
-    "actionTaken": "노트북 노후화로 인한 교체",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 교체 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 노후화로 인한 교체"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-101",
-    "title": "노트북 - 일반망 노트북 신청 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-01",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반망 노트북 신청 문의",
-    "actionTaken": "사내 메신저 노트북 신청 안내",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "사내 메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 노트북 신청 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 노트북 신청 안내 📌 연관 지식: [[사내 메신저]]"
     },
     "wikilinks": [
       "사내 메신저"
@@ -11545,84 +10666,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.308Z"
   },
   {
-    "id": "seed-110",
-    "title": "노트북 - PC 교체 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-13",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "PC 교체 문의",
-    "actionTaken": "노후화로 인한 교체 예정",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] PC 교체 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노후화로 인한 교체 예정"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-111",
-    "title": "소프트웨어 - 모니터 화면 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-13",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "모니터 화면 문의",
-    "actionTaken": "일시적 오류 반복 증상시 문의 요청",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 화면 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 일시적 오류 반복 증상시 문의 요청 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-112",
-    "title": "소프트웨어 - 모니터 교체 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-13",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "모니터 교체 문의",
-    "actionTaken": "패널 나감으로 인한 교체",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 교체 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 패널 나감으로 인한 교체 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
     "id": "seed-113",
     "title": "기본 프로그램 - 26층 TF 복합기 셋팅 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -11666,107 +10709,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: PDF. 현장 처리 결과 검증.",
       "recommendation": "[R] 확장자 변경"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-117",
-    "title": "소프트웨어 - 자산실사 사번 입력 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-20",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "자산실사 사번 입력 문의",
-    "actionTaken": "사내 개발망 미사용으로 인한 안내",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 자산실사 사번 입력 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 개발망 미사용으로 인한 안내"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-119",
-    "title": "모니터 - 본사 발령으로 모니터 신청 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-20",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "본사 발령으로 모니터 신청 문의",
-    "actionTaken": "모니터 신청 및 안내",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 본사 발령으로 모니터 신청 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 모니터 신청 및 안내 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-120",
-    "title": "네트워크 - 네트워크 연결 끊킴 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-21",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "네트워크 연결 끊킴 문의",
-    "actionTaken": "CORP_WIFI_SEC -> CORP_WIFI 안내",
-    "tags": [
-      "네트워크",
-      "기타",
-      "CORP_WIFI"
-    ],
-    "sbar": {
-      "situation": "[S] 네트워크 연결 끊킴 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] CORP_WIFI_SEC -> CORP_WIFI 안내 📌 연관 지식: [[CORP_WIFI]]"
-    },
-    "wikilinks": [
-      "CORP_WIFI"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.308Z",
-    "updatedAt": "2026-08-07T05:08:48.308Z"
-  },
-  {
-    "id": "seed-121",
-    "title": "노트북 - 노후화 PC 교체 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-23",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노후화 PC 교체 문의",
-    "actionTaken": "5년 지난 PC 교체 예정 안내",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노후화 PC 교체 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 5년 지난 PC 교체 예정 안내"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -11883,109 +10825,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.309Z"
   },
   {
-    "id": "seed-130",
-    "title": "네트워크 - ICT망 노트북 네트워크 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-29",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "ICT망 노트북 네트워크 문의",
-    "actionTaken": "CORP_GUEST-> 테스트 요청",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] ICT망 노트북 네트워크 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] CORP_GUEST-> 테스트 요청"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-131",
-    "title": "모니터 - 모니터 화면",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-29",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "모니터 화면",
-    "actionTaken": "케이블 변경",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 화면",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 케이블 변경 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-132",
-    "title": "모니터 - 화면 해상도 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-29",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "화면 해상도 문의",
-    "actionTaken": "해상도 변경",
-    "tags": [
-      "하드웨어",
-      "모니터",
-      "해상도"
-    ],
-    "sbar": {
-      "situation": "[S] 화면 해상도 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 해상도 변경 📌 연관 지식: [[해상도]]"
-    },
-    "wikilinks": [
-      "해상도"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-133",
-    "title": "모니터 - 34인치 모니터 신청 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-04",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "34인치 모니터 신청 문의",
-    "actionTaken": "34인치 모니터 지급",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 34인치 모니터 신청 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 34인치 모니터 지급 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
     "id": "seed-134",
     "title": "기본 프로그램 - 사내 메신저 로그인 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -12029,30 +10868,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
       "recommendation": "[R] 업무 부서 시스템 담당자 과 통화후 조치 예정"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-137",
-    "title": "노트북 - PC-OFF 테스트로 인한 노트북 신청 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-05",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "PC-OFF 테스트로 인한 노트북 신청 문의",
-    "actionTaken": "노트북 지급",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] PC-OFF 테스트로 인한 노트북 신청 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 지급"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -12182,32 +10997,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.309Z"
   },
   {
-    "id": "seed-146",
-    "title": "포맷 - 일반망 노트북 포맷 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-13",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "일반망 노트북 포맷 문의",
-    "actionTaken": "노트북 포맷 및 셋팅 완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 노트북 포맷 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 포맷 및 셋팅 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
     "id": "seed-148",
     "title": "브라우저 - 엣지 문서 다운로드 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -12227,32 +11016,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 다운로드 안내"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-151",
-    "title": "모니터 - 모니터 화면 안나옴",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-14",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "모니터 화면 안나옴",
-    "actionTaken": "케이블 빠짐으로 연결 정상 작동",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 화면 안나옴",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 케이블 빠짐으로 연결 정상 작동 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.309Z",
     "updatedAt": "2026-08-07T05:08:48.309Z"
@@ -12310,30 +11073,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.309Z"
   },
   {
-    "id": "seed-155",
-    "title": "노트북 - 전배로 인한 노트북 신청 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-15",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "전배로 인한 노트북 신청 문의",
-    "actionTaken": "노트북 신청 안내 완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 전배로 인한 노트북 신청 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 신청 안내 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
     "id": "seed-156",
     "title": "IP - IP신청 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -12355,91 +11094,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "IP",
       "사내 메신저"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-157",
-    "title": "하드웨어 - 신도리코 복합기 출력 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-18",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "신도리코 복합기 출력 문의",
-    "actionTaken": "신도리코 담당자 안내",
-    "tags": [
-      "하드웨어",
-      "기타",
-      "복합기",
-      "신도리코",
-      "신도"
-    ],
-    "sbar": {
-      "situation": "[S] 신도리코 복합기 출력 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 신도리코 담당자 안내 📌 연관 지식: [[복합기]], [[신도리코]], [[신도]]"
-    },
-    "wikilinks": [
-      "복합기",
-      "신도리코",
-      "신도"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-164",
-    "title": "하드웨어 - 모니터 듀얼 설정 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-20",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "모니터 듀얼 설정 문의",
-    "actionTaken": "모니터 동시화면 설정 안내",
-    "tags": [
-      "하드웨어",
-      "기타",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 듀얼 설정 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 모니터 동시화면 설정 안내 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-166",
-    "title": "노트북 - 노트북 포맷 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-22",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 포맷 문의",
-    "actionTaken": "노트북 포맷",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 포맷 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 포맷 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.309Z",
@@ -12469,30 +11123,6 @@ const SEED_KNOWLEDGE_DATA = [
       "사내 메신저",
       "워드"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-168",
-    "title": "노트북 - 노트북 노후화로 인한 교체 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-26",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 노후화로 인한 교체 문의",
-    "actionTaken": "전자결재 PC신청서 안내",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 노후화로 인한 교체 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 전자결재 PC신청서 안내"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.309Z",
     "updatedAt": "2026-08-07T05:08:48.309Z"
@@ -12599,57 +11229,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.309Z"
   },
   {
-    "id": "seed-177",
-    "title": "노트북 - 사내 개발망 신청 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-03",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "사내 개발망 신청 문의",
-    "actionTaken": "사내 메신저 전자결재 신청서 안내",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "사내 메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 개발망 신청 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 전자결재 신청서 안내 📌 연관 지식: [[사내 메신저]]"
-    },
-    "wikilinks": [
-      "사내 메신저"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-179",
-    "title": "노트북 - 메인보드 불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-08",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "메인보드 불량",
-    "actionTaken": "노트북 교체",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 메인보드 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 교체"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
     "id": "seed-180",
     "title": "기본 프로그램 - SSl 인증서 설치 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -12702,32 +11281,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.309Z"
   },
   {
-    "id": "seed-184",
-    "title": "모니터 - 모니터 노후화 교체 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-11",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "모니터 노후화 교체 문의",
-    "actionTaken": "모니터 교체 완료",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 노후화 교체 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 모니터 교체 완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
     "id": "seed-185",
     "title": "기본 프로그램 - 외부메일 발송시 패스워드 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -12750,56 +11303,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "오피스",
       "워드"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-186",
-    "title": "노트북 - 인사발령으로 인한 PC신청 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-12",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "인사발령으로 인한 PC신청 문의",
-    "actionTaken": "PC 지급 안내",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 인사발령으로 인한 PC신청 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC 지급 안내"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-188",
-    "title": "포맷 - 포맷 후 보안 소프트웨어 설치",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-12",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "포맷 후 보안 소프트웨어 설치",
-    "actionTaken": "보안 소프트웨어 설치",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 포맷 후 보안 소프트웨어 설치",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 보안 소프트웨어 설치 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.309Z",
@@ -12938,30 +11441,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.309Z"
   },
   {
-    "id": "seed-202",
-    "title": "모니터 - 회의실 스크린 화면 복제 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-19",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "회의실 스크린 화면 복제 문의",
-    "actionTaken": "복제 안내",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 회의실 스크린 화면 복제 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 복제 안내"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
     "id": "seed-204",
     "title": "네트워크 - 아이피 등록 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -13090,138 +11569,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.309Z"
   },
   {
-    "id": "seed-211",
-    "title": "하드웨어 - CMOS 패스워드 분실 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-25",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "CMOS 패스워드 분실 문의",
-    "actionTaken": "엘지 서비스센터 접수 후 해제 완료",
-    "tags": [
-      "하드웨어",
-      "기타",
-      "워드",
-      "CMOS"
-    ],
-    "sbar": {
-      "situation": "[S] CMOS 패스워드 분실 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 엘지 서비스센터 접수 후 해제 완료 📌 연관 지식: [[워드]], [[CMOS]]"
-    },
-    "wikilinks": [
-      "워드",
-      "CMOS"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-212",
-    "title": "노트북 - 노트북 부팅 안됨 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-25",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 부팅 안됨 문의",
-    "actionTaken": "배터리 교체 안내",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "RPA"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 부팅 안됨 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 배터리 교체 안내"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-213",
-    "title": "노트북 - 노트북 셋팅 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-26",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 셋팅 문의",
-    "actionTaken": "보안 소프트웨어 셋팅 완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "RPA"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 셋팅 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 보안 소프트웨어 셋팅 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-215",
-    "title": "모니터 - 모니터 화면 깨짐 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-29",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "모니터 화면 깨짐 문의",
-    "actionTaken": "COSY 허브 교체 안내",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 화면 깨짐 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] COSY 허브 교체 안내 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-217",
-    "title": "소프트웨어 - 오피스 정품인증 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-29",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "오피스 정품인증 문의",
-    "actionTaken": "정품키 안내",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "오피스"
-    ],
-    "sbar": {
-      "situation": "[S] 오피스 정품인증 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 정품키 안내 📌 연관 지식: [[오피스]]"
-    },
-    "wikilinks": [
-      "오피스"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
     "id": "seed-218",
     "title": "기본 프로그램 - 무선 마우스 / 무선 키보드 페어링 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -13274,33 +11621,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.309Z"
   },
   {
-    "id": "seed-222",
-    "title": "소프트웨어 - 메일 확인 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05-08",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "메일 확인 문의",
-    "actionTaken": "아웃룩 안읽은 메일 안내",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "아웃룩"
-    ],
-    "sbar": {
-      "situation": "[S] 메일 확인 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 아웃룩 안읽은 메일 안내 📌 연관 지식: [[아웃룩]]"
-    },
-    "wikilinks": [
-      "아웃룩"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
     "id": "seed-225",
     "title": "기본 프로그램 - 인터넷 접속 안됨 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -13322,30 +11642,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "SSL"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-226",
-    "title": "소프트웨어 - 사내 개발망 자산실사 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05-21",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "사내 개발망 자산실사 문의",
-    "actionTaken": "자산실사 등록 안내",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 개발망 자산실사 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 자산실사 등록 안내"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.309Z",
     "updatedAt": "2026-08-07T05:08:48.309Z"
@@ -13377,114 +11673,6 @@ const SEED_KNOWLEDGE_DATA = [
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.309Z",
     "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-228",
-    "title": "네트워크 - SSID 패스워드 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05-21",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "SSID 패스워드 문의",
-    "actionTaken": "패스워드 안내",
-    "tags": [
-      "네트워크",
-      "기타",
-      "SSID",
-      "워드"
-    ],
-    "sbar": {
-      "situation": "[S] SSID 패스워드 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 패스워드 안내 📌 연관 지식: [[SSID]], [[워드]]"
-    },
-    "wikilinks": [
-      "SSID",
-      "워드"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-229",
-    "title": "소프트웨어 - 노트북 자료 이동 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05-21",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "노트북 자료 이동 문의",
-    "actionTaken": "외장하드로 자료 이동",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 자료 이동 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 외장하드로 자료 이동"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-230",
-    "title": "포맷 - 노트북 일반망 포맷 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05-22",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "노트북 일반망 포맷 요청",
-    "actionTaken": "포맷 후 셋팅 완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 일반망 포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 후 셋팅 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
-    "id": "seed-231",
-    "title": "하드웨어 - 모니터 해상도 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05-29",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "모니터 해상도 문의",
-    "actionTaken": "케이블 변경 후 해상도",
-    "tags": [
-      "하드웨어",
-      "기타",
-      "모니터",
-      "해상도"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 해상도 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 케이블 변경 후 해상도 📌 연관 지식: [[모니터]], [[해상도]]"
-    },
-    "wikilinks": [
-      "모니터",
-      "해상도"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
     "id": "seed-233",
@@ -13586,30 +11774,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
-    "id": "seed-239",
-    "title": "노트북 - 오디오 불량 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-12",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "오디오 불량 문의",
-    "actionTaken": "드라이버 재설치",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 오디오 불량 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 드라이버 재설치"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-240",
     "title": "메신저 - 아웃룩 파일 이동 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -13687,57 +11851,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
-    "id": "seed-246",
-    "title": "노트북 - 노트북 버벅임 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-17",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 버벅임 발생",
-    "actionTaken": "LG AS요청 완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 버벅임 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] LG AS요청 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-247",
-    "title": "노트북 - PC 포맷 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-18",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "PC 포맷 요청",
-    "actionTaken": "포맷 완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] PC 포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-248",
     "title": "OS - 윈도우 비밀번호 해제 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -13779,30 +11892,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
       "recommendation": "[R] 안내 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-252",
-    "title": "포맷 - 내부 보안망 포멧 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-18",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "내부 보안망 포멧 요청",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 포멧 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 조치 완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -13862,31 +11951,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
-    "id": "seed-256",
-    "title": "네트워크 - 네트워크 어댑터 사라짐",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-26",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "네트워크 어댑터 사라짐",
-    "actionTaken": "드라이버 재설치 및 WIFI 재설정완료",
-    "tags": [
-      "네트워크",
-      "기타",
-      "PMIS 시스템 고도화"
-    ],
-    "sbar": {
-      "situation": "[S] 네트워크 어댑터 사라짐",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 드라이버 재설치 및 WIFI 재설정완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-260",
     "title": "기본 프로그램 - MS OFFICE 미구동",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -13932,57 +11996,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "IP"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-263",
-    "title": "네트워크 - 내부 보안망 연결체크",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-04",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망 연결체크",
-    "actionTaken": "노후PC 사용중으로 교체안내 및 교체완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 연결체크",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노후PC 사용중으로 교체안내 및 교체완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-267",
-    "title": "소프트웨어 - 엑셀파일 오류 및 MS office 재설치",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-19",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "엑셀파일 오류 및 MS office 재설치 / 점검",
-    "actionTaken": "엑셀 재설치 완료",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "엑셀"
-    ],
-    "sbar": {
-      "situation": "[S] 엑셀파일 오류 및 MS office 재설치 / 점검",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 엑셀 재설치 완료 📌 연관 지식: [[엑셀]]"
-    },
-    "wikilinks": [
-      "엑셀"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.310Z",
@@ -14043,111 +12056,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
-    "id": "seed-270",
-    "title": "노트북 - 일반업무망 노트북 교체문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-24",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반업무망 노트북 교체문의",
-    "actionTaken": "교체 절차안내완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 일반업무망 노트북 교체문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 교체 절차안내완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-271",
-    "title": "노트북 - 일반업무망 노트북 교체 및 보안 소프트웨어 셋팅",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-24",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반업무망 노트북 교체 및 보안 소프트웨어 셋팅요청",
-    "actionTaken": "교체 및 셋팅완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 일반업무망 노트북 교체 및 보안 소프트웨어 셋팅요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 교체 및 셋팅완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-272",
-    "title": "노트북 - 줌회의로인한 무선이어폰 연결작업요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-24",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "줌회의로인한 무선이어폰 연결작업요청",
-    "actionTaken": "페어링 연결 완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "줌",
-      "페어링"
-    ],
-    "sbar": {
-      "situation": "[S] 줌회의로인한 무선이어폰 연결작업요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 페어링 연결 완료 📌 연관 지식: [[줌]], [[페어링]]"
-    },
-    "wikilinks": [
-      "줌",
-      "페어링"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-273",
-    "title": "모니터 - 모니터 해상도 배열 재조정요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-24",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "모니터 해상도 배열 재조정요청",
-    "actionTaken": "재조정완료",
-    "tags": [
-      "하드웨어",
-      "모니터",
-      "해상도"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 해상도 배열 재조정요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 재조정완료 📌 연관 지식: [[모니터]], [[해상도]]"
-    },
-    "wikilinks": [
-      "모니터",
-      "해상도"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-274",
     "title": "데스크탑 - 하드웨어 고장으로인한 수리 절차 안내",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -14165,30 +12073,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: 데스크탑. 현장 처리 결과 검증.",
       "recommendation": "[R] 절차 안내완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-277",
-    "title": "소프트웨어 - 기술자료센터에 접속 시 404 오류해결요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-24",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "기술자료센터에 접속 시 404 오류해결요청",
-    "actionTaken": "고객센터 02-6313-3114번 이관완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 기술자료센터에 접속 시 404 오류해결요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 고객센터 02-6313-3114번 이관완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -14219,55 +12103,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
-    "id": "seed-281",
-    "title": "노트북 - 신규노트북 보안 소프트웨어 설치요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-25",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "신규노트북 보안 소프트웨어 설치요청",
-    "actionTaken": "설치완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 신규노트북 보안 소프트웨어 설치요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 설치완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-289",
-    "title": "네트워크 - 봇PC 네트워크안됨(13층)",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-29",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "봇PC 네트워크안됨(13층)",
-    "actionTaken": "에어로스페이스 미인가장비 탐지로인하여 담당자 이관완료",
-    "tags": [
-      "네트워크",
-      "기타",
-      "RPA2"
-    ],
-    "sbar": {
-      "situation": "[S] 봇PC 네트워크안됨(13층)",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 에어로스페이스 미인가장비 탐지로인하여 담당자 이관완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-291",
     "title": "IP - IP 주소문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -14289,31 +12124,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "IP"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-294",
-    "title": "소프트웨어 - 사내 메신저 접속안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08-01",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "사내 메신저 접속안됨",
-    "actionTaken": "마이크로소프트 엣지 초기화완료",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "시스템관리"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 메신저 접속안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 마이크로소프트 엣지 초기화완료"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.310Z",
     "updatedAt": "2026-08-07T05:08:48.310Z"
@@ -14369,30 +12179,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
-    "id": "seed-297",
-    "title": "노트북 - 노트북 키보드 고장",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08-05",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 키보드 고장",
-    "actionTaken": "OS 재설치 절차 안내완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 키보드 고장",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] OS 재설치 절차 안내완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-298",
     "title": "기본 프로그램 - 망간자료전송 실행안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -14414,33 +12200,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "망간자료전송",
       "망간자료전송"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-299",
-    "title": "네트워크 - CORP_WIFI 비밀번호 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08-06",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "CORP_WIFI 비밀번호 문의",
-    "actionTaken": "비밀번호 안내완료",
-    "tags": [
-      "네트워크",
-      "기타",
-      "CORP_WIFI"
-    ],
-    "sbar": {
-      "situation": "[S] CORP_WIFI 비밀번호 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 비밀번호 안내완료 📌 연관 지식: [[CORP_WIFI]]"
-    },
-    "wikilinks": [
-      "CORP_WIFI"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.310Z",
@@ -14494,57 +12253,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
-    "id": "seed-305",
-    "title": "하드웨어 - HDMI to HDMI 케이블 연결요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09-03",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "HDMI to HDMI 케이블 연결요청",
-    "actionTaken": "HDMI 케이블 연결",
-    "tags": [
-      "하드웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] HDMI to HDMI 케이블 연결요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] HDMI 케이블 연결"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-309",
-    "title": "노트북 - 노트북 일반망 포맷 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09-23",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 일반망 포맷 요청",
-    "actionTaken": "포맷 후 세팅 완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 일반망 포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 후 세팅 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-310",
     "title": "드라이버 - 임원 노트북 키보드 , 마우스 블루투스 연",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -14589,34 +12297,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "아웃룩"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-314",
-    "title": "네트워크 - 인터넷 접속 안됨 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10-11",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "인터넷 접속 안됨 문의",
-    "actionTaken": "ICT WIPS 차단 접속 확인작업및 담당자 조치후 정상접속 확인",
-    "tags": [
-      "네트워크",
-      "기타",
-      "WIPS"
-    ],
-    "sbar": {
-      "situation": "[S] 인터넷 접속 안됨 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] ICT WIPS 차단 접속 확인작업및 담당자 조치후 정상접속 확인 📌 연관 지식: [[WIPS]], [[IP]]"
-    },
-    "wikilinks": [
-      "WIPS",
-      "IP"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.310Z",
@@ -14677,60 +12357,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
-    "id": "seed-321",
-    "title": "네트워크 - 네트워크 연결 끊김 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10-18",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "네트워크 연결 끊김 문의",
-    "actionTaken": "SSID 재연결 후 정상",
-    "tags": [
-      "네트워크",
-      "기타",
-      "SSID"
-    ],
-    "sbar": {
-      "situation": "[S] 네트워크 연결 끊김 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSID 재연결 후 정상 📌 연관 지식: [[SSID]]"
-    },
-    "wikilinks": [
-      "SSID"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-323",
-    "title": "모니터 - 화면 해상도 문의및 화질 저하",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10-21",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "화면 해상도 문의및 화질 저하",
-    "actionTaken": "그래픽카드 드라이버 삭제후 재설치및 해상도 변경",
-    "tags": [
-      "하드웨어",
-      "모니터",
-      "해상도"
-    ],
-    "sbar": {
-      "situation": "[S] 화면 해상도 문의및 화질 저하",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 그래픽카드 드라이버 삭제후 재설치및 해상도 변경 📌 연관 지식: [[해상도]]"
-    },
-    "wikilinks": [
-      "해상도"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-327",
     "title": "데스크탑 - 출입 관리 PC 안켜짐",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -14775,86 +12401,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "줌"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-333",
-    "title": "소프트웨어 - GUL 훈민정음 파일 안열림",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11-04",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "GUL 훈민정음 파일 안열림",
-    "actionTaken": "훈민정음 뷰어 설치후 MS워드 변환 프로그램 (GUL→DOCX) 변환안내",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "워드"
-    ],
-    "sbar": {
-      "situation": "[S] GUL 훈민정음 파일 안열림",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 훈민정음 뷰어 설치후 MS워드 변환 프로그램 (GUL→DOCX) 변환안내 📌 연관 지식: [[워드]]"
-    },
-    "wikilinks": [
-      "워드"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-334",
-    "title": "포맷 - 보안 소프트웨어 설치 시 윈도우 오류 뜸",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11-05",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "보안 소프트웨어 설치 시 윈도우 오류 뜸",
-    "actionTaken": "윈도우 포맷 후 재설치",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 보안 소프트웨어 설치 시 윈도우 오류 뜸",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 윈도우 포맷 후 재설치 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-335",
-    "title": "소프트웨어 - 사내 메신저 품질관리시스템(품질관리시스템(QIS)) 접속 프로그램 TPLSvc",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11-07",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "사내 메신저 품질관리시스템(품질관리시스템(QIS)) 접속 프로그램 TPLSvc 설치 안됨",
-    "actionTaken": "TPLSvc.exe CMD에서 서비스 실행 후 해결",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "사내 메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 메신저 품질관리시스템(품질관리시스템(QIS)) 접속 프로그램 TPLSvc 설치 안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] TPLSvc.exe CMD에서 서비스 실행 후 해결 📌 연관 지식: [[사내 메신저]]"
-    },
-    "wikilinks": [
-      "사내 메신저"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.310Z",
@@ -15276,33 +12822,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.311Z"
   },
   {
-    "id": "seed-360",
-    "title": "하드웨어 - 모니터 연결요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12-18",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "모니터 연결요청",
-    "actionTaken": "모니터 노트북이랑 연결 완료",
-    "tags": [
-      "하드웨어",
-      "기타",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 연결요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 모니터 노트북이랑 연결 완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.311Z",
-    "updatedAt": "2026-08-07T05:08:48.311Z"
-  },
-  {
     "id": "seed-361",
     "title": "IP - 네트워크 연결 안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -15323,34 +12842,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "DNS"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.311Z",
-    "updatedAt": "2026-08-07T05:08:48.311Z"
-  },
-  {
-    "id": "seed-370",
-    "title": "네트워크 - WIPS 미등록으로 인한 네트워크 통신 불",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-02",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "WIPS 미등록으로 인한 네트워크 통신 불",
-    "actionTaken": "전산관리자 문의후 WIPS 사전등록 안내",
-    "tags": [
-      "네트워크",
-      "기타",
-      "WIPS"
-    ],
-    "sbar": {
-      "situation": "[S] WIPS 미등록으로 인한 네트워크 통신 불",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 전산관리자 문의후 WIPS 사전등록 안내 📌 연관 지식: [[WIPS]], [[IP]]"
-    },
-    "wikilinks": [
-      "WIPS",
-      "IP"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.311Z",
@@ -15566,30 +13057,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.311Z"
   },
   {
-    "id": "seed-384",
-    "title": "하드웨어 - 회의실 빔프로젝트 연결 불",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01-21",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "회의실 빔프로젝트 연결 불",
-    "actionTaken": "장치관리자 드라이버 삭제후 재설치",
-    "tags": [
-      "하드웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 회의실 빔프로젝트 연결 불",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 장치관리자 드라이버 삭제후 재설치"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.311Z",
-    "updatedAt": "2026-08-07T05:08:48.311Z"
-  },
-  {
     "id": "seed-389",
     "title": "메신저 - SAP 실행 불",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -15690,30 +13157,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.311Z"
   },
   {
-    "id": "seed-402",
-    "title": "노트북 - 노트북 반출 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-17",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 반출 문의",
-    "actionTaken": "전산관리자 안내",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 반출 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 전산관리자 안내"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.311Z",
-    "updatedAt": "2026-08-07T05:08:48.311Z"
-  },
-  {
     "id": "seed-403",
     "title": "기본 프로그램 - 닷넷프레임 3.5 설치 불",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -15730,57 +13173,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
       "recommendation": "[R] .NET Framework 3.5(.NET 2.0 및 3.0 포함) 설치후 정상작동"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.311Z",
-    "updatedAt": "2026-08-07T05:08:48.311Z"
-  },
-  {
-    "id": "seed-404",
-    "title": "소프트웨어 - 사내 메신저 로그인 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-19",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "사내 메신저 로그인 문의",
-    "actionTaken": "사내 메신저 비번 초기화 설정 안내",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "사내 메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 메신저 로그인 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 비번 초기화 설정 안내 📌 연관 지식: [[사내 메신저]]"
-    },
-    "wikilinks": [
-      "사내 메신저"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.311Z",
-    "updatedAt": "2026-08-07T05:08:48.311Z"
-  },
-  {
-    "id": "seed-405",
-    "title": "네트워크 - 사내 개발망 연결 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-20",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "사내 개발망 연결 문의",
-    "actionTaken": "사내 개발망 연결 지원",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 개발망 연결 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 개발망 연결 지원"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -15812,31 +13204,6 @@ const SEED_KNOWLEDGE_DATA = [
       "AD",
       "해상도"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.311Z",
-    "updatedAt": "2026-08-07T05:08:48.311Z"
-  },
-  {
-    "id": "seed-408",
-    "title": "노트북 - EOS 관련 윈도우11 테스터 노트북 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02-26",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "EOS 관련 윈도우11 테스터 노트북 문의",
-    "actionTaken": "EOS 관련 윈도우11 테스터 노트북 관련 안내",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "정보시스템실(ICT)"
-    ],
-    "sbar": {
-      "situation": "[S] EOS 관련 윈도우11 테스터 노트북 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] EOS 관련 윈도우11 테스터 노트북 관련 안내"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.311Z",
     "updatedAt": "2026-08-07T05:08:48.311Z"
@@ -15993,30 +13360,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-428",
-    "title": "모니터 - 화면 안나옴",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-21",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "화면 안나옴",
-    "actionTaken": "HDMI 케이블 교체후 정상작동",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 화면 안나옴",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] HDMI 케이블 교체후 정상작동"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-429",
     "title": "IP - 일반망 접속 불",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -16095,33 +13438,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-433",
-    "title": "포맷 - 사내 개발망 PC 포맷 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-27",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "사내 개발망 PC 포맷 문의",
-    "actionTaken": "사내 개발망 PC 포맷 안내",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "정보시스템실(ICT)"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 개발망 PC 포맷 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 개발망 PC 포맷 안내 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-437",
     "title": "IP - 사내 개발망 IP신청 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -16143,33 +13459,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "IP",
       "사내 메신저"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-438",
-    "title": "기본 프로그램 - 노트북 포맷 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-31",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기본 프로그램",
-    "symptom": "노트북 포맷 문의",
-    "actionTaken": "포맷 및 셋팅 완료",
-    "tags": [
-      "소프트웨어",
-      "정보시스템실(ICT)",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 포맷 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 및 셋팅 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.312Z",
@@ -16290,86 +13579,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
       "recommendation": "[R] 안전환경"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-447",
-    "title": "노트북 - CMOS 패스워드 설정 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-24",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "CMOS 패스워드 설정 문의",
-    "actionTaken": "방문하여 CMOS 암호 설정",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "워드",
-      "CMOS"
-    ],
-    "sbar": {
-      "situation": "[S] CMOS 패스워드 설정 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 방문하여 CMOS 암호 설정 📌 연관 지식: [[워드]], [[CMOS]]"
-    },
-    "wikilinks": [
-      "워드",
-      "CMOS"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-449",
-    "title": "하드웨어 - kvm 스위치 설치",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-25",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "kvm 스위치 설치",
-    "actionTaken": "kvm 스위치 내부 보안망 일반망 설치",
-    "tags": [
-      "하드웨어",
-      "기타",
-      "KVM"
-    ],
-    "sbar": {
-      "situation": "[S] kvm 스위치 설치",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] kvm 스위치 내부 보안망 일반망 설치 📌 연관 지식: [[KVM]]"
-    },
-    "wikilinks": [
-      "KVM"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-450",
-    "title": "네트워크 - 내부 보안망 연결불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-26",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망 연결불가",
-    "actionTaken": "랜케이블 교체",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 연결불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 랜케이블 교체"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -16522,162 +13731,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "스캔"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-458",
-    "title": "데스크탑 - 미니PC 포맷 신청 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-01",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "데스크탑",
-    "symptom": "미니PC 포맷 신청 문의",
-    "actionTaken": "미니PC 포맷 완료",
-    "tags": [
-      "하드웨어",
-      "데스크탑",
-      "정보시스템실(ICT)",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 미니PC 포맷 신청 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 데스크탑. 현장 처리 결과 검증.",
-      "recommendation": "[R] 미니PC 포맷 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-459",
-    "title": "노트북 - 노트북 세팅",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-03",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 세팅",
-    "actionTaken": "노트북 세팅 완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 세팅",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 세팅 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-460",
-    "title": "모니터 - 노후 모니터 교체",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-03",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "노후 모니터 교체",
-    "actionTaken": "노후 모니터 교체 완료",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 노후 모니터 교체",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노후 모니터 교체 완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-461",
-    "title": "기본프로그램 - PC 포맷 신청서 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-07",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기본프로그램",
-    "symptom": "PC 포맷 신청서 문의",
-    "actionTaken": "PC 포맷 신청서 접수건 안내",
-    "tags": [
-      "소프트웨어",
-      "기본프로그램",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] PC 포맷 신청서 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본프로그램. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC 포맷 신청서 접수건 안내 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-462",
-    "title": "노트북 - PC 하드 분할 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-07",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "PC 하드 분할 요청",
-    "actionTaken": "PC 하드 분할 완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] PC 하드 분할 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC 하드 분할 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-463",
-    "title": "노트북 - 노후 모니터 교체",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-09",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노후 모니터 교체",
-    "actionTaken": "노트북 수령 완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 노후 모니터 교체",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 수령 완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.312Z",
@@ -16979,60 +14032,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-484",
-    "title": "노트북 - PC반출로 인한 PC포맷 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/07(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "PC반출로 인한 PC포맷 요청",
-    "actionTaken": "포맷 신청서 확인 후 작업완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] PC반출로 인한 PC포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 신청서 확인 후 작업완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-489",
-    "title": "하드웨어 - 무선 키보드 마우스 연결 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/07(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "무선 키보드 마우스 연결 오류",
-    "actionTaken": "블루투스 동글 연결후 페어링 완료",
-    "tags": [
-      "하드웨어",
-      "기타",
-      "페어링"
-    ],
-    "sbar": {
-      "situation": "[S] 무선 키보드 마우스 연결 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 블루투스 동글 연결후 페어링 완료 📌 연관 지식: [[페어링]]"
-    },
-    "wikilinks": [
-      "페어링"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-490",
     "title": "메신저 - 일반망PC 사내 메신저 옵션 표출 오류",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -17050,78 +14049,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
       "recommendation": "[R] PC재부팅 및 메신저 재접속"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-494",
-    "title": "소프트웨어 - PC 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/13(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "PC 오류",
-    "actionTaken": "PC 재부팅완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] PC 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC 재부팅완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-495",
-    "title": "소프트웨어 - 로그인 후 윈도우로 안넘어감",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/13(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "로그인 후 윈도우로 안넘어감",
-    "actionTaken": "PC 재부팅완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 로그인 후 윈도우로 안넘어감",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC 재부팅완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-496",
-    "title": "소프트웨어 - 프린터 ID/PW 오류해결",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/13(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "프린터 ID/PW 오류해결",
-    "actionTaken": "출력이력시스템 인사연동 문제로 PC지원 담당자 이관완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 프린터 ID/PW 오류해결",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 출력이력시스템 인사연동 문제로 PC지원 담당자 이관완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -17201,111 +14128,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-501",
-    "title": "OS - PC 포맷요청/보안 소프트웨어 설치요청/자료없음",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/14(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "PC 포맷요청/보안 소프트웨어 설치요청/자료없음",
-    "actionTaken": "제고데스크탑 교체완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] PC 포맷요청/보안 소프트웨어 설치요청/자료없음",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 제고데스크탑 교체완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-502",
-    "title": "하드웨어 - 내부 보안망 인터넷 안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/15(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망 인터넷 안됨",
-    "actionTaken": "파티션 문제로 LAN 수리신청서 상신안내완료",
-    "tags": [
-      "하드웨어",
-      "기타",
-      "파티션"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 인터넷 안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 파티션 문제로 LAN 수리신청서 상신안내완료 📌 연관 지식: [[파티션]]"
-    },
-    "wikilinks": [
-      "파티션"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-503",
-    "title": "하드웨어 - 노트PC와 키보드 마우스 연결 불능",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/15(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "노트PC와 키보드 마우스 연결 불능",
-    "actionTaken": "유니파잉 제셋팅완료",
-    "tags": [
-      "하드웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 노트PC와 키보드 마우스 연결 불능",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 유니파잉 제셋팅완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-504",
-    "title": "하드웨어 - 개발 업무에 차질이 있어 기존 모니터 교체",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/15(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "개발 업무에 차질이 있어 기존 모니터 교체",
-    "actionTaken": "34인치 모니터 교체완료",
-    "tags": [
-      "하드웨어",
-      "기타",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 개발 업무에 차질이 있어 기존 모니터 교체",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 34인치 모니터 교체완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-505",
     "title": "OS - PC 로그인 계정 잠금현상 처리 및 무선네트",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -17350,30 +14172,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] 보안 소프트웨어 셋팅완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-507",
-    "title": "하드웨어 - 노후PC 교체",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/15(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "노후PC 교체",
-    "actionTaken": "노후PC 교체완료",
-    "tags": [
-      "하드웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 노후PC 교체",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노후PC 교체완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -17450,34 +14248,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] PC 재부팅완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-512",
-    "title": "노트북 - 네트워크 접속 불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/16(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "네트워크 접속 불가",
-    "actionTaken": "WiPS 해제완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "WIPS"
-    ],
-    "sbar": {
-      "situation": "[S] 네트워크 접속 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] WiPS 해제완료 📌 연관 지식: [[WIPS]], [[IP]]"
-    },
-    "wikilinks": [
-      "WIPS",
-      "IP"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.312Z",
     "updatedAt": "2026-08-07T05:08:48.312Z"
@@ -17581,57 +14351,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-519",
-    "title": "노트북 - 일반망PC 노트북 전원 불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/20(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반망PC 노트북 전원 불량",
-    "actionTaken": "장시간 충전기 미연결로 인한 방전상태로 10분정도 연결후 정상동작 확인",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 노트북 전원 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 장시간 충전기 미연결로 인한 방전상태로 10분정도 연결후 정상동작 확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-520",
-    "title": "노트북 - CMOS PW 설정방법 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/21(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "CMOS PW 설정방법 문의",
-    "actionTaken": "BIOS진입 방법 및 PW 설정방법 가이드 완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "CMOS"
-    ],
-    "sbar": {
-      "situation": "[S] CMOS PW 설정방법 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] BIOS진입 방법 및 PW 설정방법 가이드 완료 📌 연관 지식: [[CMOS]]"
-    },
-    "wikilinks": [
-      "CMOS"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-521",
     "title": "네트워크 - 내부 보안망PC 네트워크 연결불량",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -17651,34 +14370,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 내부 보안망 네트워크 어뎁터설정 완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-525",
-    "title": "모니터 - 듀얼모니터 설정시 해상도 오류 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/21(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "듀얼모니터 설정시 해상도 오류 발생",
-    "actionTaken": "듀얼 모니터 미설정 및 권장해상도 미설정 확인 및 재설정 완료",
-    "tags": [
-      "하드웨어",
-      "모니터",
-      "해상도"
-    ],
-    "sbar": {
-      "situation": "[S] 듀얼모니터 설정시 해상도 오류 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 듀얼 모니터 미설정 및 권장해상도 미설정 확인 및 재설정 완료 📌 연관 지식: [[모니터]], [[해상도]]"
-    },
-    "wikilinks": [
-      "모니터",
-      "해상도"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.312Z",
     "updatedAt": "2026-08-07T05:08:48.312Z"
@@ -17761,33 +14452,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-533",
-    "title": "모니터 - PC연결시 해상도 깨짐 현상발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/26(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "PC연결시 해상도 깨짐 현상발생",
-    "actionTaken": "PC 디스플레이 해상도 및 주사율 설정완료",
-    "tags": [
-      "하드웨어",
-      "모니터",
-      "해상도"
-    ],
-    "sbar": {
-      "situation": "[S] PC연결시 해상도 깨짐 현상발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC 디스플레이 해상도 및 주사율 설정완료 📌 연관 지식: [[해상도]]"
-    },
-    "wikilinks": [
-      "해상도"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-534",
     "title": "메신저 - 일반망 메신져 옵션 표출 안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -17836,61 +14500,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-539",
-    "title": "모니터 - 모니터 해상도 불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/28(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "모니터 해상도 불량",
-    "actionTaken": "노트북 디스플레이 설정완료",
-    "tags": [
-      "하드웨어",
-      "모니터",
-      "해상도"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 해상도 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 디스플레이 설정완료 📌 연관 지식: [[모니터]], [[해상도]]"
-    },
-    "wikilinks": [
-      "모니터",
-      "해상도"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-541",
-    "title": "노트북 - 배터리고장",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/29(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "배터리고장",
-    "actionTaken": "PC반납 및 교체, 데이터 백업완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 배터리고장",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC반납 및 교체, 데이터 백업완료 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-542",
     "title": "메신저 - 내부 보안망 메신져 접속불가",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -17910,33 +14519,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 내부 보안망네트워크 오류 확인 후 무선인증솔루션 재인증"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-543",
-    "title": "노트북 - 내부 보안망PC HDMI포트 고장",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/29(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "내부 보안망PC HDMI포트 고장",
-    "actionTaken": "PC반납 및 교체, 데이터 백업완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC HDMI포트 고장",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC반납 및 교체, 데이터 백업완료 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.312Z",
     "updatedAt": "2026-08-07T05:08:48.312Z"
@@ -17968,34 +14550,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-546",
-    "title": "모니터 - 모니터 화면 깨짐현상발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/06(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "모니터 화면 깨짐현상발생",
-    "actionTaken": "노트북 해상도 설정완료",
-    "tags": [
-      "하드웨어",
-      "모니터",
-      "해상도"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 화면 깨짐현상발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 해상도 설정완료 📌 연관 지식: [[모니터]], [[해상도]]"
-    },
-    "wikilinks": [
-      "모니터",
-      "해상도"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-547",
     "title": "네트워크 - 망연계 시스템 접속오류발생",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -18017,33 +14571,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "망연계 시스템"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-549",
-    "title": "브라우저 - 일반망 PC 엣지삭제로 인한 브라위저 사용불",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/06(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "브라우저",
-    "symptom": "일반망 PC 엣지삭제로 인한 브라위저 사용불가",
-    "actionTaken": "포맷 신청서 확인 후 작업완료",
-    "tags": [
-      "소프트웨어",
-      "브라우저",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 PC 엣지삭제로 인한 브라위저 사용불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 브라우저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 신청서 확인 후 작업완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.312Z",
@@ -18124,64 +14651,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-553",
-    "title": "소프트웨어 - MS오피스 실행불가 및 오류메세지 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/07(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "MS오피스 실행불가 및 오류메세지 발생",
-    "actionTaken": "오류메세지 확인결과 윈도우 포맷필요로 포맷신청서 확인 후 백업 및 작업완료",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "오피스",
-      "포맷",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] MS오피스 실행불가 및 오류메세지 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 오류메세지 확인결과 윈도우 포맷필요로 포맷신청서 확인 후 백업 및 작업완료 📌 연관 지식: [[오피스]], [[포맷]], [[백업]]"
-    },
-    "wikilinks": [
-      "오피스",
-      "포맷",
-      "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-554",
-    "title": "포맷 - 개인PC 반출로인한 포맷절차 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/07(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "개인PC 반출로인한 포맷절차 요청",
-    "actionTaken": "포맷신청서 결제 가이드 안내",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "정보시스템실(ICT)"
-    ],
-    "sbar": {
-      "situation": "[S] 개인PC 반출로인한 포맷절차 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 결제 가이드 안내 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
     "id": "seed-556",
     "title": "IP - 내부 보안망PC 네트워트 어뎁터 인식불가",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -18201,58 +14670,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "IP"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-557",
-    "title": "포맷 - 개인pc 반출로인한 포맷 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/08(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "개인pc 반출로인한 포맷 요청",
-    "actionTaken": "포맷 신청서 확인 후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 개인pc 반출로인한 포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 신청서 확인 후 작업완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-558",
-    "title": "모니터 - 화면 깜박거림",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/08(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "화면 깜박거림",
-    "actionTaken": "모니터 고장여부 확인 후 교체완료",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 화면 깜박거림",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 모니터 고장여부 확인 후 교체완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.313Z",
@@ -18331,32 +14748,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.313Z"
   },
   {
-    "id": "seed-563",
-    "title": "모니터 - 자리이동이후 모니터 송출불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/11(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "자리이동이후 모니터 송출불량",
-    "actionTaken": "HDMI포트 변경 후 PC화면 정상표출 완료",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 자리이동이후 모니터 송출불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] HDMI포트 변경 후 PC화면 정상표출 완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
     "id": "seed-564",
     "title": "네트워크 - 일반망, 내부 보안망 PC 네트워크 셋팅 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -18383,54 +14774,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.313Z"
   },
   {
-    "id": "seed-566",
-    "title": "노트북 - 화면버벅거림 및 실행속도 저하발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/11(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "화면버벅거림 및 실행속도 저하발생",
-    "actionTaken": "브라우저 창, 실행파일 동시실행으로 CPU과부하 확인, 최소화후 사용권장",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 화면버벅거림 및 실행속도 저하발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 브라우저 창, 실행파일 동시실행으로 CPU과부하 확인, 최소화후 사용권장"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-568",
-    "title": "노트북 - 일반망PC 윈도우화면 멈춤현상 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/12(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반망PC 윈도우화면 멈춤현상 발생",
-    "actionTaken": "해당PC 재부팅후 정상동작확인",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 윈도우화면 멈춤현상 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 해당PC 재부팅후 정상동작확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
     "id": "seed-570",
     "title": "네트워크 - 일반망PC 프린터 출력 오류",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -18452,33 +14795,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "복합기"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-571",
-    "title": "노트북 - 부문장 공용 업무 PC 포맷 및 보안프로",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/13(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "부문장 공용 업무 PC 포맷 및 보안 소프트웨어 설치 요청",
-    "actionTaken": "포맷신청서 확인 및 작업, 보안 소프트웨어 설치완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 부문장 공용 업무 PC 포맷 및 보안 소프트웨어 설치 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인 및 작업, 보안 소프트웨어 설치완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.313Z",
@@ -18534,56 +14850,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.313Z"
   },
   {
-    "id": "seed-581",
-    "title": "노트북 - 일반망 노트북 속도저하 및 버벅임 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/18(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반망 노트북 속도저하 및 버벅임 발생",
-    "actionTaken": "브라우저 창, 실행파일 동시실행으로 CPU과부하 확인, 최소화후 사용권장",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 노트북 속도저하 및 버벅임 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 브라우저 창, 실행파일 동시실행으로 CPU과부하 확인, 최소화후 사용권장"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-582",
-    "title": "모니터 - 듀얼 모니터 설정방법 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/18(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "듀얼 모니터 설정방법 요청",
-    "actionTaken": "디스플레이 설정 방법 유선 안내 완료",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 듀얼 모니터 설정방법 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 디스플레이 설정 방법 유선 안내 완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
     "id": "seed-583",
     "title": "네트워크 - 내부 보안망PC 네트워크 연결 불량",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -18601,84 +14867,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 네트워크 / 중분류: 문의. 현장 처리 결과 검증.",
       "recommendation": "[R] T-GATE PW변경후 재로그인 후 네트워크 연결 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-585",
-    "title": "모니터 - 듀얼모니터 세팅 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/19(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "듀얼모니터 세팅 요청",
-    "actionTaken": "현장방문 후 듀얼모니터 설정 완료",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 듀얼모니터 세팅 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 현장방문 후 듀얼모니터 설정 완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-587",
-    "title": "모니터 - 모니터 파손으로인한 교체 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/21(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "모니터 파손으로인한 교체 문의",
-    "actionTaken": "4월 삼성 수리기사 방문시 수리비용청구 예정 및 임시사용 모니터 대여 완료",
-    "tags": [
-      "하드웨어",
-      "모니터",
-      "삼성"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 파손으로인한 교체 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 4월 삼성 수리기사 방문시 수리비용청구 예정 및 임시사용 모니터 대여 완료 📌 연관 지식: [[삼성]], [[모니터]]"
-    },
-    "wikilinks": [
-      "삼성",
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-590",
-    "title": "소프트웨어 - 일반망PC 윈도우 PW분실",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/25(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "일반망PC 윈도우 PW분실",
-    "actionTaken": "USB 부팅 후 PW초기화작업 완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 윈도우 PW분실",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] USB 부팅 후 PW초기화작업 완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -18739,107 +14927,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.313Z"
   },
   {
-    "id": "seed-593",
-    "title": "포맷 - 프린터 스풀 꺠짐으로 인한 pc포맷",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/27(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "프린터 스풀 꺠짐으로 인한 pc포맷",
-    "actionTaken": "포맷신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 프린터 스풀 꺠짐으로 인한 pc포맷",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인후 작업완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-596",
-    "title": "소프트웨어 - 내부 보안망 PC 업무링크 접속불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/29(금)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망 PC 업무링크 접속불가",
-    "actionTaken": "safe PC 삭제완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 PC 업무링크 접속불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] safe PC 삭제완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-598",
-    "title": "네트워크 - 내부 보안망PC 네트워크 셋팅 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/01(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망PC 네트워크 셋팅 요청",
-    "actionTaken": "내부 보안망 PC 네트워크 및 보안 소프트웨어 셋팅 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 네트워크 셋팅 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 내부 보안망 PC 네트워크 및 보안 소프트웨어 셋팅 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-600",
-    "title": "노트북 - 윈도우 부팅 불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/02(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "윈도우 부팅 불가",
-    "actionTaken": "SSD고장으로 복구업체 이관완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 윈도우 부팅 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSD고장으로 복구업체 이관완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
     "id": "seed-601",
     "title": "데스크탑 - PC RAM규격 확인 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -18888,30 +14975,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.313Z"
   },
   {
-    "id": "seed-603",
-    "title": "소프트웨어 - 내부 보안망 PC TOPS 실행 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/04(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망 PC TOPS 실행 오류",
-    "actionTaken": "TOPS 프로그램 재설치 결과 조치불과로 담당자 이관완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 PC TOPS 실행 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] TOPS 프로그램 재설치 결과 조치불과로 담당자 이관완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
     "id": "seed-604",
     "title": "OS - 협력업체 PC OS설치 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -18936,59 +14999,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.313Z"
   },
   {
-    "id": "seed-605",
-    "title": "포맷 - 협력업체 철수로 인한 반출PC포맷",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/04(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "협력업체 철수로 인한 반출PC포맷",
-    "actionTaken": "포맷신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 협력업체 철수로 인한 반출PC포맷",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인후 작업완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-607",
-    "title": "노트북 - 부팅불가 및 하드인식 불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/08(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "부팅불가 및 하드인식 불가",
-    "actionTaken": "SSD교체 및 셋팅 완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 부팅불가 및 하드인식 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSD교체 및 셋팅 완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-608",
     "title": "데스크탑 - RAM,SSD 추가 장착 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -19010,58 +15020,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-609",
-    "title": "포맷 - PC 부팅불가로 인한 포맷요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/08(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "PC 부팅불가로 인한 포맷요청",
-    "actionTaken": "포맷 신청서 확인 후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] PC 부팅불가로 인한 포맷요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 신청서 확인 후 작업완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-612",
-    "title": "포맷 - WINDOWS 업데이트 후 계정로그인 불가로",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/08(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "WINDOWS 업데이트 후 계정로그인 불가로 인한 포맷요청",
-    "actionTaken": "포맷신청서 확인 후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] WINDOWS 업데이트 후 계정로그인 불가로 인한 포맷요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인 후 작업완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.314Z",
@@ -19119,34 +15077,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-615",
-    "title": "포맷 - 개발PC C드라이브 포맷 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/09(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "개발PC C드라이브 포맷 요청",
-    "actionTaken": "포맷신청서 확인 후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] 개발PC C드라이브 포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인 후 작업완료 📌 연관 지식: [[C드라이브]], [[포맷]]"
-    },
-    "wikilinks": [
-      "C드라이브",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-616",
     "title": "IP - DNS서버 변경 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -19168,56 +15098,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "DNS"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-618",
-    "title": "포맷 - 마우스 드라이버 설치 불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/09(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "마우스 드라이버 설치 불량",
-    "actionTaken": "OS문제로 포맷신청서 상신 방법가이드",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 마우스 드라이버 설치 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] OS문제로 포맷신청서 상신 방법가이드 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-619",
-    "title": "네트워크 - 인터넷 접속시 몇분후 PC먹통 상태",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/09(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "인터넷 접속시 몇분후 PC먹통 상태",
-    "actionTaken": "최적화 완료 후 정상동작 확인",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 인터넷 접속시 몇분후 PC먹통 상태",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 최적화 완료 후 정상동작 확인"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.314Z",
     "updatedAt": "2026-08-07T05:08:48.314Z"
@@ -19325,32 +15205,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-625",
-    "title": "포맷 - 장비 반출 및 대구 출장으로 인한 PC포맷",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/15(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "장비 반출 및 대구 출장으로 인한 PC포맷 요청",
-    "actionTaken": "요청 PC 4대 중 2대 포맷 작업 완료(포맷 신청서 확인)",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 장비 반출 및 대구 출장으로 인한 PC포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 요청 PC 4대 중 2대 포맷 작업 완료(포맷 신청서 확인) 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-626",
     "title": "IP - DNS 서버 변경 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -19428,60 +15282,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-632",
-    "title": "포맷 - 장비 반출 및 대구 출장으로 인한 PC포맷",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/17(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "장비 반출 및 대구 출장으로 인한 PC포맷 추가요청",
-    "actionTaken": "Lenovo 노트북 포맷 작업 완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 장비 반출 및 대구 출장으로 인한 PC포맷 추가요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] Lenovo 노트북 포맷 작업 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-638",
-    "title": "포맷 - CMOS PW 입력 후 윈도우 부팅 불가로",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/17(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "CMOS PW 입력 후 윈도우 부팅 불가로 인한 포맷 작업 요청",
-    "actionTaken": "포맷 신청서 확인 후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "CMOS"
-    ],
-    "sbar": {
-      "situation": "[S] CMOS PW 입력 후 윈도우 부팅 불가로 인한 포맷 작업 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 신청서 확인 후 작업완료 📌 연관 지식: [[CMOS]], [[포맷]]"
-    },
-    "wikilinks": [
-      "CMOS",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-639",
     "title": "OS - 내부 보안망 PC 로그인 오류",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -19499,30 +15299,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] 기존암호 초기화 및 새암호 변경완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-640",
-    "title": "노트북 - 사내 개발망 네트워크 고장",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/18(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "사내 개발망 네트워크 고장",
-    "actionTaken": "무선랜카드 드라이버 재설치완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 개발망 네트워크 고장",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선랜카드 드라이버 재설치완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -19599,57 +15375,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 평가판 삭제후 설지완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-646",
-    "title": "네트워크 - 일반망 네트워크 연결불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/19(금)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "일반망 네트워크 연결불량",
-    "actionTaken": "네트워크 어뎁터 설정 초기화",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 네트워크 연결불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 어뎁터 설정 초기화"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-650",
-    "title": "OS - MS OFFICE 실행이 안되는 증상",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/22(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "MS OFFICE 실행이 안되는 증상",
-    "actionTaken": "포맷신청서 확인 후 포맷완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] MS OFFICE 실행이 안되는 증상",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인 후 포맷완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.314Z",
     "updatedAt": "2026-08-07T05:08:48.314Z"
@@ -19783,30 +15508,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-661",
-    "title": "네트워크 - 보안USB 인식안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/23(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "보안USB 인식안됨",
-    "actionTaken": "네트워크 연결 및 보안 소프트웨어 설치 후 작동확인완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 보안USB 인식안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 연결 및 보안 소프트웨어 설치 후 작동확인완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-662",
     "title": "OS - 그룹웨어 접속 외에 외부 인터넷안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -19829,57 +15530,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "SSL"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-663",
-    "title": "네트워크 - 안성 파견지 DNS 변경방법 안내",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/23(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "안성 파견지 DNS 변경방법 안내",
-    "actionTaken": "안내완료",
-    "tags": [
-      "네트워크",
-      "기타",
-      "DNS"
-    ],
-    "sbar": {
-      "situation": "[S] 안성 파견지 DNS 변경방법 안내",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 안내완료 📌 연관 지식: [[DNS]]"
-    },
-    "wikilinks": [
-      "DNS"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-664",
-    "title": "네트워크 - 사내 개발망 노트북 네트워크 재설정",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/23(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "사내 개발망 노트북 네트워크 재설정",
-    "actionTaken": "무선드라이버 충돌로인한 OS 재설치완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 개발망 노트북 네트워크 재설정",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선드라이버 충돌로인한 OS 재설치완료"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.314Z",
     "updatedAt": "2026-08-07T05:08:48.314Z"
@@ -19908,84 +15558,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-669",
-    "title": "소프트웨어 - C드라이브 용량부족",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/23(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "C드라이브 용량부족",
-    "actionTaken": "용량증설완료",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] C드라이브 용량부족",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 용량증설완료 📌 연관 지식: [[C드라이브]]"
-    },
-    "wikilinks": [
-      "C드라이브"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-672",
-    "title": "OS - 개발PC 포맷요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/23(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "개발PC 포맷요청",
-    "actionTaken": "협력업체 연락 후 윈도우 미디어 반입하여 처리예정",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 개발PC 포맷요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 협력업체 연락 후 윈도우 미디어 반입하여 처리예정 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-674",
-    "title": "소프트웨어 - 내부 보안망 자산실사 프로그램 작동안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/23(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망 자산실사 프로그램 작동안됨",
-    "actionTaken": "서버문제점 해결 후 정상화 안내완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 자산실사 프로그램 작동안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 서버문제점 해결 후 정상화 안내완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-676",
     "title": "기본 프로그램 - 아웃록 대용량첨부 안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20004,34 +15576,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 아웃록 애딩 재설치안내완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-677",
-    "title": "포맷 - 일반망PC C드라이브 포맷 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/24(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "일반망PC C드라이브 포맷 요청",
-    "actionTaken": "포맷신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC C드라이브 포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인후 작업완료 📌 연관 지식: [[C드라이브]], [[포맷]]"
-    },
-    "wikilinks": [
-      "C드라이브",
-      "포맷"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.314Z",
     "updatedAt": "2026-08-07T05:08:48.314Z"
@@ -20159,35 +15703,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-686",
-    "title": "네트워크 - 일반망 외부사이트 접속불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/25(목)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "일반망 외부사이트 접속불가",
-    "actionTaken": "SSL인증서 삭제오류로 포맷예정(포맷신청서 결제 요청)",
-    "tags": [
-      "네트워크",
-      "기타",
-      "SSL",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 외부사이트 접속불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSL인증서 삭제오류로 포맷예정(포맷신청서 결제 요청) 📌 연관 지식: [[SSL]], [[포맷]]"
-    },
-    "wikilinks": [
-      "SSL",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-687",
     "title": "라이센스 - 개발PC 알집프로그램 설치문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20263,34 +15778,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-698",
-    "title": "포맷 - 일반망PC SSL인증서 오류로 PC포맷 및",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/26(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "일반망PC SSL인증서 오류로 PC포맷 및 OS 재설치 요청",
-    "actionTaken": "포맷신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "SSL"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC SSL인증서 오류로 PC포맷 및 OS 재설치 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인후 작업완료 📌 연관 지식: [[SSL]], [[포맷]]"
-    },
-    "wikilinks": [
-      "SSL",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-699",
     "title": "IP - 사내 개발망 개발PC 네트워크 안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20307,57 +15794,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
       "recommendation": "[R] 랜선 연결 확인후 테스트완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-700",
-    "title": "OS - 협력업체 노트북 포맷 절차 안내",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/26(금)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "협력업체 노트북 포맷 절차 안내",
-    "actionTaken": "절차 설명안내완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 협력업체 노트북 포맷 절차 안내",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 절차 설명안내완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-701",
-    "title": "네트워크 - 무선랜카드 드라이버 설치안내",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/26(금)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "무선랜카드 드라이버 설치안내",
-    "actionTaken": "드라이버 설치주소 안내완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 무선랜카드 드라이버 설치안내",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 드라이버 설치주소 안내완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -20413,30 +15849,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-712",
-    "title": "노트북 - 침수로인한 A/S요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/29(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "침수로인한 A/S요청",
-    "actionTaken": "동일모델 교체 후 기존장비 처리 절차 확인",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 침수로인한 A/S요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 동일모델 교체 후 기존장비 처리 절차 확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-713",
     "title": "OS - 윈도우11 라이선스 제공요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20478,106 +15890,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] 로컬계정 생성 후 정상작동확인완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-716",
-    "title": "네트워크 - 특정사이트 접속불가(www.oracle.co",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/29(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "특정사이트 접속불가(www.oracle.com)",
-    "actionTaken": "엣지브라우저 업데이트 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 특정사이트 접속불가(www.oracle.com)",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 엣지브라우저 업데이트 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-718",
-    "title": "IP - 포맷 후 인터넷 연결 불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/30(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "포맷 후 인터넷 연결 불가",
-    "actionTaken": "네트워크 재설정완료",
-    "tags": [
-      "네트워크",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 포맷 후 인터넷 연결 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 재설정완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-719",
-    "title": "모니터 - 노후모니터 교체요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/30(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "노후모니터 교체요청",
-    "actionTaken": "교체완료",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 노후모니터 교체요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 교체완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-720",
-    "title": "노트북 - 노후 노트북 교체문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/30(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노후 노트북 교체문의",
-    "actionTaken": "신규 노트북 준비절차 안내완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노후 노트북 교체문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 신규 노트북 준비절차 안내완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -20632,56 +15944,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-725",
-    "title": "노트북 - 노후PC 교체요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/30(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노후PC 교체요청",
-    "actionTaken": "노트북 교체완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노후PC 교체요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 교체완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-726",
-    "title": "모니터 - 노후 모니터 교체요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/30(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "노후 모니터 교체요청",
-    "actionTaken": "모니터 교체완료",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 노후 모니터 교체요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 모니터 교체완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-727",
     "title": "OS - 일반업무망 WIFI 정보 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20701,61 +15963,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 정보안내완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-729",
-    "title": "포맷 - 협력업체pc 2대 포맷요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/02(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "협력업체pc 2대 포맷요청",
-    "actionTaken": "포맷신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 협력업체pc 2대 포맷요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인후 작업완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-730",
-    "title": "메신저 - AD계정 자동 로그인안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/02(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "메신저",
-    "symptom": "AD계정 자동 로그인안됨",
-    "actionTaken": "AD프로그램 깨짐 현상으로 OS재설치 필요, 포맷신청서 상신 안내",
-    "tags": [
-      "소프트웨어",
-      "메신저",
-      "AD",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] AD계정 자동 로그인안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] AD프로그램 깨짐 현상으로 OS재설치 필요, 포맷신청서 상신 안내 📌 연관 지식: [[AD]], [[포맷]]"
-    },
-    "wikilinks": [
-      "AD",
-      "포맷"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.314Z",
     "updatedAt": "2026-08-07T05:08:48.314Z"
@@ -20809,34 +16016,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-733",
-    "title": "포맷 - 협력업체PC 포맷후 사내 개발망으로 OS재설치",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/02(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "협력업체PC 포맷후 사내 개발망으로 OS재설치 요청",
-    "actionTaken": "로우포맷 작업 완료 및 OS재설치 완료",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "로우포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 협력업체PC 포맷후 사내 개발망으로 OS재설치 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 로우포맷 작업 완료 및 OS재설치 완료 📌 연관 지식: [[로우포맷]], [[포맷]]"
-    },
-    "wikilinks": [
-      "로우포맷",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-734",
     "title": "OS - 개발PC OS설치 및 보안 소프트웨어 설치",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20856,58 +16035,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] OS 설치 및 설치프로그램 설치완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-735",
-    "title": "모니터 - 노후모니터 교체 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/02(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "노후모니터 교체 문의",
-    "actionTaken": "교체 절차 안내완료",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 노후모니터 교체 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 교체 절차 안내완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-736",
-    "title": "모니터 - 개인모니터 파손으로 모니터 신청 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/02(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "개인모니터 파손으로 모니터 신청 문의",
-    "actionTaken": "절차 설명안내완료",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 개인모니터 파손으로 모니터 신청 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 절차 설명안내완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.315Z",
     "updatedAt": "2026-08-07T05:08:48.315Z"
@@ -20961,33 +16088,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.315Z"
   },
   {
-    "id": "seed-740",
-    "title": "OS - 부서이동으로 포맷 및 사내 프로그램 설치요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/03(금)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "부서이동으로 포맷 및 사내 프로그램 설치요청",
-    "actionTaken": "포맷, 설치완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 부서이동으로 포맷 및 사내 프로그램 설치요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷, 설치완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
     "id": "seed-746",
     "title": "메신저 - 메신서 대화안됨 및 일반망 스캔 셋팅요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -21013,35 +16113,6 @@ const SEED_KNOWLEDGE_DATA = [
       "복합기 관리자",
       "오피스",
       "스캔"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-749",
-    "title": "OS - AD동작불가로 인한 포맷",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/07(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "AD동작불가로 인한 포맷",
-    "actionTaken": "포맷완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "AD",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] AD동작불가로 인한 포맷",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷완료 📌 연관 지식: [[AD]], [[포맷]]"
-    },
-    "wikilinks": [
-      "AD",
-      "포맷"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.315Z",
@@ -21111,30 +16182,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
       "recommendation": "[R] 일반망 네트워크 어뎁터 및 WIFI 설정 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-755",
-    "title": "노트북 - 노트북 2대 네트워크 망확인 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/08(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 2대 네트워크 망확인 요청",
-    "actionTaken": "노트북2대 내부 보안망OS확인",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 2대 네트워크 망확인 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북2대 내부 보안망OS확인"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -21213,36 +16260,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.315Z"
   },
   {
-    "id": "seed-766",
-    "title": "포맷 - 문서보안(DRM) 업데이트 후 엣지사용 오류발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/09(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "문서보안(DRM) 업데이트 후 엣지사용 오류발생 및 블루스크린발생",
-    "actionTaken": "포맷신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "DRM",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 문서보안(DRM) 업데이트 후 엣지사용 오류발생 및 블루스크린발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인후 작업완료 📌 연관 지식: [[문서보안(DRM)]], [[블루스크린]], [[포맷]]"
-    },
-    "wikilinks": [
-      "문서보안(DRM)",
-      "블루스크린",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
     "id": "seed-767",
     "title": "브라우저 - 사내 메신저 인사시스템 접속오류",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -21293,116 +16310,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.315Z"
   },
   {
-    "id": "seed-769",
-    "title": "소프트웨어 - 사내 품질관리시스템(품질관리시스템(품질관리시스템(QIS))) 프로그램 설치 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/10(금)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "사내 품질관리시스템(품질관리시스템(품질관리시스템(QIS))) 프로그램 설치 오류",
-    "actionTaken": "사내 메신저 고객센터 이관완료",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "사내 메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 품질관리시스템(품질관리시스템(품질관리시스템(QIS))) 프로그램 설치 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 고객센터 이관완료 📌 연관 지식: [[사내 메신저]]"
-    },
-    "wikilinks": [
-      "사내 메신저"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-772",
-    "title": "모니터 - cctv용 모니터 화면 깜빡임 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/10(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "cctv용 모니터 화면 깜빡임 발생",
-    "actionTaken": "고장확인, CCTV 업체 장비로 CCTV업체 연락안내",
-    "tags": [
-      "하드웨어",
-      "모니터",
-      "Security"
-    ],
-    "sbar": {
-      "situation": "[S] cctv용 모니터 화면 깜빡임 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 고장확인, CCTV 업체 장비로 CCTV업체 연락안내 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-773",
-    "title": "포맷 - 반납된 대여 PC 2대 로우포맷 실행",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/13(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "반납된 대여 PC 2대 로우포맷 실행",
-    "actionTaken": "로우포맷 실행 완료",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "로우포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 반납된 대여 PC 2대 로우포맷 실행",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 로우포맷 실행 완료 📌 연관 지식: [[로우포맷]], [[포맷]]"
-    },
-    "wikilinks": [
-      "로우포맷",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-774",
-    "title": "포맷 - 반납된 대여 PC 1대 로우포맷 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/13(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "반납된 대여 PC 1대 로우포맷 요청",
-    "actionTaken": "로우포맷 실행 완료",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "로우포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 반납된 대여 PC 1대 로우포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 로우포맷 실행 완료 📌 연관 지식: [[로우포맷]], [[포맷]]"
-    },
-    "wikilinks": [
-      "로우포맷",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
     "id": "seed-778",
     "title": "데스크탑 - 내부 보안망PC 부팅오류",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -21424,35 +16331,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-779",
-    "title": "노트북 - 바이오스 진입 방법 및 CMOS PW 설정",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/16(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "바이오스 진입 방법 및 CMOS PW 설정 방법 문의",
-    "actionTaken": "바이오스 진입키 및 CMOS PW 설정방법 가이드 완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "CMOS",
-      "바이오스"
-    ],
-    "sbar": {
-      "situation": "[S] 바이오스 진입 방법 및 CMOS PW 설정 방법 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 바이오스 진입키 및 CMOS PW 설정방법 가이드 완료 📌 연관 지식: [[CMOS]], [[바이오스]]"
-    },
-    "wikilinks": [
-      "CMOS",
-      "바이오스"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.315Z",
@@ -21612,129 +16490,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.315Z"
   },
   {
-    "id": "seed-802",
-    "title": "노트북 - 연구소 PC지원에서 노트북 29대 파우치 도작",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/23(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "연구소 PC지원에서 노트북 29대 파우치 도작, 24일 대여건으로 고장여부 체크 및 OS설치",
-    "actionTaken": "백라이트 고장 확인으로 연구소 잔여PC로 교체",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 연구소 PC지원에서 노트북 29대 파우치 도작, 24일 대여건으로 고장여부 체크 및 OS설치",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 백라이트 고장 확인으로 연구소 잔여PC로 교체"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-807",
-    "title": "노트북 - 경비정산, 예산관리 등 사이트 접속안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/24(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "경비정산, 예산관리 등 사이트 접속안됨",
-    "actionTaken": "메인보드고장으로 교체완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 경비정산, 예산관리 등 사이트 접속안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 메인보드고장으로 교체완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-808",
-    "title": "노트북 - 블루스크린 발생 및 저장공간 부족",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/24(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "블루스크린 발생 및 저장공간 부족",
-    "actionTaken": "PC 및 전산 소모품신청서 절차 안내완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 블루스크린 발생 및 저장공간 부족",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC 및 전산 소모품신청서 절차 안내완료 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-811",
-    "title": "소프트웨어 - SIWNPRO 사이트 접속안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/24(금)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "SIWNPRO 사이트 접속안됨",
-    "actionTaken": "고객센터 이관완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] SIWNPRO 사이트 접속안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 고객센터 이관완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-813",
-    "title": "노트북 - 일반업무망 멈춤증상 자주 나타남",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/24(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반업무망 멈춤증상 자주 나타남",
-    "actionTaken": "PC및 전산소모품신청서 작성 절차안내완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 일반업무망 멈춤증상 자주 나타남",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC및 전산소모품신청서 작성 절차안내완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
     "id": "seed-814",
     "title": "브라우저 - 개발사이트 접속안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -21754,115 +16509,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 업무 부서 이관완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-815",
-    "title": "노트북 - 블루스크린 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/27(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "블루스크린 발생",
-    "actionTaken": "네트워크 드라이버 초기화 작업 진행 후 정상접속 확인",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 블루스크린 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 드라이버 초기화 작업 진행 후 정상접속 확인 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-816",
-    "title": "노트북 - 바이오스암호 해재 후 부팅안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/27(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "바이오스암호 해재 후 부팅안됨",
-    "actionTaken": "SSD 고장으로 재고 PC 교체완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "SSD",
-      "바이오스"
-    ],
-    "sbar": {
-      "situation": "[S] 바이오스암호 해재 후 부팅안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSD 고장으로 재고 PC 교체완료 📌 연관 지식: [[SSD]], [[바이오스]]"
-    },
-    "wikilinks": [
-      "SSD",
-      "바이오스"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-817",
-    "title": "노트북 - 블루스크린으로인한 작동안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/27(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "블루스크린으로인한 작동안됨",
-    "actionTaken": "재고PC 교체완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 블루스크린으로인한 작동안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 재고PC 교체완료 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-818",
-    "title": "포맷 - OS오류로 인한 포맷요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/27(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "OS오류로 인한 포맷요청",
-    "actionTaken": "포맷신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] OS오류로 인한 포맷요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인후 작업완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.315Z",
     "updatedAt": "2026-08-07T05:08:48.315Z"
@@ -21895,32 +16541,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.315Z"
   },
   {
-    "id": "seed-823",
-    "title": "포맷 - 오프라인 PC 디스크 정리 및 개발 프로그램",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/28(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "오프라인 PC 디스크 정리 및 개발 프로그램 추가 설치를 위한 PC 포맷",
-    "actionTaken": "포맷신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 오프라인 PC 디스크 정리 및 개발 프로그램 추가 설치를 위한 PC 포맷",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인후 작업완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
     "id": "seed-824",
     "title": "IP - 일반망 네트워크 연결불량",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -21939,33 +16559,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 네트워크 어뎁터 초기화 완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-826",
-    "title": "모니터 - 노트북 화면송출 불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/28(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "노트북 화면송출 불량",
-    "actionTaken": "해상도 설정후 정상표출 확인",
-    "tags": [
-      "하드웨어",
-      "모니터",
-      "해상도"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 화면송출 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 해상도 설정후 정상표출 확인 📌 연관 지식: [[해상도]]"
-    },
-    "wikilinks": [
-      "해상도"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.316Z",
     "updatedAt": "2026-08-07T05:08:48.316Z"
@@ -22013,32 +16606,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 아웃록 에딩 재설치완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-840",
-    "title": "포맷 - 일반망pc 페이징파일 삭제후 윈도우 동작멈춤",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/03(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "일반망pc 페이징파일 삭제후 윈도우 동작멈춤",
-    "actionTaken": "포맷신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망pc 페이징파일 삭제후 윈도우 동작멈춤",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인후 작업완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.316Z",
     "updatedAt": "2026-08-07T05:08:48.316Z"
@@ -22095,35 +16662,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.316Z"
   },
   {
-    "id": "seed-843",
-    "title": "OS - 블루스크린 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/05(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "블루스크린 오류",
-    "actionTaken": "포맷완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "블루스크린",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 블루스크린 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷완료 📌 연관 지식: [[블루스크린]], [[포맷]]"
-    },
-    "wikilinks": [
-      "블루스크린",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
     "id": "seed-846",
     "title": "드라이버 - 프린터 식별 안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -22171,58 +16709,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.316Z"
   },
   {
-    "id": "seed-849",
-    "title": "포맷 - 부서 개발용PC OS설치 및 세팅요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/11(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "부서 개발용PC OS설치 및 세팅요청",
-    "actionTaken": "리커버리 OS 설치 완료",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "정보시스템실(ICT)"
-    ],
-    "sbar": {
-      "situation": "[S] 부서 개발용PC OS설치 및 세팅요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 리커버리 OS 설치 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-852",
-    "title": "노트북 - 모니터(HDMI) 연결되지 않음",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/11(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "모니터(HDMI) 연결되지 않음",
-    "actionTaken": "모니터(HDMI) 포트 재연결",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터(HDMI) 연결되지 않음",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 모니터(HDMI) 포트 재연결 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
     "id": "seed-853",
     "title": "데스크탑 - 부팅불가 및 하드인식 불가",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -22247,156 +16733,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.316Z"
   },
   {
-    "id": "seed-856",
-    "title": "네트워크 - 내부 보안망 이더넷 연결 불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/12(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망 이더넷 연결 불가",
-    "actionTaken": "랜 커넥터 교체 후 정상연결 확인",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 이더넷 연결 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 랜 커넥터 교체 후 정상연결 확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-858",
-    "title": "네트워크 - 유선 네트워크설정 무선으로 변경 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/14(금)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "유선 네트워크설정 무선으로 변경 요청",
-    "actionTaken": "임시WIFI 설정 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 유선 네트워크설정 무선으로 변경 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 임시WIFI 설정 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-862",
-    "title": "포맷 - 협력업체 포맷요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/17(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "협력업체 포맷요청",
-    "actionTaken": "포맷완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 협력업체 포맷요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-865",
-    "title": "모니터 - 본체-모니터 화면 출력점검",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/19(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "본체-모니터 화면 출력점검",
-    "actionTaken": "케이블 이슈로 교체후 정상출력 확인",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 본체-모니터 화면 출력점검",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 케이블 이슈로 교체후 정상출력 확인 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-868",
-    "title": "포맷 - 반출용pc 포맷작업",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/19(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "반출용pc 포맷작업",
-    "actionTaken": "포맷신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 반출용pc 포맷작업",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인후 작업완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-869",
-    "title": "네트워크 - 내부 보안망 접속 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/19(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망 접속 오류",
-    "actionTaken": "부서내 랜커넥터 무단혼용으로 인한 mac차단으로 각자pc에 등록된 커넥터 연결 요청",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 접속 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 부서내 랜커넥터 무단혼용으로 인한 mac차단으로 각자pc에 등록된 커넥터 연결 요청"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
     "id": "seed-870",
     "title": "라이센스 - ms관련 제품 미작동",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -22414,83 +16750,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 라이센스. 현장 처리 결과 검증.",
       "recommendation": "[R] msoffice 재설치 및 라이선스 재등록 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-873",
-    "title": "노트북 - 노트북 RAM 8G > 16G 증설 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/19(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 RAM 8G > 16G 증설 요청",
-    "actionTaken": "원보드 모델이라 증설 어려움 확인 후 안내",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 RAM 8G > 16G 증설 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 원보드 모델이라 증설 어려움 확인 후 안내"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-876",
-    "title": "OS - 문서작업시 버벅임 또는 out of memo",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/20(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "문서작업시 버벅임 또는 out of memort 오류 및 블루스크린 발생",
-    "actionTaken": "OS 손상으로 포맷신청서 상신절차 안내완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "블루스크린",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 문서작업시 버벅임 또는 out of memort 오류 및 블루스크린 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] OS 손상으로 포맷신청서 상신절차 안내완료 📌 연관 지식: [[블루스크린]], [[포맷]]"
-    },
-    "wikilinks": [
-      "블루스크린",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-877",
-    "title": "네트워크 - 1층 2번 회의실 네트워크 연결불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/20(목)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "1층 2번 회의실 네트워크 연결불량",
-    "actionTaken": "무선 네트워크 연결상태 불량으로 유선으로 변경 후 정상연결 확인",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 1층 2번 회의실 네트워크 연결불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선 네트워크 연결상태 불량으로 유선으로 변경 후 정상연결 확인"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -22746,56 +17005,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.316Z"
   },
   {
-    "id": "seed-894",
-    "title": "노트북 - RPA 서버용 내부 보안망PC 2대 S/N 공유요",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/27(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "RPA 서버용 내부 보안망PC 2대 S/N 공유요청",
-    "actionTaken": "메일로 회신 완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] RPA 서버용 내부 보안망PC 2대 S/N 공유요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 메일로 회신 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-895",
-    "title": "포맷 - 사내프로그램 오류로 인한 포맷요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/28(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "사내프로그램 오류로 인한 포맷요청",
-    "actionTaken": "브라우저 검색기록 및 캐쉬 삭제, 브라우저 초기화 진행",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 사내프로그램 오류로 인한 포맷요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 브라우저 검색기록 및 캐쉬 삭제, 브라우저 초기화 진행 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
     "id": "seed-897",
     "title": "OS - 블루스크린 발생 및 PC 강제부팅현상 발생",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -22818,54 +17027,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "블루스크린"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-898",
-    "title": "네트워크 - 일반망PC 랜카드 고장으로 교체요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/28(금)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "일반망PC 랜카드 고장으로 교체요청",
-    "actionTaken": "교체완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 랜카드 고장으로 교체요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 교체완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-899",
-    "title": "소프트웨어 - 내부 보안망PC TOPS 접속오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/28(금)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망PC TOPS 접속오류",
-    "actionTaken": "내부 보안망 메신저프로그램 재설치 후 접속완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC TOPS 접속오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 내부 보안망 메신저프로그램 재설치 후 접속완료"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.316Z",
     "updatedAt": "2026-08-07T05:08:48.316Z"
@@ -23021,33 +17182,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.316Z"
   },
   {
-    "id": "seed-909",
-    "title": "소프트웨어 - 한글파일 실행불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/02(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "한글파일 실행불가",
-    "actionTaken": "한글 2018 프로그램 재설치 후 정상실행 확인",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "한글"
-    ],
-    "sbar": {
-      "situation": "[S] 한글파일 실행불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 한글 2018 프로그램 재설치 후 정상실행 확인 📌 연관 지식: [[한글]]"
-    },
-    "wikilinks": [
-      "한글"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
     "id": "seed-911",
     "title": "OS - 화면보호기 진입시 PC전원 꺼짐발생",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -23118,33 +17252,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.316Z"
   },
   {
-    "id": "seed-916",
-    "title": "포맷 - OS 오류로인한 C드라이브 포멧요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/03(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "OS 오류로인한 C드라이브 포멧요청",
-    "actionTaken": "포멧신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "C드라이브"
-    ],
-    "sbar": {
-      "situation": "[S] OS 오류로인한 C드라이브 포멧요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포멧신청서 확인후 작업완료 📌 연관 지식: [[C드라이브]]"
-    },
-    "wikilinks": [
-      "C드라이브"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
     "id": "seed-917",
     "title": "OS - 신규입사자 내부 보안망PC 블루스크린 및 부팅 오",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -23193,80 +17300,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "백업"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-922",
-    "title": "포맷 - 오프라인 개발용pc 사내방서버로 용도변경을",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/04(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "오프라인 개발용pc 사내방서버로 용도변경을 위한 포멧 요청",
-    "actionTaken": "포멧신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 오프라인 개발용pc 사내방서버로 용도변경을 위한 포멧 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포멧신청서 확인후 작업완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-923",
-    "title": "모니터 - 사용중인 모니터 모델 및 시리얼 번호 조회",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/04(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "사용중인 모니터 모델 및 시리얼 번호 조회 요청",
-    "actionTaken": "지급리스트 확인 후 이상없음 확인",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 사용중인 모니터 모델 및 시리얼 번호 조회 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 지급리스트 확인 후 이상없음 확인 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-925",
-    "title": "네트워크 - 내부 보안망 랜케이블 교체 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/04(목)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망 랜케이블 교체 문의",
-    "actionTaken": "랜수리 신청서 상신 방법 가이드 안내",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 랜케이블 교체 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 랜수리 신청서 상신 방법 가이드 안내"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.316Z",
     "updatedAt": "2026-08-07T05:08:48.316Z"
@@ -23350,33 +17383,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.316Z"
   },
   {
-    "id": "seed-939",
-    "title": "포맷 - 개발용 PC 포맷요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/15(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "개발용 PC 포맷요청",
-    "actionTaken": "포멧신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "정보시스템실(ICT)"
-    ],
-    "sbar": {
-      "situation": "[S] 개발용 PC 포맷요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포멧신청서 확인후 작업완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
     "id": "seed-949",
     "title": "브라우저 - 인사시스템 접속오류",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -23425,57 +17431,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.316Z"
   },
   {
-    "id": "seed-952",
-    "title": "네트워크 - 내부 보안망 네트워크 연결 불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/16(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망 네트워크 연결 불가",
-    "actionTaken": "네트워크 어뎁터 초기화 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 네트워크 연결 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 어뎁터 초기화 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-956",
-    "title": "노트북 - 개발용PC SSD탈거 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/17(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "개발용PC SSD탈거 요청",
-    "actionTaken": "SSD 탈거 완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 개발용PC SSD탈거 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSD 탈거 완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
     "id": "seed-957",
     "title": "OS - 블루스크린 다수 발생",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -23498,31 +17453,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "블루스크린"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-959",
-    "title": "네트워크 - 개발용PC 네트워크 연결문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/17(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "개발용PC 네트워크 연결문의",
-    "actionTaken": "해당 건 전산관리자 PC지원 담당자 이관 완료",
-    "tags": [
-      "네트워크",
-      "기타",
-      "정보시스템실(ICT)"
-    ],
-    "sbar": {
-      "situation": "[S] 개발용PC 네트워크 연결문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 해당 건 전산관리자 PC지원 담당자 이관 완료"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.317Z",
     "updatedAt": "2026-08-07T05:08:48.317Z"
@@ -23555,30 +17485,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.317Z"
   },
   {
-    "id": "seed-965",
-    "title": "노트북 - 노트북 어뎁터 연결불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/22(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 어뎁터 연결불량",
-    "actionTaken": "어뎁터 교체 완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 어뎁터 연결불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 어뎁터 교체 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
     "id": "seed-968",
     "title": "OS - 일반망PC 버벅임 및 블루스크린 발생",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -23600,57 +17506,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-971",
-    "title": "네트워크 - 내부 보안망PC 무선 연결 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/23(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망PC 무선 연결 오류",
-    "actionTaken": "무선인증 솔루션 PW 초기화 후 재접속 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 무선 연결 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선인증 솔루션 PW 초기화 후 재접속 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-973",
-    "title": "노트북 - 개발용PC SSD 장착 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/25(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "개발용PC SSD 장착 요청",
-    "actionTaken": "SSD 장착완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 개발용PC SSD 장착 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSD 장착완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.317Z",
@@ -23728,30 +17583,6 @@ const SEED_KNOWLEDGE_DATA = [
       "SSD",
       "블루스크린"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-982",
-    "title": "포맷 - 반출PC 포멧요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/29(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "반출PC 포멧요청",
-    "actionTaken": "포멧신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 반출PC 포멧요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포멧신청서 확인후 작업완료"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.317Z",
     "updatedAt": "2026-08-07T05:08:48.317Z"
@@ -23862,30 +17693,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.317Z"
   },
   {
-    "id": "seed-988",
-    "title": "노트북 - 노트북 충전기 미연결시 전원 강제OFF 현상",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/02(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 충전기 미연결시 전원 강제OFF 현상",
-    "actionTaken": "초기불량으로 인한 PC 교체 진행완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 충전기 미연결시 전원 강제OFF 현상",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 초기불량으로 인한 PC 교체 진행완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
     "id": "seed-989",
     "title": "OS - 개발환경 구축 후 지속적인 블루스크린 발생으",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -23937,60 +17744,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.317Z"
   },
   {
-    "id": "seed-992",
-    "title": "네트워크 - 일반망PC 네트워크 연결 불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/02(금)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "일반망PC 네트워크 연결 불량",
-    "actionTaken": "망연계 시스템 PW 5회이상 틀림으로 계정 잠김 확인 후 PW 초기화 요청 후 로그인 완료",
-    "tags": [
-      "네트워크",
-      "기타",
-      "망연계"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 네트워크 연결 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 망연계 시스템 PW 5회이상 틀림으로 계정 잠김 확인 후 PW 초기화 요청 후 로그인 완료 📌 연관 지식: [[망연계 시스템]]"
-    },
-    "wikilinks": [
-      "망연계 시스템"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-995",
-    "title": "노트북 - 일반망PC 심한 버벅임 및 블루스크린 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/05(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반망PC 심한 버벅임 및 블루스크린 발생 후 PC 강제부팅",
-    "actionTaken": "메인보드고장으로 교체완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 심한 버벅임 및 블루스크린 발생 후 PC 강제부팅",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 메인보드고장으로 교체완료 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
     "id": "seed-997",
     "title": "데스크탑 - 블루스크린 및 재부팅 불가",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -24015,30 +17768,6 @@ const SEED_KNOWLEDGE_DATA = [
       "SSD",
       "블루스크린"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-998",
-    "title": "네트워크 - 내부 보안망PC 네트워크 설정 불일치",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/06(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망PC 네트워크 설정 불일치",
-    "actionTaken": "네트워크 어뎁터 재설정",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 네트워크 설정 불일치",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 어뎁터 재설정"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.317Z",
     "updatedAt": "2026-08-07T05:08:48.317Z"
@@ -24088,102 +17817,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] 포멧신청서 확인후 작업완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-1003",
-    "title": "네트워크 - 내부 보안망 PC 네트워크 세팅 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/07(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망 PC 네트워크 세팅 요청",
-    "actionTaken": "네트워크 어뎁터 설정 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 PC 네트워크 세팅 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 어뎁터 설정 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-1006",
-    "title": "네트워크 - 6층레이아웃 변경으로 인한 임직원 2명 네트",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/12(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "6층레이아웃 변경으로 인한 임직원 2명 네트워크 유무선 변경작업 요청",
-    "actionTaken": "좌석배치도 확인후 현장방문 예정",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 6층레이아웃 변경으로 인한 임직원 2명 네트워크 유무선 변경작업 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 좌석배치도 확인후 현장방문 예정"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-1007",
-    "title": "네트워크 - 근무 좌석변경으로 인한 내부 보안망PC 네트워크",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/12(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "근무 좌석변경으로 인한 내부 보안망PC 네트워크 설정 변경(유->무) 요청",
-    "actionTaken": "변경작업 완료후 무선인증 솔루션 정상 연결 확인",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 근무 좌석변경으로 인한 내부 보안망PC 네트워크 설정 변경(유->무) 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 변경작업 완료후 무선인증 솔루션 정상 연결 확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-1008",
-    "title": "노트북 - 초기불량 PC 수리로인한 LG서비스센터 기사",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/12(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "초기불량 PC 수리로인한 LG서비스센터 기사 연구소 방문",
-    "actionTaken": "13층 동행 후 PC수리 확인 후 방문 종료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 초기불량 PC 수리로인한 LG서비스센터 기사 연구소 방문",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 13층 동행 후 PC수리 확인 후 방문 종료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -24244,32 +17877,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.317Z"
   },
   {
-    "id": "seed-1011",
-    "title": "모니터 - 모니터 1대 연결 불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/19(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "모니터 1대 연결 불량",
-    "actionTaken": "HDMI케이블 재연결 후 정상표출 확인",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 1대 연결 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] HDMI케이블 재연결 후 정상표출 확인 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
     "id": "seed-1018",
     "title": "데스크탑 - 내부 보안망PC 화면표출 안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -24320,54 +17927,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.317Z"
   },
   {
-    "id": "seed-1020",
-    "title": "네트워크 - 임원 일반망PC 네트워크 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/21(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "임원 일반망PC 네트워크 오류",
-    "actionTaken": "랜카드 교체후 조치완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 임원 일반망PC 네트워크 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 랜카드 교체후 조치완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-1021",
-    "title": "노트북 - 노트북 화면송출 불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/22(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 화면송출 불량",
-    "actionTaken": "노트북 백라이트 고장으로 동일모델 교체완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 화면송출 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노트북 백라이트 고장으로 동일모델 교체완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
     "id": "seed-1023",
     "title": "데스크탑 - 제안서 서버 PC HDMI 케이블 연결시 화",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -24387,35 +17946,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] HDMI 포트 변경후 연결 완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-1024",
-    "title": "소프트웨어 - 10층 TF 팀 오피스 프로그램 설치 지원",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/22(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "10층 TF 팀 오피스 프로그램 설치 지원",
-    "actionTaken": "오피스 및 한글 설치 지원 완료",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "오피스",
-      "한글"
-    ],
-    "sbar": {
-      "situation": "[S] 10층 TF 팀 오피스 프로그램 설치 지원",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 오피스 및 한글 설치 지원 완료 📌 연관 지식: [[오피스]], [[한글]]"
-    },
-    "wikilinks": [
-      "오피스",
-      "한글"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.317Z",
     "updatedAt": "2026-08-07T05:08:48.317Z"
@@ -24547,54 +18077,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.317Z"
   },
   {
-    "id": "seed-1051",
-    "title": "네트워크 - 일반망PC 네트워크 연결 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/26(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "일반망PC 네트워크 연결 오류",
-    "actionTaken": "네트워크 어뎁터 초기화 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 네트워크 연결 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 어뎁터 초기화 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-1057",
-    "title": "노트북 - 일반망PC 전원 안켜짐",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/28(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반망PC 전원 안켜짐",
-    "actionTaken": "배터리 고장으로 동일모델 교체 완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 전원 안켜짐",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 배터리 고장으로 동일모델 교체 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
     "id": "seed-1060",
     "title": "기본 프로그램 - 사내 메신저 접속 오류",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -24666,54 +18148,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.317Z"
   },
   {
-    "id": "seed-1067",
-    "title": "네트워크 - 신규입사자 일반망PC 네트워크 연결요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/02(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "신규입사자 일반망PC 네트워크 연결요청",
-    "actionTaken": "네트워크 어뎁터 설정 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 신규입사자 일반망PC 네트워크 연결요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 어뎁터 설정 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1068",
-    "title": "네트워크 - 신규입사자 내부 보안망PC 네트워크 연결요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/02(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "신규입사자 내부 보안망PC 네트워크 연결요청",
-    "actionTaken": "네트워크 어뎁터 설정 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 신규입사자 내부 보안망PC 네트워크 연결요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 어뎁터 설정 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1075",
     "title": "IP - DNS 서버 변경으로 인한 네트워크 접속 불",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -24735,30 +18169,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "DNS"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1076",
-    "title": "네트워크 - 신규입사자 PC 인터넷 연결 불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/04(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "신규입사자 PC 인터넷 연결 불가",
-    "actionTaken": "일반망 PC 네트워크 어뎁터 초기화",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 신규입사자 PC 인터넷 연결 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 일반망 PC 네트워크 어뎁터 초기화"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.318Z",
     "updatedAt": "2026-08-07T05:08:48.318Z"
@@ -24916,30 +18326,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.318Z"
   },
   {
-    "id": "seed-1088",
-    "title": "노트북 - 화면이 안나옴",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/10(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "화면이 안나옴",
-    "actionTaken": "동일재고 교체완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 화면이 안나옴",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 동일재고 교체완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1090",
     "title": "기본 프로그램 - 일반망PC 한글실행 불가",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -24990,81 +18376,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.318Z"
   },
   {
-    "id": "seed-1094",
-    "title": "노트북 - 내부 보안망 무선 네트워크 연결 장애",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/19(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "내부 보안망 무선 네트워크 연결 장애",
-    "actionTaken": "무선인증솔루션 초기화완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 무선 네트워크 연결 장애",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선인증솔루션 초기화완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1098",
-    "title": "데스크탑 - 모니터출력 x",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/20(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "데스크탑",
-    "symptom": "모니터출력 x",
-    "actionTaken": "RAM 재장착 후 정상동작 확인",
-    "tags": [
-      "하드웨어",
-      "데스크탑",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터출력 x",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 데스크탑. 현장 처리 결과 검증.",
-      "recommendation": "[R] RAM 재장착 후 정상동작 확인 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1100",
-    "title": "노트북 - 네트워크안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/23(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "네트워크안됨",
-    "actionTaken": "랜카드 드라이버 재설치완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 네트워크안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 랜카드 드라이버 재설치완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1101",
     "title": "OS - 윈도우 패스워드 분실",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -25086,84 +18397,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "워드"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1104",
-    "title": "OS - 오프라인 -> 일반업무망 데스크탑 포맷요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/26(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "오프라인 -> 일반업무망 데스크탑 포맷요청",
-    "actionTaken": "포맷완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 오프라인 -> 일반업무망 데스크탑 포맷요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1105",
-    "title": "노트북 - 개발 과정에서 CPU 부하 및 램용량 부족으",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/26(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "개발 과정에서 CPU 부하 및 램용량 부족으로 응용이 중단됨",
-    "actionTaken": "OS 복구완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 개발 과정에서 CPU 부하 및 램용량 부족으로 응용이 중단됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] OS 복구완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1106",
-    "title": "노트북 - 협력업체 노트북 포맷요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/26(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "협력업체 노트북 포맷요청",
-    "actionTaken": "포맷완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 협력업체 노트북 포맷요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.318Z",
@@ -25197,57 +18430,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.318Z"
   },
   {
-    "id": "seed-1110",
-    "title": "OS - 오프라인 PC를 내부 보안망 PC로 용도변경으로인",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/04(금)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "오프라인 PC를 내부 보안망 PC로 용도변경으로인한 포맷신청",
-    "actionTaken": "포맷완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 오프라인 PC를 내부 보안망 PC로 용도변경으로인한 포맷신청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1111",
-    "title": "노트북 - 전원이 안들어옴",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/04(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "전원이 안들어옴",
-    "actionTaken": "배터리 고장으로 동일모델 교체 완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 전원이 안들어옴",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 배터리 고장으로 동일모델 교체 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1112",
     "title": "유지보수 - 10층 ICT 회의실 사업장->연구소 이전 샤이",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -25265,30 +18447,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: 유지보수. 현장 처리 결과 검증.",
       "recommendation": "[R] 이전 화상장비 시리얼 넘버 및 구성품 점검 상태 확인 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1113",
-    "title": "소프트웨어 - 자산실사 프로그램 팝업창 발생 시 이전부서로",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/07(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "자산실사 프로그램 팝업창 발생 시 이전부서로 나옴",
-    "actionTaken": "PC지원 임직원에게 해당 내용 이관 완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 자산실사 프로그램 팝업창 발생 시 이전부서로 나옴",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC지원 임직원에게 해당 내용 이관 완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -25315,32 +18473,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 시스템파일 손상으로 복구 명령어 실행 조치 완료 및 네트워크 C타입 커넥터 교체완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1115",
-    "title": "네트워크 - 인사2팀->지원팀으로 공용PC 명의 이전으로",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/08(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "인사2팀->지원팀으로 공용PC 명의 이전으로 인한 PC IP변경 요청",
-    "actionTaken": "신규 IP 및 보안 소프트웨어 명의 변경 작업 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 인사2팀->지원팀으로 공용PC 명의 이전으로 인한 PC IP변경 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 신규 IP 및 보안 소프트웨어 명의 변경 작업 완료 📌 연관 지식: [[IP]]"
-    },
-    "wikilinks": [
-      "IP"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.318Z",
     "updatedAt": "2026-08-07T05:08:48.318Z"
@@ -25393,32 +18525,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.318Z"
   },
   {
-    "id": "seed-1119",
-    "title": "포맷 - 인사시스템 및 OS 불안정으로 포맷 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/10(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "인사시스템 및 OS 불안정으로 포맷 요청",
-    "actionTaken": "포맷신청서 확인 후 작업 완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 인사시스템 및 OS 불안정으로 포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인 후 작업 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1121",
     "title": "유지보수 - 지하 6층 화상장비 구성품 상태확인 및 구입",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -25438,59 +18544,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 구성품 확인 및 점검 완료 및 필요 물품 조사 후 내용공유 완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1122",
-    "title": "모니터 - 모니터 화면 출력 불",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/14(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터",
-    "symptom": "모니터 화면 출력 불",
-    "actionTaken": "노후모니터사용중으로 교체완료",
-    "tags": [
-      "하드웨어",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 화면 출력 불",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터. 현장 처리 결과 검증.",
-      "recommendation": "[R] 노후모니터사용중으로 교체완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1124",
-    "title": "노트북 - 블루스크린현상",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/15(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "블루스크린현상",
-    "actionTaken": "OS복구완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 블루스크린현상",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] OS복구완료 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.318Z",
     "updatedAt": "2026-08-07T05:08:48.318Z"
@@ -25549,33 +18602,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.318Z"
   },
   {
-    "id": "seed-1137",
-    "title": "OS - 협력업체 PC 포맷요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/21(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "협력업체 PC 포맷요청",
-    "actionTaken": "포맷완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 협력업체 PC 포맷요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1139",
     "title": "OS - 일반망PC 블루스크린 표출",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -25598,81 +18624,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "블루스크린"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1140",
-    "title": "노트북 - 일반망PC 블루스크린 표출",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/21(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반망PC 블루스크린 표출",
-    "actionTaken": "점검 결과 메인보드 고장확인 으로 PC 교체예정",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 블루스크린 표출",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 점검 결과 메인보드 고장확인 으로 PC 교체예정 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1142",
-    "title": "하드웨어 - 각사업장 PC재고 현황리스트 작성 및 공유",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/22(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "각사업장 PC재고 현황리스트 작성 및 공유 요청",
-    "actionTaken": "연구소 재고PC 현황 리스트 작성 및 공유 완료",
-    "tags": [
-      "하드웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 각사업장 PC재고 현황리스트 작성 및 공유 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 연구소 재고PC 현황 리스트 작성 및 공유 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1143",
-    "title": "소프트웨어 - 자산실사 프로그램 사번등록 불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/22(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "자산실사 프로그램 사번등록 불가",
-    "actionTaken": "사용자 등록완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 자산실사 프로그램 사번등록 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사용자 등록완료"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.318Z",
     "updatedAt": "2026-08-07T05:08:48.318Z"
@@ -25728,30 +18679,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.318Z"
   },
   {
-    "id": "seed-1148",
-    "title": "소프트웨어 - 일반망 자산실사 미실행자 실행요청 메일 발송",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/23(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "일반망 자산실사 미실행자 실행요청 메일 발송",
-    "actionTaken": "발송 완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 자산실사 미실행자 실행요청 메일 발송",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 발송 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1153",
     "title": "OS - 계정 로그인안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -25800,30 +18727,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.318Z"
   },
   {
-    "id": "seed-1156",
-    "title": "노트북 - 일반망PC 메인보드고장으로 인한 교체",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/24(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반망PC 메인보드고장으로 인한 교체",
-    "actionTaken": "동일모델 교체 후 기존장비 처리 절차 확인",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 메인보드고장으로 인한 교체",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 동일모델 교체 후 기존장비 처리 절차 확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1157",
     "title": "백업 - PC교체로 인한 데이터 백업 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -25848,150 +18751,6 @@ const SEED_KNOWLEDGE_DATA = [
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.318Z",
     "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1162",
-    "title": "소프트웨어 - 자산실사 프로그램 실행일정 연기",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/28(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "자산실사 프로그램 실행일정 연기",
-    "actionTaken": "11월 01일 실행예정",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 자산실사 프로그램 실행일정 연기",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 11월 01일 실행예정"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1163",
-    "title": "소프트웨어 - 자산실사수집 봇 메일발송 테스트 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/28(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "자산실사수집 봇 메일발송 테스트 요청",
-    "actionTaken": "테스트 진행 완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 자산실사수집 봇 메일발송 테스트 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 테스트 진행 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1164",
-    "title": "하드웨어 - 지하 6층 샤이니즈 2대 분실로 실사 확인",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/29(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "기타",
-    "symptom": "지하 6층 샤이니즈 2대 분실로 실사 확인 요청",
-    "actionTaken": "지하 6층 장비 실사 결과 분실장비 없음",
-    "tags": [
-      "하드웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 지하 6층 샤이니즈 2대 분실로 실사 확인 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 지하 6층 장비 실사 결과 분실장비 없음"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1165",
-    "title": "소프트웨어 - 10층 ICT망 연결 출장용PC VDI/VP",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/29(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "10층 ICT망 연결 출장용PC VDI/VPN 테스트요청",
-    "actionTaken": "10층 테스트 완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 10층 ICT망 연결 출장용PC VDI/VPN 테스트요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 10층 테스트 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1167",
-    "title": "소프트웨어 - 자산실사 프로그램 실행 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/30(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "자산실사 프로그램 실행 오류",
-    "actionTaken": "vituual box 종료후 재실행 요청",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 자산실사 프로그램 실행 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] vituual box 종료후 재실행 요청"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1168",
-    "title": "소프트웨어 - 내부 보안망 자산실사 프로그램 미실행 확인",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/30(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망 자산실사 프로그램 미실행 확인",
-    "actionTaken": "실행요청 전화 및 메신저 메일 발송",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 자산실사 프로그램 미실행 확인",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 실행요청 전화 및 메신저 메일 발송"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
   },
   {
     "id": "seed-1169",
@@ -26066,109 +18825,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.319Z"
   },
   {
-    "id": "seed-1195",
-    "title": "노트북 - 윈도우 부팅 후 블루스크린 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/01(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "윈도우 부팅 후 블루스크린 발생",
-    "actionTaken": "초기불량으로 인한 PC 교체 진행완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 윈도우 부팅 후 블루스크린 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 초기불량으로 인한 PC 교체 진행완료 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1199",
-    "title": "포맷 - 일반망PC 강제 재부팅 오류발생으로 인한 포",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/04(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "일반망PC 강제 재부팅 오류발생으로 인한 포맷 신청",
-    "actionTaken": "포맷신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 강제 재부팅 오류발생으로 인한 포맷 신청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인후 작업완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1200",
-    "title": "소프트웨어 - 자산실사프로그램 사용자정보조회 실행불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/05(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "자산실사프로그램 사용자정보조회 실행불가",
-    "actionTaken": "사용자 등록완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 자산실사프로그램 사용자정보조회 실행불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사용자 등록완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1201",
-    "title": "포맷 - 일반망PC 버벅임 증상 다수발생으로 포맷 요",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/05(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "일반망PC 버벅임 증상 다수발생으로 포맷 요청",
-    "actionTaken": "포맷신청서 확인 후 작업 완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 버벅임 증상 다수발생으로 포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인 후 작업 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
     "id": "seed-1204",
     "title": "OS - 일반망PC 시스템 종료화면에서 멈춤",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -26186,30 +18842,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] 재부팅 후 시스템파일 복구작업 진행후 정상동작확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1205",
-    "title": "소프트웨어 - 자살실사 프로그램 진행률 공유 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/07(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "자살실사 프로그램 진행률 공유 요청",
-    "actionTaken": "내부 보안망: 83%, 일반망: 79% 진행완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 자살실사 프로그램 진행률 공유 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 내부 보안망: 83%, 일반망: 79% 진행완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -26315,108 +18947,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.319Z"
   },
   {
-    "id": "seed-1215",
-    "title": "소프트웨어 - 자산실사 서버pc 전원off상태 on으로 변",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/13(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "자산실사 서버pc 전원off상태 on으로 변경 요청",
-    "actionTaken": "부팅 및 로그인 완료",
-    "tags": [
-      "소프트웨어",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 자산실사 서버pc 전원off상태 on으로 변경 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 부팅 및 로그인 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1220",
-    "title": "네트워크 - 내부 보안망 PC 네트워크 연결 불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/14(목)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망 PC 네트워크 연결 불량",
-    "actionTaken": "무선인증솔루션 초기화완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 PC 네트워크 연결 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선인증솔루션 초기화완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1221",
-    "title": "OS - PC 업데이트 오류로 인한 포맷조치",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/14(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "PC 업데이트 오류로 인한 포맷조치",
-    "actionTaken": "OS 포맷완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] PC 업데이트 오류로 인한 포맷조치",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] OS 포맷완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1230",
-    "title": "네트워크 - 일반망 PC DNS 미변경자 변경지원요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/21(목)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "일반망 PC DNS 미변경자 변경지원요청",
-    "actionTaken": "메신저 및 전화통보 완료",
-    "tags": [
-      "네트워크",
-      "기타",
-      "DNS"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 PC DNS 미변경자 변경지원요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 메신저 및 전화통보 완료 📌 연관 지식: [[DNS]]"
-    },
-    "wikilinks": [
-      "DNS"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
     "id": "seed-1231",
     "title": "IP - 일반망PC 네트워크 연결 불가",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -26461,35 +18991,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "DNS"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1238",
-    "title": "네트워크 - 신규 무선랜카드 WIPS 등록 요청 건",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/27(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "신규 무선랜카드 WIPS 등록 요청 건",
-    "actionTaken": "랜카드 MAC정보 공유완료",
-    "tags": [
-      "네트워크",
-      "기타",
-      "시스템관리",
-      "WIPS"
-    ],
-    "sbar": {
-      "situation": "[S] 신규 무선랜카드 WIPS 등록 요청 건",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 랜카드 MAC정보 공유완료 📌 연관 지식: [[WIPS]], [[IP]]"
-    },
-    "wikilinks": [
-      "WIPS",
-      "IP"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.319Z",
@@ -26544,30 +19045,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.319Z"
   },
   {
-    "id": "seed-1245",
-    "title": "노트북 - 사용중 PC꺼짐 현상",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/02(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "사용중 PC꺼짐 현상",
-    "actionTaken": "수리불가 판정으로인한 교체 신청",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 사용중 PC꺼짐 현상",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 수리불가 판정으로인한 교체 신청"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
     "id": "seed-1247",
     "title": "OS - 일반망 PC 블루스크린 발생",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -26593,80 +19070,6 @@ const SEED_KNOWLEDGE_DATA = [
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.319Z",
     "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1248",
-    "title": "노트북 - 노트북 전원고장으로 인해 PC사용 불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/03(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 전원고장으로 인해 PC사용 불가",
-    "actionTaken": "증상 확인 및 동일모델 교체 판정",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 전원고장으로 인해 PC사용 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 증상 확인 및 동일모델 교체 판정"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1250",
-    "title": "포맷 - S품질관리시스템(품질관리시스템(QIS)) 성적서 전산화 프로젝트 종료에 따른",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/05(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "S품질관리시스템(품질관리시스템(QIS)) 성적서 전산화 프로젝트 종료에 따른 외주 개발자 업무用 포멧 신청 건",
-    "actionTaken": "포맷신청서 확인 후 작업 완료",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] S품질관리시스템(품질관리시스템(QIS)) 성적서 전산화 프로젝트 종료에 따른 외주 개발자 업무用 포멧 신청 건",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷신청서 확인 후 작업 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1253",
-    "title": "네트워크 - 계열사 이전으로 지사 -> 본사 랜카드 설치",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/06(금)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "계열사 이전으로 지사 -> 본사 랜카드 설치 및 네트워크 설정 요청",
-    "actionTaken": "랜카드 설치 및 네트워크(무선인증솔루션)세팅 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 계열사 이전으로 지사 -> 본사 랜카드 설치 및 네트워크 설정 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 랜카드 설치 및 네트워크(무선인증솔루션)세팅 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
     "id": "seed-1254",
@@ -26745,81 +19148,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1258",
-    "title": "하드웨어 - 총무 담당자 모니터 S/N, 모델명 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/16(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "문의",
-    "symptom": "총무 담당자 모니터 S/N, 모델명 요청",
-    "actionTaken": "지급리스트 확인 후 공유완료",
-    "tags": [
-      "하드웨어",
-      "문의",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 총무 담당자 모니터 S/N, 모델명 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 문의. 현장 처리 결과 검증.",
-      "recommendation": "[R] 지급리스트 확인 후 공유완료 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1259",
-    "title": "노트북 - 일반망 PC 충전 불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/17(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반망 PC 충전 불량",
-    "actionTaken": "일반망PC 배터리 고장으로 인한 교체 필요",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 PC 충전 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 일반망PC 배터리 고장으로 인한 교체 필요"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1260",
-    "title": "네트워크 - 자리에 내부 보안망 랜케이블 없음으로 무선화 신청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/18(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "자리에 내부 보안망 랜케이블 없음으로 무선화 신청",
-    "actionTaken": "무선인증솔루션 설정 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 자리에 내부 보안망 랜케이블 없음으로 무선화 신청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선인증솔루션 설정 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1261",
     "title": "IP - 내부 보안망PC 네트워크 접속오류",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -26836,128 +19164,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
       "recommendation": "[R] 네트워크 어뎁터 초기화"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1262",
-    "title": "포맷 - 타 용도(개발용, 오프라인)로 사용하던 PC",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/19(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "타 용도(개발용, 오프라인)로 사용하던 PC를 내부 보안망 PC로 교체하기 위해 포맷을 신청합니다.",
-    "actionTaken": "포멧신청서 확인후 차주 작업예정 통보",
-    "tags": [
-      "하드웨어",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 타 용도(개발용, 오프라인)로 사용하던 PC를 내부 보안망 PC로 교체하기 위해 포맷을 신청합니다.",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포멧신청서 확인후 차주 작업예정 통보 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1263",
-    "title": "네트워크 - 디자이너 PC 8대 유->무 변경 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/23(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "디자이너 PC 8대 유->무 변경 요청",
-    "actionTaken": "무선인증 솔루션 세팅 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 디자이너 PC 8대 유->무 변경 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선인증 솔루션 세팅 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1264",
-    "title": "네트워크 - 내부 보안망PC 유->무 변경 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/23(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "내부 보안망PC 유->무 변경 요청",
-    "actionTaken": "무선인증 솔루션 세팅 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 유->무 변경 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선인증 솔루션 세팅 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1265",
-    "title": "네트워크 - 디자이너 PC관리 서버PC 유->무선 변경",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/23(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "디자이너 PC관리 서버PC 유->무선 변경 요청",
-    "actionTaken": "무선인증 솔루션 세팅 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 디자이너 PC관리 서버PC 유->무선 변경 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선인증 솔루션 세팅 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1266",
-    "title": "네트워크 - 13층 식당 식수프로그램 PC(내부 보안망) 네트",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/23(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "13층 식당 식수프로그램 PC(내부 보안망) 네트워크 불량",
-    "actionTaken": "랜카드 고장으로 교체 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 13층 식당 식수프로그램 PC(내부 보안망) 네트워크 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 랜카드 고장으로 교체 완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -26989,158 +19195,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1270",
-    "title": "네트워크 - 근무지 이동으로 내부 보안망 PC 유->무 변경",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/26(목)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "근무지 이동으로 내부 보안망 PC 유->무 변경",
-    "actionTaken": "무선인증솔루션 설정 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 근무지 이동으로 내부 보안망 PC 유->무 변경",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선인증솔루션 설정 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1271",
-    "title": "네트워크 - 일반망/내부 보안망 네트워크 연결 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/26(목)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "일반망/내부 보안망 네트워크 연결 오류",
-    "actionTaken": "네트워크 어뎁터 초기화 후 연결 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망/내부 보안망 네트워크 연결 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 어뎁터 초기화 후 연결 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1272",
-    "title": "포맷 - 빈번한 윈도우 블루스크린 현상으로 인한 OS",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/27(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "빈번한 윈도우 블루스크린 현상으로 인한 OS 재설치",
-    "actionTaken": "포멧신청서 확인후 작업완료",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 빈번한 윈도우 블루스크린 현상으로 인한 OS 재설치",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포멧신청서 확인후 작업완료 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1275",
-    "title": "노트북 - 일반망PC 동작 버벅임 및 블루스크린 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/30(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반망PC 동작 버벅임 및 블루스크린 발생",
-    "actionTaken": "일반망PC SSD고장 확인 후 통보 완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "SSD",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 동작 버벅임 및 블루스크린 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 일반망PC SSD고장 확인 후 통보 완료 📌 연관 지식: [[SSD]], [[블루스크린]]"
-    },
-    "wikilinks": [
-      "SSD",
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1276",
-    "title": "노트북 - 일반망PC 전원 불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/30(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반망PC 전원 불량",
-    "actionTaken": "배터리 고장으로 동일모델 교체 완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC 전원 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 배터리 고장으로 동일모델 교체 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1277",
-    "title": "네트워크 - 좌석 랜케이블 (내부 보안망) 불량으로 유->무선",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/31(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "좌석 랜케이블 (내부 보안망) 불량으로 유->무선 변경 요청",
-    "actionTaken": "변경 완료",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 좌석 랜케이블 (내부 보안망) 불량으로 유->무선 변경 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 변경 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1278",
     "title": "IP - 일반망PC 인터넷 연결느림 및 끊김 현상 발",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -27161,60 +19215,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "DNS"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1279",
-    "title": "노트북 - 노트북 부팅 불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/02(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "노트북 부팅 불가",
-    "actionTaken": "블루스크린 오류 확인 결과 STORE(저장장치)오류 메시지 확인",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 노트북 부팅 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 블루스크린 오류 확인 결과 STORE(저장장치)오류 메시지 확인 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1280",
-    "title": "노트북 - 일반업무망PC 제대로 동작 X, 느림, 꺼짐",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/03(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "일반업무망PC 제대로 동작 X, 느림, 꺼짐 등 잦은 오류",
-    "actionTaken": "PC지원 점검 결과 SSD 고장 확인",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 일반업무망PC 제대로 동작 X, 느림, 꺼짐 등 잦은 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC지원 점검 결과 SSD 고장 확인 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.320Z",
@@ -27421,137 +19421,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1298",
-    "title": "노트북 - 블루스크린",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/17(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "블루스크린",
-    "actionTaken": "시스템 명령어 복구완료",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 블루스크린",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 시스템 명령어 복구완료 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1300",
-    "title": "OS - 로우포맷요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/17(금)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "로우포맷요청",
-    "actionTaken": "로우포맷완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "로우포맷",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 로우포맷요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 로우포맷완료 📌 연관 지식: [[로우포맷]], [[포맷]]"
-    },
-    "wikilinks": [
-      "로우포맷",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1302",
-    "title": "네트워크 - 신규좌석 인원으로 내부 보안망 유선-> 무선변경",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/17(금)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "기타",
-    "symptom": "신규좌석 인원으로 내부 보안망 유선-> 무선변경 작업",
-    "actionTaken": "변경 완료 및 정상연결 확인",
-    "tags": [
-      "네트워크",
-      "기타"
-    ],
-    "sbar": {
-      "situation": "[S] 신규좌석 인원으로 내부 보안망 유선-> 무선변경 작업",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 변경 완료 및 정상연결 확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1303",
-    "title": "소프트웨어 - 일반망PC WIN PW 분실",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/20(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기타",
-    "symptom": "일반망PC WIN PW 분실",
-    "actionTaken": "사내 메신저 고객센터 이관완료",
-    "tags": [
-      "소프트웨어",
-      "기타",
-      "사내 메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망PC WIN PW 분실",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 고객센터 이관완료 📌 연관 지식: [[사내 메신저]]"
-    },
-    "wikilinks": [
-      "사내 메신저"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1305",
-    "title": "노트북 - 메모리가 없다고 뜨면서 멈춥니다",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/20(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "메모리가 없다고 뜨면서 멈춥니다",
-    "actionTaken": "시스템 복구완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 메모리가 없다고 뜨면서 멈춥니다",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 시스템 복구완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1307",
     "title": "유지보수 - 신규 PC 세팅 및 이전",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -27747,62 +19616,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1322",
-    "title": "포맷 신청 - 포맷 신청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/23(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷 신청",
-    "symptom": "포맷 신청",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "하드웨어",
-      "포맷 신청",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 포맷 신청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷 신청. 현장 처리 결과 검증.",
-      "recommendation": "[R] 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1323",
-    "title": "포맷 신청 - 로우포맷요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/23(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷 신청",
-    "symptom": "로우포맷요청",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "하드웨어",
-      "포맷 신청",
-      "로우포맷",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 로우포맷요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷 신청. 현장 처리 결과 검증.",
-      "recommendation": "[R] 📌 연관 지식: [[로우포맷]], [[포맷]]"
-    },
-    "wikilinks": [
-      "로우포맷",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1324",
     "title": "SSD 증설 - SSD 증설",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -27978,33 +19791,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1332",
-    "title": "PC 포맷 및 프로그램 재설정 - PC 포맷 및 프로그램 재설정",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/23(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "PC 포맷 및 프로그램 재설정",
-    "symptom": "PC 포맷 및 프로그램 재설정",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "소프트웨어",
-      "PC 포맷 및 프로그램 재설정",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] PC 포맷 및 프로그램 재설정",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: PC 포맷 및 프로그램 재설정. 현장 처리 결과 검증.",
-      "recommendation": "[R] 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1333",
     "title": "윈도우 변경 - 윈도우 변경",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -28129,33 +19915,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R]"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1339",
-    "title": "포맷 후 일반 업무망 세팅 - 포맷 후 일반 업무망 세팅",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/31(금)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "포맷 후 일반 업무망 세팅",
-    "symptom": "포맷 후 일반 업무망 세팅",
-    "actionTaken": "셋팅 완료",
-    "tags": [
-      "네트워크",
-      "포맷 후 일반 업무망 세팅",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 포맷 후 일반 업무망 세팅",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 포맷 후 일반 업무망 세팅. 현장 처리 결과 검증.",
-      "recommendation": "[R] 셋팅 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.320Z",
     "updatedAt": "2026-08-07T05:08:48.320Z"
@@ -28342,33 +20101,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R]"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1348",
-    "title": "OS 오류로 인한 PC 포맷 요청 - OS 오류로 인한 PC 포맷 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/12(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS 오류로 인한 PC 포맷 요청",
-    "symptom": "OS 오류로 인한 PC 포맷 요청",
-    "actionTaken": "OS 포맷 완료",
-    "tags": [
-      "소프트웨어",
-      "OS 오류로 인한 PC 포맷 요청",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] OS 오류로 인한 PC 포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS 오류로 인한 PC 포맷 요청. 현장 처리 결과 검증.",
-      "recommendation": "[R] OS 포맷 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.320Z",
     "updatedAt": "2026-08-07T05:08:48.320Z"
@@ -28621,33 +20353,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1360",
-    "title": "모니터 파손 - 사업장 이동 중 모니터 파손",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/28(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터 파손",
-    "symptom": "사업장 이동 중 모니터 파손",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "하드웨어",
-      "모니터 파손",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 사업장 이동 중 모니터 파손",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터 파손. 현장 처리 결과 검증.",
-      "recommendation": "[R] 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1361",
     "title": "내부 보안망 네트워크 설정 - 내부 보안망 네트워크 설정",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -28801,33 +20506,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1367",
-    "title": "포맷 신청 - 개발 PC에서 내부 보안망 PC 로 용도 변경을",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/07(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷 신청",
-    "symptom": "개발 PC에서 내부 보안망 PC 로 용도 변경을 위한 사전 포맷 신청",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "하드웨어",
-      "포맷 신청",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 개발 PC에서 내부 보안망 PC 로 용도 변경을 위한 사전 포맷 신청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷 신청. 현장 처리 결과 검증.",
-      "recommendation": "[R] 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1368",
     "title": "데이터 백업 - 내부 보안망 PC 교체로 인한 데이터 백업 이동(",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -28851,33 +20529,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "D드라이브",
       "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1369",
-    "title": "포맷 신청 - PC 포맷 신청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/10(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷 신청",
-    "symptom": "PC 포맷 신청",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "하드웨어",
-      "포맷 신청",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] PC 포맷 신청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷 신청. 현장 처리 결과 검증.",
-      "recommendation": "[R] 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.320Z",
@@ -28977,34 +20628,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1376",
-    "title": "모니터 패널 고장 - 모니터 패널 고장",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/20(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "모니터 패널 고장",
-    "symptom": "모니터 패널 고장",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "하드웨어",
-      "모니터 패널 고장",
-      "SW팀(미래기술)",
-      "모니터"
-    ],
-    "sbar": {
-      "situation": "[S] 모니터 패널 고장",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 모니터 패널 고장. 현장 처리 결과 검증.",
-      "recommendation": "[R] 📌 연관 지식: [[모니터]]"
-    },
-    "wikilinks": [
-      "모니터"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.320Z",
@@ -29177,33 +20800,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R]"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1386",
-    "title": "포맷 요청 - OS 오류로 인한 PC 포맷 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/03(목)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷 요청",
-    "symptom": "OS 오류로 인한 PC 포맷 요청",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "하드웨어",
-      "포맷 요청",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] OS 오류로 인한 PC 포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷 요청. 현장 처리 결과 검증.",
-      "recommendation": "[R] 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.320Z",
     "updatedAt": "2026-08-07T05:08:48.320Z"
@@ -29436,35 +21032,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1396",
-    "title": "포맷 후 일반 업무망 세팅 - 엑셀 실행 시 실행 안되서 재부팅 메뉴로 재",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/15(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷 후 일반 업무망 세팅",
-    "symptom": "엑셀 실행 시 실행 안되서 재부팅 메뉴로 재부팅 했으나 무한 재부팅",
-    "actionTaken": "포맷 후 RSImageX 일반 이미지 세팅",
-    "tags": [
-      "하드웨어",
-      "포맷 후 일반 업무망 세팅",
-      "엑셀",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 엑셀 실행 시 실행 안되서 재부팅 메뉴로 재부팅 했으나 무한 재부팅",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷 후 일반 업무망 세팅. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 후 RSImageX 일반 이미지 세팅 📌 연관 지식: [[엑셀]], [[포맷]]"
-    },
-    "wikilinks": [
-      "엑셀",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1397",
     "title": "V3 업데이트 - V3 업데이트",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -29490,33 +21057,6 @@ const SEED_KNOWLEDGE_DATA = [
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.320Z",
     "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1398",
-    "title": "PC 포맷 - 망전환을 위한 PC 포맷 및 내부 보안망 설치",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/18(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "PC 포맷",
-    "symptom": "망전환을 위한 PC 포맷 및 내부 보안망 설치",
-    "actionTaken": "포맷 및 내부 보안망 셋팅 완료",
-    "tags": [
-      "하드웨어",
-      "PC 포맷",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 망전환을 위한 PC 포맷 및 내부 보안망 설치",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: PC 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 및 내부 보안망 셋팅 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
   },
   {
     "id": "seed-1399",
@@ -29627,60 +21167,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.321Z"
   },
   {
-    "id": "seed-1403",
-    "title": "포맷 요청 - 일반망 포맷 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/28(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷 요청",
-    "symptom": "일반망 포맷 요청",
-    "actionTaken": "포맷 완료",
-    "tags": [
-      "하드웨어",
-      "포맷 요청",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망 포맷 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷 요청. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
-    "id": "seed-1405",
-    "title": "포맷 요청 - 포맷&중계 PC용 세팅 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/07(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷 요청",
-    "symptom": "포맷&중계 PC용 세팅 요청",
-    "actionTaken": "포맷 및 세팅 완료",
-    "tags": [
-      "하드웨어",
-      "포맷 요청",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 포맷&중계 PC용 세팅 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷 요청. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 및 세팅 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
     "id": "seed-1406",
     "title": "초기화 - 이글오피스 비밀번호 분실",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -29702,33 +21188,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "오피스"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
-    "id": "seed-1407",
-    "title": "포맷 요청 - PC 포맷요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/07(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "포맷 요청",
-    "symptom": "PC 포맷요청",
-    "actionTaken": "포맷완료",
-    "tags": [
-      "소프트웨어",
-      "포맷 요청",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] PC 포맷요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 포맷 요청. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.321Z",
@@ -29929,33 +21388,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.321Z"
   },
   {
-    "id": "seed-1417",
-    "title": "포맷 및 OS 재설치 - 포맷 및 OS 재설치 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/20(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "포맷 및 OS 재설치",
-    "symptom": "포맷 및 OS 재설치 요청",
-    "actionTaken": "포맷완료",
-    "tags": [
-      "소프트웨어",
-      "포맷 및 OS 재설치",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 포맷 및 OS 재설치 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 포맷 및 OS 재설치. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
     "id": "seed-1418",
     "title": "저장장치 장착 - HDD 2TB 장착 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -29975,33 +21407,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] HDD 2TB 장착 완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
-    "id": "seed-1419",
-    "title": "업데이트 안됨 - 업데이트 안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/23(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "업데이트 안됨",
-    "symptom": "업데이트 안됨",
-    "actionTaken": "포맷 후 RSImageX 일반 이미지 세팅",
-    "tags": [
-      "소프트웨어",
-      "업데이트 안됨",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 업데이트 안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 업데이트 안됨. 현장 처리 결과 검증.",
-      "recommendation": "[R] 포맷 후 RSImageX 일반 이미지 세팅 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.321Z",
     "updatedAt": "2026-08-07T05:08:48.321Z"
@@ -30137,83 +21542,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.321Z"
   },
   {
-    "id": "seed-1448",
-    "title": "노트북 - 구매1팀 PC지원 담당자 신규 인사 발령에 따른",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-03-26 17:00",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "구매1팀 PC지원 담당자 신규 인사 발령에 따른 업무용 전산 기기 배포 지연",
-    "actionTaken": "업무용 표준 LG 노트북의 윈도우 마스터 이미지를 정합 세팅하고 부서용 프린터 드라이버 및 보안 셋팅 후 긴급 지급 완료",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 구매1팀 PC지원 담당자 신규 인사 발령에 따른 업무용 전산 기기 배포 지연",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 업무용 표준 LG 노트북의 윈도우 마스터 이미지를 정합 세팅하고 부서용 프린터 드라이버 및 보안 셋팅 후 긴급 지급 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
-    "id": "seed-1450",
-    "title": "노트북 - 업무 부서 내부 보안망 대여 노트북의 원인 미상",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-03-27 17:00",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "업무 부서 내부 보안망 대여 노트북의 원인 미상의 부팅 정지 및 보안 소프트웨어 충돌",
-    "actionTaken": "기존 고장 장비를 회수 조치하고 정합 재고 PC로 일대일 즉시 교체한 후 필수 사내 보안 에이전트 패키지 수동 복구 설치",
-    "tags": [
-      "하드웨어",
-      "노트북"
-    ],
-    "sbar": {
-      "situation": "[S] 업무 부서 내부 보안망 대여 노트북의 원인 미상의 부팅 정지 및 보안 소프트웨어 충돌",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 기존 고장 장비를 회수 조치하고 정합 재고 PC로 일대일 즉시 교체한 후 필수 사내 보안 에이전트 패키지 수동 복구 설치"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
-    "id": "seed-1451",
-    "title": "포맷 - 지사 사내 식당 관리실 PC의 시스템",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-03-29 17:00",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "지사 사내 식당 관리실 PC의 시스템 파일 손상에 따른 윈도우 부팅 불가",
-    "actionTaken": "식당 관리실 출장 방문 후 PC 하드디스크 내부 전수 로우포맷 진행 및 윈도우 OS 재설치, 정상 작동 검수 완료",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "식당",
-      "로우포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 지사 사내 식당 관리실 PC의 시스템 파일 손상에 따른 윈도우 부팅 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 식당 관리실 출장 방문 후 PC 하드디스크 내부 전수 로우포맷 진행 및 윈도우 OS 재설치, 정상 작동 검수 완료 📌 연관 지식: [[로우포맷]], [[포맷]]"
-    },
-    "wikilinks": [
-      "로우포맷",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
     "id": "seed-1453",
     "title": "일반망 - 사내 식당 관리실 신규 PC 전입에 따른 일",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -30234,34 +21562,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 외부 인터넷 개통 수리기사 현장 인솔 및 포트 가용 상태 체크, 신규 LAN선 포설을 통한 일반망 네트워크 세팅 개통 지원"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
-    "id": "seed-1455",
-    "title": "포맷 - 업무 부서(지원 담당자) 협력업체 철수",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-04-04 17:30",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "업무 부서(지원 담당자) 협력업체 철수로 수거된 PC 7대의 기밀 데이터 잔존 우려",
-    "actionTaken": "사내 정보보안 규정에 의거하여 수거된 7대의 전산 기기 전수 로우포맷(보안 포맷) 작업을 일괄 적용하여 기밀 정보 유출 완전 차단",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "로우포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 업무 부서(지원 담당자) 협력업체 철수로 수거된 PC 7대의 기밀 데이터 잔존 우려",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 정보보안 규정에 의거하여 수거된 7대의 전산 기기 전수 로우포맷(보안 포맷) 작업을 일괄 적용하여 기밀 정보 유출 완전 차단 📌 연관 지식: [[로우포맷]], [[포맷]]"
-    },
-    "wikilinks": [
-      "로우포맷",
-      "포맷"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.321Z",
     "updatedAt": "2026-08-07T05:08:48.321Z"
@@ -30291,62 +21591,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.321Z"
   },
   {
-    "id": "seed-1458",
-    "title": "포맷 - 업무 부서 협력업체 출장",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-04-08 17:00",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "업무 부서 협력업체 출장 반출 PC 10대의 보안 점검 및 포맷 시한 급박",
-    "actionTaken": "반출 예정 협력업체 전산 장비 10대 전체에 대하여 하드디스크 전량 로우포맷 및 사내 표준 OS 이미지를 강제 복구 설치",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "로우포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 업무 부서 협력업체 출장 반출 PC 10대의 보안 점검 및 포맷 시한 급박",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 반출 예정 협력업체 전산 장비 10대 전체에 대하여 하드디스크 전량 로우포맷 및 사내 표준 OS 이미지를 강제 복구 설치 📌 연관 지식: [[로우포맷]], [[포맷]]"
-    },
-    "wikilinks": [
-      "로우포맷",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
-    "id": "seed-1459",
-    "title": "포맷 - 임직원 오프라인 노트북 및 전술통신체계",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-04-08 17:30",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "임직원 오프라인 노트북 및 업무 부서 서유석 사원 오프라인 개발 데스크탑의 부팅 에러",
-    "actionTaken": "오프라인 보안 장비 2대에 대해 물리 하드디스크 정밀 점검 후 정비 로우포맷을 실행하고 공장 초기화 표준 이미지 구축",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "로우포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 임직원 오프라인 노트북 및 업무 부서 서유석 사원 오프라인 개발 데스크탑의 부팅 에러",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 오프라인 보안 장비 2대에 대해 물리 하드디스크 정밀 점검 후 정비 로우포맷을 실행하고 공장 초기화 표준 이미지 구축 📌 연관 지식: [[로우포맷]], [[포맷]]"
-    },
-    "wikilinks": [
-      "로우포맷",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
     "id": "seed-1461",
     "title": "OS - 업무 부서 임직원 일반망 PC 사용 중",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -30366,63 +21610,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] PC 전원 방전 후 윈도우 OS 손상 파일 자동 복구 명령어를 적용하고, 일반망 표준 환경으로 신규 OS 마스터 재설치"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
-    "id": "seed-1462",
-    "title": "포맷 - 업무 부서 시스템 담당자 반출 협력사 PC",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-04-17 18:00",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "업무 부서 시스템 담당자 반출 협력사 PC의 기밀 정보 완전 폐기 검수 요청",
-    "actionTaken": "보안성 검증을 완료하기 위해 해당 반출 장비의 디스크 로우포맷 작업을 진행하여 기술 기밀 유출 가능성을 원천 배제",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "로우포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 업무 부서 시스템 담당자 반출 협력사 PC의 기밀 정보 완전 폐기 검수 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 보안성 검증을 완료하기 위해 해당 반출 장비의 디스크 로우포맷 작업을 진행하여 기술 기밀 유출 가능성을 원천 배제 📌 연관 지식: [[로우포맷]], [[포맷]]"
-    },
-    "wikilinks": [
-      "로우포맷",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
-    "id": "seed-1463",
-    "title": "노트북 - 업무 부서 대규모 신규 입사자 지급용 사내",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-04-18 17:00",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "업무 부서 대규모 신규 입사자 지급용 사내 개발망 PC 12대의 보안 적합성 검증 부재",
-    "actionTaken": "사내 개발망 신규 노트북 12대 전체에 보안스티커 부착 및 바이오스 시건, EPP 무결성 검증과 T-gate 정상 가동 상태를 선제 검수",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "EPP",
-      "바이오스"
-    ],
-    "sbar": {
-      "situation": "[S] 업무 부서 대규모 신규 입사자 지급용 사내 개발망 PC 12대의 보안 적합성 검증 부재",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 개발망 신규 노트북 12대 전체에 보안스티커 부착 및 바이오스 시건, EPP 무결성 검증과 T-gate 정상 가동 상태를 선제 검수 📌 연관 지식: [[EPP]], [[바이오스]]"
-    },
-    "wikilinks": [
-      "EPP",
-      "바이오스"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.321Z",
     "updatedAt": "2026-08-07T05:08:48.321Z"
@@ -30504,39 +21691,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.321Z"
   },
   {
-    "id": "seed-1476",
-    "title": "OS - 사업장 임직원 내부 보안망 PC 전원 인",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-07-02 17:30",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "사업장 임직원 내부 보안망 PC 전원 인가 시 블루스크린 및 부팅 드라이브 누락 에러 발생",
-    "actionTaken": "내부 보안망 PC C드라이브 정밀 로우포맷 진행 후 표준 내부 보안망 OS 재설치 및 라이선스 복구 작업 이행",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "로우포맷",
-      "블루스크린",
-      "C드라이브",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 사업장 임직원 내부 보안망 PC 전원 인가 시 블루스크린 및 부팅 드라이브 누락 에러 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 내부 보안망 PC C드라이브 정밀 로우포맷 진행 후 표준 내부 보안망 OS 재설치 및 라이선스 복구 작업 이행 📌 연관 지식: [[로우포맷]], [[블루스크린]], [[C드라이브]], [[포맷]]"
-    },
-    "wikilinks": [
-      "로우포맷",
-      "블루스크린",
-      "C드라이브",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
     "id": "seed-1479",
     "title": "OS - 업무 부서 임직원 사외 출장용 노트북",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -30558,37 +21712,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "V3"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
-    "id": "seed-1481",
-    "title": "노트북 - 업무 부서 PC지원 담당자 기존 개발용 구형",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-07-11 17:30",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "노트북",
-    "symptom": "업무 부서 PC지원 담당자 기존 개발용 구형 PC의 극심한 발열 및 다운 현상 반복 발생",
-    "actionTaken": "신품 대여 노트북으로 일대일 이관 조치하고, 자료 백업 수행 후 망연계 시스템/문서보안(DRM) 등 보안 에이전트 완벽 세팅 이행",
-    "tags": [
-      "하드웨어",
-      "노트북",
-      "DRM",
-      "망연계",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 업무 부서 PC지원 담당자 기존 개발용 구형 PC의 극심한 발열 및 다운 현상 반복 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 노트북. 현장 처리 결과 검증.",
-      "recommendation": "[R] 신품 대여 노트북으로 일대일 이관 조치하고, 자료 백업 수행 후 망연계 시스템/문서보안(DRM) 등 보안 에이전트 완벽 세팅 이행 📌 연관 지식: [[문서보안(DRM)]], [[망연계 시스템]], [[백업]]"
-    },
-    "wikilinks": [
-      "문서보안(DRM)",
-      "망연계 시스템",
-      "백업"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.322Z",
@@ -30703,70 +21826,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.322Z"
   },
   {
-    "id": "seed-1487",
-    "title": "OS - 업무 부서 임직원 일반망 P",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-07-22 17:30",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "업무 부서 임직원 일반망 PC 속도 저하 및 주기적인 블루스크린 덤프 에러 발생",
-    "actionTaken": "PC지원실 이송 후 SSD 무결성 하드 검수, 전체 로우포맷 진행 및 최신 표준 일반망 윈도우 10 OS 일괄 재배포",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "SSD",
-      "로우포맷",
-      "블루스크린",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 업무 부서 임직원 일반망 PC 속도 저하 및 주기적인 블루스크린 덤프 에러 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC지원실 이송 후 SSD 무결성 하드 검수, 전체 로우포맷 진행 및 최신 표준 일반망 윈도우 10 OS 일괄 재배포 📌 연관 지식: [[SSD]], [[로우포맷]], [[블루스크린]], [[포맷]]"
-    },
-    "wikilinks": [
-      "SSD",
-      "로우포맷",
-      "블루스크린",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
-    "id": "seed-1490",
-    "title": "OS - 사업장 지원 담당자 출장 반출 대여 노트",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-08-14 17:30",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "사업장 지원 담당자 출장 반출 대여 노트북 3대의 필수 V3 및 문서보안(DRM) 최신 보안 규칙 동기화 누락",
-    "actionTaken": "반출 노트북 3대 전수 포맷 및 최신 윈도우 OS 마스터 설치, 보안 에이전트 수동 업데이트 완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "DRM",
-      "V3",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 사업장 지원 담당자 출장 반출 대여 노트북 3대의 필수 V3 및 문서보안(DRM) 최신 보안 규칙 동기화 누락",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 반출 노트북 3대 전수 포맷 및 최신 윈도우 OS 마스터 설치, 보안 에이전트 수동 업데이트 완료 📌 연관 지식: [[문서보안(DRM)]], [[V3]], [[포맷]]"
-    },
-    "wikilinks": [
-      "문서보안(DRM)",
-      "V3",
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
     "id": "seed-1492",
     "title": "OS - 업무 부서 임직원 내부 보안망 PC 사용 중",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -30788,62 +21847,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
-    "id": "seed-1493",
-    "title": "OS - 사내 아키텍처 기술 교육용 공용 PC 10대",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-08-22 17:30",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "사내 아키텍처 기술 교육용 공용 PC 10대의 윈도우 라이선스 만료 및 보안 패치 미이행",
-    "actionTaken": "교육용 PC 10대 전수 PC지원실 이송, 일괄 포맷 진행 후 최신 보안 패치 및 표준 OS 이미지 복구 설치 완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 아키텍처 기술 교육용 공용 PC 10대의 윈도우 라이선스 만료 및 보안 패치 미이행",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 교육용 PC 10대 전수 PC지원실 이송, 일괄 포맷 진행 후 최신 보안 패치 및 표준 OS 이미지 복구 설치 완료 📌 연관 지식: [[포맷]]"
-    },
-    "wikilinks": [
-      "포맷"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
-    "id": "seed-1494",
-    "title": "포맷 - 업무 부서 부서 담당자 협력업체 사용 반납",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-08-27 17:30",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "포맷",
-    "symptom": "업무 부서 부서 담당자 협력업체 사용 반납 전산 자산 2대의 내부 자료 보안 검수 수반",
-    "actionTaken": "데이터 유출 원천 차단을 위해 해당 전산 기기 하드디스크 정밀 로우포맷(Zero-Filling) 처리 완료",
-    "tags": [
-      "하드웨어",
-      "포맷",
-      "사업마케팅",
-      "로우포맷"
-    ],
-    "sbar": {
-      "situation": "[S] 업무 부서 부서 담당자 협력업체 사용 반납 전산 자산 2대의 내부 자료 보안 검수 수반",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 포맷. 현장 처리 결과 검증.",
-      "recommendation": "[R] 데이터 유출 원천 차단을 위해 해당 전산 기기 하드디스크 정밀 로우포맷(Zero-Filling) 처리 완료 📌 연관 지식: [[로우포맷]], [[포맷]]"
-    },
-    "wikilinks": [
-      "로우포맷",
-      "포맷"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.322Z",
@@ -31006,37 +22009,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "아웃룩"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
-    "id": "seed-1511",
-    "title": "OS - 윈도우 보안 누적 업데이트 결함으로 인한 임",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2026-03-31 09:07",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "윈도우 보안 누적 업데이트 결함으로 인한 임직원 기종 불문 블루스크린(MEMORY_MANAGEMENT) 무한 발생 및 부팅 마비",
-    "actionTaken": "메모리 재장착 및 시동 복구 일체 불가함에 따라 중요 개발 소스 백업 완료 후 전용 정합 디스크를 통해 OS 포맷 클린 재설치 완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "블루스크린",
-      "포맷",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 윈도우 보안 누적 업데이트 결함으로 인한 임직원 기종 불문 블루스크린(MEMORY_MANAGEMENT) 무한 발생 및 부팅 마비",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 메모리 재장착 및 시동 복구 일체 불가함에 따라 중요 개발 소스 백업 완료 후 전용 정합 디스크를 통해 OS 포맷 클린 재설치 완료 📌 연관 지식: [[블루스크린]], [[포맷]], [[백업]]"
-    },
-    "wikilinks": [
-      "블루스크린",
-      "포맷",
-      "백업"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.322Z",
