@@ -11,8 +11,8 @@
   'use strict';
 
   // State Management
-  const STORAGE_KEY = 'pc_wiki_knowledge_base_v2';
-  const HISTORY_KEY = 'pc_wiki_visit_history';
+  const STORAGE_KEY = 'pc_wiki_knowledge_base_v3';
+  const HISTORY_KEY = 'pc_wiki_visit_history_v3';
   
   let knowledgeStore = [];
   let fuseInstance = null;
@@ -38,7 +38,11 @@
   // =========================================================================
   function initDataStore() {
     try {
-      // Clear legacy storage containing previous entity names
+      // Clear legacy storage containing previous entity names and location data
+      localStorage.removeItem('hanwha_wiki_knowledge_base_v1');
+      localStorage.removeItem('hanwha_wiki_visit_history');
+      localStorage.removeItem('pc_wiki_knowledge_base_v2');
+      localStorage.removeItem('pc_wiki_visit_history');
       localStorage.removeItem('피씨위키_wiki_knowledge_base_v1');
       localStorage.removeItem('피씨위키_wiki_visit_history');
 
@@ -316,12 +320,15 @@
   function renderFilterDropdowns() {
     const catLargeSelect = document.getElementById('select-filter-category-large');
     const catMediumSelect = document.getElementById('select-filter-category-medium');
+    const sourceSelect = document.getElementById('select-filter-source');
 
     const catLargeSet = new Set();
     const catMediumSet = new Set();
+    const sourceSet = new Set();
 
     knowledgeStore.forEach(item => {
       if (item.categoryLarge) catLargeSet.add(item.categoryLarge);
+      if (item.sourceFile) sourceSet.add(item.sourceFile);
       if (activeFilter.categoryLarge) {
         if (item.categoryLarge === activeFilter.categoryLarge && item.categoryMedium) {
           catMediumSet.add(item.categoryMedium);
@@ -336,6 +343,11 @@
 
     catMediumSelect.innerHTML = '<option value="">전체 중분류</option>' + 
       Array.from(catMediumSet).map(c => `<option value="${escapeHtml(c)}" ${activeFilter.categoryMedium === c ? 'selected' : ''}>${escapeHtml(c)}</option>`).join('');
+
+    if (sourceSelect) {
+      sourceSelect.innerHTML = '<option value="">전체 출처</option>' + 
+        Array.from(sourceSet).map(s => `<option value="${escapeHtml(s)}" ${activeFilter.source === s ? 'selected' : ''}>${escapeHtml(s)}</option>`).join('');
+    }
   }
 
   // =========================================================================

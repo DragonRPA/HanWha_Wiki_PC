@@ -8,7 +8,7 @@
 ## 🌟 주요 기능 (Key Features)
 
 1. **실무 트러블슈팅 데이터 정형화 & KCS 2026 SBAR 지식 모델**
-   - `서울/판교 유지보수 대장`, `PC지원 Q&A`, `PC지원 단톡방.txt` 등 수백 건의 실제 이슈 데이터를 **Situation-Background-Assessment-Recommendation (SBAR)** 4단계 지식 구조로 정형화.
+   - `IT 유지보수 대장`, `IT 지원 Q&A`, `IT 헬프데스크 상담 이력` 등 1,760건의 실제 실무 이슈 데이터를 **Situation-Background-Assessment-Recommendation (SBAR)** 4단계 지식 구조로 정형화.
 2. **양방향 WikiLink (`[[용어명]]`) 및 역참조 (Backlinks)**
    - 본문 내 `ubCUBE`, `Tgate`, `Gradius`, `WIPS`, `DLL 복구` 등 IT 고유명사 자동 하이퍼링크 파싱.
    - 존재하지 않는 문서 참조 시 Red Link 표시 및 1클릭 신규 지식 생성 유도.
