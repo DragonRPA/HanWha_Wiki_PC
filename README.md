@@ -1,4 +1,4 @@
-# HanWha IT Service Knowledge Wiki Platform
+# 피씨위키 IT Knowledge Wiki Platform
 
 > **Google Antigravity 기반 IT 서비스 지식 자산화 및 자동화 시스템 (SRS v2.0)**  
 > 브라우저 기반 IT 기술 지식 누적 & Wiki 검색 도구
@@ -39,9 +39,9 @@
 ### 옵션 A: GitHub Pages 배포 (무료)
 1. Repository의 **Settings > Pages** 메뉴로 이동합니다.
 2. **Source**를 `Deploy from a branch`로 선택하고 브랜치를 `main` (`/root`)으로 지정 후 Save합니다.
-3. 1~2분 후 `https://DragonRPA.github.io/HanWha_Wiki_PC/` 주소로 즉시 웹 서비스가 오픈됩니다.
+3. 1~2분 후 `https://DragonRPA.github.io/PC_Wiki/` 주소로 즉시 웹 서비스가 오픈됩니다.
 
 ### 옵션 B: Vercel 배포 (무료)
 1. [Vercel Dashboard](https://vercel.com/)에 로그인 후 **Add New Project**를 선택합니다.
-2. `DragonRPA/HanWha_Wiki_PC` 리포지토리를 임포트합니다.
+2. `DragonRPA/PC_Wiki` 리포지토리를 임포트합니다.
 3. Framework Preset을 `Other`로 두고 **Deploy** 버튼을 클릭합니다.

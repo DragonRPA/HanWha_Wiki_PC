@@ -1,4 +1,4 @@
-// HanWha IT Service Knowledge Wiki - Full Seed Data (1760 records)
+// IT Service Knowledge Wiki - Full Seed Data (1760 records)
 const SEED_KNOWLEDGE_DATA = [
   {
     "id": "ssd-trouble-01",
@@ -9887,7 +9887,7 @@ const SEED_KNOWLEDGE_DATA = [
     "categoryLarge": "소프트웨어",
     "categoryMedium": "기본 프로그램",
     "symptom": "클래버스 메신져 문의",
-    "actionTaken": "메신져 도메인주소 hanwha.com -> hanwhasystems.com 변경 후 정상",
+    "actionTaken": "메신져 도메인주소 corp.com -> corpsystems.com 변경 후 정상",
     "tags": [
       "소프트웨어",
       "기본 프로그램",
@@ -9897,7 +9897,7 @@ const SEED_KNOWLEDGE_DATA = [
       "situation": "[S] 클래버스 메신져 문의",
       "background": "[B] 출처: 서울 유지보수 대장 | 발생일: 01-17 | 관련부서: 금융팀",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
-      "recommendation": "[R] 메신져 도메인주소 hanwha.com -> hanwhasystems.com 변경 후 정상 "
+      "recommendation": "[R] 메신져 도메인주소 corp.com -> corpsystems.com 변경 후 정상 "
     },
     "wikilinks": [],
     "backlinks": [],
@@ -12554,7 +12554,7 @@ const SEED_KNOWLEDGE_DATA = [
     "categoryLarge": "소프트웨어",
     "categoryMedium": "메신저",
     "symptom": "방산개발망 메신저 로그인 문의",
-    "actionTaken": "도메인 주소 hanwha.com -> hanwha-rd.com",
+    "actionTaken": "도메인 주소 corp.com -> corp-rd.com",
     "tags": [
       "소프트웨어",
       "메신저",
@@ -12564,7 +12564,7 @@ const SEED_KNOWLEDGE_DATA = [
       "situation": "[S] 방산개발망 메신저 로그인 문의",
       "background": "[B] 출처: 서울 유지보수 대장 | 발생일: 03-14 | 관련부서: 구매1팀",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 메신저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 도메인 주소 hanwha.com -> hanwha-rd.com "
+      "recommendation": "[R] 도메인 주소 corp.com -> corp-rd.com "
     },
     "wikilinks": [],
     "backlinks": [],
@@ -16278,7 +16278,7 @@ const SEED_KNOWLEDGE_DATA = [
     "categoryLarge": "보안프로그램",
     "categoryMedium": "기타",
     "symptom": "설치파일 다운로드 위치 공유요청",
-    "actionTaken": "instal.hanwha-rd.com 안내완료",
+    "actionTaken": "instal.corp-rd.com 안내완료",
     "tags": [
       "보안프로그램",
       "기타",
@@ -16288,7 +16288,7 @@ const SEED_KNOWLEDGE_DATA = [
       "situation": "[S] 설치파일 다운로드 위치 공유요청",
       "background": "[B] 출처: 서울 유지보수 대장 | 발생일: 07-29 | 관련부서: 형상관리팀",
       "assessment": "[A] 대분류: 보안프로그램 / 중분류: 기타. 현장 처리 결과 검증.",
-      "recommendation": "[R] instal.hanwha-rd.com 안내완료 "
+      "recommendation": "[R] instal.corp-rd.com 안내완료 "
     },
     "wikilinks": [],
     "backlinks": [],
@@ -16762,7 +16762,7 @@ const SEED_KNOWLEDGE_DATA = [
     "title": "하드웨어 - HDMI to HDMI 케이블 연결요청",
     "sourceFile": "서울 유지보수 대장",
     "date": "09-03",
-    "department": "한화시스템",
+    "department": "시스템운영팀",
     "categoryLarge": "하드웨어",
     "categoryMedium": "기타",
     "symptom": "HDMI to HDMI 케이블 연결요청",
@@ -16770,11 +16770,11 @@ const SEED_KNOWLEDGE_DATA = [
     "tags": [
       "하드웨어",
       "기타",
-      "한화시스템"
+      "시스템운영팀"
     ],
     "sbar": {
       "situation": "[S] HDMI to HDMI 케이블 연결요청",
-      "background": "[B] 출처: 서울 유지보수 대장 | 발생일: 09-03 | 관련부서: 한화시스템",
+      "background": "[B] 출처: 서울 유지보수 대장 | 발생일: 09-03 | 관련부서: 시스템운영팀",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: 기타. 현장 처리 결과 검증.",
       "recommendation": "[R] HDMI 케이블 연결 "
     },
@@ -29793,13 +29793,13 @@ const SEED_KNOWLEDGE_DATA = [
   },
   {
     "id": "seed-769",
-    "title": "소프트웨어 - 한화 QIS 프로그램 설치 오류",
+    "title": "소프트웨어 - 사내 QIS 프로그램 설치 오류",
     "sourceFile": "판교 유지보수 대장",
     "date": "05/10(금)",
     "department": "C4I 지상시스템사업단",
     "categoryLarge": "소프트웨어",
     "categoryMedium": "기타",
-    "symptom": "한화 QIS 프로그램 설치 오류",
+    "symptom": "사내 QIS 프로그램 설치 오류",
     "actionTaken": "클레버스 고객센터 이관완료",
     "tags": [
       "소프트웨어",
@@ -29808,7 +29808,7 @@ const SEED_KNOWLEDGE_DATA = [
       "클레버스"
     ],
     "sbar": {
-      "situation": "[S] 한화 QIS 프로그램 설치 오류",
+      "situation": "[S] 사내 QIS 프로그램 설치 오류",
       "background": "[B] 출처: 판교 유지보수 대장 | 발생일: 05/10(금) | 관련부서: C4I 지상시스템사업단",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기타. 현장 처리 결과 검증.",
       "recommendation": "[R] 클레버스 고객센터 이관완료 \n\n📌 연관 지식: [[클레버스]]"

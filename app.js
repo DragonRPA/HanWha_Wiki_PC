@@ -1,5 +1,5 @@
 /**
- * HanWha IT Service Knowledge Wiki Platform - High-Density Application Logic
+ * PC IT Service Knowledge Wiki Platform - High-Density Application Logic
  * Adheres strictly to Enterprise System Development Standards Charter
  * - Rule 3.1: Dry & Professional UI Labels
  * - Rule 3.2: No-Wrap & Flex-Shrink-0 Standard (First Column Action Button)
@@ -11,8 +11,8 @@
   'use strict';
 
   // State Management
-  const STORAGE_KEY = 'hanwha_wiki_knowledge_base_v1';
-  const HISTORY_KEY = 'hanwha_wiki_visit_history';
+  const STORAGE_KEY = 'pc_wiki_knowledge_base_v2';
+  const HISTORY_KEY = 'pc_wiki_visit_history';
   
   let knowledgeStore = [];
   let fuseInstance = null;
@@ -38,6 +38,10 @@
   // =========================================================================
   function initDataStore() {
     try {
+      // Clear legacy storage containing previous entity names
+      localStorage.removeItem('피씨위키_wiki_knowledge_base_v1');
+      localStorage.removeItem('피씨위키_wiki_visit_history');
+
       const savedData = localStorage.getItem(STORAGE_KEY);
       let parsed = null;
       if (savedData) {
@@ -740,7 +744,7 @@
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(knowledgeStore, null, 2));
     const downloadAnchor = document.createElement('a');
     downloadAnchor.setAttribute("href", dataStr);
-    downloadAnchor.setAttribute("download", `hanwha_wiki_backup_${new Date().toISOString().slice(0,10)}.json`);
+    downloadAnchor.setAttribute("download", `pc_wiki_backup_${new Date().toISOString().slice(0,10)}.json`);
     document.body.appendChild(downloadAnchor);
     downloadAnchor.click();
     downloadAnchor.remove();

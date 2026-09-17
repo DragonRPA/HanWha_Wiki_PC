@@ -280,7 +280,7 @@ const newBsodItems = bsodKnowledgeItems.filter(i => !existingIds.has(i.id));
 const combinedStore = [...newBsodItems, ...currentSeed];
 console.log(`Combined total seed items: ${combinedStore.length}`);
 
-const fileOutput = `// HanWha IT Service Knowledge Wiki - Full Seed Data (${combinedStore.length} records)
+const fileOutput = `// 피씨위키 IT Knowledge Wiki - Full Seed Data (${combinedStore.length} records)
 const SEED_KNOWLEDGE_DATA = ${JSON.stringify(combinedStore, null, 2)};
 `;
 

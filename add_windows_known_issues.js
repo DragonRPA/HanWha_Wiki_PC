@@ -156,7 +156,7 @@ const combinedStore = [...knownIssuesItems, ...nonKnownIssueItems];
 console.log(`Combined total seed items: ${combinedStore.length}`);
 
 // Write seed_data.js
-const fileOutput = `// HanWha IT Service Knowledge Wiki - Full Seed Data (${combinedStore.length} records)
+const fileOutput = `// 피씨위키 IT Knowledge Wiki - Full Seed Data (${combinedStore.length} records)
 const SEED_KNOWLEDGE_DATA = ${JSON.stringify(combinedStore, null, 2)};
 `;
 
