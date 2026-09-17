@@ -1,4 +1,4 @@
-// IT Service Knowledge Wiki - Full Seed Data (727 records)
+// IT Service Knowledge Wiki - Full Seed Data (651 records)
 const SEED_KNOWLEDGE_DATA = [
   {
     "id": "hw-ssd-nvme-timeout",
@@ -11087,34 +11087,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.309Z"
   },
   {
-    "id": "seed-167",
-    "title": "기본 프로그램 - 사내 메신저 패스워드 초기화",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-22",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기본 프로그램",
-    "symptom": "사내 메신저 패스워드 초기화",
-    "actionTaken": "업무 부서 김동욱 패스워드 초기화 안내",
-    "tags": [
-      "소프트웨어",
-      "사내 메신저",
-      "워드"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 메신저 패스워드 초기화",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
-      "recommendation": "[R] 업무 부서 김동욱 패스워드 초기화 안내 📌 연관 지식: [[사내 메신저]], [[워드]]"
-    },
-    "wikilinks": [
-      "사내 메신저",
-      "워드"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.309Z",
-    "updatedAt": "2026-08-07T05:08:48.309Z"
-  },
-  {
     "id": "seed-169",
     "title": "IP - 일반망 IP신청 문의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -11732,33 +11704,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.310Z"
   },
   {
-    "id": "seed-269",
-    "title": "기본 프로그램 - 사내 개발망 망간자료전송 설치주소 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07-23",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기본 프로그램",
-    "symptom": "사내 개발망 망간자료전송 설치주소 요청",
-    "actionTaken": "설치주소 전달완료",
-    "tags": [
-      "소프트웨어",
-      "망간자료전송"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 개발망 망간자료전송 설치주소 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
-      "recommendation": "[R] 설치주소 전달완료 📌 연관 지식: [[망간자료전송]], [[망간자료전송]]"
-    },
-    "wikilinks": [
-      "망간자료전송",
-      "망간자료전송"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
     "id": "seed-274",
     "title": "데스크탑 - 하드웨어 고장으로인한 수리 절차 안내",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -11853,30 +11798,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "IP"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.310Z",
-    "updatedAt": "2026-08-07T05:08:48.310Z"
-  },
-  {
-    "id": "seed-296",
-    "title": "OS - 개발PC 사내 개발망 OS 설치요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08-02",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "개발PC 사내 개발망 OS 설치요청",
-    "actionTaken": "설치완료",
-    "tags": [
-      "소프트웨어",
-      "OS"
-    ],
-    "sbar": {
-      "situation": "[S] 개발PC 사내 개발망 OS 설치요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 설치완료"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.310Z",
     "updatedAt": "2026-08-07T05:08:48.310Z"
@@ -13093,33 +13014,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-437",
-    "title": "IP - 사내 개발망 IP신청 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03-31",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "사내 개발망 IP신청 문의",
-    "actionTaken": "사내 메신저 - 전자결재 안내",
-    "tags": [
-      "네트워크",
-      "사내 메신저"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 개발망 IP신청 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사내 메신저 - 전자결재 안내 📌 연관 지식: [[IP]], [[사내 메신저]]"
-    },
-    "wikilinks": [
-      "IP",
-      "사내 메신저"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-439",
     "title": "기본 프로그램 - 엣지 IE 모드 접속후 ACTIVE-X 설치",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -13193,31 +13087,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-443",
-    "title": "IP - 사내 개발망 연결 문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04-02",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "사내 개발망 연결 문의",
-    "actionTaken": "전산관리자 IP신청안내",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 개발망 연결 문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 전산관리자 IP신청안내 📌 연관 지식: [[IP]]"
-    },
-    "wikilinks": [
-      "IP"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-446",
     "title": "기본 프로그램 - 안전환경 접속 불",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -13234,30 +13103,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
       "recommendation": "[R] 안전환경"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-451",
-    "title": "브라우저 - 국방전자조달시스템",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-26",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "브라우저",
-    "symptom": "국방전자조달시스템",
-    "actionTaken": "파일 비교 실수로 정상파일 선택 후 정상 진본성파일 오류 해결",
-    "tags": [
-      "소프트웨어",
-      "브라우저"
-    ],
-    "sbar": {
-      "situation": "[S] 국방전자조달시스템",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 브라우저. 현장 처리 결과 검증.",
-      "recommendation": "[R] 파일 비교 실수로 정상파일 선택 후 정상 진본성파일 오류 해결"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -13288,29 +13133,6 @@ const SEED_KNOWLEDGE_DATA = [
       "문서보안(DRM)",
       "엑셀"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-453",
-    "title": "IP - 사내 개발망 접속오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06-27",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "사내 개발망 접속오류",
-    "actionTaken": "아이피 기한 만료로 새로 발급",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 개발망 접속오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 아이피 기한 만료로 새로 발급"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.312Z",
     "updatedAt": "2026-08-07T05:08:48.312Z"
@@ -13609,30 +13431,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.312Z"
   },
   {
-    "id": "seed-506",
-    "title": "OS - 내부 보안망 교체",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/15(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "내부 보안망 교체",
-    "actionTaken": "보안 소프트웨어 셋팅완료",
-    "tags": [
-      "소프트웨어",
-      "OS"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 교체",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 보안 소프트웨어 셋팅완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
     "id": "seed-508",
     "title": "기본 프로그램 - 엑셀 사른이름저장안됨/SAP 설치요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -13700,55 +13498,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
       "recommendation": "[R] PC 재부팅완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-516",
-    "title": "IP - 내부 보안망PC 네트워크 연결불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/20(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "내부 보안망PC 네트워크 연결불량",
-    "actionTaken": "IP 다중MAC 연결 확인 후 IP초기화 완료",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 네트워크 연결불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] IP 다중MAC 연결 확인 후 IP초기화 완료 📌 연관 지식: [[IP]]"
-    },
-    "wikilinks": [
-      "IP"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.312Z",
-    "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-518",
-    "title": "라이센스 - 내부 보안망PC 윈도우 라이선스 인증오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/20(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "라이센스",
-    "symptom": "내부 보안망PC 윈도우 라이선스 인증오류",
-    "actionTaken": "내부 보안망PC 네트워크 연결후 인증상태 확인",
-    "tags": [
-      "소프트웨어",
-      "라이센스"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 윈도우 라이선스 인증오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 라이센스. 현장 처리 결과 검증.",
-      "recommendation": "[R] 내부 보안망PC 네트워크 연결후 인증상태 확인"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -13833,82 +13582,6 @@ const SEED_KNOWLEDGE_DATA = [
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.312Z",
     "updatedAt": "2026-08-07T05:08:48.312Z"
-  },
-  {
-    "id": "seed-556",
-    "title": "IP - 내부 보안망PC 네트워트 어뎁터 인식불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/07(목)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "내부 보안망PC 네트워트 어뎁터 인식불가",
-    "actionTaken": "보안 솔루션 IP설정차단기능으로 드라이버 표출불가 확인 후 네트워크 재연결완료",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 네트워트 어뎁터 인식불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 보안 솔루션 IP설정차단기능으로 드라이버 표출불가 확인 후 네트워크 재연결완료 📌 연관 지식: [[IP]]"
-    },
-    "wikilinks": [
-      "IP"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-576",
-    "title": "IP - 내부 보안망 네트워크 접속오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/14(목)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "내부 보안망 네트워크 접속오류",
-    "actionTaken": "네트워크어뎁터 재연결후 IP세팅 초기화",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 네트워크 접속오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크어뎁터 재연결후 IP세팅 초기화 📌 연관 지식: [[IP]]"
-    },
-    "wikilinks": [
-      "IP"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
-  },
-  {
-    "id": "seed-591",
-    "title": "백업 - 퇴사자PC내의 자료 백업요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/25(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "백업",
-    "symptom": "퇴사자PC내의 자료 백업요청",
-    "actionTaken": "내부 보안망 백업용 외장하드 대여완료",
-    "tags": [
-      "하드웨어",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 퇴사자PC내의 자료 백업요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 백업. 현장 처리 결과 검증.",
-      "recommendation": "[R] 내부 보안망 백업용 외장하드 대여완료 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.313Z",
-    "updatedAt": "2026-08-07T05:08:48.313Z"
   },
   {
     "id": "seed-592",
@@ -14269,30 +13942,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-639",
-    "title": "OS - 내부 보안망 PC 로그인 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/18(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "내부 보안망 PC 로그인 오류",
-    "actionTaken": "기존암호 초기화 및 새암호 변경완료",
-    "tags": [
-      "소프트웨어",
-      "OS"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 PC 로그인 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 기존암호 초기화 및 새암호 변경완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-641",
     "title": "드라이버 - 일반망 스캐너 등록",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -14315,29 +13964,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "복합기 관리자"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-643",
-    "title": "IP - 내부 보안망PC 네트워크 연결 불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/18(목)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "내부 보안망PC 네트워크 연결 불량",
-    "actionTaken": "랜 어뎁터 접촉불량으로 재연결 성공",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 네트워크 연결 불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 랜 어뎁터 접촉불량으로 재연결 성공"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.314Z",
     "updatedAt": "2026-08-07T05:08:48.314Z"
@@ -14412,83 +14038,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "DNS"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-655",
-    "title": "데스크탑 - 내부 보안망 PC 부팅오류 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/22(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "데스크탑",
-    "symptom": "내부 보안망 PC 부팅오류 발생",
-    "actionTaken": "SSD 문제로 복구업체 안내완료",
-    "tags": [
-      "하드웨어",
-      "데스크탑",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 PC 부팅오류 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 데스크탑. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSD 문제로 복구업체 안내완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-656",
-    "title": "OS - 내부 보안망 연결불가 및 내부 보안망 프로그램 설치 요",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/22(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "내부 보안망 연결불가 및 내부 보안망 프로그램 설치 요청",
-    "actionTaken": "OS 재설치 완료",
-    "tags": [
-      "소프트웨어",
-      "OS"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 연결불가 및 내부 보안망 프로그램 설치 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] OS 재설치 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
-    "id": "seed-659",
-    "title": "기본 프로그램 - 사내 개발망 한글2018 프로그램 설치문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/23(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기본 프로그램",
-    "symptom": "사내 개발망 한글2018 프로그램 설치문의",
-    "actionTaken": "내부 보안망 아웃록으로 설치파일 분활압축하여 전송완료",
-    "tags": [
-      "소프트웨어",
-      "한글"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 개발망 한글2018 프로그램 설치문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
-      "recommendation": "[R] 내부 보안망 아웃록으로 설치파일 분활압축하여 전송완료 📌 연관 지식: [[한글]]"
-    },
-    "wikilinks": [
-      "한글"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.314Z",
@@ -14741,29 +14290,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.314Z"
   },
   {
-    "id": "seed-699",
-    "title": "IP - 사내 개발망 개발PC 네트워크 안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/26(금)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "사내 개발망 개발PC 네트워크 안됨",
-    "actionTaken": "랜선 연결 확인후 테스트완료",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 개발망 개발PC 네트워크 안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 랜선 연결 확인후 테스트완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.314Z",
-    "updatedAt": "2026-08-07T05:08:48.314Z"
-  },
-  {
     "id": "seed-704",
     "title": "OS - 윈도우비밀번호 로그인안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -15003,54 +14529,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.315Z"
   },
   {
-    "id": "seed-737",
-    "title": "OS - 협력업체 PC 사내 개발망 셋팅 진행문의",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/02(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "협력업체 PC 사내 개발망 셋팅 진행문의",
-    "actionTaken": "진행률 공유완료",
-    "tags": [
-      "소프트웨어",
-      "OS"
-    ],
-    "sbar": {
-      "situation": "[S] 협력업체 PC 사내 개발망 셋팅 진행문의",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 진행률 공유완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-739",
-    "title": "OS - 협력업체 PC의 사내 개발망 셋팅",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/02(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "협력업체 PC의 사내 개발망 셋팅",
-    "actionTaken": "셋팅완료",
-    "tags": [
-      "소프트웨어",
-      "OS"
-    ],
-    "sbar": {
-      "situation": "[S] 협력업체 PC의 사내 개발망 셋팅",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 셋팅완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
     "id": "seed-750",
     "title": "기본 프로그램 - PC OFF 솔루션 근태 설정안됨",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -15145,29 +14623,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.315Z"
   },
   {
-    "id": "seed-757",
-    "title": "IP - 내부 보안망 유선LAN 동작 안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/08(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "내부 보안망 유선LAN 동작 안됨",
-    "actionTaken": "네트워크 재설정완료",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 유선LAN 동작 안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 재설정완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
     "id": "seed-767",
     "title": "브라우저 - 사내 메신저 인사시스템 접속오류",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -15213,33 +14668,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 네트워크 어뎁터 초기화 완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.315Z",
-    "updatedAt": "2026-08-07T05:08:48.315Z"
-  },
-  {
-    "id": "seed-778",
-    "title": "데스크탑 - 내부 보안망PC 부팅오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/14(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "데스크탑",
-    "symptom": "내부 보안망PC 부팅오류",
-    "actionTaken": "SSD 고장확인, 복구업체 이관완료",
-    "tags": [
-      "하드웨어",
-      "데스크탑",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 부팅오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 데스크탑. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSD 고장확인, 복구업체 이관완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.315Z",
     "updatedAt": "2026-08-07T05:08:48.315Z"
@@ -15567,29 +14995,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.316Z"
   },
   {
-    "id": "seed-847",
-    "title": "IP - 내부 보안망 PC 미접속으로 인한 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/10(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "내부 보안망 PC 미접속으로 인한 요청",
-    "actionTaken": "무선 세팅 완료",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 PC 미접속으로 인한 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선 세팅 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
     "id": "seed-853",
     "title": "데스크탑 - 부팅불가 및 하드인식 불가",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -15631,58 +15036,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 라이센스. 현장 처리 결과 검증.",
       "recommendation": "[R] msoffice 재설치 및 라이선스 재등록 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-885",
-    "title": "백업 - 내부 보안망PC 교체로인한 이전PC 데이터백업용",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/24(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "백업",
-    "symptom": "내부 보안망PC 교체로인한 이전PC 데이터백업용 저장매체 오류발생",
-    "actionTaken": "다른 SSD로 대여 완료",
-    "tags": [
-      "하드웨어",
-      "백업",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 교체로인한 이전PC 데이터백업용 저장매체 오류발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 백업. 현장 처리 결과 검증.",
-      "recommendation": "[R] 다른 SSD로 대여 완료 📌 연관 지식: [[SSD]], [[백업]]"
-    },
-    "wikilinks": [
-      "SSD",
-      "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-886",
-    "title": "백업 - 내부 보안망PC 복구데이터 이전작업 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/25(화)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "백업",
-    "symptom": "내부 보안망PC 복구데이터 이전작업 요청",
-    "actionTaken": "복구데이터 이전완료",
-    "tags": [
-      "하드웨어",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 복구데이터 이전작업 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 백업. 현장 처리 결과 검증.",
-      "recommendation": "[R] 복구데이터 이전완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -15741,30 +15094,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.316Z"
   },
   {
-    "id": "seed-889",
-    "title": "OS - 내부 보안망PC OS 재설치",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/26(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "내부 보안망PC OS 재설치",
-    "actionTaken": "재설치완료",
-    "tags": [
-      "소프트웨어",
-      "OS"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC OS 재설치",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 재설치완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
     "id": "seed-890",
     "title": "OS - SW 문서 작업시 PC 멈춤",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -15782,29 +15111,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] OS 충돌로 재설치완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-891",
-    "title": "IP - 내부 보안망 네트워크 유무선 변경 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "06/26(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "내부 보안망 네트워크 유무선 변경 요청",
-    "actionTaken": "전산관리자 협의 후 변경완료",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 네트워크 유무선 변경 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 전산관리자 협의 후 변경완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -15889,55 +15195,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.316Z"
   },
   {
-    "id": "seed-900",
-    "title": "IP - 내부 보안망 네트워크 연결불량",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/01(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "내부 보안망 네트워크 연결불량",
-    "actionTaken": "네트워크 어뎁터 재설정",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 네트워크 연결불량",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 어뎁터 재설정"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-902",
-    "title": "기본 프로그램 - 내부 보안망 PC 한글파일 실행불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/01(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기본 프로그램",
-    "symptom": "내부 보안망 PC 한글파일 실행불가",
-    "actionTaken": "한글 2018 프로그램 재설치 후 정상실행 확인",
-    "tags": [
-      "소프트웨어",
-      "한글"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 PC 한글파일 실행불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
-      "recommendation": "[R] 한글 2018 프로그램 재설치 후 정상실행 확인 📌 연관 지식: [[한글]]"
-    },
-    "wikilinks": [
-      "한글"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
     "id": "seed-904",
     "title": "OS - PC 윈도우 시작버튼 및 윈도우 기능 실행",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -15955,29 +15212,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
       "recommendation": "[R] 점검 결과 OS깨짐 확인으로 포멧신청서 상신 및 OS재설치 권유"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-907",
-    "title": "IP - 내부 보안망 무선랜 설정 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/02(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "내부 보안망 무선랜 설정 요청",
-    "actionTaken": "자리이동으로 인한 유->무선 세팅변경 완료",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 무선랜 설정 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 자리이동으로 인한 유->무선 세팅변경 완료"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -16036,29 +15270,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.316Z"
   },
   {
-    "id": "seed-914",
-    "title": "IP - 내부 보안망PC 네트워크 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/02(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "내부 보안망PC 네트워크 오류",
-    "actionTaken": "네트워크 어뎁터 초기화 완료",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 네트워크 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 어뎁터 초기화 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
     "id": "seed-915",
     "title": "IP - 일반망PC 네트워크 오류",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -16077,113 +15288,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 네트워크 어뎁터 초기화 완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-917",
-    "title": "OS - 신규입사자 내부 보안망PC 블루스크린 및 부팅 오",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/03(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "신규입사자 내부 보안망PC 블루스크린 및 부팅 오류발생",
-    "actionTaken": "레지스트리값 및 타임서버 변경 후 정상동작 확인",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 신규입사자 내부 보안망PC 블루스크린 및 부팅 오류발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 레지스트리값 및 타임서버 변경 후 정상동작 확인 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-919",
-    "title": "백업 - 정용석 전문 내부 보안망PC 복구데이터 백업 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/03(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "백업",
-    "symptom": "정용석 전문 내부 보안망PC 복구데이터 백업 요청",
-    "actionTaken": "정용석 전문 내부 보안망PC 교체예정으로 백업일정 다시잡을예정",
-    "tags": [
-      "하드웨어",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 정용석 전문 내부 보안망PC 복구데이터 백업 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 백업. 현장 처리 결과 검증.",
-      "recommendation": "[R] 정용석 전문 내부 보안망PC 교체예정으로 백업일정 다시잡을예정 📌 연관 지식: [[백업]]"
-    },
-    "wikilinks": [
-      "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-926",
-    "title": "OS - 내부 보안망PC 블루스크린 및 부팅 오류 재발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/05(금)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "내부 보안망PC 블루스크린 및 부팅 오류 재발생",
-    "actionTaken": "네트워크 랜커넥터 교체후 정상 연결",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 블루스크린 및 부팅 오류 재발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 랜커넥터 교체후 정상 연결 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.316Z",
-    "updatedAt": "2026-08-07T05:08:48.316Z"
-  },
-  {
-    "id": "seed-937",
-    "title": "OS - 내부 보안망PC 블루스크린 및 부팅 오류발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/12(금)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "내부 보안망PC 블루스크린 및 부팅 오류발생",
-    "actionTaken": "랜커넥터 교체 후 연결 완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 블루스크린 및 부팅 오류발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 랜커넥터 교체 후 연결 완료 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.316Z",
     "updatedAt": "2026-08-07T05:08:48.316Z"
@@ -16360,35 +15464,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] outlook 재설치 후 첨부파일 다운로드 완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-981",
-    "title": "OS - 내부 보안망PC 블루스크린 및 부팅 오류 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "07/29(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "내부 보안망PC 블루스크린 및 부팅 오류 발생",
-    "actionTaken": "SSD 고장으로 복구업체 소개 완료 및 SSD 교체후 OS설치 작업 완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "SSD",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 블루스크린 및 부팅 오류 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] SSD 고장으로 복구업체 소개 완료 및 SSD 교체후 OS설치 작업 완료 📌 연관 지식: [[SSD]], [[블루스크린]]"
-    },
-    "wikilinks": [
-      "SSD",
-      "블루스크린"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.317Z",
     "updatedAt": "2026-08-07T05:08:48.317Z"
@@ -16574,33 +15649,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.317Z"
   },
   {
-    "id": "seed-1009",
-    "title": "OS - 내부 보안망pc 블루스크린 다수 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/19(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "내부 보안망pc 블루스크린 다수 발생",
-    "actionTaken": "랜커넥터 교체작업 완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망pc 블루스크린 다수 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 랜커넥터 교체작업 완료 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
     "id": "seed-1010",
     "title": "기본 프로그램 - 한글 파일 실행불가",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -16622,30 +15670,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "한글"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-1018",
-    "title": "데스크탑 - 내부 보안망PC 화면표출 안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/21(수)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "데스크탑",
-    "symptom": "내부 보안망PC 화면표출 안됨",
-    "actionTaken": "재부팅 후 표출완료",
-    "tags": [
-      "하드웨어",
-      "데스크탑"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 화면표출 안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 데스크탑. 현장 처리 결과 검증.",
-      "recommendation": "[R] 재부팅 후 표출완료"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.317Z",
     "updatedAt": "2026-08-07T05:08:48.317Z"
@@ -16743,33 +15767,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 세팅 완료 (110NZVF048223)"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.317Z",
-    "updatedAt": "2026-08-07T05:08:48.317Z"
-  },
-  {
-    "id": "seed-1045",
-    "title": "OS - 내부 보안망PC 윈도우 진입 불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "08/23(금)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "내부 보안망PC 윈도우 진입 불가",
-    "actionTaken": "해당 PC SSD 고장확인 완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "SSD"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 윈도우 진입 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 해당 PC SSD 고장확인 완료 📌 연관 지식: [[SSD]]"
-    },
-    "wikilinks": [
-      "SSD"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.317Z",
     "updatedAt": "2026-08-07T05:08:48.317Z"
@@ -16918,62 +15915,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "DNS"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1078",
-    "title": "OS - 내부 보안망 PC 보안 소프트웨어 실행시 블루스크린",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/04(수)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "내부 보안망 PC 보안 소프트웨어 실행시 블루스크린 발생",
-    "actionTaken": "내부 보안망 랜 커넥터 교체후 정상동작 확인",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 PC 보안 소프트웨어 실행시 블루스크린 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 내부 보안망 랜 커넥터 교체후 정상동작 확인 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1080",
-    "title": "OS - 사내 개발망 PC 패스워드 변경 및 로컬보안정",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "09/05(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "사내 개발망 PC 패스워드 변경 및 로컬보안정책을 설정 차단",
-    "actionTaken": "AD이행 프로그램 실행 후 설정 완료",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "워드",
-      "AD"
-    ],
-    "sbar": {
-      "situation": "[S] 사내 개발망 PC 패스워드 변경 및 로컬보안정책을 설정 차단",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] AD이행 프로그램 실행 후 설정 완료 📌 연관 지식: [[워드]], [[AD]]"
-    },
-    "wikilinks": [
-      "워드",
-      "AD"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.318Z",
@@ -17204,30 +16145,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.318Z"
   },
   {
-    "id": "seed-1114",
-    "title": "OS - 내부 보안망 PC OS 강제부팅 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/07(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "내부 보안망 PC OS 강제부팅 발생",
-    "actionTaken": "시스템파일 손상으로 복구 명령어 실행 조치 완료 및 네트워크 C타입 커넥터 교체완료",
-    "tags": [
-      "소프트웨어",
-      "OS"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 PC OS 강제부팅 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 시스템파일 손상으로 복구 명령어 실행 조치 완료 및 네트워크 C타입 커넥터 교체완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
     "id": "seed-1116",
     "title": "기본 프로그램 - WORD 로그인 불가",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -17294,32 +16211,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] 구성품 확인 및 점검 완료 및 필요 물품 조사 후 내용공유 완료"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.318Z",
-    "updatedAt": "2026-08-07T05:08:48.318Z"
-  },
-  {
-    "id": "seed-1126",
-    "title": "IP - 내부 보안망 노트PC 네트워크 안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "10/16(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "내부 보안망 노트PC 네트워크 안됨",
-    "actionTaken": "DNS 재설정완료",
-    "tags": [
-      "네트워크",
-      "DNS"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 노트PC 네트워크 안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] DNS 재설정완료 📌 연관 지식: [[DNS]]"
-    },
-    "wikilinks": [
-      "DNS"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.318Z",
     "updatedAt": "2026-08-07T05:08:48.318Z"
@@ -17623,29 +16514,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.319Z"
   },
   {
-    "id": "seed-1211",
-    "title": "IP - 내부 보안망 무선 연결",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/11(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "내부 보안망 무선 연결",
-    "actionTaken": "무선인증솔루션 삽입완료",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 무선 연결",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 무선인증솔루션 삽입완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
     "id": "seed-1212",
     "title": "OS - PC부팅이 너무 느리고 성능저하",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -17742,30 +16610,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "DNS"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.319Z",
-    "updatedAt": "2026-08-07T05:08:48.319Z"
-  },
-  {
-    "id": "seed-1241",
-    "title": "ip - 내부 보안망pc 네크워크 연결오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "11/27(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "ip",
-    "symptom": "내부 보안망pc 네크워크 연결오류",
-    "actionTaken": "어뎁터 초기화 후 정상 연결 확인",
-    "tags": [
-      "네트워크",
-      "ip"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망pc 네크워크 연결오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: ip. 현장 처리 결과 검증.",
-      "recommendation": "[R] 어뎁터 초기화 후 정상 연결 확인"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.319Z",
     "updatedAt": "2026-08-07T05:08:48.319Z"
@@ -17874,53 +16718,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1261",
-    "title": "IP - 내부 보안망PC 네트워크 접속오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/19(목)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "내부 보안망PC 네트워크 접속오류",
-    "actionTaken": "네트워크 어뎁터 초기화",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 네트워크 접속오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 네트워크 어뎁터 초기화"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1267",
-    "title": "OS - 내부 보안망PC 동작이 느림",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "12/24(화)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "내부 보안망PC 동작이 느림",
-    "actionTaken": "시스템 파일 복구 명령어 실행 후 정상동작 확인",
-    "tags": [
-      "소프트웨어",
-      "OS"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 동작이 느림",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 시스템 파일 복구 명령어 실행 후 정상동작 확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1278",
     "title": "IP - 일반망PC 인터넷 연결느림 및 끊김 현상 발",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -17942,30 +16739,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "DNS"
     ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1284",
-    "title": "OS - 부팅시 블루 스크린 발생",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/06(월)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "부팅시 블루 스크린 발생",
-    "actionTaken": "내부 보안망 PC C타입 LAN커넥터 오류 확인 및 해당좌석 LAN포트 불량으로 내부 보안망 PC 유->무 변경 작업 완료",
-    "tags": [
-      "소프트웨어",
-      "OS"
-    ],
-    "sbar": {
-      "situation": "[S] 부팅시 블루 스크린 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 내부 보안망 PC C타입 LAN커넥터 오류 확인 및 해당좌석 LAN포트 불량으로 내부 보안망 PC 유->무 변경 작업 완료"
-    },
-    "wikilinks": [],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.320Z",
     "updatedAt": "2026-08-07T05:08:48.320Z"
@@ -18124,29 +16897,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1297",
-    "title": "IP - 내부 보안망PC 네트워크 연결 안됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/16(목)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "IP",
-    "symptom": "내부 보안망PC 네트워크 연결 안됨",
-    "actionTaken": "어뎁터 초기화 후 정상 연결 확인",
-    "tags": [
-      "네트워크"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망PC 네트워크 연결 안됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: IP. 현장 처리 결과 검증.",
-      "recommendation": "[R] 어뎁터 초기화 후 정상 연결 확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1307",
     "title": "유지보수 - 신규 PC 세팅 및 이전",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -18195,30 +16945,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1314",
-    "title": "내부 보안망 연결 점검 - 내부 보안망 네트워크 연결 점검",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/22(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "내부 보안망 연결 점검",
-    "symptom": "내부 보안망 네트워크 연결 점검",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "네트워크",
-      "내부 보안망 연결 점검"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 네트워크 연결 점검",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 내부 보안망 연결 점검. 현장 처리 결과 검증.",
-      "recommendation": "[R]"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1315",
     "title": "배터리 고장 - 배터리 고장, PC 전원 고장",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -18243,30 +16969,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1316",
-    "title": "무선랜 신청 - 내부 보안망 PC 무선랜 신청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/22(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "무선랜 신청",
-    "symptom": "내부 보안망 PC 무선랜 신청",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "네트워크",
-      "무선랜 신청"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 PC 무선랜 신청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 무선랜 신청. 현장 처리 결과 검증.",
-      "recommendation": "[R]"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1317",
     "title": "노후 PC 교체 - 노후 PC 교체",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -18283,30 +16985,6 @@ const SEED_KNOWLEDGE_DATA = [
       "situation": "[S] 노후 PC 교체",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: 노후 PC 교체. 현장 처리 결과 검증.",
-      "recommendation": "[R]"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1318",
-    "title": "내부 보안망 접속 에러 - 내부 보안망 접속 에러",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/22(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "내부 보안망 접속 에러",
-    "symptom": "내부 보안망 접속 에러",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "네트워크",
-      "내부 보안망 접속 에러"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 접속 에러",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 내부 보안망 접속 에러. 현장 처리 결과 검증.",
       "recommendation": "[R]"
     },
     "wikilinks": [],
@@ -18445,30 +17123,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1329",
-    "title": "일반망/내부 보안망 수거 - 일반망/내부 보안망 수거",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/23(목)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "일반망/내부 보안망 수거",
-    "symptom": "일반망/내부 보안망 수거",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "네트워크",
-      "일반망/내부 보안망 수거"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망/내부 보안망 수거",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 일반망/내부 보안망 수거. 현장 처리 결과 검증.",
-      "recommendation": "[R]"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1330",
     "title": "복구 데이터 이관 - 복구 데이터 이관",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -18533,30 +17187,6 @@ const SEED_KNOWLEDGE_DATA = [
       "situation": "[S] 윈도우 변경",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 소프트웨어 / 중분류: 윈도우 변경. 현장 처리 결과 검증.",
-      "recommendation": "[R]"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1334",
-    "title": "자료 이동 - 내부 보안망 PC 자료 이동",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "01/24(금)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "자료 이동",
-    "symptom": "내부 보안망 PC 자료 이동",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "하드웨어",
-      "자료 이동"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 PC 자료 이동",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 자료 이동. 현장 처리 결과 검증.",
       "recommendation": "[R]"
     },
     "wikilinks": [],
@@ -18832,30 +17462,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1349",
-    "title": "내부 보안망 네트워크 오류 - 내부 보안망 네트워크 오류",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/13(목)",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "내부 보안망 네트워크 오류",
-    "symptom": "내부 보안망 네트워크 오류",
-    "actionTaken": "재부팅 완료",
-    "tags": [
-      "소프트웨어",
-      "내부 보안망 네트워크 오류"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 네트워크 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 내부 보안망 네트워크 오류. 현장 처리 결과 검증.",
-      "recommendation": "[R] 재부팅 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1350",
     "title": "자료 교체로 인한 자료 백업 - 자료 교체로 인한 자료 백업",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -18899,30 +17505,6 @@ const SEED_KNOWLEDGE_DATA = [
       "situation": "[S] 계정 변경으로 인한 PC 세팅",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: PC 세팅. 현장 처리 결과 검증.",
-      "recommendation": "[R]"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1353",
-    "title": "내부 보안망 유선에서 무선으로 변경 - 내부 보안망 유선에서 무선으로 변경",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/18(화)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "내부 보안망 유선에서 무선으로 변경",
-    "symptom": "내부 보안망 유선에서 무선으로 변경",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "네트워크",
-      "내부 보안망 유선에서 무선으로 변경"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 유선에서 무선으로 변경",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 내부 보안망 유선에서 무선으로 변경. 현장 처리 결과 검증.",
       "recommendation": "[R]"
     },
     "wikilinks": [],
@@ -18983,54 +17565,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1356",
-    "title": "연결 요청 - 내부 보안망 네트워크 연결 요청",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/24(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "연결 요청",
-    "symptom": "내부 보안망 네트워크 연결 요청",
-    "actionTaken": "유선랜 등록 확인",
-    "tags": [
-      "네트워크",
-      "연결 요청"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 네트워크 연결 요청",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 연결 요청. 현장 처리 결과 검증.",
-      "recommendation": "[R] 유선랜 등록 확인"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1357",
-    "title": "연결 오류 - 시뮬레이션 PC 내 내부 보안망 및 무선 인터넷",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/24(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "연결 오류",
-    "symptom": "시뮬레이션 PC 내 내부 보안망 및 무선 인터넷 연결 오류",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "네트워크",
-      "연결 오류"
-    ],
-    "sbar": {
-      "situation": "[S] 시뮬레이션 PC 내 내부 보안망 및 무선 인터넷 연결 오류",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 연결 오류. 현장 처리 결과 검증.",
-      "recommendation": "[R]"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1358",
     "title": "인터넷 변경 - 이사 후 PC 점검 및 무선 인터넷 변경",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -19047,54 +17581,6 @@ const SEED_KNOWLEDGE_DATA = [
       "situation": "[S] 이사 후 PC 점검 및 무선 인터넷 변경",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 네트워크 / 중분류: 인터넷 변경. 현장 처리 결과 검증.",
-      "recommendation": "[R]"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1359",
-    "title": "망 점검 - 일반망/내부 보안망 네트워크 점검",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/26(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "망 점검",
-    "symptom": "일반망/내부 보안망 네트워크 점검",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "네트워크",
-      "망 점검"
-    ],
-    "sbar": {
-      "situation": "[S] 일반망/내부 보안망 네트워크 점검",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 망 점검. 현장 처리 결과 검증.",
-      "recommendation": "[R]"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1361",
-    "title": "내부 보안망 네트워크 설정 - 내부 보안망 네트워크 설정",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "02/28(금)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "내부 보안망 네트워크 설정",
-    "symptom": "내부 보안망 네트워크 설정",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "네트워크",
-      "내부 보안망 네트워크 설정"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 네트워크 설정",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 내부 보안망 네트워크 설정. 현장 처리 결과 검증.",
       "recommendation": "[R]"
     },
     "wikilinks": [],
@@ -19232,35 +17718,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1368",
-    "title": "데이터 백업 - 내부 보안망 PC 교체로 인한 데이터 백업 이동(",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/10(월)",
-    "categoryLarge": "하드웨어",
-    "categoryMedium": "데이터 백업",
-    "symptom": "내부 보안망 PC 교체로 인한 데이터 백업 이동(D드라이브 전체)",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "하드웨어",
-      "데이터 백업",
-      "D드라이브",
-      "백업"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 PC 교체로 인한 데이터 백업 이동(D드라이브 전체)",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 하드웨어 / 중분류: 데이터 백업. 현장 처리 결과 검증.",
-      "recommendation": "[R] 📌 연관 지식: [[D드라이브]], [[백업]]"
-    },
-    "wikilinks": [
-      "D드라이브",
-      "백업"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1372",
     "title": "자료 이동 요청 - 퇴사자 PC 내 자료이동 요청",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -19301,30 +17758,6 @@ const SEED_KNOWLEDGE_DATA = [
       "situation": "[S] 무선랜 교체",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 네트워크 / 중분류: 무선랜 교체. 현장 처리 결과 검증.",
-      "recommendation": "[R]"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1374",
-    "title": "내부 보안망 무선 교체 - 내부 보안망 무선 교체",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/17(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "내부 보안망 무선 교체",
-    "symptom": "내부 보안망 무선 교체",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "네트워크",
-      "내부 보안망 무선 교체"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 무선 교체",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 내부 보안망 무선 교체. 현장 처리 결과 검증.",
       "recommendation": "[R]"
     },
     "wikilinks": [],
@@ -19432,30 +17865,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.320Z"
   },
   {
-    "id": "seed-1381",
-    "title": "내부 보안망 안 됨 - 내부 보안망 안 됨",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "03/26(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "내부 보안망 안 됨",
-    "symptom": "내부 보안망 안 됨",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "네트워크",
-      "내부 보안망 안 됨"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 안 됨",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 내부 보안망 안 됨. 현장 처리 결과 검증.",
-      "recommendation": "[R]"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
     "id": "seed-1383",
     "title": "OS - PPT 작업 후 저장 시 응답없음 및 화면",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -19499,30 +17908,6 @@ const SEED_KNOWLEDGE_DATA = [
       "situation": "[S] 저장매체 구입 및 추가",
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치 구입. 현장 처리 결과 검증.",
-      "recommendation": "[R]"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.320Z",
-    "updatedAt": "2026-08-07T05:08:48.320Z"
-  },
-  {
-    "id": "seed-1385",
-    "title": "유, 무선 변경 - 내부 보안망 네트워크 유, 무선 변경",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/02(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "유, 무선 변경",
-    "symptom": "내부 보안망 네트워크 유, 무선 변경",
-    "actionTaken": "조치 완료",
-    "tags": [
-      "네트워크",
-      "유, 무선 변경"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 네트워크 유, 무선 변경",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 유, 무선 변경. 현장 처리 결과 검증.",
       "recommendation": "[R]"
     },
     "wikilinks": [],
@@ -19863,36 +18248,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.321Z"
   },
   {
-    "id": "seed-1402",
-    "title": "내부 보안망 용량 증설 - 내부 보안망 용량 증설",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "04/28(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "내부 보안망 용량 증설",
-    "symptom": "내부 보안망 용량 증설",
-    "actionTaken": "M.2 SSD 500GB 증설(장착) 및 파티션 셋팅 완료",
-    "tags": [
-      "네트워크",
-      "내부 보안망 용량 증설",
-      "SW팀(미래기술)",
-      "SSD",
-      "파티션"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 용량 증설",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 내부 보안망 용량 증설. 현장 처리 결과 검증.",
-      "recommendation": "[R] M.2 SSD 500GB 증설(장착) 및 파티션 셋팅 완료 📌 연관 지식: [[SSD]], [[파티션]]"
-    },
-    "wikilinks": [
-      "SSD",
-      "파티션"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
     "id": "seed-1406",
     "title": "초기화 - 이글오피스 비밀번호 분실",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20016,30 +18371,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.321Z"
   },
   {
-    "id": "seed-1412",
-    "title": "내부 보안망 연결 불가 - 인터넷&내부 보안망 연결 불가",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/14(수)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "내부 보안망 연결 불가",
-    "symptom": "인터넷&내부 보안망 연결 불가",
-    "actionTaken": "드라이버 재설치 완료",
-    "tags": [
-      "네트워크",
-      "내부 보안망 연결 불가"
-    ],
-    "sbar": {
-      "situation": "[S] 인터넷&내부 보안망 연결 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 내부 보안망 연결 불가. 현장 처리 결과 검증.",
-      "recommendation": "[R] 드라이버 재설치 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
     "id": "seed-1413",
     "title": "word 프로그램 이슈 - word 프로그램 미동작",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20131,30 +18462,6 @@ const SEED_KNOWLEDGE_DATA = [
       "background": "[B] 출처: PC 트러블슈팅 가이드",
       "assessment": "[A] 대분류: 하드웨어 / 중분류: 저장장치 장착. 현장 처리 결과 검증.",
       "recommendation": "[R] HDD 2TB 장착 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
-    "id": "seed-1420",
-    "title": "네트워크 오작동 - 내부 보안망 Note PC 네트워크 오작동",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "05/26(월)",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "네트워크 오작동",
-    "symptom": "내부 보안망 Note PC 네트워크 오작동",
-    "actionTaken": "와이파이 T-gate 계정 로그인 후 정상 확인",
-    "tags": [
-      "네트워크",
-      "네트워크 오작동"
-    ],
-    "sbar": {
-      "situation": "[S] 내부 보안망 Note PC 네트워크 오작동",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 네트워크 오작동. 현장 처리 결과 검증.",
-      "recommendation": "[R] 와이파이 T-gate 계정 로그인 후 정상 확인"
     },
     "wikilinks": [],
     "backlinks": [],
@@ -20341,29 +18648,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.321Z"
   },
   {
-    "id": "seed-1464",
-    "title": "기본 프로그램 - 전자광학체계2팀 보안 담당자 개발 PC 내",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-04-18 17:00",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기본 프로그램",
-    "symptom": "전자광학체계2팀 보안 담당자 개발 PC 내 Visual Studio 2019 라이선스 무효화 및 설치 불가",
-    "actionTaken": "PC지원실 현장 지원을 통해 기존 평가판 버전을 완전 삭제 및 레지스트리 정리 후 정식 정품 라이선스로 최적 재설치 완료",
-    "tags": [
-      "소프트웨어"
-    ],
-    "sbar": {
-      "situation": "[S] 전자광학체계2팀 보안 담당자 개발 PC 내 Visual Studio 2019 라이선스 무효화 및 설치 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
-      "recommendation": "[R] PC지원실 현장 지원을 통해 기존 평가판 버전을 완전 삭제 및 레지스트리 정리 후 정식 정품 라이선스로 최적 재설치 완료"
-    },
-    "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
     "id": "seed-1465",
     "title": "DNS - 구 DNS 서버 중단에 따라 사내 공용 구역",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20391,32 +18675,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.321Z"
   },
   {
-    "id": "seed-1474",
-    "title": "내부 보안망 - 원격 파견지 내 임직원 사내용 개발 노",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-05-31 17:00",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "내부 보안망",
-    "symptom": "원격 파견지 내 임직원 사내용 개발 노트북의 사내 전용 네트워크 포트 이탈 및 통신 완전 단절",
-    "actionTaken": "원격 사업장 파견지 긴급 출장 지원을 수행하여 네트워크 랜커넥터 물리 수리 및 IP 라우팅 재설정 완료",
-    "tags": [
-      "네트워크",
-      "내부 보안망"
-    ],
-    "sbar": {
-      "situation": "[S] 원격 파견지 내 임직원 사내용 개발 노트북의 사내 전용 네트워크 포트 이탈 및 통신 완전 단절",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 내부 보안망. 현장 처리 결과 검증.",
-      "recommendation": "[R] 원격 사업장 파견지 긴급 출장 지원을 수행하여 네트워크 랜커넥터 물리 수리 및 IP 라우팅 재설정 완료 📌 연관 지식: [[IP]]"
-    },
-    "wikilinks": [
-      "IP"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.321Z",
-    "updatedAt": "2026-08-07T05:08:48.321Z"
-  },
-  {
     "id": "seed-1479",
     "title": "OS - 업무 부서 임직원 사외 출장용 노트북",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20438,32 +18696,6 @@ const SEED_KNOWLEDGE_DATA = [
     },
     "wikilinks": [
       "V3"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
-    "id": "seed-1482",
-    "title": "내부 보안망 - 데이터링크2팀 지원 담당자 내부 보안망 PC 유선",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-07-12 17:00",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "내부 보안망",
-    "symptom": "데이터링크2팀 지원 담당자 내부 보안망 PC 유선 연결 시 IP 취득 불가 및 잦은 무선인증 팅김 장애",
-    "actionTaken": "사무실 허브 포트에서 PC까지 포설된 노후 랜커넥터 수동 재제작 교체 및 사내 타임서버 수동 재셋팅 완료",
-    "tags": [
-      "네트워크",
-      "내부 보안망"
-    ],
-    "sbar": {
-      "situation": "[S] 데이터링크2팀 지원 담당자 내부 보안망 PC 유선 연결 시 IP 취득 불가 및 잦은 무선인증 팅김 장애",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 내부 보안망. 현장 처리 결과 검증.",
-      "recommendation": "[R] 사무실 허브 포트에서 PC까지 포설된 노후 랜커넥터 수동 재제작 교체 및 사내 타임서버 수동 재셋팅 완료 📌 연관 지식: [[IP]]"
-    },
-    "wikilinks": [
-      "IP"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.322Z",
@@ -20498,33 +18730,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.322Z"
   },
   {
-    "id": "seed-1485",
-    "title": "내부 보안망 - 해양미래기술센터 보안 담당자 내부 보안망 로그인",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-07-17 17:30",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "내부 보안망",
-    "symptom": "해양미래기술센터 보안 담당자 내부 보안망 로그인 정보 불일치 메시지 및 무선 인증 프로필 파손",
-    "actionTaken": "내부 보안망 고유 랜커넥터 물리 수리 및 T-gate 패스워드 재설정 동기화를 통하여 무선인증솔루션 연결 복구",
-    "tags": [
-      "네트워크",
-      "내부 보안망",
-      "워드"
-    ],
-    "sbar": {
-      "situation": "[S] 해양미래기술센터 보안 담당자 내부 보안망 로그인 정보 불일치 메시지 및 무선 인증 프로필 파손",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: 내부 보안망. 현장 처리 결과 검증.",
-      "recommendation": "[R] 내부 보안망 고유 랜커넥터 물리 수리 및 T-gate 패스워드 재설정 동기화를 통하여 무선인증솔루션 연결 복구 📌 연관 지식: [[워드]]"
-    },
-    "wikilinks": [
-      "워드"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
     "id": "seed-1486",
     "title": "OS - 업무 부서 임직원 출장 복귀 PC의",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20552,33 +18757,6 @@ const SEED_KNOWLEDGE_DATA = [
     "updatedAt": "2026-08-07T05:08:48.322Z"
   },
   {
-    "id": "seed-1492",
-    "title": "OS - 업무 부서 임직원 내부 보안망 PC 사용 중",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2024-08-19 17:30",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "업무 부서 임직원 내부 보안망 PC 사용 중 불규칙적인 무한 블루스크린(Crash) 및 시스템 다운",
-    "actionTaken": "내부 보안망 PC 내부 장착된 무선 랜카드 드라이버 충돌 확인 후, 안전모드 진입하여 드라이버 초기화 및 최신 정합 드라이버 재설치",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "블루스크린"
-    ],
-    "sbar": {
-      "situation": "[S] 업무 부서 임직원 내부 보안망 PC 사용 중 불규칙적인 무한 블루스크린(Crash) 및 시스템 다운",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 내부 보안망 PC 내부 장착된 무선 랜카드 드라이버 충돌 확인 후, 안전모드 진입하여 드라이버 초기화 및 최신 정합 드라이버 재설치 📌 연관 지식: [[블루스크린]]"
-    },
-    "wikilinks": [
-      "블루스크린"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
     "id": "seed-1495",
     "title": "일반망 - 온라인 전사 자산실사 팝업 동작 중 신규 및",
     "sourceFile": "PC 트러블슈팅 가이드",
@@ -20598,37 +18776,6 @@ const SEED_KNOWLEDGE_DATA = [
       "recommendation": "[R] PC지원실 접수 건에 대해 서버에서 사용자 정보 강제 수동 동기화 및 자산 등록 완료 처리 회신"
     },
     "wikilinks": [],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
-    "id": "seed-1499",
-    "title": "OS - 본사 임직원(정세진 실장 등)의 클레버",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2025-02-03 10:31",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "OS",
-    "symptom": "본사 임직원(정세진 실장 등)의 사내 메신저 패스워드 강제 초기화 이후 AD 로그인 불가 및 비밀번호 불일치 현상 발생",
-    "actionTaken": "AD 도메인 컨트롤러 동기화 지연 확인 후, 로컬 PC에서 WIFI 해제 후 유선 LAN 강제 변경을 통해 AD 패스워드 재설정 동기화 유도",
-    "tags": [
-      "소프트웨어",
-      "OS",
-      "사내 메신저",
-      "워드",
-      "AD"
-    ],
-    "sbar": {
-      "situation": "[S] 본사 임직원(정세진 실장 등)의 사내 메신저 패스워드 강제 초기화 이후 AD 로그인 불가 및 비밀번호 불일치 현상 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: OS. 현장 처리 결과 검증.",
-      "recommendation": "[R] AD 도메인 컨트롤러 동기화 지연 확인 후, 로컬 PC에서 WIFI 해제 후 유선 LAN 강제 변경을 통해 AD 패스워드 재설정 동기화 유도 📌 연관 지식: [[사내 메신저]], [[워드]], [[AD]]"
-    },
-    "wikilinks": [
-      "사내 메신저",
-      "워드",
-      "AD"
-    ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.322Z",
     "updatedAt": "2026-08-07T05:08:48.322Z"
@@ -20682,59 +18829,6 @@ const SEED_KNOWLEDGE_DATA = [
     "wikilinks": [
       "IP",
       "SSID"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
-    "id": "seed-1509",
-    "title": "WIPS - 이진명 전무 신규 지급 노트북 무선 일반망",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2026-02-11 17:00",
-    "categoryLarge": "네트워크",
-    "categoryMedium": "WIPS",
-    "symptom": "이진명 전무 신규 지급 노트북 무선 일반망 연결 시 필수 프로그램 설치 대기 중 무선 윕스(WIPS) 오탐으로 네트워크 강제 완전 차단 발생",
-    "actionTaken": "전산관리자 무선 점검 대장에 단말 맥 주소 수동 승인 요청 등록 및 WIPS 무선 차단 예외 처리 인가 완료 후 프로그램 셋팅",
-    "tags": [
-      "네트워크",
-      "WIPS"
-    ],
-    "sbar": {
-      "situation": "[S] 이진명 전무 신규 지급 노트북 무선 일반망 연결 시 필수 프로그램 설치 대기 중 무선 윕스(WIPS) 오탐으로 네트워크 강제 완전 차단 발생",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 네트워크 / 중분류: WIPS. 현장 처리 결과 검증.",
-      "recommendation": "[R] 전산관리자 무선 점검 대장에 단말 맥 주소 수동 승인 요청 등록 및 WIPS 무선 차단 예외 처리 인가 완료 후 프로그램 셋팅 📌 연관 지식: [[WIPS]], [[IP]]"
-    },
-    "wikilinks": [
-      "WIPS",
-      "IP"
-    ],
-    "backlinks": [],
-    "createdAt": "2026-08-07T05:08:48.322Z",
-    "updatedAt": "2026-08-07T05:08:48.322Z"
-  },
-  {
-    "id": "seed-1510",
-    "title": "기본 프로그램 - 신정두 상무 일반망 노트북의 MS 아웃룩 사",
-    "sourceFile": "PC 트러블슈팅 가이드",
-    "date": "2026-02-12 17:00",
-    "categoryLarge": "소프트웨어",
-    "categoryMedium": "기본 프로그램",
-    "symptom": "신정두 상무 일반망 노트북의 MS 아웃룩 사서함 파일 손상으로 인한 전체 메일함 검색 및 송수신 불가",
-    "actionTaken": "손상된 아웃룩 메일 데이터(.pst) 파일 복구 유틸리티 실행 및 프로필 복구 조치 완료 후 정상 작동 확인",
-    "tags": [
-      "소프트웨어",
-      "아웃룩"
-    ],
-    "sbar": {
-      "situation": "[S] 신정두 상무 일반망 노트북의 MS 아웃룩 사서함 파일 손상으로 인한 전체 메일함 검색 및 송수신 불가",
-      "background": "[B] 출처: PC 트러블슈팅 가이드",
-      "assessment": "[A] 대분류: 소프트웨어 / 중분류: 기본 프로그램. 현장 처리 결과 검증.",
-      "recommendation": "[R] 손상된 아웃룩 메일 데이터(.pst) 파일 복구 유틸리티 실행 및 프로필 복구 조치 완료 후 정상 작동 확인 📌 연관 지식: [[아웃룩]]"
-    },
-    "wikilinks": [
-      "아웃룩"
     ],
     "backlinks": [],
     "createdAt": "2026-08-07T05:08:48.322Z",

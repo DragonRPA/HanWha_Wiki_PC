@@ -11,8 +11,8 @@
   'use strict';
 
   // State Management
-  const STORAGE_KEY = 'pc_wiki_knowledge_base_v9';
-  const HISTORY_KEY = 'pc_wiki_visit_history_v9';
+  const STORAGE_KEY = 'pc_wiki_knowledge_base_v10';
+  const HISTORY_KEY = 'pc_wiki_visit_history_v10';
   
   let knowledgeStore = [];
   let fuseInstance = null;
@@ -55,6 +55,8 @@
       localStorage.removeItem('pc_wiki_visit_history_v7');
       localStorage.removeItem('pc_wiki_knowledge_base_v8');
       localStorage.removeItem('pc_wiki_visit_history_v8');
+      localStorage.removeItem('pc_wiki_knowledge_base_v9');
+      localStorage.removeItem('pc_wiki_visit_history_v9');
       localStorage.removeItem('피씨위키_wiki_knowledge_base_v1');
       localStorage.removeItem('피씨위키_wiki_visit_history');
 
